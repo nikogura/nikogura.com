@@ -16,3 +16,5 @@ This repo also contains LaTeX classes for the truly masochistic that would like 
 * [Python](Python.md) Python Development Tips
 
 * [LocalEnv](LocalEnv.md) Trick for matchinga CLI environment with your IDE
+
+* [NikOguraResume.md](NikOguraResume.md) My resume.  Online.  In an online format for the world to see.  You're welcome.
