@@ -133,7 +133,7 @@ I'm a big believer in Testing, and Test Driven Development.  Actually that's not
 
 What is Integrity?  Quite simply it's knowing what something *is* and what it *is not*, and being able to continuously demonstrate that for any interested parties.  This is the essence of QA, Security, and Trust.
 
-We can't begin to talk about whether something is good or bad, secure or insecure until we establish exactly what we're talking about.  That's where code signing and secure, repeatable, transparent build tooling comes in.  It is what it is and it can be trusted to be what it is and contain what it contains.
+We can't begin to talk about whether something is good or bad, secure or insecure until we establish exactly what we're talking about.  That's where code signing and secure, repeatable, transparent build tooling comes in.  It is exactly what we think it is and contains nothing we would find surprising.  Surprises are fun if they involve cake and paper hats.  Software?  not so much.
 
 Once we can establish what it is, we can start to describe it's behavior, and the interface contract between the thing and it's users.  That's really what **Testing** is: proving to ourselves and any other interested parties that it does what we expect.
 
