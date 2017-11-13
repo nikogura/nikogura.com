@@ -1,6 +1,6 @@
 # Nik Ogura
 
-### Principal Software Engineer
+### Principal Software Engineer : Platform - Infrastructure - Security - Yes.
 
 ### San Francisco, CA
 
