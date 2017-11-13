@@ -31,7 +31,7 @@ It builds, tests, publishes, and even updates itself *in flight* when there's a 
 
 When I figure out how to get it to actually *write* it's own new features and fix it's own bugs, I'll have invented SkyNet.
 
-## Made Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline
+## Built Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline
 Apple Pay and the systems behind activation of every Apple device in the world used it.  
 
 It worked pretty well, here and abroad.  I don't know how much of it they're still using.
