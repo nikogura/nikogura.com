@@ -15,7 +15,7 @@
 ## Created an Access and Identity System for a Data Science Department 
 It's the means by which an entire department of Data Scientists and Engineers connected to every system, instance, and container in the stack.  The whole access and identity lifecycle- onboarding, offboarding, partner connections, and a light weight roaming profile for any user on any system in a dynamic auto scaling cloud environment.  
 
-The rest of the company used a 3rd party SSO offering.  They got breached and the SSO went down.  We stayed up.
+The rest of the company used a 3rd party SSO offering.  The 3rd party got breached and the SSO went down.  We stayed up.
 
 ## Bent AWS's Metadata System to Enable IAM Authentication on Laptops
 I worked out how to bend AWS's metadata service so that we could leverage IAM Roles and STS credentials as if we were running in EC2, but actually do so with passwordless authentication on a laptop.  The idea to even try came from others, but I'm the one who worked out how to make it happen.
