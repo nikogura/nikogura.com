@@ -51,7 +51,7 @@ Applications, Load Balancers, Firewalls, you name it.  Not only can it be manage
  
  In this case we needed to prototype the 'real' applications locally, as the real running instances were all precious snowflakes that nobody could reproduce.  Taking what was running 'for real' and making it build us ephemeral local models for testing was the way to go.
 
-## Built Static Code Analysis of Puppet Modules
+## Built Static Code Analysis Tools for Puppet Modules
  There were no tools to do SCA of Puppet modules for GRC (Governance, Risk- Management, and Compliance).  So I made some.
  
  The idea was to state categorically pre-merge and pre-deployment that a change to the code would not bring the system out of compliance with regulatory and security baselines, et al. 
