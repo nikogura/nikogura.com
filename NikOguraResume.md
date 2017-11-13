@@ -159,7 +159,7 @@ Are they cool?  Hells yeah!  Do I like them?  I do indeed.  Would I like to play
 What kind of cloud do you want to whip up?  I'll make you one that'll register as a Category 5, but without the whole 'flooding' and 'backed up sewage' parts.  Eew.
 
 ## Making Stuff Work
-I think of a hacker as someone who can pop the hood and fiddle around inside- make it go.  Someone who is entirely unintimidated by not knowing something, and who's entirely comfortable digging in and figuring it out.
+I think of a hacker as someone who can pop the hood and fiddle around inside- make it go.  Someone who is entirely unintimidated by not knowing something, and who's emminently comfortable digging in and figuring it out.
 
 Some of those sorts of people use that knowledge to bring ruin on others, and they have sullied that once noble name.  
 
