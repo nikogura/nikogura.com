@@ -104,9 +104,9 @@ I've been a coach for public speaking and performance, was an instructor for lea
 
 Languages to we computer types are like brushes to a painter.  Which is my favorite?  Favorite for what?  They're all wonderful in some way, and they're all miserable in some way.  You try to use the right tool for the right job and not get dinged too much by the rough edges.
 
-So far I've been deep into: Java, Ruby, Python, Groovy, JavaScript, C, Perl, Go, and Bash.
+So far I've been deep into: **Java**, **Ruby**, **Python**, **Groovy**, **JavaScript**, **C**, **Perl**, **Go**, and **Bash**.
 
-My skills in all of the above rise and fall as each gets used and then left to erode and accumulate dust while I polish up the next.  I rarely spend enough time in any single language to really feel like a virtuoso anymore.  
+My skills in all of the above rise and fall as each gets used and then left to erode while I blow the dust off the next.  I rarely spend enough time in any single language to really feel like a virtuoso anymore.  
 
 Once upon a time I read and wrote Perl better than I read and wrote English, but those days of narrow focus are long behind me.
 
@@ -116,58 +116,64 @@ If you want to whiteboard some code, I can prove to you I know how, but it might
 
 I can claim broad and occasionally deep knowledge of how computers talk to each other.  
 
-I grok the layers, and get the various thinga that happen at each,  though I confuse the 7 layer OSI model with the 4 layer TCP/IP model and have been known to forget who calls which layer what.  What's in a name anyway?  
+I grok the layers, and get the various things that happen at each one,  though I confuse the 7 layer OSI model with the 4 layer TCP/IP model and have been known to forget who calls which layer what.  What's in a name anyway?  
 
-I've written routers and firewalls from scratch, wrestled with IPSec, built VPN's, and traced network traffic to reveal poisoned ARP Caches.  
+I've written routers and firewalls from scratch, know how packets travel around, built VPN's, and traced network traffic to reveal poisoned ARP Caches.  
 
-I've run set up and maintained BIND, and can both cause and resolve DNS issues across local, LANs and WANs.
+I've run set up and maintained BIND, and can both cause and resolve DNS issues across Local and Wide Area Networks.
 
-Iptables and PF do my bidding.  The packets go where *I* tell them to go.
+IPTables and PF (Packet Filter) do my bidding.  The packets go where *I* tell them to go.
 
 I've built IPSec tunnels, and have unwound the Linux networking stack with it's network namespaces to the point where I could run OpenStack *inside* of OpenStack and have it all mostly work.  Why?  Long story.  I'm still shaking from the experience.  I did however come away with a one-file installer for a private OpenStack cloud that I kept on my key chain.  Still have it too.
 
 I get load balancers and the routing of traffic.  I've used Open Source ones such as Apache, Nginx and HAProxy, and some of the ones with price tags such as F5 BigIP, Netscaler, AWS ELB.  I can cross and uncross the streams at will.
 
 ## Quality, Security, and Testing
-I'm a big believer in Testing, and Test Driven Development.  Actually that's not quite right.  I'm actually a big fan of *integrity*, as a person, as a coder, and as a citizen of the universe.  
+I'm a big believer in Testing, and Test Driven Development.  Actually that's not quite right.  I'm actually a big fan of **Integrity**, as a person, as a coder, and as a citizen of the universe.  
 
 What is Integrity?  Quite simply it's knowing what something *is* and what it *is not*, and being able to continuously demonstrate that for any interested parties.  This is the essence of QA, Security, and Trust.
 
-We can't begin to talk about whether something is 'good', or 'bad', 'secure' or 'insecure' until we establish it's identity.  That's where code signing and secure, repeatable, transparent artifacts and build tooling comes in.  It is what it is and it can be trusted to be what it is and contain what it contains.
+We can't begin to talk about whether something is good or bad, secure or insecure until we establish exactly what we're talking about.  That's where code signing and secure, repeatable, transparent build tooling comes in.  It is what it is and it can be trusted to be what it is and contain what it contains.
 
-Once we can establish what it is, we can start to describe it's behavior, and the interface contract between the thing and it's users.  That's really what Testing is: proving to ourselves and any other interested parties that it does what we expect.
+Once we can establish what it is, we can start to describe it's behavior, and the interface contract between the thing and it's users.  That's really what **Testing** is: proving to ourselves and any other interested parties that it does what we expect.
 
 Moreover, you should never take my word *(or anyone else's)* for it.  Perform the experiment yourself and observe the result.  That's what science is.  They do call it *Computer Science* for a reason.  
 
-Are tests enough? Depends on the tests.  Write crap tests and get smelly results.  Garbage in, garbage out.
+Are tests enough? Depends on the tests, and the circumstances.  Write crap tests and get smelly results.  Garbage in, garbage out. No shiny tool can change that.
 
-If we can continuously prove that our code does what it's supposed to do and that we have full provenance of it's history and lifecycle, Security is a snap and auditors will leave you alone.  It's actually pretty easy if you develop the discipline.  It just looks like a bunch of meaningless work in the beginning until you build the muscles.
+If we can continuously prove that our code does what it's supposed to do and that we have full provenance of it's history and lifecycle, **Security** is a snap and auditors aren't so scary anymore.  
 
-Proof is also not a one time thing.  To be really meaningful, it must be continuous.  With a one-shot we can only say 'it used to work'.  Well, great, it used to work, but things change so quickly these days that even if your code didn't change, the rest of the world changed around it.  It might not 'work' any more. It also might not be 'secure' any longer.  
+It's actually pretty easy if you develop the discipline.  It just looks like a bunch of meaningless work in the beginning until you build the muscles.  Once you've built the skills and the habits, you're just doing your thing, but the bad guys just bounce off like so many bugs on the windshield.
 
-We're all running to stand still here.  Lace up those shoes.
+Proof is also not a one time thing.  To be really meaningful, it must be continuous.  With any sort of one-off, we can only say 'it worked last time'.  Well, great, it used to work, but things change so quickly these days that even if your code didn't change, the rest of the world has hardly been standing still. 
+
+It might not 'work' any more. It also might not be 'secure' any longer.  When that happens, you might still pass the audit, but your 'Security' has now become 'Security Theater'.  
+
+'Running to Stand Still' isn't just an old U2 song.  *(Yes, I'm that old.)* Lace up those shoes and stretch.  We've got some running to do.
 
 ## Cloud Goodness
 I've flown through the big clouds such as OpenStack, VmWare, and AWS.  Am I a master?  Hardly.  They're all so big that anyone who claims to know it all might just be pulling your leg.
 
-Are they cool?  Hells yeah!  Do I like them?  I do indeed.
+Are they cool?  Hells yeah!  Do I like them?  I do indeed.  Would I like to play in them some more?  When can I start?
 
 What kind of cloud do you want to whip up?  I'll make you one that'll register as a Category 5, but without the whole 'flooding' and 'backed up sewage' parts.  Eew.
 
 ## Making Stuff Work
 I think of a hacker as someone who can pop the hood and fiddle around inside- make it go.  Someone who is entirely unintimidated by not knowing something, and who's entirely comfortable digging in and figuring it out.
 
-Some of those sorts of people use that knowledge to bring ruin on others, and they have sullied the good name.  
+Some of those sorts of people use that knowledge to bring ruin on others, and they have sullied that once noble name.  
 
-I still think of myself as a 'hacker', but in the sense I just described.  I've had to learn more than a few of the tools the baddies use to do their nastiness, but I prefer to play defense.  I'm the Watcher on the Wall, not the invader.
+I still think of myself as a 'hacker', but in the sense I just described.  I've had to learn more than a few of the tools the baddies use to do their nastiness, but I prefer to play defense.  I'm the Safety, the Watcher on the Wall, not the invader.
 
 Mainly I got into this field because I had a busines to run, and knew I couldn't do it all by hand.  What I realized is, if you have a job that merely requires precision, speed, accuracy and repeatability, it's a job for a machine.
 
 The idea, to me anyway, is to get the machine to do what the machine does best, and free up the humans to do what only humans can do- the things that require imagination, judgement, artistry.  Those are the fun jobs anyway.  Who wants to be an automaton?
 
-I groove on making things that help people do things that would otherwise suck.  Secure handling of encryption keys isn't rocket science, but it's *boring*.  It doesn't take much thought, but it does take great attention to detail.  So I made the machine do it.  Machines don't skip steps and don't get bored.  Machines don't get distracted.
+I groove on making things that help people do things that would otherwise suck.  Secure handling of encryption keys isn't rocket science, it's actually quite boring.  
 
-What do you need to do, and what are the pain points?  I reckon that, with a little thought, a little sweat, we can find a way to make it not painful at all.
+It doesn't take much thought, but it does take great attention to detail.  What's more, one slip up can have huge repercussions.  So I made the machine do it.  Machines don't skip steps and don't get bored.  Machines don't get distracted.  They just do what they're told.  If only I could get my kids to do the same.
+
+What do you need to do, and what are the pain points?  I reckon that, with a little thought, a little sweat, we can find a way to make it not painful at all.  It might even be fun.
 
 If I cannot find a way, I will make one.
 
@@ -176,7 +182,7 @@ If I cannot find a way, I will make one.
 ## Stitch Fix inc. San Francisco, CA
 2017 - Present *Data Platform Engineer  Algorithms and Analytics Department*
 
-Here's where I made the Access and Identity system described above.  It's where I am now, so of course, my most exciting and up to date work on clouds and platform engineering is happening even as we speak.
+Here's where I made the Access and Identity system described above, and where I made the signed binary tool framework.  It's where I am now, so of course, my most exciting and up to date work on clouds and platform engineering is happening even as we speak.
 
 ## Apple
 2015 - 2017  *Senior DevOps Engineer, iOS Systems  (Apple Pay)*
