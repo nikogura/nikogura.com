@@ -23,25 +23,25 @@
 
 [Created an Access and Identity System for a Data Science Department](#created-an-access-and-identity-system-for-a-data-science-department)
 
-[Bent-AWS's-Metadata-System-to-Enable-IAM-Authentication-on-Laptops](#bent-aws's-metadata-system-to-enable-iam-authentication-on-laptops)
+[Bent AWS's Metadata System to Enable IAM Authentication on Laptops](#bent-aws's-metadata-system-to-enable-iam-authentication-on-laptops)
 
-[Invented-a-Self-Updating-Signed-Binary-Tool-Distribution-and-Execution-Framework](#invented-a-self-updating-signed-binary-tool-distribution-and-execution-framework)
+[Invented a Self Updating Signed Binary Tool Distribution and Execution Framework](#invented-a-self-updating-signed-binary-tool-distribution-and-execution-framework)
 
-[Dreamed-Up-Apple-Pay's-Test-Driven-Cloud-Based-CI/CD-Pipeline](#dreamed-up-apple-pay's-test-driven-cloud-based-ci/cd-pipeline)
+[Dreamed Up Apple Pay's Test Driven Cloud Based CI/CD Pipeline](#dreamed-up-apple-pay's-test-driven-cloud-based-ci/cd-pipeline)
 
-[Made-an-Application-Stack-Prototyping-and-Orchestration-Suite](#made-an-application-stack-prototyping-and-orchestration-suite)
+[Made an Application Stack Prototyping and Orchestration Suite](#made-an-application-stack-prototyping-and-orchestration-suite)
 
-[Built-Static-Code-Analysis-Tools-for-Puppet-Modules](#built-static-code-analysis-tools-for-puppet-modules)
+[Built Static Code Analysis Tools for Puppet Modules](#built-static-code-analysis-tools-for-puppet-modules)
 
-[Invented-an-Encryption-Key-Management-and-Delivery-System](#invented-an-encryption-key-management-and-delivery-system)
+[Invented an Encryption Key Management and Delivery System](#invented-an-encryption-key-management-and-delivery-system)
 
-[Designed-a-Credit-Card-PAN-Encryption-and-Tokenization-System](#designed-a-credit-card-pan-encryption-and-tokenization-system)
+[Designed a Credit Card PAN Encryption and Tokenization System](#designed-a-credit-card-pan-encryption-and-tokenization-system)
 
-[Made-LAMP-Stacks-Galore](#made-lamp-stacks-galore)
+[Made LAMP Stacks Galore](#made-lamp-stacks-galore)
 
-[Built-and-Maintained-Web-Application-Firewalls](#built-and-maintained-web-application-firewalls)
+[Built and Maintained Web Application Firewalls](#built-and-maintained-web-application-firewalls)
 
-[Brought-a-Whole-Business-Line's-Tech-Stack-into-PCI-Compliance](#brought-a-whole-business-line's-tech-stack-into-pci-compliance)
+[Brought a Whole Business Line's Tech Stack into PCI Compliance](#brought-a-whole-business-line's-tech-stack-into-pci-compliance)
 
 
 ## Created an Access and Identity System for a Data Science Department 
