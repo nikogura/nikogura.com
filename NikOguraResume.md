@@ -14,25 +14,25 @@
 
 [Created an Access and Identity System for a Data Science Department](#created-an-access-and-identity-system-for-a-data-science-department)
 
-[Bent AWS's Metadata System to Enable IAM Authentication on Laptops](#Bent AWS's Metadata System to Enable IAM Authentication on Laptops)
+[Bent-AWS's-Metadata-System-to-Enable-IAM-Authentication-on-Laptops](#bent-aws's-metadata-system-to-enable-iam-authentication-on-laptops)
 
-[Invented a Self-Updating Signed Binary Tool Distribution and Execution Framework](#Invented a Self-Updating Signed Binary Tool Distribution and Execution Framework)
+[Invented-a-Self-Updating-Signed-Binary-Tool-Distribution-and-Execution-Framework](#invented-a-self-updating-signed-binary-tool-distribution-and-execution-framework)
 
-[Dreamed Up Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline](#Dreamed Up Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline)
+[Dreamed-Up-Apple-Pay's-Test-Driven-Cloud-Based-CI/CD-Pipeline](#dreamed-up-apple-pay's-test-driven-cloud-based-ci/cd-pipeline)
 
-[Made an Application Stack Prototyping and Orchestration Suite](#Made an Application Stack Prototyping and Orchestration Suite)
+[Made-an-Application-Stack-Prototyping-and-Orchestration-Suite](#made-an-application-stack-prototyping-and-orchestration-suite)
 
-[Built Static Code Analysis Tools for Puppet Modules](#Built Static Code Analysis Tools for Puppet Modules)
+[Built-Static-Code-Analysis-Tools-for-Puppet-Modules](#built-static-code-analysis-tools-for-puppet-modules)
 
-[Invented an Encryption Key Management and Delivery System](#Invented an Encryption Key Management and Delivery System)
+[Invented-an-Encryption-Key-Management-and-Delivery-System](#invented-an-encryption-key-management-and-delivery-system)
 
-[Designed a Credit Card PAN Encryption and Tokenization System](#Designed a Credit Card PAN Encryption and Tokenization System)
+[Designed-a-Credit-Card-PAN-Encryption-and-Tokenization-System](#designed-a-credit-card-pan-encryption-and-tokenization-system)
 
-[Made LAMP Stacks Galore](#Made LAMP Stacks Galore)
+[Made-LAMP-Stacks-Galore](#made-lamp-stacks-galore)
 
-[Built and Maintained Web Application Firewalls](#Built and Maintained Web Application Firewalls)
+[Built-and-Maintained-Web-Application-Firewalls](#built-and-maintained-web-application-firewalls)
 
-[Brought a Whole Business Line's Tech Stack into PCI Compliance](#Brought a Whole Business Line's Tech Stack into PCI Compliance)
+[Brought-a-Whole-Business-Line's-Tech-Stack-into-PCI-Compliance](#brought-a-whole-business-line's-tech-stack-into-pci-compliance)
 
 
 ## Created an Access and Identity System for a Data Science Department 
@@ -114,17 +114,17 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 # Skills
 
-[Communications](#Communications)
+[Communications](#communications)
 
-[Computer Languages (To Date)](#Computer Languages To Date)
+[Computer Languages (To Date)](#computer-languages-to-date)
 
-[Networks and Traffic Management](#Networks and Traffic Management)
+[Networks and Traffic Management](#networks-and-traffic-management)
 
-[Quality, Security, and Testing](#Quality Security and Testing)
+[Quality, Security, and Testing](#quality-security-and-testing)
 
-[Cloud Goodness](#Cloud Goodness)
+[Cloud Goodness](#cloud-goodness)
 
-[Making Stuff Work](#Making Stuff Work)
+[Making Stuff Work](#making-stuff-work)
 
 
 ## Communications 
@@ -215,21 +215,21 @@ If I cannot find a way, I will make one.
 
 # Employment History
 
-[Stitch Fix - San Francisco, CA](#Stitch Fix)
+[Stitch Fix - San Francisco, CA](#stitch-fix---san-francisco-ca)
 
-[Apple - Cupertino, CA](#Apple)
+[Apple - Cupertino, CA](#apple---cupertino-ca)
 
-[Data Recognition Corporation - Maple Grove, MN](#DRC)
+[Data Recognition Corporation - Maple Grove, MN](#data-recognition-corporation---maple-grove-mn)
 
-[Wells Fargo - Minneapolis, MN](#Wells Fargo)
+[Wells Fargo - Minneapolis, MN](#wells-fargo---mineapolis-mn)
 
-[US Bank - Minneapolis, MN](#US Bank)
+[US Bank - Minneapolis, MN](#us-bank---minneapolis-mn)
 
-[Plain Black - Madison, WI](#Plain Black)
+[Plain Black - Madison, WI](#plain-black---madision-wi)
 
-[Hessian & McKasy - Minneapolis, MN](#Hessian & McKasy)
+[Hessian & McKasy - Minneapolis, MN](#hessian--mckasy---minneapolis-mn)
 
-[United Martial Arts - Plymouth, MN](#United Martial Arts)
+[United Martial Arts - Plymouth, MN](#united-martial-arts---plymouth-mn)
 
 
 ## Stitch Fix - San Francisco, CA
