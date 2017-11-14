@@ -12,6 +12,29 @@
 
 # Interesting Things I've Done
 
+[Created an Access and Identity System for a Data Science Department](#Created an Access and Identity System for a Data Science Department)
+
+[Bent AWS's Metadata System to Enable IAM Authentication on Laptops](#Bent AWS's Metadata System to Enable IAM Authentication on Laptops)
+
+[Invented a Self-Updating Signed Binary Tool Distribution and Execution Framework](#Invented a Self-Updating Signed Binary Tool Distribution and Execution Framework)
+
+[Dreamed Up Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline](#Dreamed Up Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline)
+
+[Made an Application Stack Prototyping and Orchestration Suite](#Made an Application Stack Prototyping and Orchestration Suite)
+
+[Built Static Code Analysis Tools for Puppet Modules](#Built Static Code Analysis Tools for Puppet Modules)
+
+[Invented an Encryption Key Management and Delivery System](#Invented an Encryption Key Management and Delivery System)
+
+[Designed a Credit Card PAN Encryption and Tokenization System](#Designed a Credit Card PAN Encryption and Tokenization System)
+
+[Made LAMP Stacks Galore](#Made LAMP Stacks Galore)
+
+[Built and Maintained Web Application Firewalls](#Built and Maintained Web Application Firewalls)
+
+[Brought a Whole Business Line's Tech Stack into PCI Compliance](#Brought a Whole Business Line's Tech Stack into PCI Compliance)
+
+
 ## Created an Access and Identity System for a Data Science Department 
 It's the means by which an entire department of Data Scientists and Engineers connected to every system, instance, and container in the stack.  The whole access and identity lifecycle- onboarding, offboarding, partner connections, and a light weight roaming profile for any user on any system in a dynamic auto scaling cloud environment.  
 
@@ -24,14 +47,14 @@ Absolute black magic that *just works* and requires zero code alteration of Amaz
 
 Code works the same locally as it does in the cloud.  No surprises.  That's what it's all about.
 
-## Invented a Signed Binary Tool Distribution and Execution Framework
+## Invented a Self-Updating Signed Binary Tool Distribution and Execution Framework
 It's used for distributing and running signed binaries on user laptops.  The system works online, and gracefully degrades when offline.  
 
 It builds, tests, publishes, and even updates itself *in flight* when there's a new version available.  The binaries are signed, so you can verify integrity, trust, etc.  It works so automatically and magically that I had to make sure it couldn't be easily made to do evil.
 
 When I figure out how to get it to actually *write* it's own new features and fix it's own bugs, I'll have invented SkyNet.
 
-## Built Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline
+## Dreamed Up Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline
 Apple Pay and the systems behind activation of every Apple device in the world used it.  
 
 It worked pretty well, here and abroad.  I don't know how much of it they're still using.
@@ -86,10 +109,23 @@ We proved our compliance with PCI DSS and the OWASP Top Ten.  You can install fi
 
 Who can do that?  This guy.
 
-## Brought a Whole Business Line into PCI Compliance
+## Brought a Whole Business Line's Tech Stack into PCI Compliance
 I participated in creating and executing a plan to bring a multi- million dollar business line centered around credit card processing systems from zero to PCI 2.0 compliant in < 12 months.  Can do it again too.
 
 # Skills
+
+[Communications](#Communications)
+
+[Computer Languages (To Date)](#Computer Languages To Date)
+
+[Networks and Traffic Management](#Networks and Traffic Management)
+
+[Quality, Security, and Testing](#Quality Security and Testing)
+
+[Cloud Goodness](#Cloud Goodness)
+
+[Making Stuff Work](#Making Stuff Work)
+
 
 ## Communications 
 I'm primarily a teacher, and an evangelist.  Mom wanted me to become a minister.  I would have been good at the 'fire and brimstone' parts, but I can't pull off the high hair.
@@ -112,7 +148,7 @@ Once upon a time I read and wrote Perl better than I read and wrote English, but
 
 If you want to whiteboard some code, I can prove to you I know how, but it might come out as psudeo-code or *JavaGoPerlThon*.  It doesn't take long at all for me to get deep again into the language of the day.
 
-## Networks and Traffic
+## Networks and Traffic Management
 
 I can claim broad and occasionally deep knowledge of how computers talk to each other.  
 
@@ -179,12 +215,29 @@ If I cannot find a way, I will make one.
 
 # Employment History
 
-## Stitch Fix inc. San Francisco, CA
+[Stitch Fix - San Francisco, CA](#Stitch Fix)
+
+[Apple - Cupertino, CA](#Apple)
+
+[Data Recognition Corporation - Maple Grove, MN](#DRC)
+
+[Wells Fargo - Minneapolis, MN](#Wells Fargo)
+
+[US Bank - Minneapolis, MN](#US Bank)
+
+[Plain Black - Madison, WI](#Plain Black)
+
+[Hessian & McKasy - Minneapolis, MN](#Hessian & McKasy)
+
+[United Martial Arts - Plymouth, MN](#United Martial Arts)
+
+
+## Stitch Fix - San Francisco, CA
 2017 - Present *Data Platform Engineer  Algorithms and Analytics Department*
 
 Here's where I made the Access and Identity system described above, and where I made the signed binary tool framework.  It's where I am now, so of course, my most exciting and up to date work on clouds and platform engineering is happening even as we speak.
 
-## Apple
+## Apple - Cupertino, CA
 2015 - 2017  *Senior DevOps Engineer, iOS Systems  (Apple Pay)*
 
 I'm one of two guys who Designed and built a dynamic test driven CI/CD pipeline for Apple Pay, Apple Sim, and every Apple device in the world.
@@ -195,7 +248,7 @@ I authored a system whereby the entire deployment footprint of a group of applic
 
 I helped craft iOS Systems move from SVN to Git.
 
-## DRC
+## Data Recognition Corporation - Minneapolis, MN
 2014 - 2015 *Principal DevOps Engineer*
 
 I designed an auto scaling Continuous Delivery environment for educational testing.
@@ -206,7 +259,7 @@ I designed and taught internal training curriculum for the technology, disciplin
 
 I wasn't there long.  I would have happily stayed, but Apple called and sunny California beckoned.  Can you blame me?  I never want to see ice again outside of a glass or on a distant mountain top.  *Brr.*
 
-## Wells Fargo
+## Wells Fargo - Maple Grove, MN
 2014 *Sr. Software Engineer*
 
 I was a DevOps Consultant for Development, Testing, Building and Delivery of Applications and Middleware.
@@ -217,7 +270,7 @@ My thing was, and still is, automation of anything and everything- anything that
 
 This is where I designed and built language applications to parse Puppet source code to do SCA for GRC.
 
-## US Bank
+## US Bank - Minneapolis, MN
 2007 - 2014  *Applications Systems Administrator Sr.*
 
 Mainly I did what I call 'Specialty Application Development'.  That is projects too sensitive or specialized for a general development team, or things that were deemed 'impossible'.  I didn't know they were impossible, so I just did 'em.
@@ -230,12 +283,24 @@ This is where I really delved into load balancing and monitoring.  I also presen
 
 Blah blah blah.  It was a bank.  They were serious about protecting people's money *(I still use them, in fact.)*  All that fun security/encryption/spooky paranoia type stuff listed above?  I started doing it here.
 
-## Plain Black
+## Plain Black - Madison, WI
 2006 - 2007  *Application Developer*
 
 I provided online troubleshooting for customers, and performed core development on the WebGUI CMS.
 
-## United Martial Arts
+## Universal Talkware - Minneapolis, MN
+2000  *NOC Administer*
+
+I handled internal tools development, built the NOC, and even supported the physical plant.  Dumpster diving for scrap metal for use in patching the server racks was a regular passtime.
+
+I even had the interesting experience of programming and maintaining a PBX Exchange.  Think green phosphor screens and keyboards you had to lean into to get a key to press.  A PBX handles the routing of Publically Switched Telephone Networks.  Ma Bell dropped the calls off at our door, and my PBX routed the signals to the analog phones.  Old School.  Seems crazy now, but it was a good experience.
+
+## Hessian & McKasy - Minneapolis, MN
+1999 - 2000 *IT Administrator*
+
+I started out as the help desk, and ended up as the head of IT for a 40 laywer Law Firm.  That was over the Y2K change over, which, since we did our due diligence, was a total non-event.
+
+## United Martial Arts - Plymouth, MN
 1998 - 2007  *President, CEO, and Head Instructor (also Lead Programmer, Receptionist, and Executive Janitor)*
 
 I was responsible for day to day operations of the martial arts studio, including management, financial planning, personnel- you name it, I did it.  
