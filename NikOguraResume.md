@@ -318,5 +318,5 @@ I taught classes in Exercise, Wellness, Leadership, and the Martial Arts in the 
 
 Over the course of 9 years, I designed, built and maintained a custom studio management desktop application that handled enrollment, financials, lesson plans, scheduling, video and print library management, and curriculum.  
 
-Coding was cheap entertainment.  Kick and punch doesn't pay much.  Somewhere in there I guess I got good at it, because it turned into a whole new career.
+Coding was cheap entertainment.  Kick and punch doesn't pay much.  Somewhere in there I guess I got good at it, because it turned into a whole new career- one that involves considerably less head trauma.
 
