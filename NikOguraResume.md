@@ -10,6 +10,15 @@
 
 -- Hannibal of Carthage, when told there was no way he was bringing elephants through the Alps.
 
+# Table of Contents
+[Table of Contents](#table-of-contents)
+
+[Interesting Things I've Done](#interesting-things-ive-done)
+
+[Skills](#skills)
+
+[Employment History](#employment-history)
+
 # Interesting Things I've Done
 
 [Created an Access and Identity System for a Data Science Department](#created-an-access-and-identity-system-for-a-data-science-department)
