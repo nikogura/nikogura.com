@@ -12,7 +12,7 @@
 
 # Interesting Things I've Done
 
-[Created an Access and Identity System for a Data Science Department](#Created an Access and Identity System for a Data Science Department)
+[Created an Access and Identity System for a Data Science Department](#created-an-access-and-identity-system-for-a-data-science-department)
 
 [Bent AWS's Metadata System to Enable IAM Authentication on Laptops](#Bent AWS's Metadata System to Enable IAM Authentication on Laptops)
 
