@@ -57,7 +57,7 @@ Absolute black magic that *just works* and requires zero code alteration of Amaz
 Code works the same locally as it does in the cloud.  No surprises.  That's what it's all about.
 
 ## Invented a Self-Updating Signed Binary Tool Distribution and Execution Framework
-It's used for distributing and running signed binaries on user laptops.  The system works online, and gracefully degrades when offline.  
+It's used for distributing and running signed binaries on user laptops, in cloud instances and docker containers.  It's always up to date, works on and offline, and best of all it *just works*.
 
 It builds, tests, publishes, and even updates itself *in flight* when there's a new version available.  The binaries are signed, so you can verify integrity, trust, etc.  It works so automatically and magically that I had to make sure it couldn't be easily made to do evil.
 
