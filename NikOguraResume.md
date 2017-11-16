@@ -307,7 +307,7 @@ I even had the interesting experience of programming and maintaining a PBX Excha
 ## Hessian & McKasy - Minneapolis, MN
 1999 - 2000 *IT Administrator*
 
-I started out as the help desk, and ended up as the head of IT for a 40 laywer Law Firm.  That was over the Y2K change over, which, since we did our due diligence, was a total non-event.
+I started out as the help desk, and ended up as the head of IT for a 40 seat Law Firm.  That was over the Y2K change over, which, since we did our due diligence, was a total non-event.
 
 ## United Martial Arts - Plymouth, MN
 1998 - 2007  *President, CEO, and Head Instructor (also Lead Programmer, Receptionist, and Executive Janitor)*
