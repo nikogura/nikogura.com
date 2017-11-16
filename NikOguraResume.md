@@ -4,11 +4,11 @@
 
 ### San Francisco, CA
 
-#### Aut viam inveniam, aut faciam
+#### *Aut viam inveniam, aut faciam*
 
 *(If I cannot find a way, I will make one)*
 
--- Hannibal of Carthage, when told there was no way he was bringing elephants through the Alps.
+*-- Hannibal of Carthage, when told there was no way he was bringing elephants through the Alps.*
 
 # Table of Contents
 [Table of Contents](#table-of-contents)
