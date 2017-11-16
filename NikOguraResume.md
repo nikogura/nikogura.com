@@ -21,7 +21,7 @@
 
 # Interesting Things I've Done
 
-[Created an Access and Identity System for a Data Science Department](#created-an-access-and-identity-system-for-a-data-science-department)
+[Created an Independent Access and Identity System for Stitch Fix's Algorithms Department](#created-an-independant-access-and-identity-system-for-stitch-fixs-algorithms-department)
 
 [Bent AWS's Metadata System to Enable IAM Authentication on Laptops](#bent-aws's-metadata-system-to-enable-iam-authentication-on-laptops)
 
@@ -44,8 +44,8 @@
 [Brought a Whole Business Line's Tech Stack into PCI Compliance](#brought-a-whole-business-line's-tech-stack-into-pci-compliance)
 
 
-## Created an Access and Identity System for a Data Science Department 
-It's the means by which an entire department of Data Scientists and Engineers connected to every system, instance, and container in the stack.  The whole access and identity lifecycle- onboarding, offboarding, partner connections, and a light weight roaming profile for any user on any system in a dynamic auto scaling cloud environment.  
+## Created an Independent Access and Identity System for Stitch Fix's Algorithms Department 
+It's the means by which an entire department of Data Scientists and Engineers connected to every system, instance, and container in the stack.  We wanted an an independent system that could funciton autonomously.  The whole access and identity lifecycle- onboarding, offboarding, partner connections, and a light weight roaming profile for any user on any system in a dynamic auto scaling cloud environment.  
 
 The rest of the company used a 3rd party SSO offering.  The 3rd party got breached and the SSO went down.  We stayed up.
 
@@ -203,6 +203,8 @@ I've flown through (wandered around in?) the big clouds such as OpenStack, VmWar
 
 Are they cool?  Hells yeah!  Do I like them?  I do indeed.  Would I like to play in them some more?  When can I start?
 
+What do you want to do?  Make stuff in clouds?  We can do that.  Wanna make clouds themselves?  Got you covered there too.
+
 What kind of cloud do you want to whip up?  I'll make you one that'll register as a Category 5, but without the whole 'flooding' and 'backed up sewage' parts.  Eew.
 
 ## Making Stuff Work
@@ -246,7 +248,7 @@ If I cannot find a way, I will make one.
 ## Stitch Fix - San Francisco, CA
 2017 - Present *Data Platform Engineer  Algorithms and Analytics Department*
 
-Here's where I made the Access and Identity system described above, and where I made the signed binary tool framework.  It's where I am now, so of course, my most exciting and up to date work on clouds and platform engineering is happening even as we speak.
+Here's where I made the Access and Identity system described above, and where I made the signed binary tool framework.  It's my most recent gig, so of course, my most exciting and up to date work on clouds and platform engineering happened here.
 
 ## Apple - Cupertino, CA
 2015 - 2017  *Senior DevOps Engineer, iOS Systems  (Apple Pay)*
