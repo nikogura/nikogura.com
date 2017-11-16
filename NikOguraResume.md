@@ -139,7 +139,7 @@ I participated in creating and executing a plan to bring a multi- million dollar
 ## Communications 
 I'm primarily a teacher, and an evangelist.  Mom wanted me to become a minister.  I would have been good at the 'fire and brimstone' parts, but I can't pull off the high hair.
 
-With over 30 years experience in bringing the light of knowledge to the dark corners of the intellectual realm.  If I know something, I can help you know it too.  If you want to know it that is.  No power in the 'verse can make you want to if you don't.  You can lead a person to knowledge, but you *cannot* make them think.
+With over 30 years experience in bringing the light of knowledge to the dark corners of the intellectual realm.  If I know something, I can help you know it too.  If you want to know it that is.  No power in the 'verse can make you want to learn something you don't.  You can lead a person to knowledge, but you *cannot* make them think.
 
 I've written curriculum for courses in Test Driven Development, Application Security, Network Security, and some light Penetration Testing.  I've taught the courses too.
 
