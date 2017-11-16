@@ -147,7 +147,7 @@ I've been a coach for public speaking and performance, was an instructor for lea
 
 ## Computer Languages (To Date)
 
-Languages to we computer types are like brushes to a painter.  Which is my favorite?  Favorite for what?  They're all wonderful in some way, and they're all miserable in some way.  You try to use the right tool for the right job and not get dinged too much by the rough edges.
+Computer languages are like brushes to a painter.  Which is my favorite?  Favorite for what?  They're all wonderful in some way, and they're all miserable in some way.  You try to use the right tool for the right job and not get dinged too much by the rough edges.
 
 So far I've been deep into: **Java**, **Ruby**, **Python**, **Groovy**, **JavaScript**, **C**, **Perl**, **Go**, and **Bash**.
 
@@ -155,7 +155,7 @@ My skills in all of the above rise and fall as each gets used and then left to e
 
 Once upon a time I read and wrote Perl better than I read and wrote English, but those days of narrow focus are long behind me.
 
-If you want to whiteboard some code, I can prove to you I know how, but it might come out as psudeo-code or *JavaGoPerlThon*.  It doesn't take long at all for me to get deep again into the language of the day.
+If you want to whiteboard some code, I can prove to you I know how to write it.  It might come out as psudeo-code or *JavaGoPerlThon*.  That being said, it doesn't take long at all for me to get deep again into the language of the day.
 
 ## Networks and Traffic Management
 
@@ -163,13 +163,13 @@ I can claim broad and occasionally deep knowledge of how computers talk to each 
 
 I grok the layers, and get the various things that happen at each one,  though I confuse the 7 layer OSI model with the 4 layer TCP/IP model and have been known to forget who calls which layer what.  What's in a name anyway?  
 
-I've written routers and firewalls from scratch, know how packets travel around, built VPN's, and traced network traffic to reveal poisoned ARP Caches.  
+I've written routers and firewalls from scratch, know how packets travel around, built VPN's, and traced network traffic to reveal poisoned ARP Caches.  That was fun.   
 
-I've run set up and maintained BIND, and can both cause and resolve DNS issues across Local and Wide Area Networks.
+I've run set up and maintained BIND, and can both *cause* and *resolve* DNS issues across Local and Wide Area Networks.
 
 IPTables and PF (Packet Filter) do my bidding.  The packets go where *I* tell them to go.
 
-I've built IPSec tunnels, and have unwound the Linux networking stack with it's network namespaces to the point where I could run OpenStack *inside* of OpenStack and have it all mostly work.  Why?  Long story.  I'm still shaking from the experience.  I did however come away with a one-file installer for a private OpenStack cloud that I kept on my key chain.  Still have it too.
+I've built IPSec tunnels, and have unwound the Linux networking stack with it's network namespaces to the point where I could run OpenStack *inside* of OpenStack and have it all mostly work.  Why?  Long story.  I'm still shaking from the experience.  I did however come away with a one-file installer for a private OpenStack cloud that I keep on my key chain.  Want an instant OpenStack?.
 
 I get load balancers and the routing of traffic.  I've used Open Source ones such as Apache, Nginx and HAProxy, and some of the ones with price tags such as F5 BigIP, Netscaler, AWS ELB.  I can cross and uncross the streams at will.
 
@@ -186,39 +186,41 @@ Moreover, you should never take my word *(or anyone else's)* for it.  Perform th
 
 Are tests enough? Depends on the tests, and the circumstances.  Write crap tests and get smelly results.  Garbage in, garbage out. No shiny tool can change that.
 
-If we can continuously prove that our code does what it's supposed to do and that we have full provenance of it's history and lifecycle, **Security** is a snap and auditors aren't so scary anymore.  
+If we can continuously prove that our code does what it's supposed to do and that we have full provenance of it's history and lifecycle, then **Security** becomes a snap and auditors aren't so scary anymore.  They're human too, they just like you to *prove* things- as they should.
 
 It's actually pretty easy if you develop the discipline.  It just looks like a bunch of meaningless work in the beginning until you build the muscles.  Once you've built the skills and the habits, you're just doing your thing, but the bad guys just bounce off like so many bugs on the windshield.
 
-Proof is also not a one time thing.  To be really meaningful, it must be continuous.  With any sort of one-off, we can only say 'it worked last time'.  Well, great, it used to work, but things change so quickly these days that even if your code didn't change, the rest of the world has hardly been standing still. 
+Proof is also not a one time thing.  To be really meaningful, it must be continuous just like 'integration', 'delivery', and 'feedback'.  With any sort of one-off, we can only say 'it worked last time'.  Well, great, it used to work, but things change so quickly these days that even if your code didn't change, the rest of the world has hardly been standing still. 
 
-It might not 'work' any more. It also might not be 'secure' any longer.  When that happens, you might still pass the audit, but your 'Security' has now become 'Security Theater'.  
+It might not 'work' any more. It also might not be 'secure' any longer.  When that happens, you *might* still pass the audit, but your 'Security' has now become 'Security Theater'.  
 
 'Running to Stand Still' isn't just an old U2 song.  *(Yes, I'm that old.)* Lace up those shoes and stretch.  We've got some running to do.
 
+If all you want to do is pass audits.  Don't call me.  I'm just going to tick you off.  If you want to both *pass audits* and *be secure*, let's talk. 
+
 ## Cloud Goodness
-I've flown through the big clouds such as OpenStack, VmWare, and AWS.  Am I a master?  Hardly.  They're all so big that anyone who claims to know it all might just be pulling your leg.
+I've flown through (wandered around in?) the big clouds such as OpenStack, VmWare, and AWS without hitting the rocks.  Am I a master?  Hardly.  Anyone who claims to be one might just be pulling your leg.
 
 Are they cool?  Hells yeah!  Do I like them?  I do indeed.  Would I like to play in them some more?  When can I start?
 
 What kind of cloud do you want to whip up?  I'll make you one that'll register as a Category 5, but without the whole 'flooding' and 'backed up sewage' parts.  Eew.
 
 ## Making Stuff Work
-I think of a hacker as someone who can pop the hood and fiddle around inside- make it go.  Someone who is entirely unintimidated by not knowing something, and who's emminently comfortable digging in and figuring it out.
+I think of a hacker as someone who can pop the hood and fiddle around inside- make it go, stop, or do something unexpectedly wonderful.  Someone who is entirely unintimidated by not knowing something, and who's eminently comfortable digging in and figuring it out.
 
 Some of those sorts of people use that knowledge to bring ruin on others, and they have sullied that once noble name.  
 
-I still think of myself as a 'hacker', but in the sense I just described.  I've had to learn more than a few of the tools the baddies use to do their nastiness, but I prefer to play defense.  I'm the Safety, the Watcher on the Wall, not the invader.
+I still think of myself as a 'hacker', but in the sense I just described.  I've had to learn more than a few of the tools the baddies use to do their nastiness, but I prefer to play defense.  I'm the Safety, the Watcher on the Wall, the big scary bouncer.  You're not messing around here on *my* playground.  Not on *my* watch.
 
-Mainly I got into this field because I had a busines to run, and knew I couldn't do it all by hand.  What I realized is, if you have a job that merely requires precision, speed, accuracy and repeatability, it's a job for a machine.
+Mainly I got into this field because I had a business to run, and knew I couldn't do it all by hand.  What I realized is, if you have a job that merely requires precision, speed, accuracy and repeatability, it's a job for a machine, not a person.
 
-The idea, to me anyway, is to get the machine to do what the machine does best, and free up the humans to do what only humans can do- the things that require imagination, judgement, artistry.  Those are the fun jobs anyway.  Who wants to be an automaton?
+The idea, to me anyway, is to get the machine to do what the machine does best, and free up the humans to do what only humans can do- the things that require imagination, judgement, artistry.  Those are the fun jobs anyway.  Who wants to be a robot? Well, ok, maybe a T-101 would be cool.  Hasta la vista, baby.
 
-I groove on making things that help people do things that would otherwise suck.  Secure handling of encryption keys isn't rocket science, it's actually quite boring.  
+I groove on making things that help people do things that would otherwise suck.  Secure handling of encryption keys isn't rocket science, it's actually quite boring, but you have to do it right.  Every time.  All the time. 
 
 It doesn't take much thought, but it does take great attention to detail.  What's more, one slip up can have huge repercussions.  So I made the machine do it.  Machines don't skip steps and don't get bored.  Machines don't get distracted.  They just do what they're told.  If only I could get my kids to do the same.
 
-What do you need to do, and what are the pain points?  I reckon that, with a little thought, a little sweat, we can find a way to make it not painful at all.  It might even be fun.
+What do you need to do?  What are the pain points?  I reckon that, with a little thought, a little sweat, we can find a way to make it not painful at all.  It might even be fun.
 
 If I cannot find a way, I will make one.
 
