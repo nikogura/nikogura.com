@@ -124,7 +124,7 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 ## More UI's Than You Can Shake A Stick At
 
-Lets be clear here, I'm no right brained web designer.  I pride myself on functional, not pretty.  Takea gander at any picture of my ugly mug and you'll see why.
+Lets be clear here, I'm no right brained web designer.  I pride myself on functional, not pretty.  Take a gander at any picture of my ugly mug and you'll see why.
 
 Dynamic Javascript? check. Ajax? sure. Wacky cool Javascript Frameworks? I've used 'em, and even written them.
 
