@@ -93,7 +93,7 @@ Applications, Load Balancers, Firewalls, you name it.  Not only can it be manage
 ## Invented an Encryption Key Management and Delivery System
  The company bought a PKI, and it sucked.  The parts didn't talk to each other.  It couldn't deliver the keys.  Keys were being left on shared drives and pasted into group emails.  *Ouch.*
 
-So I worked up a system to components from multiple sources together and automates deployments.  It allowed one button delivery of encryption keys to multiple operating systems across multiple network tiers.  
+So I worked up a system to tie together components from multiple sources together and automate deployments.  It allowed one button delivery of encryption keys to multiple operating systems across multiple network tiers.  
 
 It had a friendly user interface allowed non-technical users in multiple countries to create and deploy SSL Certificates in a secure manner. The application saved the company over $1M based on vendor bids for similar systems.  
 
