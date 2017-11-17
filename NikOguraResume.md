@@ -43,6 +43,7 @@
 
 [Brought a Whole Business Line's Tech Stack into PCI Compliance](#brought-a-whole-business-line's-tech-stack-into-pci-compliance)
 
+[More UI's Than You Can Shake a Stick At](#more-uis-than-you-can-shake-a-stick-at)
 
 ## Created an Independent Access and Identity System for Stitch Fix's Algorithms Department 
 It's the means by which an entire department of Data Scientists and Engineers connected to every system, instance, and container in the stack.  We wanted an an independent system that could funciton autonomously.  The whole access and identity lifecycle- onboarding, offboarding, partner connections, and a light weight roaming profile for any user on any system in a dynamic auto scaling cloud environment.  
@@ -120,6 +121,14 @@ Who can do that?  This guy.
 
 ## Brought a Whole Business Line's Tech Stack into PCI Compliance
 I participated in creating and executing a plan to bring a multi- million dollar business line centered around credit card processing systems from zero to PCI 2.0 compliant in < 12 months.  Can do it again too.
+
+## More UI's Than You Can Shake A Stick At
+
+Lets be clear here, I'm no right brained web designer.  I pride myself on functional, not pretty.  Takea gander at any picture of my ugly mug and you'll see why.
+
+Dynamic Javascript? check. Ajax? sure. Wacky cool Javascript Frameworks? I've used 'em, and even written them.
+
+GUI programming? Done it.  My strengths run to the working rather than the fancy, but I can make ypu pictures of buttons to push if thats your goal.
 
 # Skills
 
