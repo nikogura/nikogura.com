@@ -271,11 +271,11 @@ Here's where I made the Access and Identity system described above, and where I 
 
 I'm one of two guys who Designed and built a dynamic test driven CI/CD pipeline for Apple Pay, Apple Sim, and every Apple device in the world.
 
-I implemented a private OpenStack cloud for testing and verification of applications.  From scratch.  They handed me a pile of HP DL360's and 'do something with these'.
+I implemented a private OpenStack cloud for testing and verification of applications.  From scratch.  They handed me a pile of HP DL360's and 'do something with these'.  So I did.
 
 I authored a system whereby the entire deployment footprint of a group of applications can be described and manipulated in code.
 
-I helped craft iOS Systems move from SVN to Git.
+I helped guide iOS Systems move from SVN to Git.
 
 ## Data Recognition Corporation - Minneapolis, MN
 2014 - 2015 *Principal DevOps Engineer*
