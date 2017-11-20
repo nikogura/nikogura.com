@@ -262,7 +262,7 @@ If I cannot find a way, I will make one.
 
 
 ## Stitch Fix - San Francisco, CA
-2017 - Present *Data Platform Engineer  Algorithms and Analytics Department*
+2017 *Data Platform Engineer  Algorithms and Analytics Department*
 
 Here's where I made the Access and Identity system described above, and where I made the signed binary tool framework.  It's my most recent gig, so of course, my most exciting and up to date work on clouds and platform engineering happened here.
 
