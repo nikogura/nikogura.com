@@ -72,7 +72,7 @@ Now I can't take credit for the idea of actually doing this.  Some very AWS savv
     
     Them: "We don't know how."
     
-    Me: "I aught to be able to make that happen.  It's just packets after all.  They go where they're told."
+    Me: "I aught to be able to make that happen.  It's just packets after all.  It's not magic."
     
     
 So I did.  Here's how.
