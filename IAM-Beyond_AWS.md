@@ -16,7 +16,7 @@ We also want things to *just work* and glide around with the style and elegance 
 
 AWS Credentials for a goodly sized team of individualists was just a small microcosm of the bigger problem.  Everyone needed them.  Everybody wanted them.  Many already had them- several sets in fact.  How in ned were we gonna get a handle on them and manage it going forward?
 
-This has to fall under the umbrella of everything having to *just work*.  Data Scientists do not want to worry about securely maintaining credentials.  Neither does management.  They have this weird idea that they have better things to do with their time.  I tend to agree. 
+Furthermore everything has to *just work* as stated above.  Data Scientists do not want to worry about securely maintaining credentials.  Neither does Management.  They have this weird idea that they have better things to do with their time.  I tend to agree. 
 
 This is the thing about Security.  It sucks.  Even if you enjoy the philosophical exercise of imagining how a system can be brought down, (and I do), running around frantically trying to cover every possible failure point and making sure **YOUR** system isn't brought down is 'effing miserable.  Who wants to live like that?
 
