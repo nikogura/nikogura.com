@@ -17,7 +17,9 @@ This repo also contains LaTeX classes for the truly masochistic that would like 
 
 * [LocalEnv](LocalEnv.md) Trick for matchinga CLI environment with your IDE
 
-* [NikOguraResume.md](NikOguraResume.md) My resume.  Online.  In an online format for the world to see.  You're welcome.
+* [Nik's Resume](NikOguraResume.md) My resume.  Online.  In an online format for the world to see.  You're welcome.
+
+* [IAM Beyond AWS](IAM-=Beyond_AWS.md)  Something I did recently that's both nasty and beautiful, but most of all useful!
 
 Why is your resume posted online?  Well, I got sick of traditonal CV's and such where you make this blah blah blah list of hot keywords that you hope will help you make it past the filters.
 
