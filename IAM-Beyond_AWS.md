@@ -36,7 +36,9 @@ Too many cooks in that particular kitchen makes for a big mess when Mr. BlackHat
 
 That job sucks, bigtime. The only person you can hire to do such a job for any length of time either has no imagination, or is totally checked out, cos it's *boring*.  
 
-While this mythical person might be a snappy dresser and a good dancer, they're not the person you want in charge of the keys to the kingdom.  Any person who *would* be a good person to put in charge of the keys will be bored silly.  Even if you can get them to take the job, they won't be there long.
+While this mythical person might be a snappy dresser and a good dancer, they're not the person you want in charge of the keys to the kingdom.  Any person who *would* be a good person to put in charge of the keys will be bored silly.  
+
+Even if you can get them to take the job, they won't be there long.
 
 ## Enter AWS Security Token Service
 
