@@ -97,7 +97,7 @@ So what they did was pick an IP in the middle of the private range, 169.254.169.
 
 ## Hacking Hacks
 
-So Amazon hacked the DHCP Spec, and I'm about to demonstrate how I hacked the hack, hence the title.  Note I'm using the term 'hack' in int's original sense, that of messing with a system and using it in a way it wasn't exactly intended to be used.  There's no maliciousness inherent in either their use, mine.  We're both just taking what is and using it in a new and creative manner.
+So Amazon hacked the DHCP Spec, and I'm about to demonstrate how I hacked the hack, hence the title.  Note I'm using the term 'hack' in it's original sense, that of messing with a system and using it in a way it wasn't exactly intended to be used.  There's no maliciousness inherent in either their use, mine.  We're both just taking what is and using it in a new and creative manner.
 
 So what I needed to do was threefold:
 
