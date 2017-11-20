@@ -1,13 +1,16 @@
 # IAM Beyond AWS or *Hacking Hacks, and the Hackers who Hack Them*
+
 I was handed a pretty problem one day.  It was simple.  It needed to be done.  It was as inevitable as death and taxes.  
 
 What was this inexorible juggernaut of a task that was rolling towards me?  I needed to get a handle on AWS Credentials for our entire department.
 
-Is that all?  Credentials?  Bah.  That's easy.  You poke around the AWS console screen and bob's yer uncle, yer done.  Right?  Not so fast sparky.  Pull up a chair and lemme riff on this tale of woe.
+Is that all?  Credentials?  Bah.  That's easy.  You poke around the AWS console screen and bob's yer uncle, yer done.  
+
+Right?  Not so fast sparky.  Pull up a chair and lemme riff on this tale of woe.
 
 ## Total Freedom, on Rails
 
-The Platform team of a company I've recently worked for has this wild idea.  We want to embrace total freedom for our data scientists to be their brilliant best selves and follow whatever flights of fancy they may discover in their febrile minds.  That's pretty neat.
+The Platform team of a company I've recently worked for has this wild idea.  We want to embrace total freedom for our data scientists to be their brilliant best selves and follow whatever flights of fancy they may discover in their febrile minds.  That's a pretty neat goal.  It aught to be thus for all users says I.
 
 We also want things to *just work* and glide around with the style and elegance of a Tesla Model S.  That's hard to do when the cats refuse to be herded.  So what's a guy to do?
 
