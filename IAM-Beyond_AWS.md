@@ -79,9 +79,11 @@ So I did.  Here's how.
 
 ## Hacking the DHCP Spec
 
-To really understand how this works, we have to back up.  First off there's this spec for something called 'DHCP'.  DHCP, if you're not familiar, is the "Dynamic Host Configuration Protocol".  It's how your computer get's a unique address in order to communicate with other machines on a network.
+To really understand how this works, we have to back up.  
 
-Addreses need to be unique, otherwise the streams get crossed and bad things happen.  This condition is known in user terms as 'It doesn't work'.  This is the most frightening bug report that an engineer can receive.
+First off there's this spec for something called 'DHCP'.  DHCP, if you're not familiar, is the "Dynamic Host Configuration Protocol".  It's how your computer get's a unique address in order to communicate with other machines on a network.
+
+Addreses need to be unique, otherwise the streams get crossed and bad things happen.  This condition is known in user terms as **'It doesn't work'**.  This is the most frightening bug report that an engineer can receive.  I know.  I've been given bugs like that.  (Yes, that was the entire bug report.  3 words.  *sigh*)
 
 Normally, when you connect to a network, you ask for an address, and something called a 'dhcp server' hands you a unique one for your private use.  The server keeps a list of what addresses it's handed out, and how long they're good for.  The idea being that you don't hand out the same IP twice.
 
