@@ -153,7 +153,7 @@ And now Voila!, traffic heading for 169.254.169.254 port 80 actually routes to 1
     
 #### Mac Magic
 
-Doing it on a Mac is harder.  Why?  Well, it turns out there are a lot of different opinions on how to do things in the open source world.  This is hardly news, is it?
+Doing it on a Mac is harder.  Why?  Well, it turns out there are a lot of different opinions on how to do things in the open source world.  Shocking, right?
 
 Turns out the authors of NetBSD and OpenBSD thought in a Linux like fashion, and thought it might be useful to have the packet filtering stuff work regardless.  I imagine they felt like I do, and thought that if you were savvy enough to tell the packets where to go, the packets aught to go where you told them to go.  I wish I could achieve the same with my kids.
 
