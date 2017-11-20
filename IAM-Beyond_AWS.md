@@ -42,7 +42,9 @@ Even if you can get them to take the job, they won't be there long.
 
 ## Enter AWS Security Token Service
 
-This is not going to be a how to for everything AWS.  Amazon has ~~perfectly good~~  er, Amazon has ~~helpful~~, uh... Ahem.  Amazon has docs.  How about that?  [http://docs.aws.amazon.com/STS/latest/APIReference/Welcome.html]  I'm not actually knocking Amazon or their document writers.  They do a better job than I would do.  Among other things, I can't resist the urge to ramble off in some tangental direction....
+This is not going to be a how to for everything AWS.  Amazon has ~~perfectly good~~  er, Amazon has ~~helpful~~, uh... Ahem.  Amazon has docs.  How about that?  
+
+[http://docs.aws.amazon.com/STS/latest/APIReference/Welcome.html]  I'm not actually knocking Amazon or their document writers.  They do a better job than I would do.  Among other things, I can't resist the urge to ramble off in some tangental direction....
 
 Reading AWS Docs is a skill in and of itself though, kind of like reading man pages or javadocs.  They're good skills.  I recommend you develop them.  The learning curve can seem vertical at first.  Don't worry though, it levels off pretty quickly, and the only way to really get good at it is to just do it.
 
@@ -70,7 +72,7 @@ Now I can't take credit for the idea of actually doing this.  Some very AWS savv
     
     Them: "We don't know how."
     
-    Me: "I aught to be able to make that happen.  It's just packets."
+    Me: "I aught to be able to make that happen.  It's just packets after all.  They go where they're told."
     
     
 So I did.  Here's how.
