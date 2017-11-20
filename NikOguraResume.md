@@ -142,6 +142,8 @@ GUI programming? Done it.  My strengths run to the working rather than the fancy
 
 [Cloud Goodness](#cloud-goodness)
 
+[Containers 'n Stuff](#containers-n-stuff)
+
 [Making Stuff Work](#making-stuff-work)
 
 
@@ -215,6 +217,11 @@ Are they cool?  Hells yeah!  Do I like them?  I do indeed.  Would I like to play
 What do you want to do?  Make stuff in clouds?  We can do that.  Wanna make clouds themselves?  Got you covered there too.
 
 What kind of cloud do you want to whip up?  I'll make you one that'll register as a Category 5, but without the whole 'flooding' and 'backed up sewage' parts.  Eew.
+
+## Containers 'n Stuff
+Been there, done that.  I wrote something funky to do local container orchestration for Apple.  This was before Docker Compose was really stable.  Now I use Docker's version, cos it's public and awesome.  
+
+I've written tools to build container's locally, and deploy them to the cloud.  Piece of cake.  You can rapidly prototype locally, and deploy in a snap.  Isn't that what this is all about? 
 
 ## Making Stuff Work
 I think of a hacker as someone who can pop the hood and fiddle around inside- make it go, stop, or do something unexpectedly wonderful.  Someone who is entirely unintimidated by not knowing something, and who's eminently comfortable digging in and figuring it out.
