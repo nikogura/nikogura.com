@@ -228,7 +228,9 @@ Now that's intended to work with [boxinit.py](https://github.com/nikogura/stacku
 
 The directions are here: [https://github.com/nikogura/stackutils](https://github.com/nikogura/stackutils)
 
-Granted, that's a little dated.  Open Stack Liberty is pretty old school at this point.  It will get you an idea of how I like to roll though.  Enjoy.
+Granted, that's a little dated.  Open Stack Liberty is pretty old school at this point.  It will get you an idea of how I like to roll though.  Enjoy.  
+
+*(Wait, you keep an OpenStack installer on your keychain? Yup.  Because I can.)*
 
 ## Containers 'n Stuff
 Been there, done that.  I wrote something funky to do local container orchestration for Apple.  This was before Docker Compose was really stable.  Now I use Docker's version, cos it's public and awesome.  

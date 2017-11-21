@@ -21,6 +21,8 @@ This repo also contains LaTeX classes for the truly masochistic that would like 
 
 * [IAM Beyond AWS](IAM-Beyond_AWS.md)  Something I did recently that's both nasty and beautiful, but most of all useful!
 
+* [Interesting Things](https://github.com/nikogura/nixtools) Some tips and tricks you might find interesting.
+
 Why is your resume posted online?  Well, I got sick of traditonal CV's and such where you make this blah blah blah list of hot keywords that you hope will help you make it past the filters.
 
 I though, you know what?  I explain these various experiences so often to various people, wouldn't it be great if I could just link to it?  Better yet, what about having my fascinating journey through technology in a format where I didn't have to try to squash it down to n pages?
