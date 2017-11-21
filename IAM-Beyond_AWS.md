@@ -58,7 +58,9 @@ There's a problem though.  It only works in AWS.
 
 ## IAM on the Laptop
 
-Without giving away too much information about exactly how I implemented it, in round terms, what I set up was a service that interacted with the AWS STS service to grant assumed roles to authenticated individuals.  How we authenticated the individuals isn't really important, but I'll tell you it involved asymmetric encryption and didn't require passwords.  The reader can likely figure out the rest.
+In round terms, what I set up was a service that interacted with the AWS STS service to grant assumed roles to authenticated individuals.  Users were authenticated by that service using SSH keys.  SSH keys were a great mechanism for a number of reasons.  First they were already in use for both shell and Github access.  They're also a pretty tough nut to crack.  OpenSSH has been around for a long time, and to date, if there's a zero-day, it's usually in some 3rd party's 'improvement' on OpenSSH, not in the protocol itself.
+
+OpenSSH also had the advantage of being *already installed* on every laptop in the organization.  Rolling your own can be fun, but it's even more fun to pick up something that already works, is battle tested to the nth degree, and can be counted on to be already installed.  
 
 Ok, ok, we had a service that authenticated and granted STS Creds.  Is that it?  Almost.  See, every AWS based library ever written automatically looks to the AWS metadata service to do it's thing.  It only uses env vars and potentially hardcoded credentials if this service is unavailable.
 
@@ -101,11 +103,11 @@ So Amazon hacked the DHCP Spec, and I'm about to demonstrate how I hacked the ha
 
 So what I needed to do was threefold:
 
-1. I needed authenticate my users in the proper fashion, granting them temporary STS credentials according to the IAM Role setup within AWS.
+1. I needed authenticate my users in the proper fashion, granting them temporary STS credentials according to the IAM Role setup within AWS.  This meant a remote service in AWS with the proper IAM roles to perform this task.
 
-2. Impersonate the metadata service so that I'm actualy authenticating to *my own* service in a secure fashion. (The base AWS metadata service is more or less wide open)
+2. Impersonate the metadata service so that I'm actualy authenticating to *my own* service in a secure fashion. (The base AWS metadata service is more or less wide open)  This meant a local service on the laptop that could identify the user of the laptop to the remote service above.
 
-3. Somehow make sure that *every AWS SDK Library Ever Written* hits *MY* service, not the real one, which it wouldn't be able to hit anyway, because it's a non-routable address that only works within AWS.
+3. Somehow make sure that *every AWS SDK Library Ever Written* hits *MY* service, not the real one, which it wouldn't be able to hit anyway, because it's a non-routable address that only works within AWS.  This meant some serious network black magic that I shuddered to contemplate.  It would be slick, but it could be seriously used for evil.
 
 ###  Authenticated STS Service
 
@@ -133,7 +135,7 @@ I never did work out which tools wanted a trailing slash, and which didn't.  Som
 
 As long as *something* answers on that IP and path with some AWS-ish looking output, you're good to go.
 
-So that's it.  There's just a little service that reaches out to the service listed above, gets it's information and spits it back in the way the AWS SDK expects it.
+So that's it.  There's just a little service that reaches out to the service listed above, gets it's information and spits it back in the way the AWS SDK expects it.  The AWS metadata service does more than just that, but that's the only part that I needed to reproduce for this project's needs.
 
 That's it?  Well, no, there's more. You have to get around the hard coded, unroutable IP address, cos you don't want to actually monkeypatch that AWS SDK code.  Trust me.  You don't.
 
@@ -141,7 +143,9 @@ That's it?  Well, no, there's more. You have to get around the hard coded, unrou
 
 In order to make the packets go where **I** tell them to go, rather than where they would normally go, you have to get down and dirty with the packet routing stack of your kernel.  This is not for the faint of heart, but once you've swam in those waters, it's also not so bad.  What makes it especially annoying is every kernel has it's own way of doing it.
 
-On Linux, you've got the mighty IPTables.  "Eew IPTables!" you cry?  Yup.  IPTables.  Seriously, I learned to write firewalls with *IPChains* which is what we used before IPTables, back when we would walk 20 miles each way to reach the compiler.  Uphill *both* ways.  In a snow storm.  Yes, I'm that old.  IPTables is an incredibly welcome change over the 'bad old days'.
+On Linux, you've got the mighty IPTables.  "Eew IPTables!" you cry?  Yup.  IPTables.  
+
+Seriously, I learned to write firewalls with *IPChains* which is what we used before IPTables, back when we would walk 20 miles each way to reach the compiler.  Uphill *both* ways.  In a snow storm.  Yes, I'm that old.  IPTables is an incredibly welcome change over the 'bad old days'.
 
 On a Mac, you've got 'PF', which stands for 'Packet Filter', which does more or less the same thing as IPTables.  Saying that 'PF is IPTables on a Mac' is sort of accurate, though it will annoy purists.  PF is a BSD tool, that happens to be on a Mac because MacOS is based on a version of BSD called 'Darwin'.  Darwin itself is based on a version of BSD called 'FreeBSD'.  This will become important shortly.
 
@@ -186,13 +190,32 @@ I also was hobbled by needing to pass it all to PF in a single block, and PF rea
 
 So, what we've done, is we've created an alias on the loopback, which tells the loopback it can listen to the message, and then we've redirected things that are out bound back around to the loopback.  Once they're inbound, PF will redirect them again as intended.  Whew.
 
+## Sudo and Userspace
+
+Now you know how to do it.  Making it work seamlessly is another trick.  This wouldn't be fun if there weren't some interesting gotcha's lurking in the shadows.
+
+The first one is, the 'network magic' that is PF or IPTables *must* be run as root or via sudo, but the rest of the system *cannot* be run as a privileged user.  The system had to simultaneously work in both realms.  Why?  I'll tell you.
+
+See, the network stuff is low level kernel stuff, so of course it requires root.  I explored having it happen on startup, to make it further invisible, magical and delightful for my users, but that was a no go.  In their infinite wisdom and paranoia, Tim Cook's engineers have decided that, while you can mess with PF if you have admin privileges once the system is booted, you can *not* diddle with it at boot time.  Not without entering recovery mode and seriously hacking around.  Yuck.
+
+Actually, I salute Apple for this annoying monkey wrench they tossed into my clever plans.  As I pointed out to several folks who thought having to type in your password all the time was a bit of a hassle: If I can do this with AWS's metadata services, what's to stop me from doing it with, say, the IP of your bank?  Jaws dropped.  Nice data scientists don't usually think in those terms.  I however, do.
+
+Yes, the network magic I just learned you has some serious potential for malfeasance.  IP addresses aren't like physical addresses- they're not aliases or labels for locations.  They're more like precise maps and gps guided intertial navigational directions to get somewhere.  The bits represented by the numbers in the IP address are literally the switches that get 'thrown' electronically to get your packets from A to B.  If I can mess with that, I can break the Internet- for you anyway, and ultimately, that's what you care about, right?
+
+So, that covers the network.  Mostly.  Another interesting tidbit is that network magic, once set, persists until unset, or the machine reboots.  That can cause some interesting errors, cos PF in particular does not like being set twice.  Annoying gotcha that came out in testing, but was resolved.  My code had to be smart enough to detect whether the network was bent, and unbend it before attempting to rebend it again.  Not a big deal when you expect to continuously prove your code works via testing.  Thus endeth the sermon.
+
+The local service part- the bit that authenticated to the remote service on the other hand, had to run as the user.  Why?  How else to identify the user?  Remember, the whole point of this exercise was to identify a user and grant him or her elevated permissions within our AWS stack.  Even if you give everyone same permission, you need to identify to *whom* you're giving that permission to.  Otherwise what's the point.
+
+By default, ssh keys are stored in ~/.ssh/ .  Well and good, but if you run it via sudo '~/' translates to '/root/', rather than '/home/(user)/' on Linux and '/Users/(user)/' on a Mac.  That's a problem, cos I wasn't going to suggest that data scientists set root keys and such.  Eew.
+
+So the tools had to run in userspace, and had to elevate their permissions at need to do the more wizardly stuff.  That was a neat problem.
+
+It cost me some grey hair, but eventually I realized that the best privilege elevation system was the one already built into the box itself.  I just worked out how to connect the streams to shell out to the native 'sudo' and I was in business.  Sudo, with it's timer, and it's retries and all is a surprisingly complex little beast.  Replacing all of that in code was... fugly.  Better to use the wheel I already had in place, rather than make a new one with more corners.  (Wheels aren't supposed to have corners.  That's the joke.)
 
 ## Conclusion
 
-So there we are.  I'm sick of talking in my head about this.  I'll come back after a break and clean up the prose some, and perhaps add some diagrams.
+So there we are.  Passwordless expiring, temporary authentication for AWS SDK's positively linked to user identities and enabled by IAM Roles.  Neat huh?
 
-It'd be awesome too if I can find the time to give you some example scripts, but that's for another day.
+The system worked pretty well.  As I reminded everyone continuously, it would probably never be perfect.  It's a hack of a hack, and as such, inherently unstable.  Whenever you use something in a manner it was not intended you're always going to run up against the limitations imposed by the original designer- who obviously was solving a different problem than you were.
 
-Until next time.
-
-Happy Hacking!
+If I had time, resources, and interest, I'd probably build these hacks into a notification area app that had nice blinking lights showing you the status of the local service and the network magic.  Who knows?  Could be I'll visit this problem again.  You know how to get a hold of me. 
