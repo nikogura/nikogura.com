@@ -284,7 +284,9 @@ If I cannot find a way, I will make one.
 ## Stitch Fix - San Francisco, CA
 2017 *Data Platform Engineer  Algorithms and Analytics Department*
 
-Here's where I made the Access and Identity system described above, and where I made the signed binary tool framework.  It's my most recent gig, so of course, my most exciting and up to date work on clouds and platform engineering happened here.
+Here's where I made the Access and Identity system described above, and where I made the signed binary tool framework.  It's where I learned AWS, Golang, and really started grokking the internals of the SSH protocol.
+
+This is where I worked out how to make self-updating tools.
 
 ## Apple - Cupertino, CA
 2015 - 2017  *Senior DevOps Engineer, iOS Systems  (Apple Pay)*
@@ -336,6 +338,10 @@ Blah blah blah.  It was a bank.  They were serious about protecting people's mon
 2006 - 2007  *Application Developer*
 
 I provided online troubleshooting for customers, and performed core development on the WebGUI CMS.
+
+We wrote *and maintained* a 200k+ line ModPerl CMS.  In Perl.  It's possible.  You just have to have discipline.
+
+The Perl compiler doesn't force any rules on you, so you have to make some for yourselves, and stick to them.  We did.
 
 ## Universal Talkware - Minneapolis, MN
 2000  *NOC Administer*
