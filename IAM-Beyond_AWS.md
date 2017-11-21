@@ -129,7 +129,7 @@ and sometimes:
 
         http://169.254.169.254/latest/meta-data/iam/security-credentials/fargle/
         
-I neved did work out which tools wanted a trailing slash, and which didn't.  Some simple testing showed that both variants were in play.  Sometimes, when presented with a fork in the road, you just take it.
+I never did work out which tools wanted a trailing slash, and which didn't.  Some simple testing showed that both variants were in play.  Sometimes, when presented with a fork in the road, you just take it.
 
 As long as *something* answers on that IP and path with some AWS-ish looking output, you're good to go.
 
