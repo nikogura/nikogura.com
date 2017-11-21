@@ -97,7 +97,7 @@ Ok, ok, this is some wild tech trivia, but why am I inflicting it on you, the ge
 
 So what they did was pick an IP in the middle of the private range, 169.254.169.254, and put a metadata service on it with all sorts of goodies for use by EC2 instances.  What's more, all AWS SDK's are hardcoded to look for information at this point, and if they find it, they'll seamlessly *do the right thing*.  
 
-## Hacking Hacks
+## Hacking the Hack
 
 So Amazon hacked the DHCP Spec, and I'm about to demonstrate how I hacked the hack, hence the title.  Note I'm using the term 'hack' in it's original sense, that of messing with a system and using it in a way it wasn't exactly intended to be used.  There's no maliciousness inherent in either their use, mine.  We're both just taking what is and using it in a new and creative manner.
 
