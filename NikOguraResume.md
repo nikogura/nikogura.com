@@ -211,6 +211,8 @@ It might not 'work' any more. It also might not be 'secure' any longer.  When th
 
 If all you want to do is pass audits.  Don't call me.  I'm just going to tick you off.  If you want to both *pass audits* and *be secure*, let's talk. 
 
+[Some more musings on TDD](TDD.md)
+
 ## Cloud Goodness
 I've flown through (wandered around in?) the big clouds such as OpenStack, VmWare, and AWS without hitting the rocks.  Am I a master?  Hardly.  Anyone who claims to be one might just be pulling your leg.
 
