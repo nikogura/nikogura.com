@@ -57,7 +57,7 @@ Absolute black magic that *just works* and requires zero code alteration of Amaz
 
 Code works the same locally as it does in the cloud.  No surprises.  That's what it's all about.
 
-Here's [how I did it](https://github.com/nikogura/docs/blob/master/IAM-Beyond_AWS.md)
+Here's how I did it: [IAM Beyond AWS](https://github.com/nikogura/docs/blob/master/IAM-Beyond_AWS.md)
 
 ## Invented a Self-Updating Signed Binary Tool Distribution and Execution Framework
 It's used for distributing and running signed binaries on user laptops, in cloud instances and docker containers.  It's always up to date, works on and offline, and best of all it *just works*.
