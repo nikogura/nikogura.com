@@ -159,7 +159,7 @@ Doing it on a Mac is harder.  Why?  Well, it turns out there are a lot of differ
 
 Turns out the authors of NetBSD and OpenBSD thought in a Linux like fashion, and thought it might be useful to have the packet filtering stuff work regardless.  I imagine they felt like I do, and thought that if you were savvy enough to tell the packets where to go, the packets aught to go where you told them to go.  I wish I could achieve the same with my kids.
 
-The authors of FreeBSD however, figured there was no reason for PF to redirect OUTBOUND packets.  Who would want to do that?  Hackers of AWS's Hack of the DHCP protocol, obviously, but I guess we can't fault them for not imagining *I* would come along some day.  Even my momma wasn't prepared for me.  The rest of the world didn't have a chance.
+The authors of FreeBSD however, figured there was no reason for PF to redirect OUTBOUND packets.  Who would want to do that?  Hackers of AWS's Hack of the DHCP protocol, obviously, but I guess we can't fault them for not imagining *I* would come along some day.  Mom wasn't exactly prepared for my arrival either.  The rest of the world didn't have a chance.
 
 So, remember I said that MacOS is based on Darwin, which is itself based on FreeBSD.  It turned out that this was critical CS trivia to remember, because all the guides I found out on the interwebs about doing what I wanted to do were written for the NetBSD or OpenBSD versions of PF, and their advice did not work on a Mac.  Phooey.
 
