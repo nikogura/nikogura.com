@@ -222,10 +222,20 @@ What do you want to do?  Make stuff in clouds?  We can do that.  Wanna make clou
 
 What kind of cloud do you want to whip up?  I'll make you one that'll register as a Category 5, but without the whole 'flooding' and 'backed up sewage' parts.  Eew.
 
+In fact, here's a little gem I keep on my keychain.  Want to create a full Open Stack Liberty cloud from nothing with a single script?  [Open Stack Liberty Installer](https://github.com/nikogura/stackutils/blob/master/bin/stackinit)  
+
+Now that's intended to work with [boxinit.py](https://github.com/nikogura/stackutils/blob/master/boxinit.py)
+
+The directions are here: [https://github.com/nikogura/stackutils](https://github.com/nikogura/stackutils)
+
+Granted, that's a little dated.  Open Stack Liberty is pretty old school at this point.  It will get you an idea of how I like to roll though.  Enjoy.
+
 ## Containers 'n Stuff
 Been there, done that.  I wrote something funky to do local container orchestration for Apple.  This was before Docker Compose was really stable.  Now I use Docker's version, cos it's public and awesome.  
 
 I've written tools to build container's locally, and deploy them to the cloud.  Piece of cake.  You can rapidly prototype locally, and deploy in a snap.  Isn't that what this is all about? 
+
+Here's an example.  [https://github.com/nikogura/boxpile](https://github.com/nikogura/boxpile)  That's basically 'docker compose' written in java, and using Chef to create the containers.  Dear gods why would I attempt such a thing?  Well, we couldn't get buy in on replacing *everything* at once with Docker, so I had to come up with a way to demonstrate that doing X 'in docker' would be 'just as good'.  So I did.  Full end to end integration testing of the 'real code', configured the way it would have been 'for real' in the datacenter using the Puppet Modules and later Chef Recipes that were in use 'for real'.  Worked too.
 
 ## Making Stuff Work
 I think of a hacker as someone who can pop the hood and fiddle around inside- make it go, stop, or do something unexpectedly wonderful.  Someone who is entirely unintimidated by not knowing something, and who's eminently comfortable digging in and figuring it out.
