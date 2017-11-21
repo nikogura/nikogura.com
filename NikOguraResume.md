@@ -162,6 +162,12 @@ I've written curriculum for courses in Test Driven Development, Application Secu
 
 I've been a coach for public speaking and performance, was an instructor for leadership, taught both elementary and secondary classes, and was even a wildlife educator at the San Antonio Zoo in a past life.
 
+Things I can do are great, but it's really all about what I can help others achieve.  See, I don't scale.  There are only so many hours in the day.  But if I tell two people, and they tell two people, and so on and so forth, we have a whole revolution on our hands.
+
+One of my kung fu teachers used to demonstrate the most amazing magical abilities and leave the audience dumbstruck.  Then he'd ask "Pretty cool, huh?".  There was never any hesitation.  "Yes!  Amazing!"
+
+Then he'd say "No.  It's only cool if **you** can do it.".  Need I say more?
+
 ## Computer Languages (To Date)
 
 Computer languages are like brushes to a painter.  Which is my favorite?  Favorite for what?  They're all wonderful in some way, and they're all miserable in some way.  You try to use the right tool for the right job and not get dinged too much by the rough edges.
