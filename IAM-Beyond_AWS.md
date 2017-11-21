@@ -131,9 +131,9 @@ and sometimes:
         
 I neved did work out which tools wanted a trailing slash, and which didn't.  Some simple testing showed that both variants were in play.  Sometimes, when presented with a fork in the road, you just take it.
 
-As long as *something* answers on that IP and path with some AWS looking creds of the proper format, (try it yourself) you're good to go.
+As long as *something* answers on that IP and path with some AWS-ish looking output, you're good to go.
 
-So that's it.  There's just a little service that reaches out to the Service listed [above](#authenticated-sts-service), gets it's information and spits it back in the way the AWS SDK expects it.
+So that's it.  There's just a little service that reaches out to the service listed above, gets it's information and spits it back in the way the AWS SDK expects it.
 
 That's it?  Well, no, there's more. You have to get around the hard coded, unroutable IP address, cos you don't want to actually monkeypatch that AWS SDK code.  Trust me.  You don't.
 
