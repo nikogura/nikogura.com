@@ -316,7 +316,9 @@ While there I shepherded multiple applications from proprietary systems to fully
 
 I designed and taught internal training curriculum for the technology, disciplines, and cultural concepts that come under the heading of DevOps.
 
-I wasn't there long.  I would have happily stayed, but Apple called and sunny California beckoned.  Can you blame me?  I never want to see ice again outside of a glass or on a distant mountain top.  *Brr.*
+I wasn't there long.  I would have happily stayed, but Apple called and sunny California beckoned.  Can you blame me?  
+
+Ice in a glass or on a distant mountain is as close as I ever want to be again.  *Brr.*
 
 ## Wells Fargo - Maple Grove, MN
 2014 *Sr. Software Engineer*
