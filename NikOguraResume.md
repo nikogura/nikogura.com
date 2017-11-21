@@ -85,6 +85,8 @@ Applications, Load Balancers, Firewalls, you name it.  Not only can it be manage
  It's not a model I'd suggest repeating.  There were way too many moving parts.  Building docker containers with Chef Recipies and Puppet Modules is kind of icky to even think about, but it worked.
  
  In this case we needed to prototype the 'real' applications locally, as the real running instances were all precious snowflakes that nobody could reproduce.  Taking what was running 'for real' and making it build us ephemeral local models for testing was the way to go.
+ 
+ Here's a sanitized and generalized example of how I did it:  [https://github.com/nikogura/boxpile](https://github.com/nikogura/boxpile)  Nowadays, I'd just use 'Docker Compose'.
 
 ## Built Static Code Analysis Tools for Puppet Modules
  There were no tools to do SCA of Puppet modules for GRC (Governance, Risk- Management, and Compliance).  So I made some.
@@ -237,7 +239,9 @@ Been there, done that.  I wrote something funky to do local container orchestrat
 
 I've written tools to build container's locally, and deploy them to the cloud.  Piece of cake.  You can rapidly prototype locally, and deploy in a snap.  Isn't that what this is all about? 
 
-Here's an example.  [https://github.com/nikogura/boxpile](https://github.com/nikogura/boxpile)  That's basically 'docker compose' written in java, and using Chef to create the containers.  Dear gods why would I attempt such a thing?  Well, we couldn't get buy in on replacing *everything* at once with Docker, so I had to come up with a way to demonstrate that doing X 'in docker' would be 'just as good'.  So I did.  Full end to end integration testing of the 'real code', configured the way it would have been 'for real' in the datacenter using the Puppet Modules and later Chef Recipes that were in use 'for real'.  Worked too.
+Here's an example.  [https://github.com/nikogura/boxpile](https://github.com/nikogura/boxpile)  That's basically 'docker compose' written in java, and using Chef to create the containers.  Dear gods why would I attempt such a thing?  Well, we couldn't get buy in on replacing *everything* at once with Docker, so I had to come up with a way to demonstrate that doing X 'in docker' would be 'just as good'.  So I did.  
+
+Full end to end integration testing of the 'real code', configured the way it would have been 'for real' in the datacenter using the Puppet Modules and later Chef Recipes that were in use 'for real'.  Worked too.
 
 ## Making Stuff Work
 I think of a hacker as someone who can pop the hood and fiddle around inside- make it go, stop, or do something unexpectedly wonderful.  Someone who is entirely unintimidated by not knowing something, and who's eminently comfortable digging in and figuring it out.
