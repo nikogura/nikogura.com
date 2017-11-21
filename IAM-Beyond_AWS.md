@@ -111,7 +111,7 @@ So what I needed to do was threefold:
 
 This part was easy.  Look at any AWS SDK in the STS section.  This has to be a service in my VPC that has the power to grant roles.
 
-I based authentication based on asymmetric crypto keys that were already in use on everybody's laptops- SSH keys that people already had in place.  Basically I worked out how SSH uses the keys to authenticate, and duplicated that mechanism in code.  If you were you demonstrably enough for SSH, then you were you enough for the system.
+I based authentication based on asymmetric crypto keys that were already in use on everybody's laptops- SSH keys that people already had in place.  Basically I worked out how SSH uses the keys to authenticate, and duplicated that mechanism in code.  If you could prove you're you well enough for SSH, well, thats good enough for me.
 
 ### Impersonate the AWS Metadata service
 
@@ -129,7 +129,9 @@ and sometimes:
 
         http://169.254.169.254/latest/meta-data/iam/security-credentials/fargle/
         
-If *something* answers on that IP and path with some AWS looking creds of the proper format, (try it yourself) you're good to go.
+I neved did work out which tools wanted a trailing slash, and which didn't.  Some simple testing showed that both variants were in play.  Sometimes, when presented with a fork in the road, you just take it.
+
+As long as *something* answers on that IP and path with some AWS looking creds of the proper format, (try it yourself) you're good to go.
 
 So that's it.  There's just a little service that reaches out to the Service listed [above](#authenticated-sts-service), gets it's information and spits it back in the way the AWS SDK expects it.
 
