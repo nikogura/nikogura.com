@@ -140,7 +140,7 @@ GUI programming? Done it.  My strengths run to the working rather than the fancy
 
 # Skills
 
-[Communications](#communications)
+[Communications and Teaching](#communications-and-teaching)
 
 [Computer Languages (To Date)](#computer-languages-to-date)
 
