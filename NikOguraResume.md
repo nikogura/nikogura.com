@@ -50,7 +50,7 @@ It's the means by which an entire department of Data Scientists and Engineers co
 
 The rest of the company used a 3rd party SSO offering.  The 3rd party got breached and the SSO went down.  We stayed up.
 
-Here's how you can do it too:  [LDAP Made Easy](https://github.com/nikogura/nixtools/blob/master/LDAPMadeEasy.md)
+Here's how you can do it too:  [Access and Identity Made Easy](https://github.com/nikogura/nixtools/blob/master/AccessAndIdentityMadeEasy.md)
 
 ## Bent AWS's Metadata System to Enable IAM Authentication on Laptops
 I worked out how to bend AWS's metadata service so that we could leverage IAM Roles and STS credentials as if we were running in EC2, but actually do so with passwordless authentication on a laptop.  The idea to even try came from others, but I'm the one who worked out how to make it happen.
