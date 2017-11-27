@@ -136,7 +136,7 @@ Lets be clear here, I'm no right brained web designer.  I pride myself on functi
 
 Dynamic Javascript? check. Ajax? sure. Wacky cool Javascript Frameworks? I've used 'em, and even written them.
 
-GUI programming? Done it.  My strengths run to the working rather than the fancy, but I can make ypu pictures of buttons to push if thats your goal.
+GUI programming? Done it.  My strengths run to the working rather than the fancy, but I can make you pictures of buttons to push if thats your goal.
 
 # Skills
 
