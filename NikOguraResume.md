@@ -10,12 +10,16 @@
 
 *-- Hannibal of Carthage, when told there was no way he was bringing elephants through the Alps.*
 
+[*Reader's Digest Version of this Resume](NikOguraResume.docx)
+
 # Table of Contents
 [Table of Contents](#table-of-contents)
 
 [Interesting Things I've Done](#interesting-things-ive-done)
 
 [Skills](#skills)
+
+[Open Source Projects](#open-source-projects)
 
 [Employment History](#employment-history)
 
@@ -99,7 +103,7 @@ Applications, Load Balancers, Firewalls, you name it.  Not only can it be manage
  
  I got to delve into the world of Lexers, Parsers, Tokens, and language processing- all that wild stuff.  It was a blast. 
 
-## Invented an Encryption Key Management and Delivery System
+## Wrote US Bank's Encryption Key Management and Delivery System
  The company bought a PKI, and it sucked.  The parts didn't talk to each other.  It couldn't deliver the keys.  Keys were being left on shared drives and pasted into group emails.  *Ouch.*
 
 So I worked up a system to tie together components from multiple sources together and automate deployments.  It allowed one button delivery of encryption keys to multiple operating systems across multiple network tiers.  
@@ -109,7 +113,7 @@ It had a friendly user interface allowed non-technical users in multiple countri
 What's even slicker is I taught myself Java to do it.  From what I hear, they're still using it today.  I don't know whether I should be proud of that or scared- it was, after all my first Java app.  I'm sure they've polished off it's rough edges by now.  I hope.
 
 ### Designed a Credit Card PAN Encryption and Tokenization System
-It was scalable.  It was highly available.   It encrypted and masked credit card numbers for a Merchant Acquiring systems (Credit Card Authorization and Settlement).  
+It was scalable.  It was highly available.  It was downright nasty to try to exploit.  It encrypted and masked credit card numbers for a Merchant Acquiring systems (Credit Card Authorization and Settlement).  
 
 I also built and maintained the secure management tools for same.  We had to hide the numbers, sure, but this was actual payment processing inside the financial sector.  *Someone*- the right someone, and only the right someone internally had to be able to see the numbers, but no one else.
 
@@ -276,6 +280,17 @@ What do you need to do?  What are the pain points?  I reckon that, with a little
 
 If I cannot find a way, I will make one.
 
+# Open Source Projects:
+
+* *CGI::Lazy* A Perl Web Development Framework.  http://search.cpan.org/~vayde/CGI-Lazy-1.10/lib/CGI/Lazy.pm
+
+* *Selenium4j* A Java Library for translating HTML format Selenium tests into JUnit4 at runtime. https://github.com/nextinterfaces/selenium4j
+		
+* *gomason* A tool for doing clean-room CI testing locally.  https://github.com/nikogura/gomason
+	
+* *go-postgres-testdb* A library for managing ephemeral test databases. https://github.com/stitchfix/go-postgres-testdb
+
+* *python-ldap-test* A testing tool Python implementing an ephemeral in-memory LDAP server https://github.com/zoldar/python-ldap-test
 # Employment History
 
 [Stitch Fix - San Francisco, CA](#stitch-fix---san-francisco-ca)
