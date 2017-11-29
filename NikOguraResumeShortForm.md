@@ -188,11 +188,11 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 #### Universal Talkware - Minneapolis, MN - NOC Administer - 2000
 
-* I handled internal tools development, built the NOC, and even supported the physical plant.  Dumpster diving for scrap metal for use in patching the server racks was a regular passtime.
+* I handled internal tools development, built the NOC, and even supported the physical plant.
 
 #### Hessian & McKasy - Minneapolis, MN - IT Administrator - 1999 ~ 2000 
 
-* I started out as the help desk, and ended up as the head of IT for a 40 seat Law Firm.  That was over the Y2K change over, which, since we did our due diligence, was a total non-event.
+* I started out as the help desk, and ended up as the head of IT for a 40 seat Law Firm. 
 
 #### United Martial Arts - Plymouth MN - CEO and Head Instructor - 1998 ~ 2007
 
