@@ -201,9 +201,11 @@ I've run set up and maintained BIND, and can both *cause* and *resolve* DNS issu
 
 IPTables and PF (Packet Filter) do my bidding.  The packets go where *I* tell them to go.
 
-I've built IPSec tunnels, and have unwound the Linux networking stack with it's network namespaces to the point where I could run OpenStack *inside* of OpenStack and have it all mostly work.  Why?  Long story.  I'm still shaking from the experience.  I did however come away with a one-file installer for a private OpenStack cloud that I keep on my key chain.  Want an instant OpenStack?.
+I've built IPSec tunnels, and have unwound the Linux networking stack with it's network namespaces to the point where I could run OpenStack *inside* of OpenStack and have it all mostly work.  Why?  Long story.  I'm still shaking from the experience.  I did however come away with a one-file installer for a private OpenStack cloud that I keep on my key chain.  Want an instant OpenStack?.  [One Script OpenStack Installer](OpenStackLibertyInstaller.md)
 
 I get load balancers and the routing of traffic.  I've used Open Source ones such as Apache, Nginx and HAProxy, and some of the ones with price tags such as F5 BigIP, Netscaler, AWS ELB.  I can cross and uncross the streams at will.
+
+Here's an example of doing some really nasty and wonderful things to a laptop's networking stack: [IAM Beyond AWS](IAM-Beyond_AWS.md)
 
 ## Quality, Security, and Testing
 I'm a big believer in Testing, and Test Driven Development.  Actually that's not quite right.  I'm actually a big fan of **Integrity**, as a person, as a coder, and as a citizen of the universe.  
@@ -215,6 +217,16 @@ We can't begin to talk about whether something is good or bad, secure or insecur
 Once we can establish what it is, we can start to describe it's behavior, and the interface contract between the thing and it's users.  That's really what **Testing** is: proving to ourselves and any other interested parties that it does what we expect.
 
 Moreover, you should never take my word *(or anyone else's)* for it.  Perform the experiment yourself and observe the result.  That's what science is.  They do call it *Computer Science* for a reason.  
+
+Some test supporting work:
+
+* [gomason](https://github.com/nikogura/gomason) A tool for doing clean-room CI testing locally.  
+  
+* [go-postgres-testdb](https://github.com/stitchfix/go-postgres-testdb) A library for managing ephemeral test databases. 
+  
+* [python-ldap-test](https://github.com/zoldar/python-ldap-test) A testing tool Python implementing an ephemeral in-memory LDAP server
+  
+* [Selenium4j](https://github.com/nextinterfaces/selenium4j) A Java Library for translating HTML format Selenium tests into JUnit4 at runtime. 
 
 Are tests enough? Depends on the tests, and the circumstances.  Write crap tests and get smelly results.  Garbage in, garbage out. No shiny tool can change that.
 
@@ -241,11 +253,7 @@ What do you want to do?  Make stuff in clouds?  We can do that.  Wanna make clou
 
 What kind of cloud do you want to whip up?  I'll make you one that'll register as a Category 5, but without the whole 'flooding' and 'backed up sewage' parts.  Eew.
 
-In fact, here's a little gem I keep on my keychain.  Want to create a full Open Stack Liberty cloud from nothing with a single script?  [Open Stack Liberty Installer](https://github.com/nikogura/stackutils/blob/master/bin/stackinit)  
-
-Now that's intended to work with [boxinit.py](https://github.com/nikogura/stackutils/blob/master/boxinit.py)
-
-The directions are here: [https://github.com/nikogura/stackutils](https://github.com/nikogura/stackutils)
+In fact, here's a little gem I keep on my keychain.  Want to create a full Open Stack Liberty cloud from nothing with a single script? [One Script OpenStack Installer](OpenStackLibertyInstaller.md)
 
 Granted, that's a little dated.  Open Stack Liberty is pretty old school at this point.  It will get you an idea of how I like to roll though.  Enjoy.  
 
