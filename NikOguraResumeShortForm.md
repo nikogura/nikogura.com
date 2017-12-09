@@ -61,7 +61,9 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 # Profiles
 
-*Github* [https://github.com/nikogura](https://github.com/nikogura)
+*Home Page* [https://nikogura.github.io](https://nikogura.github.io)
+
+*Code Repos* [https://github.com/nikogura](https://github.com/nikogura)
 
 *LinkedIn* [https://www.linkedin.com/in/nik-ogura-44373492/](https://www.linkedin.com/in/nik-ogura-44373492/)
 
