@@ -27,19 +27,19 @@
 
 # Interesting Things I've Done
 
-[Stitch Fix's Algorithms Department's Access and Identity System](#stitch-fix's-algorithms-department's-access-and-identity-system)
+[Stitch Fix's Algorithms Department's Access and Identity System](#stitch-fixs-algorithms-departments-access-and-identity-system)
 
-[Bent AWS's Metadata System to Enable IAM Authentication on Laptops](#bent-aws's-metadata-system-to-enable-iam-authentication-on-laptops)
+[Bent AWS's Metadata System to Enable IAM Authentication on Laptops](#bent-awss-metadata-system-to-enable-iam-authentication-on-laptops)
 
 [Invented a Self Updating Signed Binary Tool Distribution and Execution Framework](#invented-a-self-updating-signed-binary-tool-distribution-and-execution-framework)
 
-[Dreamed Up Apple Pay's Test Driven Cloud Based CI/CD Pipeline](#dreamed-up-apple-pay's-test-driven-cloud-based-ci/cd-pipeline)
+[Dreamed Up Apple Pay's Test Driven Cloud Based CI/CD Pipeline](#dreamed-up-apple-pays-test-driven-cloud-based-ci/cd-pipeline)
 
 [Made an Application Stack Prototyping and Orchestration Suite](#made-an-application-stack-prototyping-and-orchestration-suite)
 
 [Built Static Code Analysis Tools for Puppet Modules](#built-static-code-analysis-tools-for-puppet-modules)
 
-[Wrote US Bank's Encryption Key Management and Delivery System](#wrote-us-bank's-encryption-key-management-and-delivery-system)
+[Wrote US Bank's Encryption Key Management and Delivery System](#wrote-us-banks-encryption-key-management-and-delivery-system)
 
 [Designed a Credit Card PAN Encryption and Tokenization System](#designed-a-credit-card-pan-encryption-and-tokenization-system)
 
@@ -47,9 +47,9 @@
 
 [Built and Maintained Web Application Firewalls](#built-and-maintained-web-application-firewalls)
 
-[Brought a Whole Business Line's Tech Stack into PCI Compliance](#brought-a-whole-business-line's-tech-stack-into-pci-compliance)
+[Brought a Whole Business Line's Tech Stack into PCI Compliance](#brought-a-whole-business-lines-tech-stack-into-pci-compliance)
 
-[More UI's Than You Can Shake a Stick At](#more-ui's-than-you-can-shake-a-stick-at)
+[More UI's Than You Can Shake a Stick At](#more-uis-than-you-can-shake-a-stick-at)
 
 ## Stitch Fix's Algorithms Department's Access and Identity System 
 It's the means by which an entire department of Data Scientists and Engineers connected to every system, instance, and container in the stack.  We wanted an an independent system that could funciton autonomously.  The whole access and identity lifecycle- onboarding, offboarding, partner connections, and a light weight roaming profile for any user on any system in a dynamic auto scaling cloud environment.  
@@ -154,7 +154,7 @@ GUI programming? Done it.  My strengths run to the working rather than the fancy
 
 [Networks and Traffic Management](#networks-and-traffic-management)
 
-[Quality, Security, and Testing](#quality,-security,-and-testing)
+[Quality, Security, and Testing](#quality-security-and-testing)
 
 [Cloud Goodness](#cloud-goodness)
 
