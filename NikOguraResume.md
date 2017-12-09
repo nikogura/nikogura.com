@@ -13,7 +13,6 @@
 [*Reader's Digest Version of this Resume*](https://github.com/nikogura/nikogura.github.io/blob/master/NikOguraResume.docx?raw=true)
 
 # Table of Contents
-[Table of Contents](#table-of-contents)
 
 [Interesting Things I've Done](#interesting-things-i've-done)
 
