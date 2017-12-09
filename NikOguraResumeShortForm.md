@@ -61,7 +61,7 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 # Profiles
 
-*Home Page* [https://nikogura.github.io](https://nikogura.github.io)
+*Home Page* [http://nikogura.com](http://nikogura.com)
 
 *Code Repos* [https://github.com/nikogura](https://github.com/nikogura)
 

@@ -296,7 +296,7 @@ If I cannot find a way, I will make one.
 		
 # Websites
 
-[Home Page](https://nikogura.github.io)
+[Home Page](http://nikogura.com)
 
 [Code Repos](https://github.com/nikogura)
 
