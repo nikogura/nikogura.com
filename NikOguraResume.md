@@ -33,13 +33,13 @@
 
 [Invented a Self Updating Signed Binary Tool Distribution and Execution Framework](#invented-a-self-updating-signed-binary-tool-distribution-and-execution-framework)
 
-[Dreamed Up Apple Pay's Test Driven Cloud Based CI/CD Pipeline](#dreamed-up-apple-pays-test-driven-cloud-based-ci/cd-pipeline)
+[Apple Pay's Test Driven Cloud Based CI/CD Pipeline](#apple-pays-test-driven-cloud-based-cicd-pipeline)
 
 [Made an Application Stack Prototyping and Orchestration Suite](#made-an-application-stack-prototyping-and-orchestration-suite)
 
 [Built Static Code Analysis Tools for Puppet Modules](#built-static-code-analysis-tools-for-puppet-modules)
 
-[Wrote US Bank's Encryption Key Management and Delivery System](#wrote-us-banks-encryption-key-management-and-delivery-system)
+[US Bank's Encryption Key Management and Delivery System](#wrote-us-banks-encryption-key-management-and-delivery-system)
 
 [Designed a Credit Card PAN Encryption and Tokenization System](#designed-a-credit-card-pan-encryption-and-tokenization-system)
 
