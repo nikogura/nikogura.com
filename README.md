@@ -1,5 +1,3 @@
-# Thoughts, Opinions, and General Documentation
-
 Herein you'll find (hopefully) interesting tidbits that might be of use to you, and it's a good place for me to store my various rantings.
 
 You'll also find my resume- both a *longreads* style online form and the more traditional condensed version.
@@ -14,7 +12,7 @@ So here it is.  I'm not giving away any sort of private information.  Everyone w
 
 Sorry about that.  I can't resist a good story, even if the cashier at Chevron really doesn't want to hear about asymmetric encryption right now...
 
-## Contents
+# Contents
 
 * [Nik's Online Resume](NikOguraResume.md) My resume.  Online.  In an online format for the world to see.  You're welcome.
 
