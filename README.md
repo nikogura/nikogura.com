@@ -14,27 +14,27 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 # Contents
 
-* [Nik's Online Resume](NikOguraResume.md) My resume.  Online.  In an online format for the world to see.  You're welcome.
+* [Nik's Online Resume](NikOguraResume.md) *My resume.  Online.  In an online format for the world to see.  You're welcome.*
 
-* [Nik's Condensed Resume](https://github.com/nikogura/nikogura.github.io/blob/master/NikOguraResume.docx?raw=true)  In case you don't want to read the fun one.
+* [Nik's Condensed Resume](https://github.com/nikogura/nikogura.github.io/blob/master/NikOguraResume.docx?raw=true)  *In case you don't want to read the fun one.*
 
-* [TDD](TDD.md) Test Driven Development Manifesto
+* [TDD](TDD.md) *Test Driven Development Manifesto*
 
-* [Python](Python.md) Python Development Tips
+* [Python](Python.md) *Python Development Tips*
 
-* [LocalEnv](LocalEnv.md) Trick for syncing a CLI environment with your IDE
+* [LocalEnv](LocalEnv.md) *Trick for syncing a CLI environment with your IDE*
 
-* [IAM Beyond AWS](IAM-Beyond_AWS.md)  Something I did recently that's both nasty and beautiful, but most of all useful!
+* [IAM Beyond AWS](IAM-Beyond_AWS.md) *Something I did recently that's both nasty and beautiful, but most of all useful!*
 
-* [Distributing Java Binaries via Homebrew](https://github.com/nikogura/homebrew-formula-plugin)  A Maven plugin for writing homebrew formulae from templates.  Useful if you want to install executable jars via Homebrew and have them *just work* like any other Homebrew-installed tool.
+* [Distributing Java Binaries via Homebrew](https://github.com/nikogura/homebrew-formula-plugin)  *A Maven plugin for writing homebrew formulae from templates.  Useful if you want to install executable jars via Homebrew and have them **just work** like any other Homebrew-installed tool.*
 
-* [One Script OpenStack Installer](OpenStackLibertyInstaller.md)  The hardest parts of OpenStack are 1: setting it up and 2: upgrading it.  Here's a way I solved problem #1 and paved the way to handle #2.
+* [One Script OpenStack Installer](OpenStackLibertyInstaller.md)  *The hardest parts of OpenStack are 1: setting it up and 2: upgrading it.  Here's a way I solved problem #1 and paved the way to handle #2.*
 
-* [Using CircleCI as if it was a Maven Repo](CircleCIMaven.md)  Using CircleCI?  Don't have a private Maven repo?  Check this out.
+* [Using CircleCI as if it was a Maven Repo](CircleCIMaven.md)  *Using CircleCI?  Don't have a private Maven repo?  Check this out.*
 
-* [Self Updating Binary Tools](SelfUpdatingTools.md)) Never ask a user to update to the latest version again.  Pretty cool huh?
+* [Self Updating Binary Tools](SelfUpdatingTools.md) *Never ask your users to update to the latest version again.*
 
-* [Gomason CI/CD in your pocket](https://github.com/nikogura/gomason) Want to test locally?  Build, Sign, and publish binaries?  Here you go.
+* [Gomason CI/CD in your pocket](https://github.com/nikogura/gomason) *Want to test locally?  Build, Sign, and publish binaries?  Here you go.*
 
 
 
