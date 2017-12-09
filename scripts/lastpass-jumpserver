@@ -1,0 +1,25 @@
+# Functions for automating logins to a jumpserver when I'm not allowed to use keys, and don't even have a homedir
+
+# queryies lastpass for the password from 'somesite', loads it into the clipboard
+# lpass daemon must be running
+# and then sshes as user to host with that password
+function gojp {
+    SCT=$(lpass show somesite | grep Pass | cut -d ' ' -f2)
+    echo $SCT | pbcopy
+    sshpass -p $SCT ssh user@host
+    unset SCT
+
+}
+
+# queryies lastpass for the password from 'gcsapps'
+# lpass daemon must be running
+# copies file to host as user in /tmp/<filename>
+function scpjp {
+    SCT=$(lpass show somesite | grep Pass | cut -d ' ' -f2)
+    sshpass -p $SCT scp $1 user@host:/tmp/$1
+    unset SCT
+
+}
+
+#exports function to remote shell and then starts an interactive shell
+#sshpass -p password ssh -t user@host "function foo() { echo 'password'; }; export -f foo; bash -l"
