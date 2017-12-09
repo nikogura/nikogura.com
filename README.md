@@ -17,7 +17,7 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 # Contents
 
-* [Nik's Online Resume](NikOguraResume.md) *My resume.  Online.  In an online format for the world to see.  You're welcome.*
+* [Nik's Online Resume](NikOguraResume.md) *My resume.  Online.  For the world to see.  You're welcome.*
 
 * [Nik's Condensed Resume](https://github.com/nikogura/nikogura.github.io/blob/master/NikOguraResume.docx?raw=true)  *In case you don't want to read the fun one.*
 
