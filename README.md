@@ -1,3 +1,6 @@
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="shifu-small.jpg">
+</head>
 Herein you'll find (hopefully) interesting tidbits that might be of use to you, and it's a good place for me to store my various rantings.
 
 You'll also find my resume- both a *longreads* style online form and the more traditional condensed version.
