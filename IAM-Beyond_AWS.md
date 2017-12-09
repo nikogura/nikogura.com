@@ -24,7 +24,7 @@ Even if you enjoy the philosophical exercise of imagining how a system can be br
 
 So a good system has to be secure, and relatively painless.  Ideally people will just do the right thing- without necessarily even knowing what the right thing is.  That's what we call *enablement*, and is what toolsmithing is all about.  
 
-We toolsmits don't really do anything useful.  Our job is to keep the painters painting.  It's the things they do with the brushes we give tham that makes the dough and wins the fame.
+We toolsmiths don't really do anything useful.  Our job is to keep the painters painting.  It's the things they do with the brushes we give tham that makes the dough and wins the fame.
 
 You don't get into Infrastructure if you want to be visible.  The only visible things here are the failures.  Blech.
 
