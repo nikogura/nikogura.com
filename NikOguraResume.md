@@ -107,7 +107,7 @@ Applications, Load Balancers, Firewalls, you name it.  Not only can it be manage
  
  I got to delve into the world of Lexers, Parsers, Tokens, and language processing- all that wild stuff.  It was a blast. 
 
-## Wrote US Bank's Encryption Key Management and Delivery System
+## US Bank's Encryption Key Management and Delivery System
  The company bought a PKI, and it sucked.  The parts didn't talk to each other.  It couldn't deliver the keys.  Keys were being left on shared drives and pasted into group emails.  *Ouch.*
 
 So I worked up a system to tie together components from multiple sources together and automate deployments.  It allowed one button delivery of encryption keys to multiple operating systems across multiple network tiers.  
