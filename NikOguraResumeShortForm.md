@@ -1,6 +1,8 @@
 # Nik Ogura
 
-### Principal Software Engineer : Platform - Infrastructure - Security
+### Principal Software Engineer 
+
+*Platform - Tools - Infrastructure - Security*
 
 ### San Francisco, CA
 
@@ -10,11 +12,11 @@
 
 *-- Hannibal of Carthage, when told there was no way he was bringing elephants through the Alps.*
 
-# Highlights of Technical Career
+# Interesting Accomplishments
  
 #### Stitch Fix Algorithms Access and Identity System
  
- It was the means by which an entire department of data scientists and engineers connected to every system, instance, and container in the tech stack.  Virtual machines, containers, in the cloud, locally.  One single, unified, independent access system.
+ It was the means by which the entire department of data scientists and engineers connected to every system, instance, and container in the tech stack.  Virtual machines, containers, in the cloud, locally.  One single, unified, independent access system.
  
  *Components:* **OpenLDAP**, **OpenVPN**, **OpenSSH**, **SSSD**, **PAM**, **Python**, **Go**
 
@@ -43,7 +45,7 @@ There were no tools to do SCA of Puppet modules for GRC (Governance, Risk- Manag
 *Components:* **Java**, **Spring MVC**, **Spring Security**, **jQuery**, **jQueryUI**, **BouncyCastle**, **Jackson**, **Apache Commons**, **StringTemplate**, **SQLite**, **ProtectApp**
 
 #### Credit Card PAN Encryption and Tokenization System
-It was scalable.  It was highly available.  It was downright nasty to try to exploit.  It encrypted and masked credit card numbers for a Merchant Acquiring systems (Credit Card Authorization and Settlement).  
+It encrypted/decrypted and masked credit card numbers for a Merchant Acquiring systems (Credit Card Authorization and Settlement).  
 
 *Components:* **Perl**, **C**, **Java**
 
@@ -51,7 +53,7 @@ It was scalable.  It was highly available.  It was downright nasty to try to exp
 
 *Components:* **Apache**, **Tomcat**, **Java**, **Perl**, **OpenSSL**, **libxml2**, **libxslt**, **MySQL**, **Git**, **Subversion**, **ModSecurity**,  **ModAuthVAS**, **Kerberos**, **ModJk**
 
-#### Built and Maintained US Bank's Web Application Firewalls
+#### US Bank's Web Application Firewalls
 I've designed, implemented, and maintained Web Application Firewalls for cross platform applications, some directly handling credit card PAN data.  
 
 *Components:* **Apache**, **ModSecurity**, **OWASP ModSecurity Core Ruleset**
@@ -101,15 +103,18 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 # Open Source Projects:
 
-* *CGI::Lazy* A Perl Web Development Framework.  http://search.cpan.org/~vayde/CGI-Lazy-1.10/lib/CGI/Lazy.pm
+* [gomason](https://github.com/nikogura/gomason) A tool for doing clean-room CI testing locally.  
 
-* *Selenium4j* A Java Library for translating HTML format Selenium tests into JUnit4 at runtime. https://github.com/nextinterfaces/selenium4j
-		
-* *gomason* A tool for doing clean-room CI testing locally.  https://github.com/nikogura/gomason
+* [Distributed Binary Toolkit](https://github.com/nikogura/dbt) A framework for authoring and using self-updating signed binaries. 
+
+* [go-postgres-testdb](https://github.com/stitchfix/go-postgres-testdb) A library for managing ephemeral test databases. 
+
+* [python-ldap-test](https://github.com/zoldar/python-ldap-test) A testing tool Python implementing an ephemeral in-memory LDAP server
+
+* [CGI::Lazy](http://search.cpan.org/~vayde/CGI-Lazy-1.10/lib/CGI/Lazy.pm) A Perl Web Development Framework.  
+
+* [Selenium4j](https://github.com/nextinterfaces/selenium4j) A Java Library for translating HTML format Selenium tests into JUnit4 at runtime. 
 	
-* *go-postgres-testdb* A library for managing ephemeral test databases. https://github.com/stitchfix/go-postgres-testdb
-
-* *python-ldap-test* A testing tool Python implementing an ephemeral in-memory LDAP server https://github.com/zoldar/python-ldap-test
 
 # Professional History
 
