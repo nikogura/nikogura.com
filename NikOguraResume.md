@@ -78,7 +78,7 @@ Here's how I did it: [Self Updating Binary Tools](SelfUpdatingTools.md)
 
 Here's a version you can use: [DBT- Distributed Binary Toolkit](https://github.com/nikogura/dbt)
 
-## Dreamed Up Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline
+## Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline
 Apple Pay and the systems behind activation of every Apple device in the world used it.  
 
 It worked pretty well, here and abroad.  I don't know how much of it they're still using.
