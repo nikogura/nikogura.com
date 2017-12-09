@@ -9,7 +9,7 @@ Why is my resume posted online?  Well, I got sick of traditonal CV's and such wh
 
 I though, you know what?  I explain these various experiences so often to various people, wouldn't it be great if I could just link to it?  Better yet, what about having my fascinating journey through technology in a format where I didn't have to try to squash it down to n pages?
 
-Joel Spolsky of 'Joel On Software' fame wrote that documentation that nobody reads is useless, and therefore you had to make it easy on your readers.  This is advice I've taken to heart, and I always try to follow it.  It's my job to entertain *and* inform.
+Joel Spolsky of [Joel On Software](https://www.joelonsoftware.com) fame wrote that documentation that nobody reads is useless, and therefore you had to make it easy on your readers.  This is advice I've taken to heart, and I always try to follow it.  To quote the late, great George Carlin, "My job is to entertain *and* inform."
 
 So here it is.  I'm not giving away any sort of private information.  Everyone within earshot of me when a particular point was brought up has probably heard the stories enough to repeat them by heart.  
 
