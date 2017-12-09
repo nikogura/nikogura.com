@@ -26,7 +26,7 @@
 
 # Interesting Things I've Done
 
-[Created an Independent Access and Identity System for Stitch Fix's Algorithms Department](#created-an-independent-access-and-identity-system-for-stitch-fix's-algorithms-department)
+[Stitch Fix's Algorithms Department's Access and Identity System](#ftitch-fix's-algorithms-department's-access-and-identity-system)
 
 [Bent AWS's Metadata System to Enable IAM Authentication on Laptops](#bent-aws's-metadata-system-to-enable-iam-authentication-on-laptops)
 
@@ -50,7 +50,7 @@
 
 [More UI's Than You Can Shake a Stick At](#more-ui's-than-you-can-shake-a-stick-at)
 
-## Created an Independent Access and Identity System for Stitch Fix's Algorithms Department 
+## Stitch Fix's Algorithms Department's Access and Identity System 
 It's the means by which an entire department of Data Scientists and Engineers connected to every system, instance, and container in the stack.  We wanted an an independent system that could funciton autonomously.  The whole access and identity lifecycle- onboarding, offboarding, partner connections, and a light weight roaming profile for any user on any system in a dynamic auto scaling cloud environment.  
 
 The rest of the company used a 3rd party SSO offering.  The 3rd party got breached and the SSO went down.  We stayed up.
