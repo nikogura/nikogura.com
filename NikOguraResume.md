@@ -45,7 +45,7 @@
 
 [Made LAMP Stacks Galore](#made-lamp-stacks-galore)
 
-[Built and Maintained Web Application Firewalls](#built-and-maintained-web-application-firewalls)
+[Built and Maintained US Bank's Web Application Firewalls](#built-and-maintained-us-banks-web-application-firewalls)
 
 [Brought a Whole Business Line's Tech Stack into PCI Compliance](#brought-a-whole-business-lines-tech-stack-into-pci-compliance)
 
@@ -128,8 +128,10 @@ The stack was modern, but ran on an ancient systems.  Their priesthood lovingly 
 
 I've done the same for Python, Gunicorn, Django and Nginx.  
 
-## Built and Maintained Web Application Firewalls
+## Built and Maintained US Bank's Web Application Firewalls
 I've designed, implemented, and maintained Web Application Firewalls for cross platform applications, some directly handling credit card PAN data.  
+
+Actually there were two of us.  The other was my boss at the time Eric Malone.  We handled the WAF's for the entirety of US Bank at the time.  It wasn't our role, but we did such a good job of managing our own, we kept being asked to bring other apps and teams onto our firewalls.  The WAF policy for all of US Bank at one time boiled down to 'Nik says so.'.  It worked, because I wasn't afraid to say 'no' when it needed to be said, and Eric backed me up with the upper levels of management.  
 
 We proved our compliance with PCI DSS and the OWASP Top Ten.  You can install firewalls off the shelf with the push of a button.  The trick is knowing enough about what is going on to tune the rulesets and educate the app developers to understand why the 'easy' and 'simple' construction they like to use is actually opening the system to attack.  
 
