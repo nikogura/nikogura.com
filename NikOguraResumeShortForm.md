@@ -12,46 +12,46 @@
 
 # Highlights of Technical Career
  
-#### Created the Access and Identity system for Stitch Fix Algorithms
+#### Stitch Fix Algorithms Access and Identity System
  
  It was the means by which an entire department of data scientists and engineers connected to every system, instance, and container in the tech stack.  Virtual machines, containers, in the cloud, locally.  One single, unified, independent access system.
  
  *Components:* **OpenLDAP**, **OpenVPN**, **OpenSSH**, **SSSD**, **PAM**, **Python**, **Go**
 
-#### Invented a Self-Updating Signed Binary Tool Distribution and Execution Framework
+#### Self-Updating Signed Binary Tool Distribution and Execution Framework
 It's used for distributing and running signed binaries on user laptops, in cloud instances and docker containers.  It's always up to date, works on and offline, and best of all it *just works*.
 
 *Components:* **Go** **Artifactory** **OpenPGP**
 
-#### Dreamed Up Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline
+#### Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline
 
 *Components:* **Chef**, **Java**, **Spring**, **Maven**, **OpenStack**, **Python**, **Ruby**, **GitHub**, **TeamCity**
 
-#### Made an Application Stack Prototyping and Orchestration Suite
+#### Application Stack Prototyping and Orchestration Suite
 Basically I wrote 'docker-compose', before what we now know of as 'docker-compose' was totally stable.
 		
 *Components:* **Java**, **Python**, **OpenStack**, **Docker**, **Netscaler**, **HPNA**
 	    
-#### Built Static Code Analysis Tools for Puppet Modules
+#### Static Code Analysis Tools for Puppet Modules
 There were no tools to do SCA of Puppet modules for GRC (Governance, Risk- Management, and Compliance).  So I made some.
 
 *Components:* **Java**, **Spring**, **Tomcat**, **Spring Security**, **Antlr**, **Ruby**, **GitHub**, **jQuery**, **Puppet**
 		
-#### Wrote US Bank's Encryption Key Management and Delivery System
+#### US Bank's Encryption Key Management and Delivery System
  A PKI was purchased, and it didn't do what we needed.  The parts didn't talk to each other.  It couldn't deliver the keys.  Manual key management was not working.
 
 *Components:* **Java**, **Spring MVC**, **Spring Security**, **jQuery**, **jQueryUI**, **BouncyCastle**, **Jackson**, **Apache Commons**, **StringTemplate**, **SQLite**, **ProtectApp**
 
-#### Designed a Credit Card PAN Encryption and Tokenization System
+#### Credit Card PAN Encryption and Tokenization System
 It was scalable.  It was highly available.  It was downright nasty to try to exploit.  It encrypted and masked credit card numbers for a Merchant Acquiring systems (Credit Card Authorization and Settlement).  
 
 *Components:* **Perl**, **C**, **Java**
 
-#### Created hardened LAMP stacks for PCI Compliant Credit Card Processing Applications
+#### Hardened LAMP stacks for PCI Compliant Credit Card Processing Applications
 
 *Components:* **Apache**, **Tomcat**, **Java**, **Perl**, **OpenSSL**, **libxml2**, **libxslt**, **MySQL**, **Git**, **Subversion**, **ModSecurity**,  **ModAuthVAS**, **Kerberos**, **ModJk**
 
-#### Built and Maintained Web Application Firewalls
+#### Built and Maintained US Bank's Web Application Firewalls
 I've designed, implemented, and maintained Web Application Firewalls for cross platform applications, some directly handling credit card PAN data.  
 
 *Components:* **Apache**, **ModSecurity**, **OWASP ModSecurity Core Ruleset**
