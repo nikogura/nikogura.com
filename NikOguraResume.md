@@ -27,7 +27,7 @@
 
 # Interesting Things I've Done
 
-[Stitch Fix's Algorithms Department's Access and Identity System](#ftitch-fix's-algorithms-department's-access-and-identity-system)
+[Stitch Fix's Algorithms Department's Access and Identity System](#stitch-fix's-algorithms-department's-access-and-identity-system)
 
 [Bent AWS's Metadata System to Enable IAM Authentication on Laptops](#bent-aws's-metadata-system-to-enable-iam-authentication-on-laptops)
 
