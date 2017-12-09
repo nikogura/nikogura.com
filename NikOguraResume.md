@@ -10,7 +10,7 @@
 
 *-- Hannibal of Carthage, when told there was no way he was bringing elephants through the Alps.*
 
-[*Reader's Digest Version of this Resume](https://github.com/nikogura/nikogura.github.io/blob/master/NikOguraResume.docx?raw=true)
+[*Reader's Digest Version of this Resume*](https://github.com/nikogura/nikogura.github.io/blob/master/NikOguraResume.docx?raw=true)
 
 # Table of Contents
 [Table of Contents](#table-of-contents)
