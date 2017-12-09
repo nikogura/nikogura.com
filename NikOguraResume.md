@@ -55,7 +55,7 @@ It's the means by which an entire department of Data Scientists and Engineers co
 
 The rest of the company used a 3rd party SSO offering.  The 3rd party got breached and the SSO went down.  We stayed up.
 
-Here's how you can do it too:  [Access and Identity Made Easy](https://github.com/nikogura/nixtools/blob/master/AccessAndIdentityMadeEasy.md)
+Here's how you can do it too:  [Access and Identity Made Easy](AccessAndIdentityMadeEasy.md)
 
 ## Bent AWS's Metadata System to Enable IAM Authentication on Laptops
 I worked out how to bend AWS's metadata service so that we could leverage IAM Roles and STS credentials as if we were running in EC2, but actually do so with passwordless authentication on a laptop.  The idea to even try came from others, but I'm the one who worked out how to make it happen.
@@ -64,7 +64,7 @@ Absolute black magic that *just works* and requires zero code alteration of Amaz
 
 Code works the same locally as it does in the cloud.  No surprises.  That's what it's all about.
 
-Here's how I did it: [IAM Beyond AWS](https://github.com/nikogura/docs/blob/master/IAM-Beyond_AWS.md)
+Here's how I did it: [IAM Beyond AWS](IAM-Beyond_AWS.md)
 
 ## Invented a Self-Updating Signed Binary Tool Distribution and Execution Framework
 It's used for distributing and running signed binaries on user laptops, in cloud instances and docker containers.  It's always up to date, works on and offline, and best of all it *just works*.
@@ -73,7 +73,9 @@ It builds, tests, publishes, and even updates itself *in flight* when there's a 
 
 When I figure out how to get it to actually *write* it's own new features and fix it's own bugs, I'll have invented SkyNet.
 
-Here's how I did it: [Self Updating Binary Tools](https://github.com/nikogura/nixtools/blob/master/SelfUpdatingTools.md)
+Here's how I did it: [Self Updating Binary Tools](SelfUpdatingTools.md)
+
+Here's a version you can use: [DBT- Distributed Binary Toolkit](https://github.com/nikogura/dbt)
 
 ## Dreamed Up Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline
 Apple Pay and the systems behind activation of every Apple device in the world used it.  
