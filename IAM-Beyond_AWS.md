@@ -22,9 +22,9 @@ This is the thing about Security.  It sucks.
 
 Even if you enjoy the philosophical exercise of imagining how a system can be brought down, (and I do), running around frantically trying to cover every possible failure point and making sure **YOUR** system isn't brought down is 'effing miserable.  Who wants to live like that?
 
-So a good system has to be secure, and relatively painless.  Ideally people will just do the right thing- without necessarily even knowing what the right thing is.  That's what we call *enablement*, and is what Platform Engineering is all about.  
+So a good system has to be secure, and relatively painless.  Ideally people will just do the right thing- without necessarily even knowing what the right thing is.  That's what we call *enablement*, and is what toolsmithing is all about.  
 
-We Platform Engineers don't really do anything useful.  Our job is to keep the painters painting.  It's the things they do with the brushes we give tham that makes the dough and wins the fame.
+We toolsmits don't really do anything useful.  Our job is to keep the painters painting.  It's the things they do with the brushes we give tham that makes the dough and wins the fame.
 
 You don't get into Infrastructure if you want to be visible.  The only visible things here are the failures.  Blech.
 
@@ -44,7 +44,9 @@ Even if you can get them to take the job, they won't be there long.
 
 This is not going to be a how to for everything AWS.  Amazon has ~~perfectly good~~  er, Amazon has ~~helpful~~, uh... Ahem.  Amazon has docs.  How about that?  
 
-[http://docs.aws.amazon.com/STS/latest/APIReference/Welcome.html]  I'm not actually knocking Amazon or their document writers.  They do a better job than I would do.  Among other things, I can't resist the urge to ramble off in some tangental direction....
+[http://docs.aws.amazon.com/STS/latest/APIReference/Welcome.html](http://docs.aws.amazon.com/STS/latest/APIReference/Welcome.html)
+
+I'm not actually knocking Amazon or their document writers.  They do a better job than I would do.  Among other things, I can't resist the urge to ramble off in some tangental direction....
 
 Reading AWS Docs is a skill in and of itself though, kind of like reading man pages or javadocs.  They're good skills.  I recommend you develop them.  The learning curve can seem vertical at first.  Don't worry though, it levels off pretty quickly, and the only way to really get good at it is to just do it.
 
