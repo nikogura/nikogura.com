@@ -1,5 +1,5 @@
 <head>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
 </head>
 Herein you'll find (hopefully) interesting tidbits that might be of use to you, and it's a good place for me to store my various rantings.
 
