@@ -67,7 +67,7 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 *Code Repos* [https://github.com/nikogura](https://github.com/nikogura)
 
-*LinkedIn* [https://www.linkedin.com/in/nik-ogura-44373492/](https://www.linkedin.com/in/nik-ogura-44373492/)
+*LinkedIn* [https://www.linkedin.com/in/nikogura/](https://www.linkedin.com/in/nikogura)
 
 # Technical Background
 

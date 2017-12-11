@@ -314,7 +314,7 @@ If I cannot find a way, I will make one.
 
 [Code Repos](https://github.com/nikogura)
 
-[LinkedIn](https://www.linkedin.com/in/nik-ogura-44373492/)
+[LinkedIn](https://www.linkedin.com/in/nikogura/)
 
 # Employment History
 
