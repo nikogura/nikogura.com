@@ -3,7 +3,7 @@
 </head>
 Herein you'll find (hopefully) interesting tidbits that might be of use to you, and it's a good place for me to store my various rantings.
 
-You'll also find my resume- both a *longreads* style online form and the more traditional condensed version.
+You'll also find my resume- in both an online long form and the more traditional condensed version.
 
 Why is my resume posted online?  Well, I got sick of traditonal CV's and such where you make this blah blah blah list of hot keywords that you hope will help you make it past the filters.
 
