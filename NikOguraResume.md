@@ -318,6 +318,8 @@ If I cannot find a way, I will make one.
 
 # Employment History
 
+[Scribd - San Francisco, CA](#scribd---san-francisco,-ca)
+
 [Stitch Fix - San Francisco, CA](#stitch-fix---san-francisco,-ca)
 
 [Apple - Cupertino, CA](#apple---cupertino,-ca)
@@ -334,6 +336,12 @@ If I cannot find a way, I will make one.
 
 [United Martial Arts - Plymouth, MN](#united-martial-arts---plymouth,-mn)
 
+## Scribd - San Francisco, CA
+2018 *DevOps Engineer*
+
+Leveling up the enterprise by helping everyone get better at being faster, and faster at being better.
+
+Making everything *just work* in a delightful fashion for our customers, but also for ourselves.
 
 ## Stitch Fix - San Francisco, CA
 2017 *Data Platform Engineer  Algorithms and Analytics Department*

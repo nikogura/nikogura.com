@@ -118,6 +118,12 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 # Professional History
 
+#### Scribd - San Francisco, CA - DevOps Engineer - 2018 - Present
+
+Leveling up the enterprise by helping everyone get better at being faster, and faster at being better.
+
+Making everything *just work* in a delightful fashion for our customers, but also for ourselves.
+
 #### Stitch Fix Inc. - San Francisco, CA - Data Platform Engineer - 2017
 
 * Created the Access and Identity systems whereby the Algorithms & Analytics department connects to every resource, instance and container in the stack.
