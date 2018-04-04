@@ -76,7 +76,7 @@ When I figure out how to get it to actually *write* it's own new features and fi
 
 Here's how I did it: [Self Updating Binary Tools](SelfUpdatingTools.md)
 
-Here's a version you can use: [DBT- Distributed Binary Toolkit](https://github.com/nikogura/dbt)
+Here's a version you can use: [DBT- Dynamic Binary Toolkit](https://github.com/nikogura/dbt)
 
 ## Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline
 Apple Pay and the systems behind activation of every Apple device in the world used it.  
@@ -298,7 +298,7 @@ If I cannot find a way, I will make one.
 
 * [gomason](https://github.com/nikogura/gomason) A tool for doing clean-room CI testing locally.  
 
-* [Distributed Binary Toolkit](https://github.com/nikogura/dbt) A framework for authoring and using self-updating signed binaries. 
+* [Dynamic Binary Toolkit](https://github.com/nikogura/dbt) A framework for authoring and using self-updating signed binaries. 
 
 * [go-postgres-testdb](https://github.com/stitchfix/go-postgres-testdb) A library for managing ephemeral test databases. 
 

@@ -105,7 +105,7 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 * [gomason](https://github.com/nikogura/gomason) A tool for doing clean-room CI testing locally.  
 
-* [Distributed Binary Toolkit](https://github.com/nikogura/dbt) A framework for authoring and using self-updating signed binaries. 
+* [Dynamic Binary Toolkit](https://github.com/nikogura/dbt) A framework for authoring and using self-updating signed binaries. 
 
 * [go-postgres-testdb](https://github.com/stitchfix/go-postgres-testdb) A library for managing ephemeral test databases. 
 

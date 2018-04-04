@@ -341,4 +341,4 @@ Q.E.D.
 
 ## Reference Implementation
 
-The above concepts, implemented: [DBT Distributed Binary Toolkit](https://github.com/nikogura/dbt)
+The above concepts, implemented: [DBT Dynamic Binary Toolkit](https://github.com/nikogura/dbt)
