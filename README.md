@@ -39,6 +39,8 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 * [Gomason CI/CD in your pocket](https://github.com/nikogura/gomason) *Want to test locally?  Build, Sign, and publish binaries?  Here you go.*
 
+* [LDAP for people with better things to do than master LDAP](AccessAndIdentityMadeEasy.md) *LDAP can be painful, but everything already knows how to connect to it.  Why not connect all the things?*
+
 
 
 
