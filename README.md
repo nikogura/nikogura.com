@@ -35,7 +35,7 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 * [Using CircleCI as if it was a Maven Repo](CircleCIMaven.md)  *Using CircleCI?  Don't have a private Maven repo?  Check this out.*
 
-* [Self Updating Binary Tools](SelfUpdatingTools.md) *Never ask your users to update to the latest version again.*
+* [Dynamic Binary Toolkit: Tools that keep themselves up to date!](SelfUpdatingTools.md) *Never ask your users to update to the latest version again.*
 
 * [Gomason CI/CD in your pocket](https://github.com/nikogura/gomason) *Want to test locally?  Build, Sign, and publish binaries?  Here you go.*
 

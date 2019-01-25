@@ -1,4 +1,4 @@
-# Self Updating Tools
+# Dynamic Binary Toolkit: Tools that automatically keep themselves up to date!
 
 ## Inevitability of Change
 
