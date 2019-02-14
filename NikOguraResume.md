@@ -1,6 +1,6 @@
 # Nik Ogura
 
-### Principal Software Engineer
+### Principal Engineer
 *Platform - Tools - Security - Infrastructure*
 
 ### San Francisco, CA
@@ -74,7 +74,7 @@ It builds, tests, publishes, and even updates itself *in flight* when there's a 
 
 When I figure out how to get it to actually *write* it's own new features and fix it's own bugs, I'll have invented SkyNet.
 
-Here's how I did it: [Self Updating Binary Tools](SelfUpdatingTools.md)
+Here's how I did it: [Self Updating Binary Tools](DBT.md)
 
 Here's a version you can use: [DBT- Dynamic Binary Toolkit](https://github.com/nikogura/dbt)
 
@@ -337,11 +337,15 @@ If I cannot find a way, I will make one.
 [United Martial Arts - Plymouth, MN](#united-martial-arts---plymouth,-mn)
 
 ## Scribd - San Francisco, CA
-2018 *DevOps Engineer*
+2018 - Present *Principal Security Engineer*
 
-Leveling up the enterprise by helping everyone get better at being faster, and faster at being better.
+My mission is to Protect and Serve: Build security-critical infrastructure, lead incident response and partner with the wider Engineering org to promote a security culture at Scribd.
 
-Making everything *just work* in a delightful fashion for our customers, but also for ourselves.
+Security cannot be about saying ‘no’, or mindlessly checking items off a list. Ultimately, it’s about enablement- helping people do things faster, easier, and in ways they couldn’t do for themselves.
+
+Giving out fish where needed, Teaching folks to fish whenever possible, then doing some serious fishing of my own.
+
+I revel in a porous boundary between Sec / Dev / Ops that allows me to secure, advise, and build amazing solutions that not only work, but are object lessons in *doing it right*.
 
 ## Stitch Fix - San Francisco, CA
 2017 *Data Platform Engineer  Algorithms and Analytics Department*

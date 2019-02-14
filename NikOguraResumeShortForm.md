@@ -1,6 +1,6 @@
 # Nik Ogura
 
-### Principal Software Engineer 
+### Principal Engineer 
 
 *Platform - Tools - Infrastructure - Security*
 
@@ -120,9 +120,13 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 #### Scribd - San Francisco, CA - DevOps Engineer - 2018 - Present
 
-Leveling up the enterprise by helping everyone get better at being faster, and faster at being better.
+My mission is to Protect and Serve: Build security-critical infrastructure, lead incident response and partner with the wider Engineering org to promote a security culture at Scribd.
 
-Making everything *just work* in a delightful fashion for our customers, but also for ourselves.
+Security cannot be about saying ‘no’, or mindlessly checking items off a list. Ultimately, it’s about enablement- helping people do things faster, easier, and in ways they couldn’t do for themselves.
+
+Giving out fish where needed, Teaching folks to fish whenever possible, then doing some serious fishing of my own.
+
+I revel in a porous boundary between Sec / Dev / Ops that allows me to secure, advise, and build amazing solutions that not only work, but are object lessons in *doing it right*.
 
 #### Stitch Fix Inc. - San Francisco, CA - Data Platform Engineer - 2017
 

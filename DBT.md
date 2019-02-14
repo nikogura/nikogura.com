@@ -34,6 +34,11 @@ In short, here's what we need to do:
 
 6. [Pull a 'Single White Female' on ourselves, and exec the new binary with the original arguments, and then carry on about our business.](#re-execute-new-binary-with-original-arguments)
     
+## Reference Implementation
+
+At first I wrote about it, then I broke down and just _wrote_ it:
+
+[DBT Dynamic Binary Toolkit](https://github.com/nikogura/dbt)
     
 ## How it's Done
 
@@ -339,6 +344,3 @@ And that's it.  Of course, the new invocation will go through the update cycle a
 Q.E.D.
 
 
-## Reference Implementation
-
-The above concepts, implemented: [DBT Dynamic Binary Toolkit](https://github.com/nikogura/dbt)
