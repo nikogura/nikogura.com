@@ -1,15 +1,11 @@
 # Nik Ogura
 
-### Principal Engineer
+### Lead Dev/SecOps Engineer
 *Platform - Tools - Security - Infrastructure*
 
 ### San Francisco, CA
 
-#### *Aut viam inveniam, aut faciam.*
-
-*(If I cannot find a way, I will make one)*
-
-*-- Hannibal of Carthage, when told there was no way he was bringing elephants through the Alps.*
+#### *Aut viam inveniam, aut faciam.* *(I will find a way, or I will make one)*
 
 [*Reader's Digest Version of this Resume*](https://github.com/nikogura/nikogura.github.io/blob/master/NikOguraResume.docx?raw=true)
 
@@ -26,6 +22,9 @@
 [Employment History](#employment-history)
 
 # Interesting Things I've Done
+[Scribd's SIEM System](#scribds-siem-system)
+
+[Scribd's Managed Secrets System](#scribds-managed-secrets-system)
 
 [Stitch Fix's Algorithms Department's Access and Identity System](#stitch-fixs-algorithms-departments-access-and-identity-system)
 
@@ -50,6 +49,20 @@
 [Brought a Whole Business Line's Tech Stack into PCI Compliance](#brought-a-whole-business-lines-tech-stack-into-pci-compliance)
 
 [More UI's Than You Can Shake a Stick At](#more-uis-than-you-can-shake-a-stick-at)
+
+#### Scribd's SIEM System
+Scribd's world-wide footprint creates interesting challenges from a monitoring and abuse standpoint.  Merely being able to see what's going on is a challenge.  There's so much data coming in that 'spinner disks' can't keep up with it and start smoking the moment you turn the system on.  I had to write code that could receive, process, correlate, and consume information for processing.  With it we discovered all sorts of interesting things- better insights into how our legitimate users were using the product, and also the bad actors and their botnets.
+
+It's all available in a self service fashion that allows anyone in the company to answer for themselves the question "What's going on?".
+
+*Components:* **Go**, **ElasticSearch**, **Logstash**, **Kibana**, **ElasticBeats**, **Syslog**
+
+#### Scribd's Managed Secrets System
+Define your secrets- what they look like, and how to generate them.  The system takes care of the rest.  A developer can define a secret, and who should access it, but not be able to know the prod value.  Any user gets the proper value for their environment.  
+
+Authenticate via LDAP, TLS Certificate, Kubernetes, IAM - it doesn't matter.  One binary tool magically does the right thing and 'your secrets' magically appear at your fingertips.
+
+*Components:* **Hashicorp Vault**, **Go**
 
 ## Stitch Fix's Algorithms Department's Access and Identity System 
 It's the means by which an entire department of Data Scientists and Engineers connected to every system, instance, and container in the stack.  We wanted an an independent system that could funciton autonomously.  The whole access and identity lifecycle- onboarding, offboarding, partner connections, and a light weight roaming profile for any user on any system in a dynamic auto scaling cloud environment.  
@@ -262,6 +275,10 @@ Granted, that's a little dated.  Open Stack Liberty is pretty old school at this
 
 *(Wait, you keep an OpenStack installer on your keychain? Yup.  Because I can.)*
 
+Nowadays everybody wants to talk about Kubernetes.  I have you covered.  I've built production ready K8S clusters.  Several of them in fact.  I've also built the systems that give people self-service access to them, and the ability to deploy code to them with the click of a button.
+
+Familiar with the Kubernetes source code?  Check.  Blue/Green deployments?  Ayup.  Not just blue/green either.  As many colors as you need- think cached precompiled javascript assets in a world-wide CDN stretching back in time.  How many?  How long does your cache live?  Not only do you have to deploy them, you have to clean 'em up when you're satisfied the pods are no longer in use.
+
 ## Containers 'n Stuff
 Been there, done that.  I wrote something funky to do local container orchestration for Apple.  This was before Docker Compose was really stable.  Now I recommend we all just Docker's version, cos it's open source and awesome.  
 
@@ -296,9 +313,9 @@ If I cannot find a way, I will make one.
 
 # Open Source Projects
 
-* [gomason](https://github.com/nikogura/gomason) A tool for doing clean-room CI testing locally.  
+* [dbt](https://github.com/nikogura/dbt) "Dynamic Binary Toolkit" A framework for authoring and using self-updating signed binaries.  Listed in [awesome-go](https://github.com/avelino/awesome-go)
 
-* [Dynamic Binary Toolkit](https://github.com/nikogura/dbt) A framework for authoring and using self-updating signed binaries. 
+* [gomason](https://github.com/nikogura/gomason) A tool for doing clean-room CI testing locally.  Listed in [awesome-go](https://github.com/avelino/awesome-go)
 
 * [go-postgres-testdb](https://github.com/stitchfix/go-postgres-testdb) A library for managing ephemeral test databases. 
 
@@ -337,15 +354,15 @@ If I cannot find a way, I will make one.
 [United Martial Arts - Plymouth, MN](#united-martial-arts---plymouth,-mn)
 
 ## Scribd - San Francisco, CA
-2018 - Present *Principal Security Engineer*
+2018 - Present *Dev/SecOps Engineering Lead*
 
-My mission is to Protect and Serve: Build security-critical infrastructure, lead incident response and partner with the wider Engineering org to promote a security culture at Scribd.
+I created one-click self service deployment tooling to bare-metal hosts and Kubernetes clusters.  Heck, I even created a series of Kubernetes clusters myself, ex nilhio, and lead the effort to use them in anger.
 
-Security cannot be about saying ‘no’, or mindlessly checking items off a list. Ultimately, it’s about enablement- helping people do things faster, easier, and in ways they couldn’t do for themselves.
+The company's entire onboarding and access system, both to our network and our K8S clusters came out of my fertile mind and busy fingers, as did our internal PKI- with a little help from Hashicorp Vault and a ton of golang magic.
 
-Giving out fish where needed, Teaching folks to fish whenever possible, then doing some serious fishing of my own.
+I designed and build a system of 'Managed Secrets' so that we could generate, rotate, and well, 'manage' secrets across the enterprise- in AWS and in a bare metal datacenter.  An app getting the right secret is important, but you also need to know who has access to what, when to rotate, et al.  
 
-I revel in a porous boundary between Sec / Dev / Ops that allows me to secure, advise, and build amazing solutions that not only work, but are object lessons in *doing it right*.
+I tamed the ELK stack, and wrote event correlation tools to take incoming request data from Fastly's WAF and make it available to detect and counter bad actors all over the world.  This system ingests hundreds of Gb of information daily that flows in so quickly that it melts old fashioned spinner disks.
 
 ## Stitch Fix - San Francisco, CA
 2017 *Data Platform Engineer  Algorithms and Analytics Department*

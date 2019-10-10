@@ -1,29 +1,38 @@
 # Nik Ogura
 
-### Principal Engineer 
+### Lead Dev/SecOps Engineer 
 
 *Platform - Tools - Infrastructure - Security*
 
 ### San Francisco, CA
 
-#### *Aut viam inveniam, aut faciam.*
-
-*(If I cannot find a way, I will make one)*
-
-*-- Hannibal of Carthage, when told there was no way he was bringing elephants through the Alps.*
+#### *Aut viam inveniam, aut faciam.* *(I will find a way, or I will make one)*
 
 # Interesting Accomplishments
+
+#### Scribd's SIEM System
+Scribd's world-wide footprint creates interesting challenges from a monitoring and abuse standpoint.  Merely being able to see what's going on is a challenge.  There's so much data coming in that 'spinner disks' can't keep up with it and start smoking the moment you turn the system on.  I had to write code that could receive, process, correlate, and consume information for processing.  With it we discovered all sorts of interesting things- better insights into how our legitimate users were using the product, and also the bad actors and their botnets.
+
+It's all available in a self service fashion that allows anyone in the company to answer for themselves the question "What's going on?".
+
+*Components:* **Go**, **ElasticSearch**, **Logstash**, **Kibana**, **ElasticBeats**
  
+#### Scribd Managed Secrets System
+Define your secrets- what they look like, and how to generate them.  The system takes care of the rest.  A developer can define a secret, and who should access it, but not be able to know the prod value.  Any user gets the proper value for their environment.  
+
+Authenticate via LDAP, TLS Certificate, Kubernetes, IAM - it doesn't matter.  One binary tool magically does the right thing and 'your secrets' magically appear at your fingertips.
+
+*Components:* **Hashicorp Vault**, **Go**
+
 #### Stitch Fix Algorithms Access and Identity System
+It was the means by which the entire department of data scientists and engineers connected to every system, instance, and container in the tech stack.  Virtual machines, containers, in the cloud, locally.  One single, unified, independent access system.
  
- It was the means by which the entire department of data scientists and engineers connected to every system, instance, and container in the tech stack.  Virtual machines, containers, in the cloud, locally.  One single, unified, independent access system.
- 
- *Components:* **OpenLDAP**, **OpenVPN**, **OpenSSH**, **SSSD**, **PAM**, **Python**, **Go**
+*Components:* **OpenLDAP**, **OpenVPN**, **OpenSSH**, **SSSD**, **PAM**, **Python**, **Go**
 
 #### Self-Updating Signed Binary Tool Distribution and Execution Framework
 It's used for distributing and running signed binaries on user laptops, in cloud instances and docker containers.  It's always up to date, works on and offline, and best of all it *just works*.
 
-*Components:* **Go** **Artifactory** **OpenPGP**
+*Components:* **Go**, **Artifactory**, **OpenPGP**
 
 #### Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline
 
@@ -40,7 +49,7 @@ There were no tools to do SCA of Puppet modules for GRC (Governance, Risk- Manag
 *Components:* **Java**, **Spring**, **Tomcat**, **Spring Security**, **Antlr**, **Ruby**, **GitHub**, **jQuery**, **Puppet**
 		
 #### US Bank's Encryption Key Management and Delivery System
- A PKI was purchased, and it didn't do what we needed.  The parts didn't talk to each other.  It couldn't deliver the keys.  Manual key management was not working.
+A PKI was purchased, and it didn't do what we needed.  The parts didn't talk to each other.  It couldn't deliver the keys.  Manual key management was not working.
 
 *Components:* **Java**, **Spring MVC**, **Spring Security**, **jQuery**, **jQueryUI**, **BouncyCastle**, **Jackson**, **Apache Commons**, **StringTemplate**, **SQLite**, **ProtectApp**
 
@@ -50,7 +59,6 @@ It encrypted/decrypted and masked credit card numbers for a Merchant Acquiring s
 *Components:* **Perl**, **C**, **Java**
 
 #### Hardened LAMP stacks for PCI Compliant Credit Card Processing Applications
-
 *Components:* **Apache**, **Tomcat**, **Java**, **Perl**, **OpenSSL**, **libxml2**, **libxslt**, **MySQL**, **Git**, **Subversion**, **ModSecurity**,  **ModAuthVAS**, **Kerberos**, **ModJk**
 
 #### US Bank's Web Application Firewalls
@@ -79,7 +87,9 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 *Operating Systems:* **RPM Linux Systems (RHEL, SLES, CentOS, Oracle Linux)**, **Debian Linux Systems (Debian, Ubuntu)**, **Arch Linux**, **Android**, **MacOS**
 
-*System Administration:* **Physical Machines**, **Virtual Machines**, **Containers**, **Clouds**, **Workstations**, **TCP/IP Networks**, **Routers**, **Switches**, **Firewalls**
+*System Administration:* **Physical Machines**, **Virtual Machines**, **Containers**, **Clouds**, **Workstations**, **TCP/IP Networks**, **Routers**, **Switches**, **Firewalls**, **Kubernetes**
+
+*Logging and Monitoring* **LogStash**, **ElasticSearch**, **Kibana**, **ElasticBeats**, **Syslog**
 
 *Web Servers & Application Containers:* **Apache HTTPD**, **Tomcat**, **ModPerl**, **Nginx**, **HaProxy**, **Gunicorn**
 
@@ -87,7 +97,7 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 *CI Systems:* **Jenkins**, **TeamCity**, **CircleCI**, **Strider**
 
-*Security:* **SSL**, **SSH**, **IPSec**, **PCI DSS**, **Spring Security**, **ModSecurity**, **Kerberos**
+*Security:* **SSL**, **SSH**, **IPSec**, **PCI DSS**, **Spring Security**, **ModSecurity**, **Kerberos**, **Vault**
 
 *Networks:* **IPTables**, **PF**, **BIND**, **DHCP**, **Dnsmasq**, **Sendmail**, **Postfix**, **CUPS**, **OpenLDAP**
 
@@ -103,9 +113,9 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 # Open Source Projects:
 
-* [gomason](https://github.com/nikogura/gomason) A tool for doing clean-room CI testing locally.  
+* [dbt](https://github.com/nikogura/dbt) "Dynamic Binary Toolkit" A framework for authoring and using self-updating signed binaries.  Listed in [awesome-go](https://github.com/avelino/awesome-go)
 
-* [Dynamic Binary Toolkit](https://github.com/nikogura/dbt) A framework for authoring and using self-updating signed binaries. 
+* [gomason](https://github.com/nikogura/gomason) A tool for doing clean-room CI testing locally.  Listed in [awesome-go](https://github.com/avelino/awesome-go)
 
 * [go-postgres-testdb](https://github.com/stitchfix/go-postgres-testdb) A library for managing ephemeral test databases. 
 
@@ -120,11 +130,13 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 #### Scribd - San Francisco, CA - DevOps Engineer - 2018 - Present
 
-My mission is to Protect and Serve: Build security-critical infrastructure, lead incident response and partner with the wider Engineering org to promote a security culture at Scribd.
+I created one-click self service deployment tooling to bare-metal hosts and Kubernetes clusters.  Heck, I even created a series of Kubernetes clusters myself, ex nilhio, and lead the effort to use them in anger.
 
-Security cannot be about saying ‘no’, or mindlessly checking items off a list. Ultimately, it’s about enablement- helping people do things faster, easier, and in ways they couldn’t do for themselves.
+The company's entire onboarding and access system, both to our network and our K8S clusters came out of my fertile mind and busy fingers, as did our internal PKI- with a little help from Hashicorp Vault and a ton of golang magic.
 
-Giving out fish where needed, Teaching folks to fish whenever possible, then doing some serious fishing of my own.
+I designed and build a system of 'Managed Secrets' so that we could generate, rotate, and well, 'manage' secrets across the enterprise- in AWS and in a bare metal datacenter.  An app getting the right secret is important, but you also need to know who has access to what, when to rotate, et al.  
+
+I tamed the ELK stack, and wrote event correlation tools to take incoming request data from Fastly's WAF and make it available to detect and counter bad actors all over the world.  This system ingests hundreds of Gb of information daily that flows in so quickly that it melts old fashioned spinner disks.
 
 I revel in a porous boundary between Sec / Dev / Ops that allows me to secure, advise, and build amazing solutions that not only work, but are object lessons in *doing it right*.
 
