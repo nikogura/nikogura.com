@@ -41,6 +41,8 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 * [LDAP for people with better things to do than master LDAP](AccessAndIdentityMadeEasy.md) *LDAP can be painful, but everything already knows how to connect to it.  Why not connect all the things?*
 
+* [MVC-ish](MVC-Ish.md) *Quazi MVC design patterns in golang.*
+
 
 
 
