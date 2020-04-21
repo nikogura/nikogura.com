@@ -1,5 +1,6 @@
-MVC-Ish
-I’m a big fan of MVC like patterns.  I say ‘MVC-ish’ because you could look at how I implement it and lecture me that it’s not “Proper MVC”.  Whatever.  I’m trying to demonstrate a principle, and I’m pointing to the closest similar concept I can find.
+I’m a big fan of MVC like patterns.  I say ‘MVC-ish’ because you could look at how I implement it and lecture me that it’s not “Proper MVC”.  
+
+Whatever.  I’m trying to demonstrate a principle, and I’m pointing to the closest similar concept I can find.
 
 What I mean is this:  I try to write libraries.  Libraries should be as general purpose as possible, and exhaustively tested.  Libraries are the Model of the MVC pattern.  
 
