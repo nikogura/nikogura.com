@@ -21,6 +21,12 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 * [Nik's Condensed Resume](https://github.com/nikogura/nikogura.github.io/blob/master/NikOguraResume.docx?raw=true)  *In case you don't want to read the fun one.*
 
+* [DBT: Dynamic Binary Toolkit- Tools that keep themselves up to date!](DBT.md) *Never ask your users to update to the latest version again.*
+
+* [Gomason CI/CD in your pocket](https://github.com/nikogura/gomason) *Want to test locally?  Build, Sign, and publish binaries?  Here you go.*
+
+* [MVC-ish](MVC-Ish.md) *Quazi MVC design patterns in golang.*
+
 * [TDD](TDD.md) *Test Driven Development Manifesto*
 
 * [Python](Python.md) *Python Development Tips*
@@ -35,15 +41,5 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 * [Using CircleCI as if it was a Maven Repo](CircleCIMaven.md)  *Using CircleCI?  Don't have a private Maven repo?  Check this out.*
 
-* [DBT: Dynamic Binary Toolkit- Tools that keep themselves up to date!](DBT.md) *Never ask your users to update to the latest version again.*
-
-* [Gomason CI/CD in your pocket](https://github.com/nikogura/gomason) *Want to test locally?  Build, Sign, and publish binaries?  Here you go.*
-
 * [LDAP for people with better things to do than master LDAP](AccessAndIdentityMadeEasy.md) *LDAP can be painful, but everything already knows how to connect to it.  Why not connect all the things?*
-
-* [MVC-ish](MVC-Ish.md) *Quazi MVC design patterns in golang.*
-
-
-
-
 
