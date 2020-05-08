@@ -124,7 +124,7 @@ I chose [Hashicorp Vault](https://www.vaultproject.io/) as the backend for my re
 
 I also wrote it in golang, because it has the wonderful ability to compile everything down to single binaries without dependencies, and easily cross compile for OS'es other than the one I the author work in.
 
-None of these choices mean jack.  I could have written it in Ruby and backed it by AWS SSM Parameter Store.  It's the UX that counts here.
+None of these choices mean jack.  I could have written it in Ruby and backed it by AWS SSM Parameter Store.  Really, Really, REALLY doesn't matter.  It's the UX that counts here.
 
 
 ### Managed Secrets Components
