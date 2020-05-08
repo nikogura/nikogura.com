@@ -102,6 +102,8 @@ The perfect secret system should:
 
 * provide a means for someone to *define* secrets, even though they cannot access the production values
 
+* provide a means to detect whether a secret has been changed or rotated.
+
 * make it so nobody has to have the horrible job of entering secrets into any sort of interface for a system they don't support, know nothing about, and frankly, care nothing about.
 
 The computer should make this all happen, freeing the humans to *just* do their jobs.
