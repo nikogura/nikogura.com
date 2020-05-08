@@ -141,8 +141,7 @@ There are 4 components to Managed Secrets, as originally implemented by me.  (I'
 
 These repos conform to my idea of [MVC-Ish](MVC-Ish.md).  In short, it's 2 binaries that exercise libraries in the other repos.  It was my intention that the libraries be used by other systems (programs, Lambda's, etc), but the cli binaries would provide both a reference implementation and a default tool that anyone could use from the CLI or a bash script.
 
-
-* ... to be continued *
+... to be continued 
 
 
 
