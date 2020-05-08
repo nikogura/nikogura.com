@@ -116,7 +116,7 @@ Managed Secrets is basically a system in which you define your secret's metadata
 
 It's essentially a *yaml interface on your secret access and storage system*.
 
-Let's say that again:  *Managed Secrets is a YAML Interface on your Secret System*.  The guts take care of translating what you have stated that you want in a yaml file into action in your backend.  
+Let's say that again:  *Managed Secrets is a YAML Interface on your Secret System*.  The code takes care of translating what you have placed in your YAML file, and translates that into reality in your secret storage system.
 
 That's what makes this approach so cool.  Everybody gets what they want.  Developers can 'just get secrets'.  Security Engineers and Auditors can get the reports/alerts they want.
 
