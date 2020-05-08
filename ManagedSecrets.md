@@ -6,7 +6,7 @@ Everybody needs secrets.  What's so hard about them?
 
 First off, anyone who's actually run/managed a secrets system of any size knows that making sure your app has the secrets it needs is just the tip of the iceberg.  
 
-Yeah, that's all the developers care about.  It's all most people think of.  Just about any solution can provide for that use case.
+Secret storage and how you access them is all the developers care about.  It's all most people think of.  Just about any solution can provide for that use case.
 
 For the unsung heroes who maintain the system however, there's more.  Quite a lot more.  Ask any security pro or *gasp*, an auditor.
 
