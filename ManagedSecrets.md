@@ -126,10 +126,13 @@ Secrets can be rotated on schedule or on demand as needed.  Everybody wins.
 
 I chose [Hashicorp Vault](https://www.vaultproject.io/) as the backend for my reference implementation, but you could write backends for AWS Secrets Manager, or SSM Parameter Store, or any other system.
 
-I also wrote it in golang, because it has the wonderful ability to compile everything down to single binaries without dependencies, and easily cross compile for OS'es other than the one I the author work in.
+I wrote it in Golang, because go has the wonderful ability to compile everything down to single binaries without dependencies, and easily cross compile for OS'es other than the one I, the author, work in.
 
-None of these choices mean jack.  I could have written it in Ruby and backed it by AWS SSM Parameter Store.  Really, Really, REALLY doesn't matter.  It's the UX that counts here.
+None of these choices mean jack.  I could have written it in Ruby and backed it by AWS SSM Parameter Store.  The backend and the language really, Really, REALLY don't matter.  It's the UX that counts here.
 
+Too many people get lost in 'solutioning' and can't see the forest for the trees.  You create tools for users.  Users don't care about what's going on under the hood.  They care that the car goes when they want to go, and stops when they want to stop.
+
+Design your tools for your users- one of which is undoubtedly yourself.  You want powerful, easy to use tools don't you?  I sure do.
 
 ### Managed Secrets Components
 
