@@ -141,6 +141,87 @@ There are 4 components to Managed Secrets, as originally implemented by me.  (I'
 
 These repos conform to my idea of [MVC-Ish](MVC-Ish.md).  In short, it's 2 binaries that exercise libraries in the other repos.  It was my intention that the libraries be used by other systems (programs, services, Lambda's, etc), but the CLI binaries would provide both a reference implementation and a default tool that anyone could use from the CLI or a bash script.
 
+This code, combined with a YAML config file, takes all the sting out of managing secrets for you, and for your users.  Again, I wrote the reference implementation with Vault as a backend, and Vault is the Cadillac of secret storage engines, but the idea was that I could swap out the backend at anytime and my users wouldn't know or care.  They don't interact with the storage system.  They just write YAML files.  Like this one:
+
+#### Config Example
+
+This example defines a Team, which is any logical grouping of people in a company.
+
+    ---
+    name: test-team1                        # The name of the Team
+    secrets:                                # Definitions of the Secrets in the Team
+      - name: foo
+        generator:
+          type: alpha                       # A 10 digit alphanumeric secert
+          length: 10
+
+      - name: bar
+        generator:
+          type: hex                         # A 12 digit hexadecimal secret
+          length: 12
+
+      - name: baz
+        generator:
+          type: uuid                        # A UUID secret
+
+      - name: wip
+        generator:
+          type: chbs
+          words: 6                          # A 6 word 'correct-horse-battery-staple' secret.  6 random commonly used words joined by hyphens.
+
+      - name: zoz
+        generator:
+          type: rsa
+          blocksize: 2048                   # A RSA keypair expressed as a secret (Not currently supported)
+          
+      - name: blort                         # I've clearly run out of standard throwaway names here.
+        generator:
+          type: static                      # Static secrets have to be placed manually.  API keys are a good use case for Static Secrets.
+
+      - name: foo.example.com
+        generator:
+          type: tls                         # A TLS Certificate/ Private Key expressed as a secret.
+          cn: foo.example.com
+          ca: service                       # This cert is created off of the 'service' CA
+          sans:
+            - bar.example.com                # Allowed alternate names for this cert
+            - baz.example.com
+          ip_sans:                          # IP SANS allow you to use TLS and target an IP directly
+            - 1.2.3.4
+            
+    roles:                                  # Your Secret Roles  This is what you authenticate to in order to access the Secrets above.
+      - name: app1                          # A role unimaginatively named 'app1'
+        realms:
+          - type: k8s                       # legal types are 'k8s', 'tls', and 'iam'
+            identifiers:
+              - some-k8s-cluster            # for k8s, this is the name of the cluster.  Has no meaning for other realms.
+            principals:
+              - app1                        # for k8s, this is the namespace that's allowed to access the secret
+            environment: production         # each role maps to a single environment.  Which one is this?
+
+          - type: tls                       # 'tls' specifies authenticated by client certs (generally only applies to SL hosts)
+            principals:
+              - fargle.example.com          # for tls, this is the FQDN of the host
+            environment: development        # when this host connects, it gets development secrets
+
+          - type: iam                       # only works if you're running in AWS
+            principals:
+              - "arn:aws:iam::888888888888:role/some-role20201234567890123456789012"
+            environment: staging            # each principal auths to a role in a single environment.
+        secrets:
+          - name: foo                       # These Secrets are defined above.  No 'team' in the config means 'team from this file'
+          - name: wip
+          - name: baz
+            team: test-team2                # This secret is owned by another Team.
+            
+    environments:                           # Environments are just strings.  Use whatever you want.   Many people would like Scribd to use standardized Environment names.  That's a people problem, not a tech problem.  To the code, they're all just strings.
+      - production
+      - staging
+      - development                         # The 'development' environment is special.  If you have one, anyone who can authenticate can access development secrets.  This is intended to ease/ speed development.
+      
+With the above file, all you need is a properly configured instance of [Keymaster-CLI](https://github.com/scribd/keymaster-cli) to configure the secrets backend, and then your systems can use [Keymaster-CLI](https://github.com/scribd/keymaster-cli) (or something like it) to authenticate and get their secrets.
+      
+
 ... to be continued 
 
 
