@@ -228,7 +228,13 @@ This example defines a Team, which is any logical grouping of people in a compan
       - staging
       - development                         # The 'development' environment is special.  If you have one, anyone who can authenticate can access development secrets.  This is intended to ease/ speed development.
       
-With the above file, all you need is a properly configured instance of [Keymaster-CLI](https://github.com/scribd/keymaster-cli) to configure the secrets backend, and then your systems can use [Keymaster-CLI](https://github.com/scribd/keymaster-cli) (or something like it) to authenticate and get their secrets.
+With the above file, all you need is a properly configured instance of [Keymaster-CLI](https://github.com/scribd/keymaster-cli) to configure the secrets backend.
+
+Your systems can use [Keymaster-CLI](https://github.com/scribd/keymaster-cli) (or something like it) to authenticate and get their secrets.  Heck, if they really want to, they can interact directly with the secrets backend directly, though why someone would want to do that is beyond me.  
+
+Interfaces are like fences.  Good fences make for good neighbors.  Secrets should work like a service.  
+
+Most of the time you are just a user of a service, not it's maintainer.  The user doesn't care how the sausage gets made.  They just get to take a bite and enjoy.
       
 
 ... to be continued 
