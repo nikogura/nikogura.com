@@ -150,7 +150,7 @@ These repos conform to my idea of [MVC-Ish](MVC-Ish.md).  In short, it's 2 binar
 
 This code, combined with a YAML config file, takes all the sting out of managing secrets for you, and for your users.  Again, I wrote the reference implementation with Vault as a backend, and Vault is the Cadillac of secret storage engines, but the idea was that I could swap out the backend at anytime and my users wouldn't know or care.  
 
-They don't interact with the storage system.  They just write YAML files.  Like this one:
+Users don't interact with the storage system.  They just write YAML files.  Like this one:
 
 #### Config Example
 
