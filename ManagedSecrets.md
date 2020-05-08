@@ -230,12 +230,15 @@ This example defines a Team, which is any logical grouping of people in a compan
       
 With the above file, all you need is a properly configured instance of [Keymaster-CLI](https://github.com/scribd/keymaster-cli) to configure the secrets backend.
 
-Your systems can use [Keymaster-CLI](https://github.com/scribd/keymaster-cli) (or something like it) to authenticate and get their secrets.  Heck, if they really want to, they can interact directly with the secrets backend directly, though why someone would want to do that is beyond me.  
+Your systems can use [Keymaster-CLI](https://github.com/scribd/keymaster-cli) (or something like it) to authenticate and get their secrets.  
 
-Interfaces are like fences.  Good fences make for good neighbors.  Secrets should work like a service.  
+Heck, if they really want to, they can interact directly with the secrets backend directly.  The storage and access system of your backend is still there, and could be used.  The libraries described here are just a control / management plane on the backend.
+ 
+Why someone would want to connect directly to the backend is beyond me.  Doing so makes whatever you're using *less* portable, and makes it more likely you'll have to go back and change your code when the secret storage system changes or upgrades.
 
-Most of the time you are just a user of a service, not it's maintainer.  The user doesn't care how the sausage gets made.  They just get to take a bite and enjoy.
-      
+Managed Secrets is an interface.  Interfaces are like fences.  Good fences make for good neighbors.  
+
+Managing a secrets system is like making sausage.  The diner doesn't care how the sausage gets made.  They just get to take a bite and enjoy.  *yum*
 
 ... to be continued 
 
