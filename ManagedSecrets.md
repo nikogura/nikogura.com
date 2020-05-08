@@ -10,7 +10,7 @@ Anyone who's actually run/managed a secrets system of any size knows that storag
 
 There's more.  Quite a lot more.  Ask any security pro or *gasp*, an auditor.
 
-## Secret System Nonfunctional Requirements
+## Nonfunctional Requirements of a Secrets System
 
 Here's a short list of the 'other' concerns behind a secrets system:
 
@@ -36,7 +36,7 @@ What's that you say?  They don't get done?  Surely you jest.  No conscientious e
 
 I'm dead serious- and don't call me 'Shirley'.  When's the last time your secrets were rotated?  Ask somebody in your company.  Bet the response is something like "Uh... Probably never?".
 
-## Secret Backends
+## Secret Storage Backends
 
 There are a bazillion of them to choose from.  Every one of them has some way of getting your secret to your application, and I'm here to tell you which one you use *doesn't friggin matter*.  
 
