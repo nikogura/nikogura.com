@@ -131,13 +131,13 @@ None of these choices mean jack.  I could have written it in Ruby and backed it 
 
 There are 4 components to Managed Secrets, as originally implemented by me.  (I'm no longer the custodian of the repos, so who knows what's changed.)
 
-* https://github.com/scribd/keymaster - Library for configuring and managing your secret storage and access system.
+* [Keymaster](https://github.com/scribd/keymaster) - Library for configuring and managing your secret storage and access system.
 
-* https://github.com/scribd/vault-authenticator - Library for granting access to your secrets.
+* [Vault-Authenticator](https://github.com/scribd/vault-authenticator) - Library for granting access to your secrets.
 
-* https://github.com/scribd/secrets - Tool demonstrating how to use *vault-authenticator* to access secrets.
+* [Secrets](https://github.com/scribd/secrets) - Tool demonstrating how to use *vault-authenticator* to access secrets.
 
-* https://github.com/scribd/keymaster-cli - Tool demonstrating how to use *keymaster* to read secret definitions and make the machine manage your secrets.
+* [Keymaster-CLI](https://github.com/scribd/keymaster-cli) - Tool demonstrating how to use *keymaster* to read secret definitions and make the machine manage your secrets.
 
 These repos conform to my idea of [MVC-Ish](MVC-Ish.md).  In short, it's 2 binaries that exercise libraries in the other repos.  It was my intention that the libraries be used by other systems (programs, services, Lambda's, etc), but the CLI binaries would provide both a reference implementation and a default tool that anyone could use from the CLI or a bash script.
 
