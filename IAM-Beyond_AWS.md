@@ -93,7 +93,7 @@ Normally, when you connect to a network, you ask for an address, and something c
 
 This is all great and wonderful, but what if you don't have a DHCP Server on the network?  Or worse yet, if there's supposed to be one, but it goes down?  Well, it turns out the designers of the spec already thought this one out for you.
 
-There's a small restricted subnet hidden in the DHCP spec.  If you connect to a network, and try to get an IP via DHCP, and nobody answers, your computer will randomly pick one of the addresses in this range and use it, hoping to all that is holy that it hasn't picked an address in use by another machine.  If this happens, you have the dreaded bug listed above.  It won't work.
+There's a small restricted subnet hidden in the DHCP spec.  This is the 'link-local' network.  If you connect to a network, and try to get an IP via DHCP, and nobody answers, your computer will randomly pick one of the addresses in this range and use it, hoping to all that is holy that it hasn't picked an address in use by another machine.  If this happens, you have the dreaded bug listed above.  It won't work.
 
 Ok, ok, this is some wild tech trivia, but why am I inflicting it on you, the gentle reader?  Well, it turns out Amazon brilliantly (or dastardly I suppose if you disagree with them) reasoned that there was no good reason for this subnet to be used within their EC2 cloud.  After all, it would mean that their highly available and reliable DHCP system would be down, and if that were the case, they would have deeper problems.
 
@@ -186,7 +186,7 @@ What I finally found, was a footnote somewhere (I don't recall where exactly) st
         echo "$PFUP" | 2>/dev/null sudo pfctl -ef -
         
         
-Why all that nonsense?  Mainly because I don't want to burden the users with a bunch of PF gobbledygook.  They're not likely to like|care|understand.  It's not that they can't.  They just have other things to think about.  Fair enough.  I don't do data science either.
+Why all that nonsense?  Mainly because I don't want to burden the users with a bunch of PF gobbledygook.  They're not likely to like / care / understand.  It's not that they can't.  They just have other things to think about.  Fair enough.  I don't do data science either.
 
 I also was hobbled by needing to pass it all to PF in a single block, and PF really wants to parse files, with newlines in them and such.
 
