@@ -18,7 +18,7 @@ There's more.  Quite a lot more.  Ask any security pro or *gasp*, an auditor.
 
 * *Define / Provide / Revoke Access to Secrets*  Define groups of entities ('roles') who can access the secrets.
 
-As a MVP, that's pretty much it.  The rest is all gravy.  Again, *any* backend system aught to be able to handle those tasks, but they all need to be automated.  
+As a MVP, that's pretty much it.  The rest is all gravy.  *Any* backend system aught to be able to handle those tasks, but they all need to be automated.  
 
 If they're manual, they won't be done as often or as quickly as needed.  That's just human nature.
 
