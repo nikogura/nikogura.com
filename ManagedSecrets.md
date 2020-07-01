@@ -10,6 +10,18 @@ Anyone who's actually run/managed a secrets system of any size knows that storag
 
 There's more.  Quite a lot more.  Ask any security pro or *gasp*, an auditor.
 
+## Functional Requirements of a Secrets System
+
+* *Define Secrets*  You need to 'make a secret'.  This is similar to declaring memory.  You're making a 'bucket' in your system that can be filled by some value.
+
+* *Set / Reset Secrets*  This task fills the 'bucket' created in the 'Define Secrets' task.  It has to be able to be done programmatically so that it can be changed regularly/easily/quickly.
+
+* *Define / Provide / Revoke Access to Secrets*  Define groups of entities ('roles') who can access the secrets.
+
+As a MVP, that's pretty much it.  The rest is all gravy.  Again, *any* backend system aught to be able to handle those tasks, but they all need to be automated.  
+
+If they're manual, they won't be done as often or as quickly as needed.  That's just human nature.
+
 ## Nonfunctional Requirements of a Secrets System
 
 Here's a short list of the 'other' concerns behind a secrets system:
@@ -240,17 +252,6 @@ Managed Secrets is an interface.  Interfaces are like fences.  Good fences make 
 
 Managing a secrets system is like making sausage.  The diner doesn't care how the sausage gets made.  They just get to take a bite and enjoy.  *yum*
 
-## The Tasks any Secrets System has to Handle
-
-* *Define Secrets*  You need to 'make a secret'.  This is similar to declaring memory.  You're making a 'bucket' in your system that can be filled by some value.
-
-* *Set / Reset Secrets*  This task fills the 'bucket' created in the 'Define Secrets' task.  It has to be able to be done programmatically so that it can be changed regularly/easily/quickly.
-
-* *Define / Provide / Revoke Access to Secrets*  Define groups of entities ('roles') who can access the secrets.
-
-As a MVP, that's pretty much it.  The rest is all gravy.  Again, *any* backend system aught to be able to handle those tasks, but they all need to be automated.  
-
-If they're manual, they won't be done as often or as quickly as needed.  That's just human nature.
 
 ... to be continued 
 
