@@ -44,3 +44,5 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 * [LDAP for people with better things to do than master LDAP](AccessAndIdentityMadeEasy.md) *LDAP can be painful, but everything already knows how to connect to it.  Why not connect all the things?*
 
 * [Managed Secrets](ManagedSecrets.md) *Your org needs secrets.  Making them available to your apps is just the tip of the iceberg.*
+
+* [Coding Standards](CodingStandards.md) My philosophy on coding standards - especially in golang, and by inference on the rest of life.
