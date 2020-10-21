@@ -58,3 +58,5 @@ The problem, of course, is that this resource cannot be created until the vault 
 
 In the meantime, I'll probably do some sort of a Job that no-ops until it gets something back from those two calls, and then creates the resource.
 
+You can, however, pre create the certificate before the issuer exists.  It will sit in an unready state until you create the issuer.  This means we can probably cheaply script the resource creation.
+
