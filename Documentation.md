@@ -186,5 +186,3 @@ I highly recommend any programmer's text editor.  I used to write my docs in LaT
 
 Thank you for your time in reading this, and letting me rent out space in your head.
 
-- Nik
-
