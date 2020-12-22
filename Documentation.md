@@ -50,7 +50,7 @@ When I asked one of my teachers about it, he referred to them as "Your Day Moves
 
 What grew from this experience is the idea that we needed to avoid tactics that required a great number of factors to resolve in our favor and instead rely on moves that were more likely to succeed than to fail.  A good tactic was one that still worked as intended even when a maximum number of factors went _against_ you.
 
-The humorous acronym for this idea is the K.I.S.S. principle: Keep It Simple, Stupid.
+The humorous acronym for this idea is the K.I.S.S. Principle: Keep It Simple, Stupid. The more scholarly version is [Occam's Razor](https://en.wikipedia.org/wiki/Occam's_razor).
 
 When a student came up with some elaborate movie move they wanted to use I would always ask "Do you want to bet your nose on it?".  When they invariably were puzzled I would explain: 
 
@@ -120,7 +120,7 @@ Docs are instructions for a human.  Code is instruction for a machine.
 
 Docs are only good insofar as they match the machine instructions, ergo they must be linked.  
 
-The easiest way to maintain that link is to keep them in the same repo.  See [Occam's Razor](https://en.wikipedia.org/wiki/Occam's_razor).
+The easiest way to maintain that link is to keep them in the same repo.  K.I.S.S. 
 
 ### Keep Docs Up to Date
 
