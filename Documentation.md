@@ -170,7 +170,7 @@ Browsers, devices, and many programs already naturally render Markdown for you. 
 
 Write once, read many.  It's been the goal of the programming world since the invention of the C Programming language.
 
-What's more, Markdown is so simple that you can find, and write programs to transform it.
+What's more, Markdown is so simple that you can find, and write programs to transform it.  That makes for even more load shifting from humans to machines!
 
 ## Part III - Wrap Up
 
