@@ -84,9 +84,9 @@ By smoothing the rough edges of the writing process we make it more likely that 
 
 I can already hear people say "I've seen people succeed with tool X or method Y".  Yup.  Sure.  You _can_ make anything work, and someone somewhere probably has.  
 
-I still say "Do you want to bet your nose on that?".  
+I still say "Do you want to bet your nose on that?".  K.I.S.S.  
 
-K.I.S.S.  Face it, when the tension mounts, none of us are exactly at our best.  
+Face it, when the tension mounts, none of us are exactly at our best.  
 
 Our system needs to cater to the worst case scenario, not the best.
 
