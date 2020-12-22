@@ -36,7 +36,7 @@ My philosophy of documentation (and all things technical) stems from this insigh
 
 If it's possible for docs to be left out- they will be.  If it's easier for docs to be left to rot - they will be.  
 
-We're talking Human nature here, and the nature of the Universe.  Everything sort of goes its own way appointed, and in its own time.  Our interference often means less than we'd like to think it does.
+We're talking Human nature here, and the nature of the Universe.  Everything sort of goes its own way appointed, and in its own time.  Our interference often means a lot less than we imagine.
 
 ### Martial Arts
 
@@ -44,21 +44,23 @@ I've practiced and taught the martial arts for over 30 years.  I owned and opera
 
 In that time, I met a lot of people with fantastic physical abilities, and people who were falling apart. I met people steeped in tactics, and people who's ideas of fighting came from watching too many B movies.
 
-I studied and taught many techniques that were absolutely amazing in their execution, requiring years of training to perfect. I was puzzled by some of these moves.  They seemed fantastically difficult to get right.  The potential for self-injury was very high, even leaving out the idea of an opponent that wanted to hurt you.
+I studied and taught many techniques that were absolutely amazing in their execution, requiring years of training to perfect. I was puzzled by some of these moves.  They seemed fantastically difficult to get right.  The potential for self-injury was very high, even leaving out the idea that there was this opponent who was actively trying to hurt you.
 
-When asked, one of my teachers referred to them as "Your Day moves".  It would work well if it turned out to be "Your Day".  i.e. if everything unfolded exactly as planned.  Yeah.  How many days like that do _you_ have?  Me neither.
+When I asked one of my teachers about it, he referred to them as "Your Day Moves".  It would work well if it turned out to be "Your Day".  i.e. if everything unfolded exactly as planned.  Yeah.  How many days like that do _you_ have?  Me neither.
 
-What grew from this experience is the idea that we needed to avoid tactics that required a great number of factors to resolve in our favor and instead rely on moves that were more likely to succeed than to fail.  A good tactic was one that still worked as intended even when a maximum number of factors went against you.
+What grew from this experience is the idea that we needed to avoid tactics that required a great number of factors to resolve in our favor and instead rely on moves that were more likely to succeed than to fail.  A good tactic was one that still worked as intended even when a maximum number of factors went _against_ you.
 
-The humorous acronym is the K.I.S.S. principle: Keep It Simple, Stupid.
+The humorous acronym for this idea is the K.I.S.S. principle: Keep It Simple, Stupid.
 
 When a student came up with some elaborate movie move they wanted to use I would always ask "Do you want to bet your nose on it?".  When they invariably were puzzled I would explain: 
 
-If it works, great.  The fight is over.  If it doesn't, you're off balance, out of position, and it's likely your opponent will be easily take advantage, which could result in your broken nose.  Do you want to bet your nose on that move?
+If it works, great.  The fight is over.  If it doesn't, you're off balance, out of position, and it's likely your opponent will be easily take advantage, which could result in your broken nose.  Do you want to bet your nose on that move working?
 
 Usually the answer was "no".  When shit happens, simple is best.  When we're trying to deliver quality products together with useful documentation on a tight schedule, shit is inevitably happening.
 
-Our documentation process then must have as few moving parts as possible, and rely on as few breakpoints as we can arrange.  The more steps - especially tedious steps - that are required, the more likely it is that one will be not be done, and then the process fails and the docs rot.
+Our documentation process then must have as few moving parts as possible, and rely on as few breakpoints as we can arrange.  
+
+The more steps required - especially tedious ones- the more likely it is that one will be not be done, and then the process fails and the docs rot.
 
 ### The Perfect System
 
@@ -82,7 +84,11 @@ By smoothing the rough edges of the writing process we make it more likely that 
 
 I can already hear people say "I've seen people succeed with tool X or method Y".  Yup.  Sure.  You _can_ make anything work, and someone somewhere probably has.  
 
-I still say "Do you want to bet your nose on that?".  K.I.S.S.  Face it, when the tension mounts, none of us are exactly at our best.  Our system needs to cater to the worst case scenario, not the best.
+I still say "Do you want to bet your nose on that?".  
+
+K.I.S.S.  Face it, when the tension mounts, none of us are exactly at our best.  
+
+Our system needs to cater to the worst case scenario, not the best.
 
 ## Part II: Execution
 
