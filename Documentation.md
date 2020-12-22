@@ -182,7 +182,7 @@ I write all of this via [IntelliJ Ultimate](https://www.jetbrains.com/idea/) usi
 
 ![IntelliJ Docs](images/intelliJDocs.png)
 
-It even spell-checks to a degree, though with the proliferation of acronyms and project names that accompany any technical writing, it can't catch everything.  It does nag me about improper use of its vs it's though, which is nice.
+It even spell-checks to a degree, though with the proliferation of acronyms and project names that accompany any technical writing, it can't catch everything.  It does nag me about improper use of "its" vs "it's" though, which is nice.  My junior high grammar teacher would be pleased.
 
 I highly recommend any programmer's text editor.  I used to write my docs in LaTeX with vim.  That method also followed these principles, but the learning curve for both tools is nearly vertical.  Markdown is a wonderful invention.  
 
