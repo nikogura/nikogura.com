@@ -98,9 +98,11 @@ What follows is the best method I've come across so far in achieving the above g
 
 Similar to the MVC pattern (Model, View, Controller), the info your docs convey - the Model, needs to stay separate from the way it's presented - the View.
 
-Presentation changes depending on branding and fashion.  The information that describes how your code works doesn't change with anywhere near the speed.
+Presentation changes depending on branding and fashion.  The information that describes how your code works doesn't change with anywhere near the same speed.
 
-Furthermore, making your docs simultaneously available on multiple devices pretty much means your formatting needs to be rendered on the fly by a machine. A MS Word doc that looks fine on your 27" Apple Display might be utterly unreadable on somebody's phone.
+Furthermore, making your docs simultaneously available on multiple devices pretty much means your formatting _has_ to be rendered on the fly by a machine. 
+
+An MS Word doc that looks fine on your 27" Apple Display might be utterly unreadable on somebody's phone.  If they can't be read by the person who needs them when they need them, the docs are useless.
 
 ### Don't Maintain Multiple Versions
 
@@ -114,15 +116,21 @@ Humans should never need to look beyond a single canonical source of truth.
 
 That single canonical source of truth needs to be the same repository as that used for the code itself.
 
-Docs are instructions for a human.  Code is instruction for a machine.  Docs are only good insofar as they match machine instruction, ergo they must be linked.  The easiest way to maintain that link is to keep them in the same repo.
+Docs are instructions for a human.  Code is instruction for a machine.  
+
+Docs are only good insofar as they match the machine instructions, ergo they must be linked.  
+
+The easiest way to maintain that link is to keep them in the same repo.  See [Occam's Razor](https://en.wikipedia.org/wiki/Occam's_razor).
 
 ### Keep Docs Up to Date
 
-Docs are dead as soon as they're unmaintained and out of step.  How many manuals and architectural diagrams have you seen that were written once long ago and haven't been updated?  In my experience, that's most of them.
+Docs are dead as soon as they're unmaintained and out of step with the code.  How many manuals and architectural diagrams have you seen that were written once long ago and haven't been updated?  In my experience, this describes most of them.
 
 The problem here is that programs - whose features are driven by product teams are dynamic by nature.  There's always a desire for a new feature.  Usually there are whole teams of people pushing for changes to software.
 
-The docs on the other hand are a tedious thing that nobody really pushes for.  As long as the features are delivered, that's the end of things.  There's also this prevalent myth that a user interface is 'intuitiive'.  Nonsense.
+The docs on the other hand are a tedious thing that nobody really pushes for.  As long as the features are delivered, that's the end of things.  
+
+There's also this prevalent myth that a user interface is 'intuitiive'.  Nonsense.  Your product needs docs.
 
 > The only "intuitive" interface is the nipple.  After that it's all learned.  --Bruce Ediger
 
@@ -132,11 +140,15 @@ By putting them all in the same repository, and making them all a part of the sa
 
 ### Make Docs Available Online
 
-It's a connected world.  Customers need to be able to get the information they require at a touch of a button without leaving the native presentation format of the product.  In other words, a phone app shouldn't need people to open their laptop, or dig out a printed manual.
+It's a connected world.  Customers need to be able to get the information they require at a touch of a button without leaving the native presentation format of the product.  
 
-It is imperative in the modern world that docs be online, and available from any device with a network connection.  Docs need to be easy to read or they won't be - They also need to be easy to _find_.
+In other words, a phone app shouldn't need people to open their laptop, or dig out a printed manual.
 
-Where possible, your docs should be directly linkable from your product.  Customer has a problem with a feature?  There should be an icon or link or popup there ready to display the most up-to-date version of the information the customer needs.  The number of users that will put down their mobile device and pull out a printed manual are vanishingly small.
+It is imperative in the modern world that docs be online, and available from any device with a network connection.  Docs need to be easy to read or they won't be - They also need to be easy to _find_. Where possible, your docs should be directly linkable from your product.  
+
+Customer has a problem with a feature?  There should be an icon or link or popup there ready to display the most up-to-date version of the information the customer needs.  
+
+The number of users that will put down their mobile device and pull out a printed manual are vanishingly small.  You don't want your company's revenue depending on a tiny group of customers.  You want to sell to the masses, and face it, the masses are _lazy_.
 
 ### Make Docs Easy to Read
 
@@ -158,7 +170,7 @@ Documentation should not be a non-prescription sleep aid!
 
 ### Export Docs to Dead Formats
 
-If you must have a static, dead format such as PDF, or a docx or something on *gasp* paper, it should be an _export_, not a native thing.
+If you must have a static, dead format such as PDF, or a docx or something on \*gasp\* paper, it should be an _export_, not a native thing.
 
 Google Docs and Confluence are dead ends.  They will never be anymore or any less than they are.  The designers/maintainers are not interested in interoperability, and they don't want you to be able to get your info OUT of that platform.
 
