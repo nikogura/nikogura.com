@@ -4,9 +4,9 @@
 
 Since the dawn of time, there have been people who have been able to figure stuff out.  They don't necessarily even know what they're doing, or how.  They just can pull it off.  Don't you just _hate_ those smug bastards?
 
-The rest of us need to _learn_, and face it, written language is really the king of learning.  Has been for thousands of years.
+The rest of us need to _learn_, and face it, written language is really king where learning is concerned.  It's been that way for thousands of years.
 
-But Docs are hard to do well.  Sure, something is better than nothing, but if we look at it from a behavioral and philosophical standpoint, we can take much of the sting out of the process.
+But documentation is hard to do well.  Sure, something is better than nothing, but if we look at it from a behavioral and philosophical standpoint, we can take much of the sting out of the process of writing and maintaining documentation.
 
 ## Part I: Philosophy
 
