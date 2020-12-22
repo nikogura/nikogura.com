@@ -188,5 +188,3 @@ I highly recommend any programmer's text editor.  There's a learning curve, I ad
 
 I used to write my docs in LaTeX with vim.  That method also followed these principles, but the learning curve for both tools is nearly vertical.  Markdown is a wonderful invention.  
 
-Thank you for your time in reading this, and letting me rent out space in your head.
-
