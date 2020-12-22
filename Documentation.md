@@ -180,7 +180,9 @@ To be truly meta, I have endeavored to follow it here on this website, and for t
 
 I write all of this via [IntelliJ Ultimate](https://www.jetbrains.com/idea/) using the Vim keybindings.  Intellij will render Markdown in a side pane in near real-time as I type, so I can see how things will look.  It also will autocomplete anchor tags and image links for me, lessening the likelihood that I will typo something and leave a dead link on my site.  
 
-It even spell checks to a degree, though with the proliferation of acronyms and project names that accompany any technical writing, it can't catch everything.
+![IntelliJ Docs](images/intelliJDocs.png)
+
+It even spell-checks to a degree, though with the proliferation of acronyms and project names that accompany any technical writing, it can't catch everything.  It does nag me about improper use of its vs it's though, which is nice.
 
 I highly recommend any programmer's text editor.  I used to write my docs in LaTeX with vim.  That method also followed these principles, but the learning curve for both tools is nearly vertical.  Markdown is a wonderful invention.  
 
