@@ -184,7 +184,7 @@ I write all of this via [IntelliJ Ultimate](https://www.jetbrains.com/idea/) usi
 
 It even spell-checks to a degree, though with the proliferation of acronyms and project names that accompany any technical writing, it can't catch everything.  It does nag me about improper use of "its" vs "it's" though, which is nice.  My junior high grammar teacher would be pleased.
 
-I highly recommend any programmer's text editor.  There's a learning curve, I admit, but they're tools created to make keeping track of 200k+ lines of text not only _possible_, but _easy_.  They work too.
+I highly recommend any programmer's text editor.  There's a learning curve, I admit, but they're tools created to make keeping track of 200k+ lines of text not only _possible_, but _easy_.  They work too.  The docs for any complex system are at least as involved as the code for the system.  Use the tools the pros use.
 
 I used to write my docs in LaTeX with vim.  That method also followed these principles, but the learning curve for both tools is nearly vertical.  Markdown is a wonderful invention.  
 
