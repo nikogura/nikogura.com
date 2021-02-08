@@ -77,10 +77,10 @@ Finally I can pull the first element off the numeric list and pull lookup the am
             // 2 weeks prior to the moment terraform is run, formatted as a pure number.
             two_weeks_ago = formatdate("YYYYMMDDhhmmss", timeadd(timestamp(), local.time_window))
 
-            // all images.  I make a hash, cos while I'm going to sort on the creation date, I eventually need to return the ID of the ami.
+            // all images.  This hash is just so I can check my work visually.
             all_amis = {for i in data.aws_ami.base : formatdate("YYYYMMDDhhmmss", i.creation_date) => i.id}
 
-            // images more than 2 weeks old.  We only add them to the hash if the date is less than right now.
+            // images more than 2 weeks old.  We only add them to the hash if the date is less than right now.  I make a hash, cos while I'm going to sort on the creation date, I eventually need to return the ID of the ami.
             older_amis = {for i in data.aws_ami.base : i.creation_date => i.id if formatdate("YYYYMMDDhhmmss", i.creation_date) < formatdate("YYYYMMDDhhmmss", timeadd(timestamp(), local.time_window))}
 
             // sort the keys, which are the dates, then reverse it so the newest is at the top
