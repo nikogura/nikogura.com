@@ -71,22 +71,25 @@ Then I can sort the keys, which works in lexicographic order - and turns out jus
 Finally I can pull the first element off the numeric list and pull lookup the ami id of that element.  Voila!
 
         locals {
-            // window - 2 weeks ago in hours
+            // window - 2 weeks ago in hours.  Terraform can do hours, but not 'days'.
             time_window = "-336h"
 
-            // 2 weeks prior to the moment we run
+            // 2 weeks prior to the moment terraform is run, formatted as a pure number.
             two_weeks_ago = formatdate("YYYYMMDDhhmmss", timeadd(timestamp(), local.time_window))
 
-            // all images
+            // all images.  I make a hash, cos while I'm going to sort on the creation date, I eventually need to return the ID of the ami.
             all_amis = {for i in data.aws_ami.base : formatdate("YYYYMMDDhhmmss", i.creation_date) => i.id}
 
-            // images more than 2 weeks old
+            // images more than 2 weeks old.  We only add them to the hash if the date is less than right now.
             older_amis = {for i in data.aws_ami.base : i.creation_date => i.id if formatdate("YYYYMMDDhhmmss", i.creation_date) < formatdate("YYYYMMDDhhmmss", timeadd(timestamp(), local.time_window))}
 
+            // sort the keys, which are the dates, then reverse it so the newest is at the top
             dates = reverse(sort(keys(local.older_amis)))
 
+            // take the top element.  That will be the newest within the list.
             latest_date = local.dates[0]
 
+            // set the value in a variable I can use elsewhere.
             ami_id = local.older_amis[local.latest_date]
 
         }
