@@ -1,6 +1,6 @@
 # Auto Updating AMI's on a Rolling Window with Terraform
 
-So, I recently had a connundrum.  I want my AWS EC2 ASG's to continuously update without manual intervention, but I don't want to 'poison' a launch config with a bad AMI image and cause a prod outage.
+So, I recently had a connundrum.  I want my AWS EC2 ASG's to continuously update without manual intervention, but I don't want to 'poison' a launch config with a bad AMI image and cause a prod outage when the ASG eventually scales up.
 
 One idea I had was to pre-build my AMI's, and pre-test the snot out of them before I used them in staging or production.  Duh, right?  Sadly, the environments I have are not the enviornments I want.  While I do want to achieve the blessed nirvana of being able to spin up new environments 'just cos' test them, and then let them vanish back into the ether, I'm a long way from that enlightened state.  There are too many tentacles in this legacy octopus code.  _sigh_.
 
