@@ -47,6 +47,6 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 * [Coding Standards](CodingStandards.md) My philosophy on coding standards - especially in golang, and by inference on the rest of life.
 
-* [Documentation](Documentation.md) My documentation manifesto.  How I do docs, and why you should do something similar.
+* [Documentation](Documentation.md) My documentation manifesto.  How I do docs, and why you might want to consider doing something similar.
 
 * [Terraform Auto AMI Rolling Window](TerraformRollingWindow.md) Auto updating AMI's with a configurable rolling window so we can stay up to date, but not necessarily bleeding edge.
