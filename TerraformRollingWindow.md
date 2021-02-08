@@ -64,7 +64,7 @@ Terraform is funny.  I can get a list of the ID's, but it's just a bunch of stri
 
 Now I can get down and dirty.  We use `locals` to declare local variables I can use later in actual resources.
 
-Where this gets really wild is, since I can't convert to unix time, and I can only use operatros like '<' on numbers, I have to 'format' the numbers in such a way that I can do a purely numeric comparison on them to build my window.
+Where this gets really wild is, since I can't convert to unix time, and I can only use operators like '<' on numbers, I have to 'format' the numbers in such a way that I can do a purely numeric comparison on them to build my window.
 
 Then I can sort the keys, which works in lexicographic order - and turns out just fine given the numeric dates, and reverse it, cos I want the latest.
 
