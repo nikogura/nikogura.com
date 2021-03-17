@@ -53,7 +53,8 @@ As said above, Errors are Values. When you construct your error handling routine
 Don’t do this:
 
     thing, _ := SomethingThatReturnsThingAndErr()
-    You’re just skipping the error. This will be hell to debug later when the excrement hits the rotary impeller.
+
+You’re just skipping the error. This will be hell to debug later when the excrement hits the rotary impeller.
 
 Or this:
 
