@@ -50,3 +50,5 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 * [Documentation](Documentation.md) My documentation manifesto.  How I do docs, and why you might want to consider doing something similar.
 
 * [Terraform Auto AMI Rolling Window](TerraformRollingWindow.md) Auto updating AMI's with a configurable rolling window so we can stay up to date, but not necessarily bleeding edge.
+
+* [Golang Design Tips](GolangDesignTips.md) Some design tips for golang.
