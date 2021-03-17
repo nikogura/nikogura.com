@@ -1,5 +1,5 @@
 # Golang Design Tips
-Many of Golang’s ‘unwritten rules’ can be summed up by: https://go-proverbs.github.io/
+Many of Golang’s ‘unwritten rules’ can be summed up by: [https://go-proverbs.github.io/](https://go-proverbs.github.io/)
 
 I’ll give you my own extension/take on a couple of them here, along with some of my own recommendations.
 
