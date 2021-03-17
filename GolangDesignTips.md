@@ -77,7 +77,9 @@ There’s a great package, github.com/pkg/errors that I personally use all the t
 
 This is much more useful. You’ve added context to the error.
 
-Now, especially if you made your wrap statement provide specific information, you can search your codebase for that statement, and voila! You now know where the error came from. Command line tools such as grep are crude perhaps, but they’re also very very useful.
+Now, especially if you made your wrap statement provide specific information, you can search your codebase for that statement, and voila! You now know where the error came from. 
+
+Command line tools such as grep are crude perhaps, but they’re also very _very_ useful.
 
 ## Don’t Panic
 
@@ -97,7 +99,7 @@ Check your errors, and bail out of the function as soon as you find one that you
 
 Golang is a weird language.  Some parts of it are crazy.  Other parts are crazy like a fox.
 
-If you look at the 'main sequence' of computer languages, from ASM to C to Perl, to Python to Ruby and to Java, there is a definite progression as the field advanced. Many things are easy to do in Python and Ruby because Perl came before, and people thought "Aha!  We can do better!".
+If you look at the 'main sequence' of computer languages, from ASM to C to Perl, to Python to Ruby and to Java, there is a definite progression as the field advanced. Many things are easy to do in Python and Ruby because Perl came before, and people thought "This sucks!  We can do better!".
 
 Golang is off this 'main sequence'.  It's way off in left field in many ways. Take for instance Golang isn't Object Oriented, though its syntax looks very OO-ish.  
 
@@ -109,7 +111,11 @@ Why am I rambling on about this?  What's the point?
 
 The point is you need to write golang as golang, not as C, or ruby, or python, etc.  Each language has its synatx, but also it's _idiom_.  You have to learn both, else you're missing out on the features that make each language worth using.
 
-Packages in golang are another good example.  All to often people build these labrynthine package trees, and shit gets complicated real quick.  Then you need extra tooling like [mage](https://magefile.org/) to build things. I'm not knocking the developers of Mage.  I'm sure they're lovely people, but if you keep your golang packages flat, you don't need it.  
+Packages in golang are another good example.  All too often people build these labyrinthine package trees, and shit gets complicated real quick.  You don't need that much complexity.  Keep it flat.  If you really need a different package, make a totally different module with it's own lifecycle in a differnet repo.
+
+If you don't follow this advice, you need extra tooling like [mage](https://magefile.org/) to build things. I'm not knocking the developers of Mage.  I'm sure they're lovely people, but no matter how well they solve this problem doesn't change the fact that if you keep your golang packages flat, you don't need it.  
+
+We engineers sometimes get so focused on solving a problem, or doing something _better_ that we lose sight of the fact that we're solving the _wrong problem_.  It's like killing yourself to become a better dog trainer - except the critter in front of you is a cat, and the cat _just doesn't care_.  
 
 I'm reminded of an anecdote from the early days of Git and Mercurial.  It went something like this:  "If you have a simple build and release process, you probably only need Mercurial.  If your release process is so complicated that you need the extra control that Git provides, you should probably go back and rethink it.".
 
