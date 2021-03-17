@@ -34,7 +34,7 @@ It could be a junior dev. It could be a contractor. It could be you at 3AM when 
 
 Do everyone a favor, including your future self, and don’t have an attack of the clevers. The next time you read this code you may not have the flash of insight you had in your moment of brilliant design nirvana. Keep it simple, keep it clear. You’ll thank yourself later. (And all of the rest of us will too!)
 
-##Errors Are Values
+## Errors Are Values
 
 Golang is rife with the construction:
 
