@@ -150,17 +150,19 @@ Design your tools for your users- one of which is undoubtedly yourself.  You wan
 
 There are 4 components to Managed Secrets, as originally implemented by me.  (I'm no longer the custodian of the repos, so who knows what's changed.)
 
-* [Keymaster](https://github.com/scribd/keymaster) - Library for configuring and managing your secret storage and access system.
+* [Keymaster](https://github.com/nikogura/keymaster) - Library for configuring and managing your secret storage and access system.
 
-* [Vault-Authenticator](https://github.com/scribd/vault-authenticator) - Library for granting access to your secrets.
+* [Vault-Authenticator](https://github.com/nikogura/vault-authenticator) - Library for granting access to your secrets.
 
-* [Secrets](https://github.com/scribd/secrets) - Tool demonstrating how to use *vault-authenticator* to access secrets.
+* [Secrets](https://github.com/nikogura/secrets) - Tool demonstrating how to use *vault-authenticator* to access secrets.
 
-* [Keymaster-CLI](https://github.com/scribd/keymaster-cli) - Tool demonstrating how to use *keymaster* to read secret definitions and make the machine manage your secrets.
+* [Keymaster-CLI](https://github.com/nikogura/keymaster-cli) - Tool demonstrating how to use *keymaster* to read secret definitions and make the machine manage your secrets.
 
 These repos conform to my idea of [MVC-Ish](MVC-Ish.md).  In short, it's 2 binaries that exercise libraries in the other repos.  It was my intention that the libraries be used by other systems (programs, services, Lambda's, etc), but the CLI binaries would provide both a reference implementation and a default tool that anyone could use from the CLI or a bash script.
 
 This code, combined with a YAML config file, takes all the sting out of managing secrets for you, and for your users.  Again, I wrote the reference implementation with Vault as a backend, and Vault is the Cadillac of secret storage engines, but the idea was that I could swap out the backend at anytime and my users wouldn't know or care.  
+
+I originally wrote this code for [Scribd](www.scribd.com), and they were kind enough to allow me to publish it under the MIT License.  To the best of my knowledge, they have no interest in maintaining or extending it, so it seems likely as of the time of this writing that my forks of these repos will become the primary source for Managed Secrets.
 
 Users don't interact with the storage system.  They just write YAML files.  Like this one:
 
@@ -240,25 +242,15 @@ This example defines a Team, which is any logical grouping of people in a compan
       - staging
       - development                         # The 'development' environment is special.  If you have one, anyone who can authenticate can access development secrets.  This is intended to ease/ speed development.
       
-With the above file, all you need is a properly configured instance of [Keymaster-CLI](https://github.com/scribd/keymaster-cli) to configure the secrets backend.
+With the above file, all you need is a properly configured instance of [Keymaster-CLI](https://github.com/nikogura/keymaster-cli) to configure the secrets backend.
 
-Your systems can use [Keymaster-CLI](https://github.com/scribd/keymaster-cli) (or something like it) to authenticate and get their secrets.  
+Your systems can use [Keymaster-CLI](https://github.com/nikogura/keymaster-cli) (or something like it) to authenticate and get their secrets.  
 
 Heck, if they really want to, they can interact directly with the secrets backend directly.  The storage and access system of your backend is still there, and could be used.  The libraries described here are just a control / management plane on the backend.
  
 Why someone would want to connect directly to the backend is beyond me.  Doing so makes whatever you're using *less* portable, and makes it more likely you'll have to go back and change your code when the secret storage system changes or upgrades.
 
-Managed Secrets is an interface.  Interfaces are like fences.  Good fences make for good neighbors.  
+Managed Secrets is basically just a YAML interface to your secret storage system..  Interfaces are like fences.  Good fences make for good neighbors.  
 
 Managing a secrets system is like making sausage.  The diner doesn't care how the sausage gets made.  They just get to take a bite and enjoy.  *yum*
-
-
-... to be continued 
-
-
-
-
-
-
-
 
