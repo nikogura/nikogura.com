@@ -68,7 +68,7 @@ Ask any Sysadmin.  The biggest headache they have are the users.  (Operators of 
 
 We humans like to do what we're interested in doing, and we don't like being distracted by details that get in our way.  
 
-Case in point?  Every use a public WiFi access point?  Hmm?  You'd be hard pressed to find a more *IN* secure means of using a computer.  
+Case in point?  Every use a public WiFi access point?  Hmm?  You'd be hard pressed to find a more *IN*secure means of using a computer.  
 
 You'd never lick the seat of a public toilet, but we'll all connect to a public WiFi without even thinking about it.  (And yes, it's more or less the same thing, electronically speaking.  At least the toilet is cleaned on some schedule.  The router at Starbucks?  Odds are it hasn't been touched since it was first plugged in.)
 
