@@ -158,7 +158,7 @@ Design your tools for your users- one of which is undoubtedly yourself.  You wan
 
 There are 4 components to Managed Secrets.  I originally wrote this code for [Scribd](www.scribd.com), and they were kind enough to allow me to publish it under the MIT License.  
 
-To the best of my knowledge, they have no interest in maintaining or extending them, so it seems likely as of the time of this writing that my forks of these repos will become the primary source for Managed Secrets.
+To the best of my knowledge, while Scribd uses Managed Secrets, they have no interest in maintaining or extending the code behind the system, so it seems likely as of the time of this writing that my forks of these repos will become the primary source for Managed Secrets.
 
 * [Keymaster](https://github.com/nikogura/keymaster) - Library for configuring and managing your secret storage and access system.
 
