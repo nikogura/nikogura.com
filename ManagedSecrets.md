@@ -170,6 +170,8 @@ To the best of my knowledge, while Scribd uses Managed Secrets, they have no int
 
 These repos conform to my idea of [MVC-Ish](MVC-Ish.md).  In short, it's 2 binaries that exercise libraries in the other repos.  It was my intention that the libraries be used by other systems (programs, services, Lambda's, etc), but the CLI binaries would provide both a reference implementation and a default tool that anyone could use from the CLI or a bash script.
 
+The CLI binaries are separate from the library code so that they can be easily forked and customized for internal usage.  The real meat of the solution is in `keymaster` and `vault-authenticator`, but a company's actual implementation is customizable in the CLI tools.  That way you can leverage the audit/review of the Open Source world, yet keep your own internal architectural details private.
+
 This code, combined with a YAML config file, takes all the sting out of managing secrets for you, and for your users.  Again, I wrote the reference implementation with Vault as a backend, and Vault is the Cadillac of secret storage engines, but the idea was that I could swap out the backend at anytime and my users wouldn't know or care.  
 
 Users don't interact with the storage system.  They just write YAML files.  Like this one:
