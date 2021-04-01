@@ -114,7 +114,7 @@ The perfect secret system should:
 
 * provide a means for someone to *define* secrets, even though they cannot access the production values
 
-* allow developers to freely access development secrets, while denying access to 'higer' environments (such as production)
+* allow developers to freely access development secrets, while denying access to 'higher' environments (such as production)
 
 * provide a means to detect whether a secret has been changed or rotated.
 
@@ -133,6 +133,14 @@ Let's say that again:  *Managed Secrets is a YAML Interface on your Secret Syste
 That's what makes this approach so cool.  Everybody gets what they want.  Developers can 'just get secrets'.  Security Engineers and Auditors can get the reports/alerts they want.
 
 Secrets can be rotated on schedule or on demand as needed.  Everybody wins.
+
+## TLS Certificates and Private Keys are Secrets
+
+When you think about it, TLS Certificates and Private Keys are secrets just like any other.  They have their own lifecycle (expiration), are usually provided by an entirely different entity than the application code that depends upon them, and the authors of your services don't really care what's in them, they just want them to work.
+
+There are systems like [certbot](certbot.eff.org), which let your app servers request their own certificates.  This works, but it's a little scary in that the thing connected to the outside world - the app server has the power to create and refresh the trust and encryption mechanism for your systems.  Better in my opinion to separate the concerns, and let your internal, protected systems create your TLS certs, and deliver them to the point of use. This way, a cert (or a secret) can be compromised and you can rotate/change it, but the attacker will never have the ability to _create_ credentials.  Call me paranoid.
+
+By treating Certificates and Keys as 'just another secret', we can deliver them in the same fashion as any other secret, and benefit from the same access and audit mechanism.  Why work harder than you need to?  K.I.S.S.  (Keep It Simple, Stupid).
 
 ## Implementation
 
@@ -253,4 +261,3 @@ Why someone would want to connect directly to the backend is beyond me.  Doing s
 Managed Secrets is basically just a YAML interface to your secret storage system..  Interfaces are like fences.  Good fences make for good neighbors.  
 
 Managing a secrets system is like making sausage.  The diner doesn't care how the sausage gets made.  They just get to take a bite and enjoy.  *yum*
-
