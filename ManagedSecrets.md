@@ -156,7 +156,9 @@ Design your tools for your users- one of which is undoubtedly yourself.  You wan
 
 ### Managed Secrets Components
 
-There are 4 components to Managed Secrets, as originally implemented by me.  (I'm no longer the custodian of the repos, so who knows what's changed.)
+There are 4 components to Managed Secrets.  I originally wrote this code for [Scribd](www.scribd.com), and they were kind enough to allow me to publish it under the MIT License.  
+
+To the best of my knowledge, they have no interest in maintaining or extending them, so it seems likely as of the time of this writing that my forks of these repos will become the primary source for Managed Secrets.
 
 * [Keymaster](https://github.com/nikogura/keymaster) - Library for configuring and managing your secret storage and access system.
 
@@ -169,8 +171,6 @@ There are 4 components to Managed Secrets, as originally implemented by me.  (I'
 These repos conform to my idea of [MVC-Ish](MVC-Ish.md).  In short, it's 2 binaries that exercise libraries in the other repos.  It was my intention that the libraries be used by other systems (programs, services, Lambda's, etc), but the CLI binaries would provide both a reference implementation and a default tool that anyone could use from the CLI or a bash script.
 
 This code, combined with a YAML config file, takes all the sting out of managing secrets for you, and for your users.  Again, I wrote the reference implementation with Vault as a backend, and Vault is the Cadillac of secret storage engines, but the idea was that I could swap out the backend at anytime and my users wouldn't know or care.  
-
-I originally wrote this code for [Scribd](www.scribd.com), and they were kind enough to allow me to publish it under the MIT License.  To the best of my knowledge, they have no interest in maintaining or extending it, so it seems likely as of the time of this writing that my forks of these repos will become the primary source for Managed Secrets.
 
 Users don't interact with the storage system.  They just write YAML files.  Like this one:
 
