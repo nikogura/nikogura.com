@@ -258,7 +258,7 @@ Heck, if they really want to, they can interact directly with the secrets backen
  
 Why someone would want to connect directly to the backend is beyond me.  Doing so makes whatever you're using *less* portable, and makes it more likely you'll have to go back and change your code when the secret storage system changes or upgrades.
 
-Managed Secrets is basically just a YAML interface to your secret storage system..  Interfaces are like fences.  Good fences make for good neighbors.  
+Managed Secrets is, again, basically just a YAML interface to your secret storage system.  Interfaces are like fences.  Good fences make for good neighbors.  
 
 Managing a secrets system is like making sausage.  The diner doesn't care how the sausage gets made.  They just get to take a bite and enjoy.  *yum*
 
