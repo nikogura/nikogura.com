@@ -261,3 +261,13 @@ Why someone would want to connect directly to the backend is beyond me.  Doing s
 Managed Secrets is basically just a YAML interface to your secret storage system..  Interfaces are like fences.  Good fences make for good neighbors.  
 
 Managing a secrets system is like making sausage.  The diner doesn't care how the sausage gets made.  They just get to take a bite and enjoy.  *yum*
+
+## Usage
+
+Users don't interact with the secrets backend to provision secrets.  They don't interact with it to obtain secrets either.
+
+Using the [secrets](https://github.com/nikogura/secrets) example tool, you use `secrets fetch` to fetch whatever secrets you're allowed to have, and `secrets exec` to exec a subprocess with the secrets exported as ENV vars in your subprocess.
+
+You can run `secrets checksum` to obtain a checksum of all secrets available to you, which allows you to detect whether they've changed, and if so, take whatever action is appropriate.
+
+The whole idea of Managed Secrets is to give the user - in this case the application developer the UX they've always wanted - they want secrets to 'just be there' when they're needed.  Likewise the administrator gets the UX they want - they can control what goes where, and report to auditors about who obtained what, and when the need inevitably arises, they can instantly respond and 'rotate' (i.e. change) the secrets.  Everybody wins!
