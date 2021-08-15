@@ -7,9 +7,11 @@
 
 *and by 'work' I mean work superlatively.*
 
-### San Francisco, CA
+### Undisclosed Location, USA
 
-#### *Aut viam inveniam, aut faciam.* *(I will find a way, or I will make one)*
+#### *Aut viam inveniam, aut faciam.* 
+
+*(I will find a way, or I will make one)*
 
 [*Reader's Digest Version of this Resume*](https://github.com/nikogura/nikogura.github.io/blob/master/NikOguraResume.docx?raw=true)
 

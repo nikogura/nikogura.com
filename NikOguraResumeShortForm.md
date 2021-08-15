@@ -8,9 +8,11 @@
 
 *and by 'work' I mean work superlatively.*
 
-### San Francisco, CA
+### Undisclosed Location, USA
 
-#### *Aut viam inveniam, aut faciam.* *(I will find a way, or I will make one)*
+#### *Aut viam inveniam, aut faciam.* 
+
+*(I will find a way, or I will make one)*
 
 # Interesting Accomplishments
 
