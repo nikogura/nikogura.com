@@ -1,7 +1,8 @@
 # Nik Ogura
 
-### Lead Dev/SecOps Engineer
+### Lead Dev/Sec/Ops Engineer
 *Platform - Tools - Security - Infrastructure*
+* I make things - things that work. *
 
 ### San Francisco, CA
 
@@ -22,6 +23,8 @@
 [Employment History](#employment-history)
 
 # Interesting Things I've Done
+[Orion's On Premeses Kubernetes System](#orions-on-premeses Kubernetes System)
+
 [Scribd's SIEM System](#scribds-siem-system)
 
 [Scribd's Managed Secrets System](#scribds-managed-secrets-system)
@@ -49,6 +52,11 @@
 [Brought a Whole Business Line's Tech Stack into PCI Compliance](#brought-a-whole-business-lines-tech-stack-into-pci-compliance)
 
 [More UI's Than You Can Shake a Stick At](#more-uis-than-you-can-shake-a-stick-at)
+
+#### Orion's On Premeses Kubernetes System
+Picture a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports it's own auto-unsealing certificate authority powered by Hashicorp Vault.
+
+The real power of the system is it's UX.  You enter a command, and it creates itself ex nihilo.  Huge power, amazing complexity, yet it _just works_.
 
 #### Scribd's SIEM System
 Scribd's world-wide footprint creates interesting challenges from a monitoring and abuse standpoint.  Merely being able to see what's going on is a challenge.  There's so much data coming in that 'spinner disks' can't keep up with it and start smoking the moment you turn the system on.  I had to write code that could receive, process, correlate, and consume information for processing.  With it we discovered all sorts of interesting things- better insights into how our legitimate users were using the product, and also the bad actors and their botnets.
@@ -353,10 +361,17 @@ If I cannot find a way, I will make one.
 
 [United Martial Arts - Plymouth, MN](#united-martial-arts---plymouth,-mn)
 
-## Scribd - San Francisco, CA
-2018 - Present *Dev/SecOps Engineering Lead*
+## Orion Labs - San Francisco, CA
+2020 - Present *Infrastructure Engineering Lead DevOps*
 
-I created one-click self service deployment tooling to bare-metal hosts and Kubernetes clusters.  Heck, I even created a series of Kubernetes clusters myself, ex nilhio, and lead the effort to use them in anger.
+I took a legacy EC2 autoscaling application stack and re-architected it as a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports it's own auto-unsealing certificate authority powered by Hashicorp Vault.
+
+While doing that, we replaced an expensive Splunk based monitoring/metrics system with a totally modern, best in class, and most importantly free stack based on Prometheus, Grafana, and Alertmanager.  What's more, since it's based on open source technology, our monitoring/metrics stack is able to be bundled into our on-premesis product as a value add for our customers.
+
+## Scribd - San Francisco, CA
+2018 - 2020 *Dev/SecOps Engineering Lead*
+
+I created one-click self service deployment tooling to bare-metal hosts and Kubernetes clusters.  Heck, I even created a series of Kubernetes clusters myself, ex nihilo, and lead the effort to use them in anger.
 
 The company's entire onboarding and access system, both to our network and our K8S clusters came out of my fertile mind and busy fingers, as did our internal PKI- with a little help from Hashicorp Vault and a ton of golang magic.
 
