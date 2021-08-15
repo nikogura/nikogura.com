@@ -2,7 +2,8 @@
 
 ### Lead Dev/Sec/Ops Engineer
 *Platform - Tools - Security - Infrastructure*
-*I make things - things that work; and by 'work' _I mean work superlatively_.*
+*I make things - things that work-*
+*and by 'work' _I mean work superlatively_.*
 
 ### San Francisco, CA
 
