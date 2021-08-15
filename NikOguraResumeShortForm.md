@@ -4,9 +4,7 @@
 
 *Platform - Tools - Infrastructure - Security*
 
-*I make things - things that work-*
-
-*and by 'work' I mean work superlatively.*
+*I make things - things that work- and by 'work' I mean work superlatively.*
 
 ### Undisclosed Location, USA
 

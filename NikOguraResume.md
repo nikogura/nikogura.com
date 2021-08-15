@@ -3,9 +3,7 @@
 ### Lead Dev/Sec/Ops Engineer
 *Platform - Tools - Security - Infrastructure*
 
-*I make things - things that work-*
-
-*and by 'work' I mean work superlatively.*
+*I make things - things that work- and by 'work' I mean work superlatively.*
 
 ### Undisclosed Location, USA
 
