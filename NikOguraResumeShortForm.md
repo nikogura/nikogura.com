@@ -3,8 +3,10 @@
 ### Lead Dev/SecOps Engineer 
 
 *Platform - Tools - Infrastructure - Security*
+
 *I make things - things that work-*
-*and by 'work' I mean work _superlatively_.*
+
+*and by 'work' I mean work superlatively.*
 
 ### San Francisco, CA
 
