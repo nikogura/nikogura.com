@@ -59,7 +59,7 @@
 #### Orion's On Premeses Kubernetes System
 Picture a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports it's own auto-unsealing certificate authority powered by Hashicorp Vault.
 
-The real power of the system is it's UX.  You enter a command, and it creates itself ex nihilo.  Huge power, amazing complexity, yet it _just works_.
+The real power of the system is it's UX.  You enter a command, and it creates itself _ex nihilo_.  Huge power, amazing complexity, yet it _just works_.
 
 #### Scribd's SIEM System
 Scribd's world-wide footprint creates interesting challenges from a monitoring and abuse standpoint.  Merely being able to see what's going on is a challenge.  There's so much data coming in that 'spinner disks' can't keep up with it and start smoking the moment you turn the system on.  I had to write code that could receive, process, correlate, and consume information for processing.  With it we discovered all sorts of interesting things- better insights into how our legitimate users were using the product, and also the bad actors and their botnets.
