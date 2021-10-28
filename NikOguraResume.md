@@ -348,6 +348,8 @@ If I cannot find a way, I will make one.
 
 # Employment History
 
+[Orion Labs - San Francisco, CA](#orion-labs---san-francisco,-ca)
+
 [Scribd - San Francisco, CA](#scribd---san-francisco,-ca)
 
 [Stitch Fix - San Francisco, CA](#stitch-fix---san-francisco,-ca)
@@ -372,6 +374,8 @@ If I cannot find a way, I will make one.
 I took a legacy EC2 autoscaling application stack and re-architected it as a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports it's own auto-unsealing certificate authority powered by Hashicorp Vault.
 
 While doing that, we replaced an expensive Splunk based monitoring/metrics system with a totally modern, best in class, and most importantly free stack based on Prometheus, Grafana, and Alertmanager.  What's more, since it's based on open source technology, our monitoring/metrics stack is able to be bundled into our on-premesis product as a value add for our customers.
+
+I'm also responsible for all technical training within the company.  To date I've designed curriculum and taught internal classes on topics such as golang, elasticsearch, kubernetes, dns, IP networks, TLS/SSl, and both symmetric and asymmetric encryption.
 
 ## Scribd - San Francisco, CA
 2018 - 2020 *Dev/SecOps Engineering Lead*
