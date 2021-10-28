@@ -1,6 +1,6 @@
 # Nik Ogura
 
-### Lead Dev/Sec/Ops Engineer
+### Principal/Staff Dev/Sec/Ops Engineer
 *Platform - Tools - Security - Infrastructure*
 
 *I make things - things that work- and by 'work' I mean work superlatively.*
