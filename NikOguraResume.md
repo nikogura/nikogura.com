@@ -1,6 +1,6 @@
 # Nik Ogura
 
-### Principal/Staff Dev/Sec/Ops Engineer
+### Principal Staff Engineer
 *Platform - Tools - Security - Infrastructure*
 
 *I make things - things that work- and by 'work' I mean work superlatively.*
@@ -60,6 +60,8 @@
 Picture a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports it's own auto-unsealing certificate authority powered by Hashicorp Vault.
 
 The real power of the system is it's UX.  You enter a command, and it creates itself _ex nihilo_.  Huge power, amazing complexity, yet it _just works_.
+
+One customer evaluating the system described it as 'flawless'.  Another large customer called it "The easiest, highest quality software installation we have ever seen".
 
 *Components:* **Kubernetes**, **Go**, **ElasticSearch**, **Logstash**, **Kibana**, **Fluent-Bit**, **Hashicorp Vault**, **Prometheus**, **Grafana**, **AlertManager**.
 
@@ -369,7 +371,7 @@ If I cannot find a way, I will make one.
 [United Martial Arts - Plymouth, MN](#united-martial-arts---plymouth,-mn)
 
 ## Orion Labs - San Francisco, CA
-2020 - Present *Infrastructure Engineering Lead DevOps*
+2020 - Present *Principal Staff Engineer*
 
 I took a legacy EC2 autoscaling application stack and re-architected it as a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports it's own auto-unsealing certificate authority powered by Hashicorp Vault.
 
