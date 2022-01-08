@@ -25,6 +25,8 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 * [Gomason CI/CD in your pocket](https://github.com/nikogura/gomason) *Want to test locally?  Build, Sign, and publish binaries?  Here you go.*
 
+* [Managed Secrets](https://github.com/nikogura/managed-secrets) A YAML Interface on Hashicorp Vault
+
 * [MVC-ish](MVC-Ish.md) *Quazi MVC design patterns in golang.*
 
 * [TDD](TDD.md) *Test Driven Development Manifesto*
@@ -42,8 +44,6 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 * [Using CircleCI as if it was a Maven Repo](CircleCIMaven.md)  *Using CircleCI?  Don't have a private Maven repo?  Check this out.*
 
 * [LDAP for people with better things to do than master LDAP](AccessAndIdentityMadeEasy.md) *LDAP can be painful, but everything already knows how to connect to it.  Why not connect all the things?*
-
-* [Managed Secrets](ManagedSecrets.md) *Your org needs secrets.  Making them available to your apps is just the tip of the iceberg.*
 
 * [Coding Standards](CodingStandards.md) My philosophy on coding standards - especially in golang, and by inference on the rest of life.
 
