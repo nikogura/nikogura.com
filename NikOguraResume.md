@@ -26,7 +26,7 @@
 [Employment History](#employment-history)
 
 # Interesting Things I've Done
-[Orion's On Premeses Kubernetes System](#orions-on-premeses-kubernetes-system)
+[Orion's SaaS and On-Premeses Kubernetes Systems](#orion-labs---san-francisco-ca)
 
 [Scribd's SIEM System](#scribds-siem-system)
 
@@ -56,10 +56,12 @@
 
 [More UI's Than You Can Shake a Stick At](#more-uis-than-you-can-shake-a-stick-at)
 
-#### Orion's On Premeses Kubernetes System
-Picture a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports it's own auto-unsealing certificate authority powered by Hashicorp Vault.
+#### Orion's SaaS and On-Premeses Kubernetes Systems
+The plaform on which all of Orion's technology stands.
 
-The real power of the system is it's UX.  You enter a command, and it creates itself _ex nihilo_.  Huge power, amazing complexity, yet it _just works_.
+Picture a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports a metrics and visibility stack, as well as its own auto-unsealing certificate authority powered by Hashicorp Vault.
+
+The real power of the system is its UX.  You enter a command, and it creates itself _ex nihilo_.  Huge power, amazing complexity, yet it _just works_.
 
 One customer evaluating the system described it as 'flawless'.  Another large customer called it "The easiest, highest quality software installation we have ever seen".
 
