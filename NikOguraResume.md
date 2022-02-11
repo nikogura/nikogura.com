@@ -75,9 +75,15 @@ It's all available in a self service fashion that allows anyone in the company t
 *Components:* **Go**, **ElasticSearch**, **Logstash**, **Kibana**, **ElasticBeats**, **Syslog**
 
 #### Scribd's Managed Secrets System
-Define your secrets- what they look like, and how to generate them.  The system takes care of the rest.  A developer can define a secret, and who should access it, but not be able to know the prod value.  Any user gets the proper value for their environment.  
+Imagine a YAML interface simplifying Hashicorp Vault.  
+
+Define your secrets- what they look like, and how to generate them.  The system takes care of the rest.  
+
+A developer can define a secret, and who should access it, but not be able to know the value outside of a dev system.  Any user gets the proper value for their environment.  
 
 Authenticate via LDAP, TLS Certificate, Kubernetes, IAM - it doesn't matter.  One binary tool magically does the right thing and 'your secrets' magically appear at your fingertips.
+
+[Managed Secrets](https://github.com/nikogura/managed-secrets)
 
 *Components:* **Hashicorp Vault**, **Go**
 
