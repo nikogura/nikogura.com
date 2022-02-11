@@ -340,6 +340,8 @@ If I cannot find a way, I will make one.
 
 * [gomason](https://github.com/nikogura/gomason) A tool for doing clean-room CI testing locally.  Listed in [awesome-go](https://github.com/avelino/awesome-go)
 
+* [managed-secrets](https://github.com/nikogura/managed-secrets) A YAML interface simplifying [Hashicorp Vault](https://www.vaultproject.io/)
+
 * [go-postgres-testdb](https://github.com/stitchfix/go-postgres-testdb) A library for managing ephemeral test databases. 
 
 * [python-ldap-test](https://github.com/zoldar/python-ldap-test) A testing tool Python implementing an ephemeral in-memory LDAP server
@@ -381,9 +383,9 @@ If I cannot find a way, I will make one.
 ## Orion Labs - San Francisco, CA
 2020 - Present *Principal Staff Engineer*
 
-I took a legacy EC2 autoscaling application stack and re-architected it as a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports it's own auto-unsealing certificate authority powered by Hashicorp Vault.
+I took a legacy EC2 autoscaling application stack and re-architected it as a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports its own auto-unsealing certificate authority powered by Hashicorp Vault.
 
-While doing that, we replaced an expensive Splunk based monitoring/metrics system with a totally modern, best in class, and most importantly free stack based on Prometheus, Grafana, and Alertmanager.  What's more, since it's based on open source technology, our monitoring/metrics stack is able to be bundled into our on-premesis product as a value add for our customers.
+While doing that, we replaced an expensive Splunk based monitoring/metrics system with a totally modern, best in class, and most importantly free stack based on Prometheus, Grafana, and Alertmanager.  What's more, since it's based on open source technology, our monitoring/metrics stack is able to be bundled into our on-premeses product as a value add for our customers.
 
 I'm also responsible for all technical training within the company.  To date I've designed curriculum and taught internal classes on topics such as golang, elasticsearch, kubernetes, dns, IP networks, TLS/SSl, and both symmetric and asymmetric encryption.
 
