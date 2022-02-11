@@ -57,7 +57,7 @@
 [More UI's Than You Can Shake a Stick At](#more-uis-than-you-can-shake-a-stick-at)
 
 #### Orion's SaaS and On-Premeses Kubernetes Systems
-The plaform on which all of Orion's technology stands.
+The platform on which all of Orion's technology stands.  What we run for our SaaS customers is what we sell as an on-prem solution.  We eat our own dogfood, and it's delicious.
 
 Picture a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports a metrics and visibility stack, as well as its own auto-unsealing certificate authority powered by Hashicorp Vault.
 
