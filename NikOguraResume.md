@@ -119,7 +119,13 @@ Apple Pay and the systems behind activation of every Apple device in the world u
 
 It worked pretty well, here and abroad.  I don't know how much of it they're still using.
 
-Hear about them going down and being unable to deploy between 2015 and 2017?  Me neither.
+Hear about them going down during the China launch and being unable to deploy between 2015 and 2017?  Me neither.  Never happened.
+
+The system was actually one of the best CI/CD systems I've had the pleasure of building.  Philosophically it was the ideal setup. It dynamically created an entire virtual environment for each and every pull request.  That environment lived until the PR was merged to master, when it was torn down and the resources returned to the general pool.
+
+We did it by putting OpenStack on a bunch of unused hardware that was lying around still in the original boxes.  Virtual machines, once created, were provisioned via Chef. The hardest part was getting the blades into a rack, since the datacenter was still under construction at the time.
+
+It was so secure that Apple's own security teams could not get into it until we stood down some of its protections.  I was told that was a first.
 
 ## Made an Application Stack Prototyping and Orchestration Suite
 I worked up a system whereby the entire deployment footprint of a group of applications can be described and manipulated in code. It was self healing and could detect and correct drift. 
