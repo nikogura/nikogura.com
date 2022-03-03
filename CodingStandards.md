@@ -36,7 +36,7 @@ In golang, the pkg/ directory is intended to contain code that can be re-used by
 
 While there are certainly cases where code should never be reused, generally speaking this is a pattern to be avoided.  Reusing code is a huge time saver, and writing code that can be reused is just good design principles.
 
-If you don’t have a really good reason for using internal/ put everything in pkg/.  Putting your code in internal/ only prevents use by other programs.  It doesn’t provide any security or privacy benefits.
+If you don’t have a really good reason for using internal/ put everything in pkg/.  Putting your code in internal/ only prevents use by other programs.  It doesn't provide any security or privacy benefits.
 
 You can say "Nobody will ever need to use this code.", and you may be right.  Why limit yourself though?  If it truly has to be private, stick it in a private repo.  Otherwise, leave it flexible and open.
 
@@ -56,10 +56,10 @@ As no doubt you can guess by reading the above, I'm not much in favor of private
 
 Sure, they have their place, but if you cannot absolutely say "This is why this needs to be private", make it public.  Why lose flexibility if you don't need to do so?
 
-In my martial arts career I would often teach people 'rules'.  I would also teach people the exceptions to the rules.  
+In my martial arts career I would often teach people 'rules'.  I would also teach people the exceptions to the 'rules'.  
 
 The moment people learn of an exception to a rule, they try to apply it everywhere.  I don't know why.  My daughters do it too, so it's probably human nature.
 
-What I say about exceptions - in coding, in martial arts, and in life is this:  if you don't know why the exception exists, and why it specifically applies to *this* situation follow the rule.  
+What I say about exceptions - in coding, in martial arts, and in life is this:  if you don't know why the exception exists, and why it specifically applies to *this* situation,  follow the rule.  Using an exception when you don't know exactly why you're using it means you're probably using it wrongly.
 
 The rule, in my not so humble opinion, is make all functions and variables public.  Don't impose restrictions on your future self unless you can articulate and defend a very good reason for doing otherwise.  Your future self will thank you for the consideration.
