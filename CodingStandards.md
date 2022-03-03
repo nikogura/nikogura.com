@@ -1,6 +1,6 @@
 # Coding Standards (especially in Golang)
 
-This rant is at the surface about code best practices ('best' as defined by me of course.), but it's really about design philosophy and how try to approach my work.
+This rant is at the surface about code best practices ('best' as defined by me of course.), but it's really about design philosophy and how I try to approach my work.
 
 ## Code Privacy and Reusability
 
