@@ -6,7 +6,7 @@
 
 *I make things - things that work- and by 'work' I mean work superlatively.*
 
-### Undisclosed Location, USA
+### San Diego County, USA
 
 #### *Aut viam inveniam, aut faciam.* 
 
