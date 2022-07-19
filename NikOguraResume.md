@@ -1,6 +1,6 @@
 # Nik Ogura
 
-### Principal Staff Engineer
+### Principal Engineer
 *Platform - Tools - Security - Infrastructure*
 
 *I make things - things that work- and by 'work' I mean work superlatively.*
@@ -11,7 +11,7 @@
 
 *(I will find a way, or I will make one)*
 
-[*Reader's Digest Version of this Resume*](https://github.com/nikogura/nikogura.github.io/blob/master/NikOguraResume.docx?raw=true)
+[*Reader's Digest Version of this Resume*](https://github.com/nikogura/nikogura.github.io/blob/master/NikOgura.docx?raw=true)
 
 # Table of Contents
 
@@ -26,7 +26,7 @@
 [Employment History](#employment-history)
 
 # Interesting Things I've Done
-[Orion's SaaS and On-Premeses Kubernetes Systems](#orion-labs---san-francisco-ca)
+[Orion's SaaS and On-Premises Kubernetes Systems](#orion-labs---san-francisco-ca)
 
 [Scribd's SIEM System](#scribds-siem-system)
 
@@ -56,7 +56,7 @@
 
 [More UI's Than You Can Shake a Stick At](#more-uis-than-you-can-shake-a-stick-at)
 
-#### Orion's SaaS and On-Premeses Kubernetes Systems
+#### Orion's SaaS and On-Premises Kubernetes Systems
 The platform on which all of Orion's technology stands.  What we run for our SaaS customers is what we sell as an on-prem solution.  We eat our own dogfood, and it's delicious.
 
 Picture a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports a metrics and visibility stack, as well as its own auto-unsealing certificate authority powered by Hashicorp Vault.
@@ -387,11 +387,11 @@ If I cannot find a way, I will make one.
 [United Martial Arts - Plymouth, MN](#united-martial-arts---plymouth,-mn)
 
 ## Orion Labs - San Francisco, CA
-2020 - Present *Principal Staff Engineer*
+2020 - 2022 *Principal Staff Engineer*
 
 I took a legacy EC2 autoscaling application stack and re-architected it as a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports its own auto-unsealing certificate authority powered by Hashicorp Vault.
 
-While doing that, we replaced an expensive Splunk based monitoring/metrics system with a totally modern, best in class, and most importantly free stack based on Prometheus, Grafana, and Alertmanager.  What's more, since it's based on open source technology, our monitoring/metrics stack is able to be bundled into our on-premeses product as a value add for our customers.
+While doing that, we replaced an expensive Splunk based monitoring/metrics system with a totally modern, best in class, and most importantly free stack based on Prometheus, Grafana, and Alertmanager.  What's more, since it's based on open source technology, our monitoring/metrics stack is able to be bundled into our on-premises product as a value add for our customers.
 
 I'm also responsible for all technical training within the company.  To date I've designed curriculum and taught internal classes on topics such as golang, elasticsearch, kubernetes, dns, IP networks, TLS/SSl, and both symmetric and asymmetric encryption.
 

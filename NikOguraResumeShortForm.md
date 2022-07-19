@@ -1,6 +1,6 @@
 # Nik Ogura
 
-### Lead Dev/SecOps Engineer 
+### Principal Engineer 
 
 *Platform - Tools - Infrastructure - Security*
 
@@ -14,7 +14,7 @@
 
 # Interesting Accomplishments
 
-#### Orion's On Premeses Kubernetes System
+#### Orion's On-Premises Kubernetes System
 Picture a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports it's own auto-unsealing certificate authority powered by Hashicorp Vault.
 
 The real power of the system is it's UX.  You enter a command, and it creates itself _ex nihilo_.  Huge power, amazing complexity, yet it _just works_.
@@ -140,7 +140,7 @@ I participated in creating and executing a plan to bring a multi- million dollar
 # Professional History
 
 ## Orion Labs - San Francisco, CA
-2020 - Present *Infrastructure Engineering Lead DevOps*
+2020 - 2022 *Infrastructure Engineering Lead DevOps*
 
 I took a legacy EC2 autoscaling application stack and re-architected it as a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports it's own auto-unsealing certificate authority powered by Hashicorp Vault.
 
