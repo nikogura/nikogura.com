@@ -139,6 +139,13 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 # Professional History
 
+## AWS Global Financial Services
+2022 - Present  *Senior DevOps Consultant*
+
+Serving as 'Jack of All Trades' (and master of some) to the Financial Services and Banking sector.  Teaching DevOps Principles and driving Cloud Adoption.
+
+Bringing the Financial Sector into the 21st century - kicking and screaming if necessary.
+
 ## Orion Labs - San Francisco, CA
 2020 - 2022 *Infrastructure Engineering Lead DevOps*
 
