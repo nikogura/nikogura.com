@@ -149,10 +149,13 @@ Bringing the Financial Sector into the 21st century - kicking and screaming if n
 ## Orion Labs - San Francisco, CA
 2020 - 2022 *Principal Staff Engineer*
 
-I took a legacy EC2 autoscaling application stack and re-architected it as a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports it's own auto-unsealing certificate authority powered by Hashicorp Vault.
+I took a legacy EC2 autoscaling application stack and re-architected it as a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports its own auto-unsealing certificate authority powered by Hashicorp Vault.
 
-While doing that, we replaced an expensive Splunk based monitoring/metrics system with a totally modern, best in class, and most importantly free stack based on Prometheus, Grafana, and Alertmanager.  What's more, since it's based on open source technology, our monitoring/metrics stack is able to be bundled into our on-premesis product as a value add for our customers.
+While doing that, I replaced an expensive Splunk based monitoring/metrics system with a totally modern, best in class, and most importantly free stack based on Prometheus, Grafana, and Alertmanager.  What's more, since it's based on open source technology, our monitoring/metrics stack is able to be bundled into our on-premises product as a value add for our customers.
 
+For an encore, I created the Golang development standards for the company.  Once the new standard was created, I refactored the legacy microservices to this new standard, wrote a few new ones, and created the Orion Voice Bot framework in golang, complete with it's own Kubernetes Operator for easy deployment and management.
+
+I was also responsible for all technical training within the company.  To date I've designed curriculum and taught internal classes on topics such as golang, elasticsearch, kubernetes, dns, IP networks, TLS/SSl, and both symmetric and asymmetric encryption.  If it happened on a computer, I was responsible for teaching people how to do it.
 
 #### Scribd - San Francisco, CA - Sec/DevOps Engineering Lead - 2018 - Present
 
