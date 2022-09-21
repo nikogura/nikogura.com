@@ -151,21 +151,21 @@ Bringing the Financial Sector into the 21st century - kicking and screaming if n
 
 I took a legacy EC2 autoscaling application stack and re-architected it as a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports its own auto-unsealing certificate authority powered by Hashicorp Vault.
 
-While doing that, I replaced an expensive Splunk based monitoring/metrics system with a totally modern, best in class, and most importantly free stack based on Prometheus, Grafana, and Alertmanager.  What's more, since it's based on open source technology, our monitoring/metrics stack is able to be bundled into our on-premises product as a value add for our customers.
+While doing that, I replaced an expensive Splunk based monitoring/metrics system with a totally modern, best in class, and most importantly free stack based on Prometheus, Grafana, and Alertmanager.  What's more, since it's based on open source technology, our monitoring/metrics stack was able to be bundled into our on-premises product as a value add for our customers.
 
-For an encore, I created the Golang development standards for the company.  Once the new standard was created, I refactored the legacy microservices to this new standard, wrote a few new ones, and created the Orion Voice Bot framework in golang, complete with it's own Kubernetes Operator for easy deployment and management.
+For an encore, I created the Golang development standards for the company.  Once the new standard was created, I refactored the legacy microservices to this new standard, wrote a few new ones, and created the Orion Voice Bot framework in golang, complete with its own Kubernetes Operator for easy deployment and management.
 
 I was also responsible for all technical training within the company.  To date I've designed curriculum and taught internal classes on topics such as golang, elasticsearch, kubernetes, dns, IP networks, TLS/SSl, and both symmetric and asymmetric encryption.  If it happened on a computer, I was responsible for teaching people how to do it.
 
 #### Scribd - San Francisco, CA - Sec/DevOps Engineering Lead - 2018 - Present
 
-I created one-click self service deployment tooling to bare-metal hosts and Kubernetes clusters.  Heck, I even created a series of Kubernetes clusters myself, ex nilhio, and lead the effort to use them in anger.
+I created one-click self-service deployment tooling to bare-metal hosts and Kubernetes clusters.  Heck, I even created a series of Kubernetes clusters myself, ex nilhio, and lead the effort to use them in anger.
 
 The company's entire onboarding and access system, both to our network and our K8S clusters came out of my fertile mind and busy fingers, as did our internal PKI- with a little help from Hashicorp Vault and a ton of golang magic.
 
-I designed and build a system of 'Managed Secrets' so that we could generate, rotate, and well, 'manage' secrets across the enterprise- in AWS and in a bare metal datacenter.  An app getting the right secret is important, but you also need to know who has access to what, when to rotate, et al.  
+I designed and build a system of 'Managed Secrets' so that we could generate, rotate, and well, 'manage' secrets across the enterprise - in AWS and in a bare metal datacenter.  An app getting the right secret is important, but you also need to know who has access to what, when to rotate, et al.  
 
-I tamed the ELK stack, and wrote event correlation tools to take incoming request data from Fastly's WAF and make it available to detect and counter bad actors all over the world.  This system ingests hundreds of Gb of information daily that flows in so quickly that it melts old fashioned spinner disks.
+I tamed the ELK stack, and wrote event correlation tools to take incoming request data from Fastly's WAF and make it available to detect and counter bad actors all over the world.  This system ingests hundreds of Gb of information daily that flows in so quickly that it melts old-fashioned spinner disks.
 
 I revel in a porous boundary between Sec / Dev / Ops that allows me to secure, advise, and build amazing solutions that not only work, but are object lessons in *doing it right*.
 

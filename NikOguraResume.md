@@ -56,7 +56,7 @@
 
 [More UI's Than You Can Shake a Stick At](#more-uis-than-you-can-shake-a-stick-at)
 
-#### Orion's SaaS and On-Premises Kubernetes Systems
+## Orion's SaaS and On-Premises Kubernetes Systems
 The platform on which all of Orion's technology stands.  What we run for our SaaS customers is what we sell as an on-prem solution.  We eat our own dogfood, and it's delicious.
 
 Picture a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports a metrics and visibility stack, as well as its own auto-unsealing certificate authority powered by Hashicorp Vault.
@@ -67,14 +67,14 @@ One customer evaluating the system described it as 'flawless'.  Another large cu
 
 *Components:* **Kubernetes**, **Go**, **ElasticSearch**, **Logstash**, **Kibana**, **Fluent-Bit**, **Hashicorp Vault**, **Prometheus**, **Grafana**, **AlertManager**.
 
-#### Scribd's SIEM System
-Scribd's world-wide footprint creates interesting challenges from a monitoring and abuse standpoint.  Merely being able to see what's going on is a challenge.  There's so much data coming in that 'spinner disks' can't keep up with it and start smoking the moment you turn the system on.  I had to write code that could receive, process, correlate, and consume information for processing.  With it we discovered all sorts of interesting things- better insights into how our legitimate users were using the product, and also the bad actors and their botnets.
+## Scribd's SIEM System
+Scribd's world-wide footprint creates interesting challenges from a monitoring and abuse standpoint.  Merely being able to see what's going on is a challenge.  There's so much data coming in that 'spinner disks' can't keep up with it and start smoking the moment you turn the system on.  I had to write code that could receive, process, correlate, and consume information for processing.  With it we discovered all sorts of interesting things - better insights into how our legitimate users were using the product, and also the bad actors and their botnets.
 
 It's all available in a self service fashion that allows anyone in the company to answer for themselves the question "What's going on?".
 
 *Components:* **Go**, **ElasticSearch**, **Logstash**, **Kibana**, **ElasticBeats**, **Syslog**
 
-#### Scribd's Managed Secrets System
+## Scribd's Managed Secrets System
 Imagine a YAML interface simplifying Hashicorp Vault.  
 
 Define your secrets- what they look like, and how to generate them.  The system takes care of the rest.  
@@ -156,7 +156,7 @@ So I worked up a system to tie together components from multiple sources togethe
 
 It had a friendly user interface allowed non-technical users in multiple countries to create and deploy SSL Certificates in a secure manner. The application saved the company over $1M based on vendor bids for similar systems.  
 
-What's even slicker is I taught myself Java to do it.  From what I hear, they're still using it today.  I don't know whether I should be proud of that or scared- it was, after all my first Java app.  I'm sure they've polished off it's rough edges by now.  I hope.
+What's even slicker is I taught myself Java to do it.  From what I hear, they're still using it today.  I don't know whether I should be proud of that - or scared - it was, after all my first Java app.  I'm sure they've polished off it's rough edges by now.  I hope.
 
 ### Designed a Credit Card PAN Encryption and Tokenization System
 It was scalable.  It was highly available.  It was downright nasty to try to exploit.  It encrypted and masked credit card numbers for a Merchant Acquiring systems (Credit Card Authorization and Settlement).  
@@ -398,22 +398,22 @@ Bringing the Financial Sector into the 21st century - kicking and screaming if n
 
 I took a legacy EC2 autoscaling application stack and re-architected it as a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports its own auto-unsealing certificate authority powered by Hashicorp Vault.
 
-While doing that, I replaced an expensive Splunk based monitoring/metrics system with a totally modern, best in class, and most importantly free stack based on Prometheus, Grafana, and Alertmanager.  What's more, since it's based on open source technology, our monitoring/metrics stack is able to be bundled into our on-premises product as a value add for our customers.
+While doing that, I replaced an expensive Splunk based monitoring/metrics system with a totally modern, best in class, and most importantly free stack based on Prometheus, Grafana, and Alertmanager.  What's more, since it's based on open source technology, our monitoring/metrics stack was able to be bundled into our on-premises product as a value add for our customers.
 
-For an encore, I created the Golang development standards for the company.  Once the new standard was created, I refactored the legacy microservices to this new standard, wrote a few new ones, and created the Orion Voice Bot framework in golang, complete with it's own Kubernetes Operator for easy deployment and management.
+For an encore, I created the Golang development standards for the company.  Once the new standard was created, I refactored the legacy microservices to this new standard, wrote a few new ones, and created the Orion Voice Bot framework in golang, complete with its own Kubernetes Operator for easy deployment and management.
 
 I was also responsible for all technical training within the company.  To date I've designed curriculum and taught internal classes on topics such as golang, elasticsearch, kubernetes, dns, IP networks, TLS/SSl, and both symmetric and asymmetric encryption.  If it happened on a computer, I was responsible for teaching people how to do it.
 
 ## Scribd - San Francisco, CA
 2018 - 2020 *Dev/SecOps Engineering Lead*
 
-I created one-click self service deployment tooling to bare-metal hosts and Kubernetes clusters.  Heck, I even created a series of Kubernetes clusters myself, ex nihilo, and lead the effort to use them in anger.
+I created one-click self-service deployment tooling to bare-metal hosts and Kubernetes clusters.  Heck, I even created a series of Kubernetes clusters myself, ex nihilo, and lead the effort to use them in anger.
 
 The company's entire onboarding and access system, both to our network and our K8S clusters came out of my fertile mind and busy fingers, as did our internal PKI- with a little help from Hashicorp Vault and a ton of golang magic.
 
-I designed and build a system of 'Managed Secrets' so that we could generate, rotate, and well, 'manage' secrets across the enterprise- in AWS and in a bare metal datacenter.  An app getting the right secret is important, but you also need to know who has access to what, when to rotate, et al.  
+I designed and build a system of 'Managed Secrets' so that we could generate, rotate, and well, 'manage' secrets across the enterprise - in AWS and in a bare metal datacenter.  An app getting the right secret is important, but you also need to know who has access to what, when to rotate, et al.  
 
-I tamed the ELK stack, and wrote event correlation tools to take incoming request data from Fastly's WAF and make it available to detect and counter bad actors all over the world.  This system ingests hundreds of Gb of information daily that flows in so quickly that it melts old fashioned spinner disks.
+I tamed the ELK stack, and wrote event correlation tools to take incoming request data from Fastly's WAF and make it available to detect and counter bad actors all over the world.  This system ingests hundreds of Gb of information daily that flows in so quickly that it melts old-fashioned spinner disks.
 
 ## Stitch Fix - San Francisco, CA
 2017 *Data Platform Engineer  Algorithms and Analytics Department*
