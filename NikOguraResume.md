@@ -402,6 +402,8 @@ You can't drive a Ferrari as if it was a Model T - not and get all the benefits 
 
 I took a legacy EC2 autoscaling application stack and re-architected it as a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports its own auto-unsealing certificate authority powered by Hashicorp Vault.
 
+Feedback from one secretive governmental customer whose name I am not cleared to know was one word: "flawless".  Another very large well known company described it as "The smoothest, easiest, highest quality installation they have ever seen".
+
 While doing that, I replaced an expensive Splunk based monitoring/metrics system with a totally modern, best in class, and most importantly free stack based on Prometheus, Grafana, and Alertmanager.  What's more, since it's based on open source technology, our monitoring/metrics stack was able to be bundled into our on-premises product as a value add for our customers.
 
 For an encore, I created the Golang development standards for the company.  Once the new standard was created, I refactored the legacy microservices to this new standard, wrote a few new ones, and created the Orion Voice Bot framework in golang, complete with its own Kubernetes Operator for easy deployment and management.
