@@ -393,6 +393,10 @@ Serving as 'Jack of All Trades' (and master of some) to the Financial Services a
 
 Bringing the Financial Sector into the 21st century - kicking and screaming if necessary.
 
+Pro Tip: There usually is a bit of kicking and screaming involved. Modern tools and principles are as much about HOW you use them as WHAT tools you use.  People love shiny new tools, but are slow to change their thinking and their procedures. 
+
+You can't drive a Ferrarri as if it was a Model T - not and get all the benefits of driving a Ferrarri. The cost, sadly, is the same regardless.
+
 ## Orion Labs - San Francisco, CA
 2020 - 2022 *Principal Staff Engineer*
 
