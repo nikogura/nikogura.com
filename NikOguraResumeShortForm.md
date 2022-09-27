@@ -161,7 +161,7 @@ While doing that, I replaced an expensive Splunk based monitoring/metrics system
 
 For an encore, I created the Golang development standards for the company.  Once the new standard was created, I refactored the legacy microservices to this new standard, wrote a few new ones, and created the Orion Voice Bot framework in golang, complete with its own Kubernetes Operator for easy deployment and management.
 
-I was also responsible for all technical training within the company.  To date I've designed curriculum and taught internal classes on topics such as golang, elasticsearch, kubernetes, dns, IP networks, TLS/SSl, and both symmetric and asymmetric encryption.  If it happened on a computer, I was responsible for teaching people how to do it.
+I was also responsible for all technical training within the company.  I designed curriculum and taught internal classes on topics such as golang, elasticsearch, kubernetes, dns, IP networks, TLS/SSL, and both symmetric and asymmetric encryption.  If it happened on a computer, I was responsible for teaching people how to do it.
 
 #### Scribd - San Francisco, CA - Sec/DevOps Engineering Lead - 2018 - Present
 
