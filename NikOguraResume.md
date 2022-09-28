@@ -413,13 +413,15 @@ I was also responsible for all technical training within the company.  I designe
 ## Scribd - San Francisco, CA
 2018 - 2020 *Dev/SecOps Engineering Lead*
 
-I created one-click self-service deployment tooling to bare-metal hosts and Kubernetes clusters.  Heck, I even created a series of Kubernetes clusters myself, ex nihilo, and lead the effort to use them in anger.
+I began my tenure as a Senior DevOps/SRE/System Operator.  Later I created and lead the Security team, and was the company's sole Sec/DevOps Engineer.
 
-The company's entire onboarding and access system, both to our network and our K8S clusters came out of my fertile mind and busy fingers, as did our internal PKI- with a little help from Hashicorp Vault and a ton of golang magic.
+I created one-click self-service deployment tooling to bare-metal hosts and Kubernetes clusters.  I even created a series of Kubernetes clusters myself, ex nihilo, and lead the effort to use them in production with a 'long tail' of pre-cached javascript.  Think 'Blue-Green', except with all the colors of the rainbow trailing back as long as needed until the cache was finally purged and the older versions were no longer needed.
 
-I designed and build a system of 'Managed Secrets' so that we could generate, rotate, and well, 'manage' secrets across the enterprise - in AWS and in a bare metal datacenter.  An app getting the right secret is important, but you also need to know who has access to what, when to rotate, et al.  
+The company's entire onboarding and access system, both to our network and our K8S clusters came out of my fertile mind and busy fingers, as did our internal PKI- with a little help from Hashicorp Vault and a ton of Golang.
 
-I tamed the ELK stack, and wrote event correlation tools to take incoming request data from Fastly's WAF and make it available to detect and counter bad actors all over the world.  This system ingests hundreds of Gb of information daily that flows in so quickly that it melts old-fashioned spinner disks.
+I designed and build a system of 'Managed Secrets' so that we could generate, rotate, and well, 'manage' secrets across the enterprise - in AWS and in a bare metal datacenter.  An app getting the right secret is important, but you also need to know who has access to what, when to rotate, et al.  Managed Secrets essentially puts a YAML interface on Hashicorp Vault, and makes operating an enterprise secrets system easy.  Managed Secrets are also delightful to use for a developer.  In every environment, your workload get the secrets it needed automatically as if by magic.
+
+I built ELK stacks, and wrote event correlation tools to take incoming request data from Fastly's WAF and make it available to detect and counter bad actors all over the world.  This system ingested hundreds of Gb of information daily, flowing in so quickly that it melted old-fashioned spinner disks.  They literally couldn't keep up with the data flow.  At it's peak, the system processed over 200 million requests per day across the entire world, and consumed less resources than the Logstash process used to match IP addresses with Geolocations.
 
 ## Stitch Fix - San Francisco, CA
 2017 *Data Platform Engineer  Algorithms and Analytics Department*
