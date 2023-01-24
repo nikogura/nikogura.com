@@ -1,0 +1,8 @@
+#!/usr/bin/env/bash
+
+set -e
+set -x
+set -o pipefail
+
+pandoc -f markdown -t docx -o NikOgura.docx NikOguraResumeShortForm.md
+

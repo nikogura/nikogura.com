@@ -386,16 +386,14 @@ If I cannot find a way, I will make one.
 
 [United Martial Arts - Plymouth, MN](#united-martial-arts---plymouth,-mn)
 
-## AWS Global Financial Services
-2022 - Present  *Senior DevOps Consultant*
+## Amazon Web Services
+2022 - Present  *Senior DevOps Consultant*  *Systems Development Engineer*
 
-Serving as 'Jack of All Trades' (and master of some) to the Financial Services and Banking sector.  Teaching DevOps Principles and driving Cloud Adoption.
+Automating, Maintaining, and Securing everything around Amazon Global Accelerator - in the cloud, on bare metal, around the world.
 
-Bringing the Financial Sector into the 21st century - kicking and screaming if necessary.
+Served as 'Jack of All Trades' (and master of some) to the Financial Services and Banking sector.  Taught DevOps Principles and drove Cloud Adoption, bringing the Financial Sector into the 21st century - kicking and screaming if necessary.
 
-Pro Tip: There usually is a bit of kicking and screaming involved. Modern tools and principles are as much about HOW you use them as WHAT tools you use.  People love shiny new tools, but are slow to change their thinking and their procedures. 
-
-You can't drive a Ferrari as if it was a Model T - not and get all the benefits of driving a Ferrari. The cost, sadly, is the same regardless.
+There usually was a bit of kicking and screaming involved. Modern tools and principles are as much about HOW you use them as WHAT tools you use.  People love shiny new tools, but are slow to change their thinking and their procedures. You can't drive a Ferrari as if it was a Model T - not and get all the benefits of driving a Ferrari. The cost, sadly, is the same regardless.
 
 ## Orion Labs - San Francisco, CA
 2020 - 2022 *Principal Staff Engineer*
