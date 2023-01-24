@@ -140,7 +140,7 @@ I participated in creating and executing a plan to bring a multi- million dollar
 # Professional History
 
 ## AWS Global Financial Services
-2022 - Present  *Senior DevOps Consultant* *Systems Development Engineer*
+2022 - Present  *Senior DevOps Consultant*, *Systems Development Engineer*
 
 Automating, Maintaining, and Securing everything around Amazon Global Accelerator - in the cloud, on bare metal, around the world.
 

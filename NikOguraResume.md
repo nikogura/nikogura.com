@@ -366,6 +366,8 @@ If I cannot find a way, I will make one.
 
 # Employment History
 
+[Amazon Web Services](#amazon-web-services)
+
 [Orion Labs - San Francisco, CA](#orion-labs---san-francisco,-ca)
 
 [Scribd - San Francisco, CA](#scribd---san-francisco,-ca)
@@ -387,7 +389,7 @@ If I cannot find a way, I will make one.
 [United Martial Arts - Plymouth, MN](#united-martial-arts---plymouth,-mn)
 
 ## Amazon Web Services
-2022 - Present  *Senior DevOps Consultant*  *Systems Development Engineer*
+2022 - Present  *Senior DevOps Consultant*, *Systems Development Engineer*
 
 Automating, Maintaining, and Securing everything around Amazon Global Accelerator - in the cloud, on bare metal, around the world.
 
