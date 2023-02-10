@@ -1,6 +1,6 @@
 # MVC-ish
 
-I’m a big fan of MVC like patterns.  I say ‘MVC-ish’ because you could look at how I implement it and lecture me that it’s not “Proper MVC”.  You're right.  There's no 'C' in this pattern, it's just 'MV', but that hardly rolls off the tongue. 
+I’m a big fan of MVC like patterns.  I say ‘MVC-ish’ because you could look at how I implement it and lecture me that it’s not “Proper MVC”.  You're right.  There's no 'C' in this pattern, it's just 'MV', but that hardly rolls off the tongue, now does it? 
 
 Whatever.  I’m trying to demonstrate a principle, and I’m pointing to the closest similar concept I can find.
 
