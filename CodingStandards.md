@@ -32,25 +32,25 @@ That's what we call 'mastery'.  The master in any field can produce master-level
 
 ## Code Paths
 
-In golang, the pkg/ directory is intended to contain code that can be re-used by other programs.  In contrast, the internal/ directory is for code that should never be reused.  In fact, the golang compiler will flat out refuse to import anything from an internal/ directory.
+In Golang, the `pkg/` directory is intended to contain code that can be re-used by other programs.  In contrast, the `internal/` directory is for code that should never be reused.  In fact, the Golang compiler will flat out refuse to import anything from an `internal/` directory.
 
 While there are certainly cases where code should never be reused, generally speaking this is a pattern to be avoided.  Reusing code is a huge time saver, and writing code that can be reused is just good design principles.
 
-If you don’t have a really good reason for using internal/ put everything in pkg/.  Putting your code in internal/ only prevents use by other programs.  It doesn't provide any security or privacy benefits.
+If you don’t have an astoundingly good reason for using `internal/` put everything in `pkg/`.  Putting your code in `internal/` only prevents use by other programs.  It doesn't provide any security or privacy benefits.  Decompiling is trivially easy, so it's not as if you're keeping any secrets.
 
 You can say "Nobody will ever need to use this code.", and you may be right.  Why limit yourself though?  If it truly has to be private, stick it in a private repo.  Otherwise, leave it flexible and open.
 
-Yes, I can hear you saying, if you're writing a big public repository it can be good to section off some internal code that you don't want people messing with or depending on.  I won't argue with you.  That can be a good thing.
+Yes, I can hear you saying, if you're writing a big public repository it can be good to section off some internal code that you don't want people messing with or depending on.  I won't argue with you.  That can be a good thing.  You also may be making excuses for being sloppy.
 
 You're better off in the long run taking the extra time and laying out good, useful, reusable code and not depending on the difference between `internal/` and `pkg/`.  It's not always possible.  It's not always reasonable.  I don't always follow it either.
 
-Just because I *know* the path doesn't mean I always *walk* it.  Doesn't make it any less true though.
+Just because I *know* the path doesn't mean I always *walk* it.  Doesn't make it any less true.
 
 ## Public vs Private Variable and Functions
 
-In golang, a variable or function is public if it starts with a capital letter.  It’s private if it starts with a lowercase letter.
+In Golang, a variable or function is public if it starts with a capital letter.  It’s private if it starts with a lowercase letter.
 
-If something is public, it can be used outside of your package.  If it’s private, it cannot.  
+If something is public, it can be accessed outside your package.  If it’s private, it cannot.  
 
 As no doubt you can guess by reading the above, I'm not much in favor of private variables or functions.
 
@@ -62,7 +62,14 @@ The moment people learn of an exception to a rule, they try to apply it everywhe
 
 What I say about exceptions - in coding, in martial arts, and in life is this:  if you don't know why the exception exists, and why it specifically applies to *this* situation,  follow the rule.  Using an exception when you don't know exactly why you're using it means you're probably using it wrongly.
 
-The rule, in my not so humble opinion, is make all functions and variables public.  Don't impose restrictions on your future self unless you can articulate and defend a very good reason for doing otherwise.  Your future self will thank you for the consideration.
+The rule, in my not so humble opinion, is make all functions and variables public.
+
+Don't impose restrictions on your future self unless you can articulate and defend a very good reason for doing otherwise.
+
+This is especially important if you're coming to Golang from another language.  Some of Golang's error messages are really esoteric and hard to follow for the beginner.  Words you think you know are used in _slightly_ different ways, and they'll bite you.
+
+Later on, when you have really gotten your head around this weird thing called Golang, you'll know why some things should be private, and you won't have any misleading warnings from the compiler to make you tear your hair out.
+
 
 ## MVC-ish or SOLID Engineering in Golang
 
