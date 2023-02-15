@@ -85,7 +85,7 @@ SOLID goes back to the early 2000's, but much of the philosophy as existed since
 
 MVC, or "Model - View - Controller" is another example of this principle.  The 'Controller' part of MVC is a little specialized to programs that need to route traffic, but the Model and View bits apply everywhere.  The trick is to not mix them.
 
-## Libraries
+### Libraries
 
 When I write code, I try to write libraries.  Libraries should be as general purpose as possible, and exhaustively tested.  Libraries are the Model of the MVC pattern.
 
@@ -98,7 +98,7 @@ A good Library / Model should be able to be exercised in many ways.  The same Li
 * Libraries / Models should be exhaustively tested.  When you write a piece of code, you know what your intention is.  You know how you think it should perform.  Take the time to _teach the computer to verify that your expectations are met_.  That's what 'automated tests' are.  You're just teaching the machine to a) know what 'working' is, and b) teach it how to test itself. Later when you make 'one little change' to this fundamental code, your tests will be your life saver.
 
 
-## Views
+### Views
 
 Views on the other hand can change all the time, and you generally should plan on having a one Model to many Views relationship in your programs.
 
@@ -107,7 +107,7 @@ Specifics of how the data is presented, consumed, or displayed is the province o
 Often a CLI is the quickest and easiest View to slap on a Model, but it’s not the only one, nor is it necessarily the best.
 
 
-## Tests
+### Tests
 
 Don't hesitate to write what you might be tempted to call 'stupid tests'.  There is no such thing.  A simple test that concatenates strings, or trims a suffix might seem 'stupid', but it takes about 90 seconds to write, and once it's done it lives in your codebase forever.
 
@@ -115,12 +115,16 @@ That little 'stupid' test will save you down the road.  If it doesn't, it didn't
 
 Little things, like atoms, molecules, and lego bricks build up.  One or two are not particularly impressive, but once you have a pile of them, they add up.  As they say, "No raindrop feels responsible for the flood."
 
-In Golang, this means the meat of your code will likely live under /pkg/<name>, and your CLI will be under /cmd.  The files under /cmd end up being an object lesson on how to exercise your libraries in /pkg.  Never mix the two.
+### Wrap Up
 
-Design this way, and you’re doing your future self (and the rest of us too) a big favor.
+In Golang, this MVC-ish/SOLID approach means the meat of your code will likely live under /pkg/<name>, and your CLI will be under /cmd.  The files under /cmd end up being an object lesson on how to exercise your libraries in /pkg.  Never mix the two.
 
+
+### Examples
 Here’s an external example of what I mean using a tool called gomason.  The purpose of gomason is to build, test, sign, and publish binaries easily based off a config file:  [https://github.com/nikogura/gomason](https://github.com/nikogura/gomason)
 
 You’ll note that publish.go  is just calling functions in [https://github.com/nikogura/gomason/tree/master/pkg/gomason](https://github.com/nikogura/gomason/tree/master/pkg/gomason).  The functions, however, being under /pkg are fully available to be used by other libraries.
 
 The gomason tool only has a CLI view at this point in time, but there’s no reason why someone (maybe you!) could add a web UI to make it even more useful, adding an additional mechanism of exercising the same code.
+
+Write your code so that it can be reused. Design this way, and you’re doing your future self (and the rest of us too) a big favor.
