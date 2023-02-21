@@ -389,7 +389,7 @@ If I cannot find a way, I will make one.
 [United Martial Arts - Plymouth, MN](#united-martial-arts---plymouth,-mn)
 
 ## Amazon Web Services
-2022 - Present  *Senior DevOps Consultant*, *Systems Development Engineer*
+2022 - Present *Systems Development Engineer*,  *Senior DevOps Consultant*
 
 Automating, Maintaining, and Securing everything around Amazon Global Accelerator - in the cloud, on bare metal, around the world.
 
