@@ -35,7 +35,7 @@ Authenticate via LDAP, TLS Certificate, Kubernetes, IAM - it doesn't matter.  On
 
 *Components:* **Hashicorp Vault**, **Go**
 
-#### Stitch Fix Algorithms Access and Identity System
+#### Stitch Fix Algorithms IAM System
 It was the means by which the entire department of data scientists and engineers connected to every system, instance, and container in the tech stack.  Virtual machines, containers, in the cloud, locally.  One single, unified, independent access system.
  
 *Components:* **OpenLDAP**, **OpenVPN**, **OpenSSH**, **SSSD**, **PAM**, **Python**, **Go**
@@ -139,7 +139,7 @@ I participated in creating and executing a plan to bring a multi- million dollar
 
 # Professional History
 
-## AWS Global Financial Services
+## Amazon Web Services
 2022 - Present  *Systems Development Engineer*, *Senior DevOps Consultant*
 
 Automating, Maintaining, and Securing everything around Amazon Global Accelerator - in the cloud, on bare metal, around the world.
@@ -167,7 +167,7 @@ I began my tenure as a Senior DevOps/SRE/System Operator.  Later I created and l
 
 I created one-click self-service deployment tooling to bare-metal hosts and Kubernetes clusters.  I even created a series of Kubernetes clusters myself, ex nihilo, and lead the effort to use them in production with a 'long tail' of pre-cached javascript.  Think 'Blue-Green', except with all the colors of the rainbow trailing back as long as needed until the cache was finally purged and the older versions were no longer needed.
 
-The company's entire onboarding and access system, both to our network and our K8S clusters came out of my fertile mind and busy fingers, as did our internal PKI- with a little help from Hashicorp Vault and a ton of Golang.
+The company's IAM system, both to our network and our K8S clusters came out of my fertile mind and busy fingers, as did our internal PKI- with a little help from Hashicorp Vault and a ton of Golang.
 
 I designed and build a system of 'Managed Secrets' so that we could generate, rotate, and well, 'manage' secrets across the enterprise - in AWS and in a bare metal datacenter.  An app getting the right secret is important, but you also need to know who has access to what, when to rotate, et al.  Managed Secrets essentially puts a YAML interface on Hashicorp Vault, and makes operating an enterprise secrets system easy.  Managed Secrets are also delightful to use for a developer.  In every environment, your workload get the secrets it needed automatically as if by magic.
 
@@ -175,7 +175,7 @@ I built ELK stacks, and wrote event correlation tools to take incoming request d
 
 #### Stitch Fix Inc. - San Francisco, CA - Data Platform Engineer - 2017
 
-* Created the Access and Identity systems whereby the Algorithms & Analytics department connects to every resource, instance and container in the stack.
+* Created the IAM systems whereby the Algorithms & Analytics department connects to every resource, instance and container in the stack.
 
 * Enabled AWS IAM Role based development that works transparently on a laptop as if the computer were actually an EC2 node. Whether you're local or in the cloud your code works exactly the same.
 

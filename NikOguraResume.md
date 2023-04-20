@@ -87,12 +87,12 @@ Authenticate via LDAP, TLS Certificate, Kubernetes, IAM - it doesn't matter.  On
 
 *Components:* **Hashicorp Vault**, **Go**
 
-## Stitch Fix's Algorithms Department's Access and Identity System 
+## Stitch Fix's Algorithms Department's IAM System 
 It's the means by which an entire department of Data Scientists and Engineers connected to every system, instance, and container in the stack.  We wanted an an independent system that could funciton autonomously.  The whole access and identity lifecycle- onboarding, offboarding, partner connections, and a light weight roaming profile for any user on any system in a dynamic auto scaling cloud environment.  
 
 The rest of the company used a 3rd party SSO offering.  The 3rd party got breached and the SSO went down.  We stayed up.
 
-Here's how you can do it too:  [Access and Identity Made Easy](AccessAndIdentityMadeEasy.md)
+Here's an interesting trick I discovered:  [Access and Identity Made Easy](AccessAndIdentityMadeEasy.md)
 
 ## Bent AWS's Metadata System to Enable IAM Authentication on Laptops
 I worked out how to bend AWS's metadata service so that we could leverage IAM Roles and STS credentials as if we were running in EC2, but actually do so with passwordless authentication on a laptop.  The idea to even try came from others, but I'm the one who worked out how to make it happen.
@@ -417,7 +417,7 @@ I began my tenure as a Senior DevOps/SRE/System Operator.  Later I created and l
 
 I created one-click self-service deployment tooling to bare-metal hosts and Kubernetes clusters.  I even created a series of Kubernetes clusters myself, ex nihilo, and lead the effort to use them in production with a 'long tail' of pre-cached javascript.  Think 'Blue-Green', except with all the colors of the rainbow trailing back as long as needed until the cache was finally purged and the older versions were no longer needed.
 
-The company's entire onboarding and access system, both to our network and our K8S clusters came out of my fertile mind and busy fingers, as did our internal PKI- with a little help from Hashicorp Vault and a ton of Golang.
+The company's IAM system, both to our network and our K8S clusters came out of my fertile mind and busy fingers, as did our internal PKI- with a little help from Hashicorp Vault and a ton of Golang.
 
 I designed and build a system of 'Managed Secrets' so that we could generate, rotate, and well, 'manage' secrets across the enterprise - in AWS and in a bare metal datacenter.  An app getting the right secret is important, but you also need to know who has access to what, when to rotate, et al.  Managed Secrets essentially puts a YAML interface on Hashicorp Vault, and makes operating an enterprise secrets system easy.  Managed Secrets are also delightful to use for a developer.  In every environment, your workload get the secrets it needed automatically as if by magic.
 
@@ -426,7 +426,7 @@ I built ELK stacks, and wrote event correlation tools to take incoming request d
 ## Stitch Fix - San Francisco, CA
 2017 *Data Platform Engineer  Algorithms and Analytics Department*
 
-Here's where I made the Access and Identity system described above, and where I made the signed binary tool framework.  It's where I learned AWS, Golang, and really started grokking the internals of the SSH protocol.
+Here's where I made the IAM system described above, and where I made the signed binary tool framework.  It's where I learned AWS, Golang, and really started grokking the internals of the SSH protocol.
 
 This is where I worked out how to make self-updating tools.
 
