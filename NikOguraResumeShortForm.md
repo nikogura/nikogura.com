@@ -2,9 +2,7 @@
 
 ### Principal Engineer 
 
-*Platform - Tools - Infrastructure - Security*
-
-*I make things - things that work- and by 'work' I mean work superlatively.*
+*Infrastructure - Security - Software - Platform - Tools*
 
 ### San Diego County, USA
 
@@ -25,7 +23,7 @@
 
 * Created Kubernetes Operators to drive to ease use of and drive customers to Amazon Web Application Firewall.
 
-Technologies: Golang, Kubernetes, Linux
+Technologies: Golang, Kubernetes, Linux, AWS, Bare Metal, Networks
 
 ## Orion Labs - San Francisco, CA
 2020 - 2022 *Principal Staff Engineer*
@@ -40,7 +38,7 @@ Technologies: Golang, Kubernetes, Linux
 
 * Led internal training initiatives on technology for all employees at Orion.
 
-Technologies: AWS, Kubernetes, Bash, Linux, Golang, Terraform, Prometheus, Grafana, AlertManager, ElasticSearch, Kibana, Logstash, OpenSSL, Hashicorp Vault
+Technologies: AWS, Kubernetes, Bash, Linux, Golang, Terraform, Prometheus, Grafana, AlertManager, ElasticSearch, Kibana, Logstash, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks
 
 #### Scribd - San Francisco, CA - Sec/DevOps Engineering Lead - 2018 - Present
 
@@ -52,7 +50,7 @@ Technologies: AWS, Kubernetes, Bash, Linux, Golang, Terraform, Prometheus, Grafa
 
 * Instituted an advanced IAM system and PKI to protect internal networks and Kubernetes clusters against unauthorized access.
 
-Technologies: Kubernetes, Elasticsearch, Logstash, Kibana, Linux, Golang, Chef, Ruby, OpenLDAP, OpenSSL, Hashicorp Vault
+Technologies: Kubernetes, Elasticsearch, Logstash, Kibana, Linux, Golang, Chef, Ruby, OpenLDAP, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks
 
 #### Stitch Fix Inc. - San Francisco, CA - Data Platform Engineer - 2017
 
@@ -62,7 +60,7 @@ Technologies: Kubernetes, Elasticsearch, Logstash, Kibana, Linux, Golang, Chef, 
 
 * Built a self- building, self-updating, extensible userspace binary tooling system that creates and distributes signed binaries for doing work on laptops with no external depenencies.
 
-Technologies: AWS, Golang, Python, OpenLDAP, Docker, Linux, OpenSSL, Hashicorp Vault
+Technologies: AWS, Golang, Python, OpenLDAP, Docker, Linux, OpenSSL, Hashicorp Vault, IPTables, Networks, PF
 
 #### Apple iOS Systems - Cupertino, CA - Senior DevOps Engineer - 2015 ~ 2017
 
@@ -74,7 +72,7 @@ Technologies: AWS, Golang, Python, OpenLDAP, Docker, Linux, OpenSSL, Hashicorp V
 
 * Transitioned the organization from Subversion to Git.
 
-Technologies: Java, Docker, Chef, Puppet, Bash, Ruby, Subversion, Git, Linux
+Technologies: Java, Docker, Chef, Puppet, Bash, Ruby, Subversion, Git, Linux, Bare Metal, IPTables, Networks
 
 #### Data Recognition Corporation - Maple Grove, MN - Principal DevOps Engineer - 2014 ~ 2015
 
@@ -84,7 +82,7 @@ Technologies: Java, Docker, Chef, Puppet, Bash, Ruby, Subversion, Git, Linux
 
 * Designed and taught internal training curriculum for the technology, disciplines, and cultural concepts that come under the heading of DevOps.
 	
-Technologies: Puppet, Linux, Java, Ruby
+Technologies: Puppet, Linux, Java, Ruby, VmWare
 
 #### Wells Fargo - Minneapolis, MN - Sr. Software Engineer - 2014
 
@@ -100,7 +98,7 @@ Technologies: Java, Puppet, Ruby, Antlr
 
 * Specialty Application Development- Projects too sensitive or specialized for a general development team, or things that were deemed 'impossible'.
 
-* Designed, built and implemented encryption key fullfillment system used by mulitple users in multiple countries.
+* Designed, built and implemented encryption key management system used by mulitple users in multiple countries.
 
 * Designed, build, and maintained encryption and tokenization system for PAN data in Merchant Acquiring systems.
 
@@ -130,9 +128,10 @@ Technologies: Java, Puppet, Ruby, Antlr
 
 * Consultant/SME for Software Packaging, Build, Deployment.
 
-Technologies: Perl, Linux, Apache HTTPD, Python, Java, Spring, OpenSSL, Luna HSMs
+Technologies: Perl, Linux, Apache HTTPD, Python, Java, Spring, OpenSSL, Luna HSMs, Bare Metal, VmWare
 
 #### Plain Black - Madison, WI - Developer - 2006~ 2007
+
 * Provided online troubleshooting for supported customers.
 
 * Core development on the WebGUI CMS
@@ -143,11 +142,13 @@ Technologies: Perl, Linux, Apache HTTPD
 
 * I handled internal tools development, built the NOC, and even supported the physical plant.
 
-Technologies: Perl, Linux, Apache HTTPD
+Technologies: Perl, Linux, Apache HTTPD, Bare Metal
 
 #### Hessian & McKasy - Minneapolis, MN - IT Administrator - 1999 ~ 2000 
 
-* I started out as the help desk, and ended up as the head of IT for a 40 seat Law Firm. 
+* Started out as the help desk.
+
+* Ended up as the head of IT for a 40 seat law firm. 
 
 #### United Martial Arts - Plymouth MN - CEO and Head Instructor - 1998 ~ 2007
 
@@ -161,17 +162,19 @@ Technologies: Perl, Linux, Apache HTTPD
 
 # Profiles
 
-*Home Page* [http://nikogura.com](http://nikogura.com)
+*Home Page* [https://nikogura.com](https://nikogura.com)
 
 *Code Repos* [https://github.com/nikogura](https://github.com/nikogura)
 
 *LinkedIn* [https://www.linkedin.com/in/nikogura/](https://www.linkedin.com/in/nikogura)
 
-# Open Source Projects:
+# Open Source Projects
 
 * [dbt](https://github.com/nikogura/dbt) "Dynamic Binary Toolkit" A framework for authoring and using self-updating signed binaries.  Listed in [awesome-go](https://github.com/avelino/awesome-go)
 
 * [gomason](https://github.com/nikogura/gomason) A tool for doing clean-room CI testing locally.  Listed in [awesome-go](https://github.com/avelino/awesome-go)
+
+* [Managed Secrets](https://github.com/nikogura/managed-secrets) A YAML interface on Hashicorp Vault.  Makes running Vault simple!
 
 * [go-postgres-testdb](https://github.com/stitchfix/go-postgres-testdb) A library for managing ephemeral test databases.
 

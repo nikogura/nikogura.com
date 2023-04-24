@@ -6,3 +6,4 @@ set -o pipefail
 
 pandoc -f markdown -t docx -o NikOgura.docx NikOguraResumeShortForm.md
 
+pandoc -f markdown -t pdf -o NikOgura.pdf NikOguraResumeShortForm.md -V 'header-includes: \renewcommand*\familydefault{\sfdefault}' -V '\usepackage[margin=0.5in]{geometry}'

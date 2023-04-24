@@ -11,7 +11,7 @@
 
 *(I will find a way, or I will make one)*
 
-[*Reader's Digest Version of this Resume*](https://github.com/nikogura/nikogura.github.io/blob/master/NikOgura.docx?raw=true)
+[*Condensed Version of this Resume*](https://github.com/nikogura/nikogura.github.io/blob/master/NikOgura.pdf?raw=true)
 
 # Table of Contents
 
@@ -347,6 +347,8 @@ If I cannot find a way, I will make one.
 * [gomason](https://github.com/nikogura/gomason) A tool for doing clean-room CI testing locally.  Listed in [awesome-go](https://github.com/avelino/awesome-go)
 
 * [managed-secrets](https://github.com/nikogura/managed-secrets) A YAML interface simplifying [Hashicorp Vault](https://www.vaultproject.io/)
+
+* [Managed Secrets](https://github.com/nikogura/managed-secrets) A YAML interface on Hashicorp Vault.  Makes running Vault simple!
 
 * [go-postgres-testdb](https://github.com/stitchfix/go-postgres-testdb) A library for managing ephemeral test databases. 
 
