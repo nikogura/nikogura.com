@@ -21,7 +21,7 @@
  
 * Contributed to the Financial Services and Banking sector's transition to modernization by providing practical DevOps guidance and driving cloud adoption.
 
-* Created Kubernetes Operators to ease use of, and drive customers to Amazon Web Application Firewall.
+* Created Kubernetes Operators for Amazon Web Application Firewall.
 
 Technologies: Golang, Kubernetes, Linux, AWS, Bare Metal, Networks
 
