@@ -12,166 +12,47 @@
 
 *(I will find a way, or I will make one)*
 
-# Interesting Accomplishments
-
-#### Orion's On-Premises Kubernetes System
-Picture a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports it's own auto-unsealing certificate authority powered by Hashicorp Vault.
-
-The real power of the system is it's UX.  You enter a command, and it creates itself _ex nihilo_.  Huge power, amazing complexity, yet it _just works_.
-
-*Components:* **Kubernetes**, **Go**, **ElasticSearch**, **Logstash**, **Kibana**, **Fluent-Bit**, **Hashicorp Vault**, **Prometheus**, **Grafana**, **AlertManager**. 
-
-#### Scribd's SIEM System
-Scribd's world-wide footprint creates interesting challenges from a monitoring and abuse standpoint.  Merely being able to see what's going on is a challenge.  There's so much data coming in that 'spinner disks' can't keep up with it and start smoking the moment you turn the system on.  I had to write code that could receive, process, correlate, and consume information for processing.  With it we discovered all sorts of interesting things- better insights into how our legitimate users were using the product, and also the bad actors and their botnets.
-
-It's all available in a self service fashion that allows anyone in the company to answer for themselves the question "What's going on?".
-
-*Components:* **Go**, **ElasticSearch**, **Logstash**, **Kibana**, **ElasticBeats**
- 
-#### Scribd Managed Secrets System
-Define your secrets- what they look like, and how to generate them.  The system takes care of the rest.  A developer can define a secret, and who should access it, but not be able to know the prod value.  Any user gets the proper value for their environment.  
-
-Authenticate via LDAP, TLS Certificate, Kubernetes, IAM - it doesn't matter.  One binary tool magically does the right thing and 'your secrets' magically appear at your fingertips.
-
-*Components:* **Hashicorp Vault**, **Go**
-
-#### Stitch Fix Algorithms IAM System
-It was the means by which the entire department of data scientists and engineers connected to every system, instance, and container in the tech stack.  Virtual machines, containers, in the cloud, locally.  One single, unified, independent access system.
- 
-*Components:* **OpenLDAP**, **OpenVPN**, **OpenSSH**, **SSSD**, **PAM**, **Python**, **Go**
-
-#### Self-Updating Signed Binary Tool Distribution and Execution Framework
-It's used for distributing and running signed binaries on user laptops, in cloud instances and docker containers.  It's always up to date, works on and offline, and best of all it *just works*.
-
-*Components:* **Go**, **Artifactory**, **OpenPGP**
-
-#### Apple Pay's Test-Driven Cloud-Based CI/CD Pipeline
-
-*Components:* **Chef**, **Java**, **Spring**, **Maven**, **OpenStack**, **Python**, **Ruby**, **GitHub**, **TeamCity**
-
-#### Application Stack Prototyping and Orchestration Suite
-Basically I wrote 'docker-compose', before what we now know of as 'docker-compose' was totally stable.
-		
-*Components:* **Java**, **Python**, **OpenStack**, **Docker**, **Netscaler**, **HPNA**
-	    
-#### Static Code Analysis Tools for Puppet Modules
-There were no tools to do SCA of Puppet modules for GRC (Governance, Risk- Management, and Compliance).  So I made some.
-
-*Components:* **Java**, **Spring**, **Tomcat**, **Spring Security**, **Antlr**, **Ruby**, **GitHub**, **jQuery**, **Puppet**
-		
-#### US Bank's Encryption Key Management and Delivery System
-A PKI was purchased, and it didn't do what we needed.  The parts didn't talk to each other.  It couldn't deliver the keys.  Manual key management was not working.
-
-*Components:* **Java**, **Spring MVC**, **Spring Security**, **jQuery**, **jQueryUI**, **BouncyCastle**, **Jackson**, **Apache Commons**, **StringTemplate**, **SQLite**, **ProtectApp**
-
-#### Credit Card PAN Encryption and Tokenization System
-It encrypted/decrypted and masked credit card numbers for a Merchant Acquiring systems (Credit Card Authorization and Settlement).  
-
-*Components:* **Perl**, **C**, **Java**
-
-#### Hardened LAMP stacks for PCI Compliant Credit Card Processing Applications
-*Components:* **Apache**, **Tomcat**, **Java**, **Perl**, **OpenSSL**, **libxml2**, **libxslt**, **MySQL**, **Git**, **Subversion**, **ModSecurity**,  **ModAuthVAS**, **Kerberos**, **ModJk**
-
-#### US Bank's Web Application Firewalls
-I've designed, implemented, and maintained Web Application Firewalls for cross platform applications, some directly handling credit card PAN data.  
-
-*Components:* **Apache**, **ModSecurity**, **OWASP ModSecurity Core Ruleset**
-
-#### Brought a Whole Business Line's Tech Stack into PCI Compliance
-I participated in creating and executing a plan to bring a multi- million dollar business line centered around credit card processing systems from zero to PCI 2.0 compliant in < 12 months.  Can do it again too.
-
-# Profiles
-
-*Home Page* [http://nikogura.com](http://nikogura.com)
-
-*Code Repos* [https://github.com/nikogura](https://github.com/nikogura)
-
-*LinkedIn* [https://www.linkedin.com/in/nikogura/](https://www.linkedin.com/in/nikogura)
-
-# Technical Background
-
-*Programming Languages:* **Java**, **Ruby**, **Python**, **Groovy**, **JavaScript**, **C**, **C++**, **Perl**, **Go**, **Bash**
-
-*Communication:* Educator for Best Practices, Test Driven Development, Application Security, Network Security, Penetration Testing.  Instructor for Leadership, Public Speaking.
-
-*Configuration Management:* **Chef**, **Puppet**, **Ansible**
-
-*Operating Systems:* **RPM Linux Systems (RHEL, SLES, CentOS, Oracle Linux)**, **Debian Linux Systems (Debian, Ubuntu)**, **Arch Linux**, **Android**, **MacOS**
-
-*System Administration:* **Physical Machines**, **Virtual Machines**, **Containers**, **Clouds**, **Workstations**, **TCP/IP Networks**, **Routers**, **Switches**, **Firewalls**, **Kubernetes**
-
-*Logging and Monitoring* **LogStash**, **ElasticSearch**, **Kibana**, **ElasticBeats**, **Syslog**
-
-*Web Servers & Application Containers:* **Apache HTTPD**, **Tomcat**, **ModPerl**, **Nginx**, **HaProxy**, **Gunicorn**
-
-*Testing:* **jUnit**, **TestNG**, **Selenium**, **Test::More**, **Rspec**, **ServerSpec**, **Inspec**, **unittest**, **go test**
-
-*CI Systems:* **Jenkins**, **TeamCity**, **CircleCI**, **Strider**
-
-*Security:* **SSL**, **SSH**, **IPSec**, **PCI DSS**, **Spring Security**, **ModSecurity**, **Kerberos**, **Vault**
-
-*Networks:* **IPTables**, **PF**, **BIND**, **DHCP**, **Dnsmasq**, **Sendmail**, **Postfix**, **CUPS**, **OpenLDAP**
-
-*Version Control:* **Git**, **GitHub**, **GitLab**, **Subversion**, **Mercurial**
-
-*Databases:* **MySQL**, **Oracle**, **SQLite**, **HSQL**, **MongoDB**, **Cassandra**, **Postgres**
-
-*Build Tools:* **Make**, **Ant**, **Maven**, **Gradle**, **Archiva**, **Artifactory**, **Rake**
-
-*Virtualization:* **VirtualBox**, **VMWare**, **Vagrant**, **Packer**, **Qemu**, **ESXi**, **vSphere**, **OpenStack**, **Docker**, **KVM**, **libvirt**
-
-*SCA/ Language Tools:* **Antlr**, **RATS**
-
-# Open Source Projects:
-
-* [dbt](https://github.com/nikogura/dbt) "Dynamic Binary Toolkit" A framework for authoring and using self-updating signed binaries.  Listed in [awesome-go](https://github.com/avelino/awesome-go)
-
-* [gomason](https://github.com/nikogura/gomason) A tool for doing clean-room CI testing locally.  Listed in [awesome-go](https://github.com/avelino/awesome-go)
-
-* [go-postgres-testdb](https://github.com/stitchfix/go-postgres-testdb) A library for managing ephemeral test databases. 
-
-* [python-ldap-test](https://github.com/zoldar/python-ldap-test) A testing tool Python implementing an ephemeral in-memory LDAP server
-
-* [CGI::Lazy](http://search.cpan.org/~vayde/CGI-Lazy-1.10/lib/CGI/Lazy.pm) A Perl Web Development Framework.  
-
-* [Selenium4j](https://github.com/nextinterfaces/selenium4j) A Java Library for translating HTML format Selenium tests into JUnit4 at runtime. 
-	
-
 # Professional History
 
 ## Amazon Web Services
 2022 - Present  *Systems Development Engineer*, *Senior DevOps Consultant*
 
-Automating, Maintaining, and Securing everything around Amazon Global Accelerator - in the cloud, on bare metal, around the world.
+* Implemented automation processes to ensure the security and maintenance of Amazon Global Accelerator across various platforms.
 
-Served as 'Jack of All Trades' (and master of some) to the Financial Services and Banking sector.  Taught DevOps Principles and drove Cloud Adoption, bringing the Financial Sector into the 21st century - kicking and screaming if necessary.
+* Served as internal Security Consultant to Amazon Global Accelerator.
+ 
+* Contributed to the Financial Services and Banking sector's transition to modernization by providing practical DevOps guidance and driving cloud adoption.
 
-There usually was a bit of kicking and screaming involved. Modern tools and principles are as much about HOW you use them as WHAT tools you use.  People love shiny new tools, but are slow to change their thinking and their procedures. You can't drive a Ferrari as if it was a Model T - not and get all the benefits of driving a Ferrari. The cost, sadly, is the same regardless.
+* Created Kubernetes Operators to drive to ease use of and drive customers to Amazon Web Application Firewall.
+
+Technologies: Golang, Kubernetes, Linux
 
 ## Orion Labs - San Francisco, CA
 2020 - 2022 *Principal Staff Engineer*
 
-I took a legacy EC2 autoscaling application stack and re-architected it as a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports its own auto-unsealing certificate authority powered by Hashicorp Vault.
+* Designed and implemented a versatile Platform Infrastructure for SaaS, CloudPrem, OnPrem, and Airgapped Kubernetes based installations for Orion and it's customers.
 
-Feedback from one secretive governmental customer whose name I am not cleared to know was one word: "flawless".  Another very large well known company described it as "The smoothest, easiest, highest quality installation they have ever seen".
+* Transformed 24/7 IT Operations with improvements to visibility, monitoring, alerting, and response systems resulting in reliable and delightful solutions.
+ 
+* Developed a cutting-edge Framework for Voice Bots using the Orion Platform.
 
-While doing that, I replaced an expensive Splunk based monitoring/metrics system with a totally modern, best in class, and most importantly free stack based on Prometheus, Grafana, and Alertmanager.  What's more, since it's based on open source technology, our monitoring/metrics stack was able to be bundled into our on-premises product as a value add for our customers.
+* Elevated technology standards at Orion by spearheading the development of Golang code guidelines and migrating existing microservices to meet new standards.
 
-For an encore, I created the Golang development standards for the company.  Once the new standard was created, I refactored the legacy microservices to this new standard, wrote a few new ones, and created the Orion Voice Bot framework in golang, complete with its own Kubernetes Operator for easy deployment and management.
+* Led internal training initiatives on technology for all employees at Orion.
 
-I was also responsible for all technical training within the company.  I designed curriculum and taught internal classes on topics such as golang, elasticsearch, kubernetes, dns, IP networks, TLS/SSL, and both symmetric and asymmetric encryption.  If it happened on a computer, I was responsible for teaching people how to do it.
+Technologies: AWS, Kubernetes, Bash, Linux, Golang, Terraform, Prometheus, Grafana, AlertManager, ElasticSearch, Kibana, Logstash, OpenSSL, Hashicorp Vault
 
 #### Scribd - San Francisco, CA - Sec/DevOps Engineering Lead - 2018 - Present
 
-I began my tenure as a Senior DevOps/SRE/System Operator.  Later I created and lead the Security team, and was the company's sole Sec/DevOps Engineer.
+* Developed a scalable SIEM/WAF system to monitor and secure Scribd's global CDN, ensuring the protection of customer data.
 
-I created one-click self-service deployment tooling to bare-metal hosts and Kubernetes clusters.  I even created a series of Kubernetes clusters myself, ex nihilo, and lead the effort to use them in production with a 'long tail' of pre-cached javascript.  Think 'Blue-Green', except with all the colors of the rainbow trailing back as long as needed until the cache was finally purged and the older versions were no longer needed.
+* Implemented an easy-to-use YAML interface on Hashicorp Vault called Managed Secrets for streamlined management of sensitive information.
 
-The company's IAM system, both to our network and our K8S clusters came out of my fertile mind and busy fingers, as did our internal PKI- with a little help from Hashicorp Vault and a ton of Golang.
+* Designed Kubernetes deployments that linked to Fastly caches, enabling efficient tracking of cache expiration of precompiled javascript code at scale.
 
-I designed and build a system of 'Managed Secrets' so that we could generate, rotate, and well, 'manage' secrets across the enterprise - in AWS and in a bare metal datacenter.  An app getting the right secret is important, but you also need to know who has access to what, when to rotate, et al.  Managed Secrets essentially puts a YAML interface on Hashicorp Vault, and makes operating an enterprise secrets system easy.  Managed Secrets are also delightful to use for a developer.  In every environment, your workload get the secrets it needed automatically as if by magic.
+* Instituted an advanced IAM system and PKI to protect internal networks and Kubernetes clusters against unauthorized access.
 
-I built ELK stacks, and wrote event correlation tools to take incoming request data from Fastly's WAF and make it available to detect and counter bad actors all over the world.  This system ingested hundreds of Gb of information daily, flowing in so quickly that it melted old-fashioned spinner disks.  They literally couldn't keep up with the data flow.  At it's peak, the system processed over 200 million requests per day across the entire world, and consumed less resources than the Logstash process used to match IP addresses with Geolocations.
+Technologies: Kubernetes, Elasticsearch, Logstash, Kibana, Linux, Golang, Chef, Ruby, OpenLDAP, OpenSSL, Hashicorp Vault
 
 #### Stitch Fix Inc. - San Francisco, CA - Data Platform Engineer - 2017
 
@@ -180,6 +61,8 @@ I built ELK stacks, and wrote event correlation tools to take incoming request d
 * Enabled AWS IAM Role based development that works transparently on a laptop as if the computer were actually an EC2 node. Whether you're local or in the cloud your code works exactly the same.
 
 * Built a self- building, self-updating, extensible userspace binary tooling system that creates and distributes signed binaries for doing work on laptops with no external depenencies.
+
+Technologies: AWS, Golang, Python, OpenLDAP, Docker, Linux, OpenSSL, Hashicorp Vault
 
 #### Apple iOS Systems - Cupertino, CA - Senior DevOps Engineer - 2015 ~ 2017
 
@@ -191,15 +74,17 @@ I built ELK stacks, and wrote event correlation tools to take incoming request d
 
 * Transitioned the organization from Subversion to Git.
 
+Technologies: Java, Docker, Chef, Puppet, Bash, Ruby, Subversion, Git, Linux
 
 #### Data Recognition Corporation - Maple Grove, MN - Principal DevOps Engineer - 2014 ~ 2015
 
-* Designed an auto scaling Continuous Delivery environment for educational testing.
+* Designed an auto-scaling Continuous Delivery environment for educational testing.
 
 * Shepherded multiple applications from proprietary systems to fully Open Source platforms.
 
 * Designed and taught internal training curriculum for the technology, disciplines, and cultural concepts that come under the heading of DevOps.
 	
+Technologies: Puppet, Linux, Java, Ruby
 
 #### Wells Fargo - Minneapolis, MN - Sr. Software Engineer - 2014
 
@@ -208,6 +93,8 @@ I built ELK stacks, and wrote event correlation tools to take incoming request d
 * Module Developer for Continuous Integration/ Continuous Delivery of multiple applications across multiple technologies and multiple operating systems.  
 
 * Designed and built SCA tools to parse the Puppet DSL for GRC.
+
+Technologies: Java, Puppet, Ruby, Antlr
 	
 #### U.S. Bank - Minneapolis, MN - Application Systems Administrator Sr. 2007 ~ 2014
 
@@ -243,14 +130,20 @@ I built ELK stacks, and wrote event correlation tools to take incoming request d
 
 * Consultant/SME for Software Packaging, Build, Deployment.
 
+Technologies: Perl, Linux, Apache HTTPD, Python, Java, Spring, OpenSSL, Luna HSMs
+
 #### Plain Black - Madison, WI - Developer - 2006~ 2007
 * Provided online troubleshooting for supported customers.
 
 * Core development on the WebGUI CMS
 
+Technologies: Perl, Linux, Apache HTTPD
+
 #### Universal Talkware - Minneapolis, MN - NOC Administer - 2000
 
 * I handled internal tools development, built the NOC, and even supported the physical plant.
+
+Technologies: Perl, Linux, Apache HTTPD
 
 #### Hessian & McKasy - Minneapolis, MN - IT Administrator - 1999 ~ 2000 
 
@@ -266,3 +159,25 @@ I built ELK stacks, and wrote event correlation tools to take incoming request d
 
 * Authored training curriculum for leadership programs as well as physical curriculum.
 
+# Profiles
+
+*Home Page* [http://nikogura.com](http://nikogura.com)
+
+*Code Repos* [https://github.com/nikogura](https://github.com/nikogura)
+
+*LinkedIn* [https://www.linkedin.com/in/nikogura/](https://www.linkedin.com/in/nikogura)
+
+# Open Source Projects:
+
+* [dbt](https://github.com/nikogura/dbt) "Dynamic Binary Toolkit" A framework for authoring and using self-updating signed binaries.  Listed in [awesome-go](https://github.com/avelino/awesome-go)
+
+* [gomason](https://github.com/nikogura/gomason) A tool for doing clean-room CI testing locally.  Listed in [awesome-go](https://github.com/avelino/awesome-go)
+
+* [go-postgres-testdb](https://github.com/stitchfix/go-postgres-testdb) A library for managing ephemeral test databases.
+
+* [python-ldap-test](https://github.com/zoldar/python-ldap-test) A testing tool Python implementing an ephemeral in-memory LDAP server
+
+* [CGI::Lazy](http://search.cpan.org/~vayde/CGI-Lazy-1.10/lib/CGI/Lazy.pm) A Perl Web Development Framework.
+
+* [Selenium4j](https://github.com/nextinterfaces/selenium4j) A Java Library for translating HTML format Selenium tests into JUnit4 at runtime. 
+	
