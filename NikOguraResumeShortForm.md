@@ -26,7 +26,7 @@
 Technologies: Golang, Kubernetes, Linux, AWS, Bare Metal, Networks
 
 ## Orion Labs - San Francisco, CA
-2020 - 2022 *Principal Staff Engineer*
+2020 - 2022 *Principal Staff Engineer, Head of DevOps/SRE/Infrastructure*
 
 * Designed and implemented a versatile Platform Infrastructure for SaaS, CloudPrem, OnPrem, and Airgapped Kubernetes based installations for Orion and it's customers.
 
