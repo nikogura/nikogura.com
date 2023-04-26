@@ -4,6 +4,9 @@ set -e
 set -x
 set -o pipefail
 
-pandoc -f markdown -t docx -o NikOgura.docx NikOguraResumeShortForm.md
+#pandoc -f markdown -t docx -o NikOgura.docx NikOguraResumeShortForm.md
 
-pandoc -f markdown -t pdf -o NikOgura.pdf NikOguraResumeShortForm.md -V 'header-includes: \renewcommand*\familydefault{\sfdefault}' -V '\usepackage[margin=0.5in]{geometry}'
+pandoc -f markdown -t pdf -o NikOgura.pdf NikOguraResumeShortForm.md \
+-V 'header-includes: \renewcommand*\familydefault{\sfdefault}' \
+-V 'header-includes: \usepackage[margin=0.5in]{geometry}' \
+-V 'header-includes: \usepackage[colorlinks=true,linkcolor=blue,anchorcolor=blue,citecolor=blue,filecolor=blue,urlcolor=cyan]{hyperref}'

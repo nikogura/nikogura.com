@@ -6,14 +6,14 @@
 
 ### San Diego County, USA
 
-#### *Aut viam inveniam, aut faciam.* 
+#### *Viam inveniam, aut faciam.* 
 
 *(I will find a way, or I will make one)*
 
 # Professional History
 
 ## Amazon Web Services
-2022 - Present  *Systems Development Engineer*, *Senior DevOps Consultant*
+2022 - 2023  *Systems Development Engineer*, *Senior DevOps Consultant*
 
 * Implemented automation processes to ensure the security and maintenance of Amazon Global Accelerator across various platforms.
 
@@ -40,7 +40,7 @@ Technologies: Golang, Kubernetes, Linux, AWS, Bare Metal, Networks
 
 Technologies: AWS, Kubernetes, Bash, Linux, Golang, Terraform, Prometheus, Grafana, AlertManager, ElasticSearch, Kibana, Logstash, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks
 
-#### Scribd - San Francisco, CA - Sec/DevOps Engineering Lead - 2018 - Present
+#### Scribd - San Francisco, CA - Sec/DevOps Engineering Lead - 2018 - 2020
 
 * Developed a scalable SIEM/WAF system to monitor and secure Scribd's global CDN, ensuring the protection of customer data.
 
@@ -98,9 +98,9 @@ Technologies: Java, Puppet, Ruby, Antlr
 
 * Specialty Application Development- Projects too sensitive or specialized for a general development team, or things that were deemed 'impossible'.
 
-* Designed, built and implemented encryption key management system used by mulitple users in multiple countries.
+* Authored Encryption Key management and delivery system used by multiple users in multiple countries.
 
-* Designed, build, and maintained encryption and tokenization system for PAN data in Merchant Acquiring systems.
+* Authored Encryption and Tokenization system for PAN (Primary Account Number) data in Merchant Acquiring systems.
 
 * Security Consultant for an Application Architecture team.
 
@@ -122,7 +122,7 @@ Technologies: Java, Puppet, Ruby, Antlr
 
 * Designed and implemented processes for Code Signing, Continuous Integration, and Application Building.
 
-* Consultant for Penetration Testing, Exploit Confirmation, and Proof of Remediation.
+* Consultant for Threat Modeling, Penetration Testing, Exploit Confirmation, and Proof of Remediation.
 
 * Consultant/SME for SSL, SSH, Encryption, Public Key Infrastructure.
 
@@ -132,29 +132,25 @@ Technologies: Perl, Linux, Apache HTTPD, Python, Java, Spring, OpenSSL, Luna HSM
 
 #### Plain Black - Madison, WI - Developer - 2006~ 2007
 
-* Provided online troubleshooting for supported customers.
-
-* Core development on the WebGUI CMS
+* Core Development on the WebGUI Content Management System.
+ 
+* Customer Service.
 
 Technologies: Perl, Linux, Apache HTTPD
 
-#### Universal Talkware - Minneapolis, MN - NOC Administer - 2000
+#### Universal Talkware - Minneapolis, MN - NOC Administrator - 2000
 
-* I handled internal tools development, built the NOC, and even supported the physical plant.
+* Built Network Operations Center, handled internal tools, and even administered the physical plant.
 
 Technologies: Perl, Linux, Apache HTTPD, Bare Metal
 
-#### Hessian & McKasy - Minneapolis, MN - IT Administrator - 1999 ~ 2000 
+#### Hessian & McKasy - Minneapolis, MN - Head of IT - 1999 ~ 2000 
 
-* Started out as the help desk.
-
-* Ended up as the head of IT for a 40 seat law firm. 
+* Ran IT for a 40 seat law firm. Desktops, Network, Backups, Compliance - the works.
 
 #### United Martial Arts - Plymouth MN - CEO and Head Instructor - 1998 ~ 2007
 
-* Responsible for day to day operations of the martial arts studio, including management, financial planning, and personnel.  
-
-* Taught classes in Exercise, Wellness, Leadership, and the Martial Arts in the studio as well as for corporations and in the community.  
+* Responsible for day to day operations of the martial arts studio, including Management, Finance, and HR.  
 
 * Designed, built and maintained a custom studio management desktop application that handled enrollment, financials, lesson plans, scheduling, video and print library management, and curriculum.
 
@@ -170,17 +166,16 @@ Technologies: Perl, Linux, Apache HTTPD, Bare Metal
 
 # Open Source Projects
 
-* [dbt](https://github.com/nikogura/dbt) "Dynamic Binary Toolkit" A framework for authoring and using self-updating signed binaries.  Listed in [awesome-go](https://github.com/avelino/awesome-go)
+*Dynamic Binary Toolkit* https://github.com/nikogura/dbt  A framework for authoring and using self-updating signed binaries.  Listed in *Awesome-Go* https://github.com/avelino/awesome-go.
 
-* [gomason](https://github.com/nikogura/gomason) A tool for doing clean-room CI testing locally.  Listed in [awesome-go](https://github.com/avelino/awesome-go)
+*gomason* https://github.com/nikogura/gomason A tool for doing clean-room CI testing locally.  Listed in *Awesome-Go*.
 
-* [Managed Secrets](https://github.com/nikogura/managed-secrets) A YAML interface on Hashicorp Vault.  Makes running Vault simple!
+*Managed Secrets* https://github.com/nikogura/managed-secrets A YAML interface on Hashicorp Vault.  Makes running Vault simple!
 
-* [go-postgres-testdb](https://github.com/stitchfix/go-postgres-testdb) A library for managing ephemeral test databases.
+*go-postgres-testdb* https://github.com/stitchfix/go-postgres-testdb A library for managing ephemeral test databases.
 
-* [python-ldap-test](https://github.com/zoldar/python-ldap-test) A testing tool Python implementing an ephemeral in-memory LDAP server
+*python-ldap-test* https://github.com/zoldar/python-ldap-test A testing tool Python implementing an ephemeral in-memory LDAP server.
 
-* [CGI::Lazy](http://search.cpan.org/~vayde/CGI-Lazy-1.10/lib/CGI/Lazy.pm) A Perl Web Development Framework.
+*CGI::Lazy* http://search.cpan.org/~vayde/CGI-Lazy-1.10/lib/CGI/Lazy.pm A Perl Web Development Framework.
 
-* [Selenium4j](https://github.com/nextinterfaces/selenium4j) A Java Library for translating HTML format Selenium tests into JUnit4 at runtime. 
-	
+*Selenium4j* https://github.com/nextinterfaces/selenium4j A Java Library for translating HTML format Selenium tests into JUnit4 at runtime. 

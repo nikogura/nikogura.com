@@ -391,124 +391,145 @@ If I cannot find a way, I will make one.
 [United Martial Arts - Plymouth, MN](#united-martial-arts---plymouth,-mn)
 
 ## Amazon Web Services
-2022 - Present *Systems Development Engineer*,  *Senior DevOps Consultant*
+2022 - 2023  *Systems Development Engineer*, *Senior DevOps Consultant*
 
-Automating, Maintaining, and Securing everything around Amazon Global Accelerator - in the cloud, on bare metal, around the world.
+* Implemented automation processes to ensure the security and maintenance of Amazon Global Accelerator across various platforms.
 
-Served as 'Jack of All Trades' (and master of some) to the Financial Services and Banking sector.  Taught DevOps Principles and drove Cloud Adoption, bringing the Financial Sector into the 21st century - kicking and screaming if necessary.
+* Served as internal Security Consultant to Amazon Global Accelerator.
 
-There usually was a bit of kicking and screaming involved. Modern tools and principles are as much about HOW you use them as WHAT tools you use.  People love shiny new tools, but are slow to change their thinking and their procedures. You can't drive a Ferrari as if it was a Model T - not and get all the benefits of driving a Ferrari. The cost, sadly, is the same regardless.
+* Contributed to the Financial Services and Banking sector's transition to modernization by providing practical DevOps guidance and driving cloud adoption.
+
+* Created Kubernetes Operators for Amazon Web Application Firewall.
+
+Technologies: Golang, Kubernetes, Linux, AWS, Bare Metal, Networks
 
 ## Orion Labs - San Francisco, CA
 2020 - 2022 *Principal Staff Engineer*
 
-I took a legacy EC2 autoscaling application stack and re-architected it as a stand-alone, self-bootstrapping, one click Kubernetes based system that works in on-prem, cloud-prem, and even air-gapped installations. In addition to Orion's PTT stack, the system sports its own auto-unsealing certificate authority powered by Hashicorp Vault.
+* Designed and implemented a versatile Platform Infrastructure for SaaS, CloudPrem, OnPrem, and Airgapped Kubernetes based installations for Orion and it's customers.
 
-Feedback from one secretive governmental customer whose name I am not cleared to know was one word: "flawless".  Another very large well known company described it as "The smoothest, easiest, highest quality installation they have ever seen".
+* Transformed 24/7 IT Operations with improvements to visibility, monitoring, alerting, and response systems resulting in reliable and delightful solutions.
 
-While doing that, I replaced an expensive Splunk based monitoring/metrics system with a totally modern, best in class, and most importantly free stack based on Prometheus, Grafana, and Alertmanager.  What's more, since it's based on open source technology, our monitoring/metrics stack was able to be bundled into our on-premises product as a value add for our customers.
+* Developed a cutting-edge Framework for Voice Bots using the Orion Platform.
 
-For an encore, I created the Golang development standards for the company.  Once the new standard was created, I refactored the legacy microservices to this new standard, wrote a few new ones, and created the Orion Voice Bot framework in golang, complete with its own Kubernetes Operator for easy deployment and management.
+* Elevated technology standards at Orion by spearheading the development of Golang code guidelines and migrating existing microservices to meet new standards.
 
-I was also responsible for all technical training within the company.  I designed curriculum and taught internal classes on topics such as golang, elasticsearch, kubernetes, dns, IP networks, TLS/SSL, and both symmetric and asymmetric encryption.  If it happened on a computer, I was responsible for teaching people how to do it.
+* Led internal training initiatives on technology for all employees at Orion.
 
-## Scribd - San Francisco, CA
-2018 - 2020 *Dev/SecOps Engineering Lead*
+Technologies: AWS, Kubernetes, Bash, Linux, Golang, Terraform, Prometheus, Grafana, AlertManager, ElasticSearch, Kibana, Logstash, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks
 
-I began my tenure as a Senior DevOps/SRE/System Operator.  Later I created and lead the Security team, and was the company's sole Sec/DevOps Engineer.
+#### Scribd - San Francisco, CA - Sec/DevOps Engineering Lead - 2018 - 2020
 
-I created one-click self-service deployment tooling to bare-metal hosts and Kubernetes clusters.  I even created a series of Kubernetes clusters myself, ex nihilo, and lead the effort to use them in production with a 'long tail' of pre-cached javascript.  Think 'Blue-Green', except with all the colors of the rainbow trailing back as long as needed until the cache was finally purged and the older versions were no longer needed.
+* Developed a scalable SIEM/WAF system to monitor and secure Scribd's global CDN, ensuring the protection of customer data.
 
-The company's IAM system, both to our network and our K8S clusters came out of my fertile mind and busy fingers, as did our internal PKI- with a little help from Hashicorp Vault and a ton of Golang.
+* Implemented an easy-to-use YAML interface on Hashicorp Vault called Managed Secrets for streamlined management of sensitive information.
 
-I designed and build a system of 'Managed Secrets' so that we could generate, rotate, and well, 'manage' secrets across the enterprise - in AWS and in a bare metal datacenter.  An app getting the right secret is important, but you also need to know who has access to what, when to rotate, et al.  Managed Secrets essentially puts a YAML interface on Hashicorp Vault, and makes operating an enterprise secrets system easy.  Managed Secrets are also delightful to use for a developer.  In every environment, your workload get the secrets it needed automatically as if by magic.
+* Designed Kubernetes deployments that linked to Fastly caches, enabling efficient tracking of cache expiration of precompiled javascript code at scale.
 
-I built ELK stacks, and wrote event correlation tools to take incoming request data from Fastly's WAF and make it available to detect and counter bad actors all over the world.  This system ingested hundreds of Gb of information daily, flowing in so quickly that it melted old-fashioned spinner disks.  They literally couldn't keep up with the data flow.  At it's peak, the system processed over 200 million requests per day across the entire world, and consumed less resources than the Logstash process used to match IP addresses with Geolocations.
+* Instituted an advanced IAM system and PKI to protect internal networks and Kubernetes clusters against unauthorized access.
 
-## Stitch Fix - San Francisco, CA
-2017 *Data Platform Engineer  Algorithms and Analytics Department*
+Technologies: Kubernetes, Elasticsearch, Logstash, Kibana, Linux, Golang, Chef, Ruby, OpenLDAP, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks
 
-Here's where I made the IAM system described above, and where I made the signed binary tool framework.  It's where I learned AWS, Golang, and really started grokking the internals of the SSH protocol.
+#### Stitch Fix Inc. - San Francisco, CA - Data Platform Engineer - 2017
 
-This is where I worked out how to make self-updating tools.
+* Created the IAM systems whereby the Algorithms & Analytics department connects to every resource, instance and container in the stack.
 
-## Apple - Cupertino, CA
-2015 - 2017  *Senior DevOps Engineer, iOS Systems  (Apple Pay)*
+* Enabled AWS IAM Role based development that works transparently on a laptop as if the computer were actually an EC2 node. Whether you're local or in the cloud your code works exactly the same.
 
-I'm one of two guys who Designed and built a dynamic test driven CI/CD pipeline for Apple Pay, Apple Sim, and every Apple device in the world.
+* Built a self- building, self-updating, extensible userspace binary tooling system that creates and distributes signed binaries for doing work on laptops with no external depenencies.
 
-I implemented a private OpenStack cloud for testing and verification of applications.  From scratch.  They handed me a pile of HP DL360's and 'do something with these'.  So I did.
+Technologies: AWS, Golang, Python, OpenLDAP, Docker, Linux, OpenSSL, Hashicorp Vault, IPTables, Networks, PF
 
-I authored a system whereby the entire deployment footprint of a group of applications can be described and manipulated in code.
+#### Apple iOS Systems - Cupertino, CA - Senior DevOps Engineer - 2015 ~ 2017
 
-I helped guide iOS Systems move from SVN to Git.
+* Designed and built a dynamic test driven CI/CD pipeline for Apple Pay, Apple Sim, and every Apple device in the world.
 
-## Data Recognition Corporation - Minneapolis, MN
-2014 - 2015 *Principal DevOps Engineer*
+* Implemented a private OpenStack cloud for testing and verification of applications.
 
-I designed an auto scaling Continuous Delivery environment for educational testing.
+* Designed a system whereby the entire deployment footprint of a group of applications can be described and manipulated in code.
 
-While there I shepherded multiple applications from proprietary systems to fully Open Source platforms.  Goodbye Microsoft, hello Linux.
+* Transitioned the organization from Subversion to Git.
 
-I designed and taught internal training curriculum for the technology, disciplines, and cultural concepts that come under the heading of DevOps.
+Technologies: Java, Docker, Chef, Puppet, Bash, Ruby, Subversion, Git, Linux, Bare Metal, IPTables, Networks
 
-I wasn't there long.  I would have happily stayed, but Apple called and sunny California beckoned.  Can you blame me?  
+#### Data Recognition Corporation - Maple Grove, MN - Principal DevOps Engineer - 2014 ~ 2015
 
-Ice in a glass or on a distant mountain is as close as I ever want to be again.  *Brr.*
+* Designed an auto-scaling Continuous Delivery environment for educational testing.
 
-## Wells Fargo - Maple Grove, MN
-2014 *Sr. Software Engineer*
+* Shepherded multiple applications from proprietary systems to fully Open Source platforms.
 
-I was a DevOps Consultant for Development, Testing, Building and Delivery of Applications and Middleware.
+* Designed and taught internal training curriculum for the technology, disciplines, and cultural concepts that come under the heading of DevOps.
 
-My main job was that of Module Developer for Continuous Integration/ Continuous Delivery of multiple applications across multiple technologies and multiple operating systems.  They had multiple OpenStack clouds.  We built the Puppet modules to deploy into it.
+Technologies: Puppet, Linux, Java, Ruby, VmWare
 
-My thing was, and still is, automation of anything and everything- anything that a machine can do faster and more reliably, freeing the humans to do what only humans can do.
+#### Wells Fargo - Minneapolis, MN - Sr. Software Engineer - 2014
 
-This is where I designed and built language applications to parse Puppet source code to do SCA for GRC.
+* DevOps Consultant for Development, Testing, Building and Delivery of Applications and Middleware.
 
-## US Bank - Minneapolis, MN
-2007 - 2014  *Applications Systems Administrator Sr.*
+* Module Developer for Continuous Integration/ Continuous Delivery of multiple applications across multiple technologies and multiple operating systems.
 
-Mainly I did what I call 'Specialty Application Development'.  That is projects too sensitive or specialized for a general development team, or things that were deemed 'impossible'.  I didn't know they were impossible, so I just did 'em.
+* Designed and built SCA tools to parse the Puppet DSL for GRC.
 
-This is where I built the encryption key delivery system, and my first LAMP stacks.  This is where I did most of my credit card related goodness, where I learned about encryption, PCI, that stuff.
+Technologies: Java, Puppet, Ruby, Antlr
 
-I was basically a 'security consultant' for an Application Architecture team. I worked with Arch and Development teams to evaluate threats, explain the scan findings, and show the folks how the vulnerabilities work and how to fix them.
+#### U.S. Bank - Minneapolis, MN - Application Systems Administrator Sr. 2007 ~ 2014
 
-This is where I really delved into load balancing and monitoring.  I also presented internal courses/talks to business and engineering groups.  I trained teams in automated testing tools and techniques.
+* Specialty Application Development- Projects too sensitive or specialized for a general development team, or things that were deemed 'impossible'.
 
-Blah blah blah.  It was a bank.  They were serious about protecting people's money *(I still use them, in fact.)*  All that fun security/encryption/spooky paranoia type stuff listed above?  I started doing it here.
+* Authored Encryption Key management and delivery system used by multiple users in multiple countries.
 
-## Plain Black - Madison, WI
-2006 - 2007  *Application Developer*
+* Authored Encryption and Tokenization system for PAN (Primary Account Number) data in Merchant Acquiring systems.
 
-I provided online troubleshooting for customers, and performed core development on the WebGUI CMS.
+* Security Consultant for an Application Architecture team.
 
-We wrote *and maintained* a 200k+ line ModPerl CMS.  In Perl.  It's possible.  You just have to have discipline.
+* Designed and Maintained full SDLC for High Availability PCI Compliant Apache Servers and LAMP Applications in multiple network tiers.
 
-The Perl compiler doesn't force any rules on you, so you have to make some for yourselves, and stick to them.  We did.
+* Third level support of Web Applications, RHEL and SLES Servers, Oracle Databases, and IP Networks.
 
-## Universal Talkware - Minneapolis, MN
-2000  *NOC Administer*
+* Worked with Application Architecture teams and Development teams to preemptively address emerging threats while maintaining PCI DSS compliance across mixed technologies and multiple operating systems.
 
-I handled internal tools development, built the NOC, and even supported the physical plant.  Dumpster diving for scrap metal for use in patching the server racks was a regular passtime.
+* Designed Monitoring and Alerting modules for High Availability Apache Servers (Custom Apache Modules).
 
-I even had the interesting experience of programming and maintaining a PBX Exchange.  Think green phosphor screens and keyboards you had to lean into to get a key to press.  A PBX handles the routing of Publically Switched Telephone Networks.  Ma Bell dropped the calls off at our door, and my PBX routed the signals to the analog phones.  Old School.  Seems crazy now, but it was a good experience.
+* Full Stack Web Development on a variety of platforms.
 
-## Hessian & McKasy - Minneapolis, MN
-1999 - 2000 *IT Administrator*
+* Presented internal courses/talks to business and technology teams on web communication and its dangers.
 
-I started out as the help desk, and ended up as the head of IT for a 40 seat Law Firm.  That was over the Y2K change over, which, since we did our due diligence, was a total non-event.
+* Trained Development and QA personnel in methods and tools for Unit/ Integration testing.
 
-## United Martial Arts - Plymouth, MN
-1998 - 2007  *President, CEO, and Head Instructor (also Lead Programmer, Receptionist, and Executive Janitor)*
+* Designed IPSec and IPTables security profiles for protection of PAN data in PCI Enclaves.
 
-I was responsible for day to day operations of the martial arts studio, including management, financial planning, personnel- you name it, I did it.  
+* Designed and implemented processes for Code Signing, Continuous Integration, and Application Building.
 
-I taught classes in Exercise, Wellness, Leadership, and the Martial Arts in the studio as well as for corporations and in the community.  
+* Consultant for Threat Modeling, Penetration Testing, Exploit Confirmation, and Proof of Remediation.
 
-Over the course of 9 years, I designed, built and maintained a custom studio management desktop application that handled enrollment, financials, lesson plans, scheduling, video and print library management, and curriculum.  
+* Consultant/SME for SSL, SSH, Encryption, Public Key Infrastructure.
 
-Coding was cheap entertainment.  Kick and punch doesn't pay much.  Somewhere in there I guess I got good at it, because it turned into a whole new career- one that involves considerably less head trauma.
+* Consultant/SME for Software Packaging, Build, Deployment.
 
+Technologies: Perl, Linux, Apache HTTPD, Python, Java, Spring, OpenSSL, Luna HSMs, Bare Metal, VmWare
+
+#### Plain Black - Madison, WI - Developer - 2006~ 2007
+
+* Core Development on the WebGUI Content Management System.
+
+* Customer Service.
+
+Technologies: Perl, Linux, Apache HTTPD
+
+#### Universal Talkware - Minneapolis, MN - NOC Administrator - 2000
+
+* Built Network Operations Center, handled internal tools, and even administered the physical plant.
+
+Technologies: Perl, Linux, Apache HTTPD, Bare Metal
+
+#### Hessian & McKasy - Minneapolis, MN - Head of IT - 1999 ~ 2000
+
+* Ran IT for a 40 seat law firm. Desktops, Network, Backups, Compliance - the works.
+
+#### United Martial Arts - Plymouth MN - CEO and Head Instructor - 1998 ~ 2007
+
+* Responsible for day to day operations of the martial arts studio, including Management, Finance, and HR.
+
+* Designed, built and maintained a custom studio management desktop application that handled enrollment, financials, lesson plans, scheduling, video and print library management, and curriculum.
+
+* Authored training curriculum for leadership programs as well as physical curriculum.
