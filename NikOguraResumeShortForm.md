@@ -1,8 +1,6 @@
 # Nik Ogura
 
-### Principal Engineer 
-
-*Infrastructure - Security - Software - Platform - Tools*
+### Infrastructure - Security - Software - Platform - Tools
 
 ### San Diego County, USA
 
@@ -12,8 +10,8 @@
 
 # Professional History
 
-## Amazon Web Services
-2022 - 2023  *Systems Development Engineer*, *Senior DevOps Consultant*
+## Amazon Web Services - Remote, USA
+2022 - Present  *Systems Development Engineer*, *Senior DevOps Consultant*
 
 * Implemented automation processes to ensure the security and maintenance of Amazon Global Accelerator across various platforms.
 
@@ -23,10 +21,12 @@
 
 * Created Kubernetes Operators for Amazon Web Application Firewall.
 
-Technologies: Golang, Kubernetes, Linux, AWS, Bare Metal, Networks
+Technologies: Golang, Kubernetes, Linux, AWS, Bare Metal, Networks, Hashicorp Vault
 
-## Orion Labs - San Francisco, CA
-2020 - 2022 *Principal Staff Engineer, Head of DevOps/SRE/Infrastructure*
+## Orion Labs - Remote, USA
+2020 - 2022 *Head of Infrastructure / SRE / DevOps, Principal Staff Engineer*
+
+* Lead Infrastructure team - responsible for all SRE / DevOps work, and Orion's Cloud and On Prem systems.
 
 * Designed and implemented a versatile Platform Infrastructure for SaaS, CloudPrem, OnPrem, and Airgapped Kubernetes based installations for Orion and it's customers.
 
@@ -38,45 +38,59 @@ Technologies: Golang, Kubernetes, Linux, AWS, Bare Metal, Networks
 
 * Led internal training initiatives on technology for all employees at Orion.
 
-Technologies: AWS, Kubernetes, Bash, Linux, Golang, Terraform, Prometheus, Grafana, AlertManager, ElasticSearch, Kibana, Logstash, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks
+Technologies: AWS, Kubernetes, Bash, Linux, Golang, Terraform, Prometheus, Grafana, AlertManager, ElasticSearch, Kibana, Logstash, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks, Postgres, Redis
 
-#### Scribd - San Francisco, CA - Sec/DevOps Engineering Lead - 2018 - 2020
+## Scribd - Remote, USA 
+2018 - 2020 Principal DevSecOps Engineer, Sr. DevOps/SRE
 
-* Developed a scalable SIEM/WAF system to monitor and secure Scribd's global CDN, ensuring the protection of customer data.
+* Founded, hired, and led the Scribd Security Team.
 
-* Implemented an easy-to-use YAML interface on Hashicorp Vault called Managed Secrets for streamlined management of sensitive information.
+* Developed a scalable SIEM system to monitor and secure Scribd's global CDN, ensuring the protection of customer data.
 
-* Designed Kubernetes deployments that linked to Fastly caches, enabling efficient tracking of cache expiration of precompiled javascript code at scale.
+* Led implementation of  WAF (Web Application Firewall) to protect Scribd's services and network.
 
-* Instituted an advanced IAM system and PKI to protect internal networks and Kubernetes clusters against unauthorized access.
+* Created an easy-to-use YAML interface on Hashicorp Vault called "Managed Secrets" for streamlined management of sensitive information- now published as an Open Source project.
 
-Technologies: Kubernetes, Elasticsearch, Logstash, Kibana, Linux, Golang, Chef, Ruby, OpenLDAP, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks
+* Designed Kubernetes clusters and Kubernetes native tooling that linked application workloads to Fastly caches, enabling efficient tracking of cache expiration of precompiled javascript code at scale.
 
-#### Stitch Fix Inc. - San Francisco, CA - Data Platform Engineer - 2017
+* Created an advanced IAM System and PKI to protect internal networks and Kubernetes clusters against unauthorized access.
 
-* Created the IAM systems whereby the Algorithms & Analytics department connects to every resource, instance and container in the stack.
+Technologies: Kubernetes, ElasticSearch, Logstash, Kibana, Linux, Golang, Chef, Ruby, OpenLDAP, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks, MySQL
+
+## Stitch Fix Inc. - San Francisco, CA 
+2017 - Sr. DevOps/SRE, Data Platform Engineer 
+
+* Created the IAM System whereby the Algorithms & Analytics department connects to every resource, instance and container in the stack.
 
 * Enabled AWS IAM Role based development that works transparently on a laptop as if the computer were actually an EC2 node. Whether you're local or in the cloud your code works exactly the same.
 
-* Built a self- building, self-updating, extensible userspace binary tooling system that creates and distributes signed binaries for doing work on laptops with no external depenencies.
+* Created a system for interactive containers in the cloud that enabled Data Scientists to run their code near their data transparently as if it was local.
+
+* Created self-updating userspace tool framework that creates and distributes signed tools for doing work on laptops, servers, and containers.
 
 Technologies: AWS, Golang, Python, OpenLDAP, Docker, Linux, OpenSSL, Hashicorp Vault, IPTables, Networks, PF
 
-#### Apple iOS Systems - Cupertino, CA - Senior DevOps Engineer - 2015 ~ 2017
+## Apple iOS Systems / Apple Pay - Sunnyvale, CA 
+2015 - 2017 Systems Architect, Lead DevOps Engineer, Senior DevOps Engineer
+
+* Led Apple Pay DevOps team.
 
 * Designed and built a dynamic test driven CI/CD pipeline for Apple Pay, Apple Sim, and every Apple device in the world.
 
-* Implemented a private OpenStack cloud for testing and verification of applications.
+* Implemented a private OpenStack cloud for testing and verification of applications from bare metal hardware.
 
 * Designed a system whereby the entire deployment footprint of a group of applications can be described and manipulated in code.
+ 
+* Created a system by which full end-to-end integration testing of the Apple Pay stack can be performed on any laptop.
 
-* Transitioned the organization from Subversion to Git.
+* Transitioned Apple Pay from Subversion to Git.
 
-Technologies: Java, Docker, Chef, Puppet, Bash, Ruby, Subversion, Git, Linux, Bare Metal, IPTables, Networks
+Technologies: Java, Docker, Chef, Puppet, Bash, Ruby, Subversion, Git, Linux, Bare Metal, IPTables, Networks, Redis
 
-#### Data Recognition Corporation - Maple Grove, MN - Principal DevOps Engineer - 2014 ~ 2015
+## Data Recognition Corporation - Remote, USA
+2014 - 2015 Principal DevOps Consultant
 
-* Designed an auto-scaling Continuous Delivery environment for educational testing.
+* Designed an auto-scaling Continuous Delivery System for educational testing.
 
 * Shepherded multiple applications from proprietary systems to fully Open Source platforms.
 
@@ -84,91 +98,111 @@ Technologies: Java, Docker, Chef, Puppet, Bash, Ruby, Subversion, Git, Linux, Ba
 	
 Technologies: Puppet, Linux, Java, Ruby, VmWare
 
-#### Wells Fargo - Minneapolis, MN - Sr. Software Engineer - 2014
+## Wells Fargo - Minneapolis, MN
+2014 DevOps Consultant, Sr. Software Engineer
 
-* DevOps Consultant for Development, Testing, Building and Delivery of Applications and Middleware.
+* Led Development, Testing, and Delivery of Applications and Middleware.
 
 * Module Developer for Continuous Integration/ Continuous Delivery of multiple applications across multiple technologies and multiple operating systems.  
 
 * Designed and built SCA tools to parse the Puppet DSL for GRC.
 
-Technologies: Java, Puppet, Ruby, Antlr
+Technologies: Linux, Java, Puppet, Ruby, Antlr
 	
-#### U.S. Bank - Minneapolis, MN - Application Systems Administrator Sr. 2007 ~ 2014
+## U.S. Bank - Remote, USA
+2007 - 2014 Security Architect, Application Architect, Sr. Systems Engineer / SRE 
 
-* Specialty Application Development- Projects too sensitive or specialized for a general development team, or things that were deemed 'impossible'.
+* Security Architect for Corporate Payment Systems.
 
-* Authored Encryption Key management and delivery system used by multiple users in multiple countries.
+* Created and Maintained Web Application Firewalls (WAF) for all of U.S. Bank.
 
-* Authored Encryption and Tokenization system for PAN (Primary Account Number) data in Merchant Acquiring systems.
+* Software Engineer for special / sensitive projects around Security and Payment Systems.
 
-* Security Consultant for an Application Architecture team.
+* Consultant for Threat Modeling, Penetration Testing, Security Remediation.
 
-* Designed and Maintained full SDLC for High Availability PCI Compliant Apache Servers and LAMP Applications in multiple network tiers.
+* Consultant / Trainer for Automated Testing.
+
+* Designed and Maintained PCI Compliant Payment Systems.
+
+* Maintained PCI DSS compliance for Payment Systems
+
+* Created Observability / Monitoring / Alerting systems for Payment Systems.
+
+* Created Encryption Key management and delivery service used by multiple users in multiple countries.
+
+* Created Encryption and Tokenization system for PAN (Primary Account Number) data in Merchant Acquiring systems.
 
 * Third level support of Web Applications, RHEL and SLES Servers, Oracle Databases, and IP Networks.
 
-* Worked with Application Architecture teams and Development teams to preemptively address emerging threats while maintaining PCI DSS compliance across mixed technologies and multiple operating systems.
-
-* Designed Monitoring and Alerting modules for High Availability Apache Servers (Custom Apache Modules).
-
-* Full Stack Web Development on a variety of platforms.
-
-* Presented internal courses/talks to business and technology teams on web communication and its dangers. 
-
-* Trained Development and QA personnel in methods and tools for Unit/ Integration testing.
+* Full Stack Engineer on a variety of platforms.
 
 * Designed IPSec and IPTables security profiles for protection of PAN data in PCI Enclaves.
 
-* Designed and implemented processes for Code Signing, Continuous Integration, and Application Building.
-
-* Consultant for Threat Modeling, Penetration Testing, Exploit Confirmation, and Proof of Remediation.
+* Designed and implemented processes for Code Signing, Continuous Integration, and Artifact Storage.
 
 * Consultant/SME for SSL, SSH, Encryption, Public Key Infrastructure.
 
 * Consultant/SME for Software Packaging, Build, Deployment.
 
-Technologies: Perl, Linux, Apache HTTPD, Python, Java, Spring, OpenSSL, Luna HSMs, Bare Metal, VmWare
+Technologies: Perl, Linux, Apache HTTPD, Python, Java, Spring, OpenSSL, Luna HSMs, Bare Metal, VmWare, MySQL, Oracle
 
-#### Plain Black - Madison, WI - Developer - 2006~ 2007
+## Plain Black - Remote, USA
+2006 - 2007 Software Engineer
 
-* Core Development on the WebGUI Content Management System.
+* Software Engineer - WebGUI Content Management System.
  
 * Customer Service.
 
 Technologies: Perl, Linux, Apache HTTPD
 
-#### Universal Talkware - Minneapolis, MN - NOC Administrator - 2000
+## Universal Talkware - Minneapolis, MN
+2000 Lead Systems Engineer - Network Operations Center
 
-* Built Network Operations Center, handled internal tools, and even administered the physical plant.
+* Built Network Operations Center
+
+* Internal tools
+
+* On Prem / Bare Metal Servers/ Datacenter
 
 Technologies: Perl, Linux, Apache HTTPD, Bare Metal
 
-#### Hessian & McKasy - Minneapolis, MN - Head of IT - 1999 ~ 2000 
+## Hessian & McKasy - Minneapolis, MN
+1999 - 2000 Director of IT / Systems / Security
 
-* Ran IT for a 40 seat law firm. Desktops, Network, Backups, Compliance - the works.
+* Ran IT for a 40 seat law firm. Desktops, Servers, Network, Backups, Compliance, Security - entire electronic / technological base of the company.
 
-#### United Martial Arts - Plymouth MN - CEO and Head Instructor - 1998 ~ 2007
+Technologies: Windows, Windows NT, Novell Netware, MS Access, VBA, Bare Metal
 
-* Responsible for day to day operations of the martial arts studio, including Management, Finance, and HR.  
+## United Martial Arts - Plymouth MN 
+1998 - 2007 Director, Head Instructor
 
-* Designed, built and maintained a custom studio management desktop application that handled enrollment, financials, lesson plans, scheduling, video and print library management, and curriculum.
+* Responsible for day to day operations of the martial arts studio, including Management, Finance, Systems, and HR.  
+
+* Created custom management applications that handled enrollment, financials, lesson plans, scheduling, video and print library management, and curriculum.
 
 * Authored training curriculum for leadership programs as well as physical curriculum.
 
+Technologies: Perl, Linux, Apache HTTPD, Bare Metal
+
 # Profiles
 
-*Home Page* [https://nikogura.com](https://nikogura.com)
+*Web Site* [https://nikogura.com](https://nikogura.com)
 
-*Code Repos* [https://github.com/nikogura](https://github.com/nikogura)
+*Portfolio* [https://github.com/nikogura](https://github.com/nikogura)
 
 *LinkedIn* [https://www.linkedin.com/in/nikogura/](https://www.linkedin.com/in/nikogura)
 
+# Certifications
+
+* AWS Solutions Architect
+
+* Hashicorp Vault Professional
+
 # Open Source Projects
 
-*Dynamic Binary Toolkit* https://github.com/nikogura/dbt  A framework for authoring and using self-updating signed binaries.  Listed in *Awesome-Go* https://github.com/avelino/awesome-go.
+*Dynamic Binary Toolkit* https://github.com/nikogura/dbt  A delivery system for self-updating, signed tools.  Listed in *Awesome-Go* https://github.com/avelino/awesome-go.
 
-*gomason* https://github.com/nikogura/gomason A tool for doing clean-room CI testing locally.  Listed in *Awesome-Go*.
+*GoMason* https://github.com/nikogura/gomason A tool for doing clean-room CI testing locally.  Listed in *Awesome-Go*.
 
 *Managed Secrets* https://github.com/nikogura/managed-secrets A YAML interface on Hashicorp Vault.  Makes running Vault simple!
 
