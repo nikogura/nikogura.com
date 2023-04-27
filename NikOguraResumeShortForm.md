@@ -38,7 +38,7 @@ Technologies: Golang, Kubernetes, Linux, AWS, Bare Metal, Networks, Hashicorp Va
 
 * Led internal training initiatives on technology for all employees at Orion.
 
-Technologies: AWS, Kubernetes, Bash, Linux, Golang, Terraform, Prometheus, Grafana, AlertManager, ElasticSearch, Kibana, Logstash, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks, Postgres, Redis
+Technologies: AWS, Kubernetes, Bash, Linux, Golang, Terraform, Prometheus, Grafana, AlertManager, ElasticSearch, Kibana, Logstash, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks, Postgres, Redis, Fluent-Bit, Elastic Beats
 
 ## Scribd - Remote, USA 
 2018 - 2020 Principal DevSecOps Engineer, Sr. DevOps/SRE
@@ -55,7 +55,7 @@ Technologies: AWS, Kubernetes, Bash, Linux, Golang, Terraform, Prometheus, Grafa
 
 * Created an advanced IAM System and PKI to protect internal networks and Kubernetes clusters against unauthorized access.
 
-Technologies: Kubernetes, ElasticSearch, Logstash, Kibana, Linux, Golang, Chef, Ruby, OpenLDAP, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks, MySQL
+Technologies: Kubernetes, ElasticSearch, Logstash, Kibana, Linux, Golang, Chef, Ruby, OpenLDAP, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks, MySQL, Fluentd, Grafana
 
 ## Stitch Fix Inc. - San Francisco, CA 
 2017 - Sr. DevOps/SRE, Data Platform Engineer 
