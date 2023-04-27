@@ -26,7 +26,7 @@ Technologies: Golang, Kubernetes, Linux, AWS, Bare Metal, Networks, Hashicorp Va
 ## Orion Labs - Remote, USA
 2020 - 2022 *Head of Infrastructure / SRE / DevOps, Principal Staff Engineer*
 
-* Lead Infrastructure team - responsible for all SRE / DevOps work, and Orion's Cloud and On Prem systems.
+* Lead Infrastructure/DevOps/SRE Team - responsible for all SRE / DevOps work, and Orion's Cloud and On Prem systems.
 
 * Designed and implemented a versatile Platform Infrastructure for SaaS, CloudPrem, OnPrem, and Airgapped Kubernetes based installations for Orion and it's customers.
 
@@ -74,6 +74,8 @@ Technologies: AWS, Golang, Python, OpenLDAP, Docker, Linux, OpenSSL, Hashicorp V
 2015 - 2017 Systems Architect, Lead DevOps Engineer, Senior DevOps Engineer
 
 * Led Apple Pay DevOps team.
+ 
+* Transformed Systems Design and Administration by bringing Security, Audit, and Engineering to a modern, best-practice based pattern of administration and audit.
 
 * Designed and built a dynamic test driven CI/CD pipeline for Apple Pay, Apple Sim, and every Apple device in the world.
 
