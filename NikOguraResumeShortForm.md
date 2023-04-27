@@ -122,6 +122,8 @@ Technologies: Linux, Java, Puppet, Ruby, Antlr
 
 * Consultant / Trainer for Automated Testing.
 
+* SRE for Payment Systems.
+
 * Designed and Maintained PCI Compliant Payment Systems.
 
 * Maintained PCI DSS compliance for Payment Systems
@@ -131,8 +133,6 @@ Technologies: Linux, Java, Puppet, Ruby, Antlr
 * Created Encryption Key management and delivery service used by multiple users in multiple countries.
 
 * Created Encryption and Tokenization system for PAN (Primary Account Number) data in Merchant Acquiring systems.
-
-* Third level support of Web Applications, RHEL and SLES Servers, Oracle Databases, and IP Networks.
 
 * Full Stack Engineer on a variety of platforms.
 
