@@ -21,7 +21,7 @@
 
 * Created Kubernetes Operators for Amazon Web Application Firewall.
 
-Technologies: Golang, Kubernetes, Linux, AWS, Bare Metal, Networks, Hashicorp Vault
+Technologies: Golang, Kubernetes, Linux, AWS, Bare Metal, Networks, Hashicorp Vault, GitLab
 
 ## Orion Labs - Remote, USA
 2020 - 2022 *Head of Infrastructure / SRE / DevOps, Principal Staff Engineer*
@@ -38,7 +38,7 @@ Technologies: Golang, Kubernetes, Linux, AWS, Bare Metal, Networks, Hashicorp Va
 
 * Led internal training initiatives on technology for all employees at Orion.
 
-Technologies: AWS, Kubernetes, Bash, Linux, Golang, Terraform, Prometheus, Grafana, AlertManager, ElasticSearch, Kibana, Logstash, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks, Postgres, Redis, Fluent-Bit, Elastic Beats
+Technologies: AWS, Kubernetes, Bash, Linux, Golang, Terraform, Prometheus, Grafana, AlertManager, ElasticSearch, Kibana, Logstash, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks, Postgres, Redis, Fluent-Bit, Elastic Beats, CircleCI, Github
 
 ## Scribd - Remote, USA 
 2018 - 2020 Principal DevSecOps Engineer, Sr. DevOps/SRE
@@ -55,7 +55,7 @@ Technologies: AWS, Kubernetes, Bash, Linux, Golang, Terraform, Prometheus, Grafa
 
 * Created an advanced IAM System and PKI to protect internal networks and Kubernetes clusters against unauthorized access.
 
-Technologies: Kubernetes, ElasticSearch, Logstash, Kibana, Linux, Golang, Chef, Ruby, OpenLDAP, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks, MySQL, Fluentd, Grafana
+Technologies: Kubernetes, ElasticSearch, Logstash, Kibana, Linux, Golang, Chef, Ruby, OpenLDAP, OpenSSL, Hashicorp Vault, Bare Metal, IPTables, Networks, MySQL, Fluentd, Grafana, Jenkins, GitLab
 
 ## Stitch Fix Inc. - San Francisco, CA 
 2017 - Sr. DevOps/SRE, Data Platform Engineer 
@@ -87,7 +87,7 @@ Technologies: AWS, Golang, Python, OpenLDAP, Docker, Linux, OpenSSL, Hashicorp V
 
 * Transitioned Apple Pay from Subversion to Git.
 
-Technologies: Java, Docker, Chef, Puppet, Bash, Ruby, Subversion, Git, Linux, Bare Metal, IPTables, Networks, Redis
+Technologies: Java, Docker, Chef, Puppet, Ansible, Bash, Ruby, Subversion, Git, Linux, Bare Metal, IPTables, Networks, Redis, Artifactory, Jenkins
 
 ## Data Recognition Corporation - Remote, USA
 2014 - 2015 Principal DevOps Consultant
@@ -109,7 +109,7 @@ Technologies: Puppet, Linux, Java, Ruby, VmWare
 
 * Designed and built SCA tools to parse the Puppet DSL for GRC.
 
-Technologies: Linux, Java, Puppet, Ruby, Antlr
+Technologies: Linux, Java, Puppet, Ruby, Antlr, Jenkins
 	
 ## U.S. Bank - Remote, USA
 2007 - 2014 Security Architect, Application Architect, Sr. Systems Engineer / SRE 
