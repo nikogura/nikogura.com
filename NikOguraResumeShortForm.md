@@ -24,7 +24,7 @@
 Technologies: Golang, Kubernetes, Linux, AWS, Bare Metal, Networks, Hashicorp Vault, GitLab
 
 ## Orion Labs - Remote, USA
-2020 - 2022 *Head of Infrastructure / SRE / DevOps, Principal Staff Engineer*
+2020 - 2022 *Head of Infrastructure / SRE / DevOps, Principal Engineer*
 
 * Lead Infrastructure/DevOps/SRE Team - responsible for all SRE / DevOps work, and Orion's Cloud and On Prem systems.
 
