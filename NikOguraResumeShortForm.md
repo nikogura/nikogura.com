@@ -10,8 +10,13 @@
 
 # Professional History
 
+## Terrace - Remote, USA
+2023 - Present *Director of Infrastructure*
+
+* Building a cloud-agnostic, world-wide platform for wealth management across DeFi and traditional centralized financial exchanges.
+
 ## Amazon Web Services - Remote, USA
-2022 - Present  *Systems Development Engineer*, *Senior DevOps Consultant*
+2022 - 2023  *Systems Development Engineer*, *Senior DevOps Consultant*
 
 * Implemented automation processes to ensure the security and maintenance of Amazon Global Accelerator across various platforms.
 

@@ -368,7 +368,9 @@ If I cannot find a way, I will make one.
 
 # Employment History
 
-[Amazon Web Services](#amazon-web-services)
+[Terrace](#terrace---remote-usa)
+
+[Amazon Web Services](#amazon-web-services---remote-usa)
 
 [Orion Labs - San Francisco, CA](#orion-labs---san-francisco,-ca)
 
@@ -390,7 +392,12 @@ If I cannot find a way, I will make one.
 
 [United Martial Arts - Plymouth, MN](#united-martial-arts---plymouth,-mn)
 
-## Amazon Web Services
+## Terrace - Remote, USA
+2023 - Present *Director of Infrastructure*
+
+* Building a cloud-agnostic, world-wide platform for wealth management across DeFi and traditional centralized financial exchanges.
+
+## Amazon Web Services - Remote, USA
 2022 - 2023  *Systems Development Engineer*, *Senior DevOps Consultant*
 
 * Implemented automation processes to ensure the security and maintenance of Amazon Global Accelerator across various platforms.
