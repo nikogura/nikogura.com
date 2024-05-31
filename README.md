@@ -52,3 +52,5 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 * [Golang Design Tips](GolangDesignTips.md) Some design tips for golang.
  
 * [Kubernetes Shell Functions](KubernetesShellFunctions.md) Kubernetes commands can get painful to type.  These make it a lot easier to interact with a cluster.
+
+* [Talos Linux OIDC for AWS with Terraform](TalosAWSOIDC.md) Connect your Talos Kubernetes clusters to AWS via OIDC.
