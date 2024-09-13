@@ -54,3 +54,5 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 * [Kubernetes Shell Functions](KubernetesShellFunctions.md) Kubernetes commands can get painful to type.  These make it a lot easier to interact with a cluster.
 
 * [Talos Linux OIDC for AWS with Terraform](TalosAWSOIDC.md) Connect your Talos Kubernetes clusters to AWS via OIDC.
+
+* [The Three Virtues of a Programmer](https://thethreevirtues.com/)  I didn't invent them.  I didn't put them online, but Perl was my first programming language, and I feverently believe that these are virtues we should all embrace.
