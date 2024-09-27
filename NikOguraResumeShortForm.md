@@ -225,4 +225,4 @@ Technologies: Perl, Linux, Apache HTTPD, Bare Metal
 
 *Selenium4j* https://github.com/nextinterfaces/selenium4j A Java Library for translating HTML format Selenium tests into JUnit4 at runtime.
 
-* [Managed Secrets](https://github.com/nikogura/managed-secrets) A YAML interface on Hashicorp Vault that allows teams to manage their secrets, without being to access them in production.
+*Managed Secrets* https://github.com/nikogura/managed-secrets A YAML interface on Hashicorp Vault that allows teams to manage their secrets, without being to access them in production.
