@@ -357,6 +357,8 @@ If I cannot find a way, I will make one.
 * [CGI::Lazy](http://search.cpan.org/~vayde/CGI-Lazy-1.10/lib/CGI/Lazy.pm) A Perl Web Development Framework.  
 
 * [Selenium4j](https://github.com/nextinterfaces/selenium4j) A Java Library for translating HTML format Selenium tests into JUnit4 at runtime. 
+
+* [Managed Secrets](https://github.com/nikogura/managed-secrets) A YAML interface on Hashicorp Vault that allows teams to manage their secrets, without being to access them in production.
 		
 # Online Profiles
 
