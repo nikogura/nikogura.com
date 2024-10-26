@@ -15,7 +15,7 @@
 
 * Managing the infrastructure, security, technology and people behind a best-in-class crypto trading experience for everyone.
 * Serving as Head of Engineering for a world-wide distributed workforce.
-* Built a cloud-agnostic, world-wide platform for wealth management across DeFi (Distributed Finance, a/k/a Crypto Exchanges) and traditional CeFi (centralized financial exchanges).
+* Built a cloud-agnostic, world-wide platform for wealth management across DeFi (Distributed Finance, a/k/a Crypto Exchanges) and traditional CeFi (centralized financial exchanges).  The perfect balance of Fintech, Blockchain, and Security.
 * Secure, immutable Kubernetes clusters that span multiple cloud providers and even on-prem systems.
 * Open Source, best-in-class technologies such as Kubernetes, Prometheus, Thanos, Grafana, Istio, and Kafka.  We only pay compute and network costs.  Everything else is truly free for all time.  No vendor lock-in.  Infinite agility.
 
