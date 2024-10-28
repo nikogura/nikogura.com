@@ -98,6 +98,8 @@ Technologies: AWS, Golang, Python, OpenLDAP, Docker, Linux, OpenSSL, Hashicorp V
 
 * Designed and built a dynamic test driven CI/CD pipeline for Apple Pay, Apple Sim, and every Apple device in the world.
 
+* Architected the command and control architecture for Apple Pay for the China launch. 
+
 * Implemented a private OpenStack cloud for testing and verification of applications from bare metal hardware.
 
 * Designed a system whereby the entire deployment footprint of a group of applications can be described and manipulated in code.
