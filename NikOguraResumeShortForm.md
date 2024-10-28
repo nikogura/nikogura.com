@@ -15,9 +15,9 @@
 
 * Hired as Director of Cloud Infrastructure and Security.
 
-* Migrated DeFi/ CeFi Crypto Trading POC from GCP/GKE to AWS/EKS and finally to AWS/Talos Linux (immutable kubernetes distribution).
+* Migrated DeFi/ CeFi Crypto Trading proof-of-concept from GCP/GKE to AWS/EKS and finally to AWS/Talos Linux (Immutable Kubernetes).
 
-* Architected a cloud-agnostic, planet-scale platform for wealth management across DeFi (Distributed Finance, i.e. Cryptocurrency Exchanges) and traditional CeFi (Centralized Financial Exchanges).  The perfect balance of Fintech, Blockchain, and Security.
+* Architected a cloud-agnostic, secure, planet-scalable application platform across multiple cloud providers and on-prem installations.
  
 * Secured company IP during critical moment of turnover.
  
@@ -25,7 +25,7 @@
 
 * Recruited and hired an expanded engineering team.
 
-* Led a globally distributed engineering team to re-architect the company product from a partially functional, unscalable, insecure proof-of-concept to a secure, performant platform for DeFi, CeFi and Cryptocurrency trading with latencies measured in the milliseconds.
+* Led a globally distributed engineering team to re-architect Terrace's core product from the ground up into a performant platform for DeFi, CeFi and Cryptocurrency trading with latencies measured in the milliseconds.  The perfect balance of Fintech, Blockchain, and Security.
 
 * Promoted to Chief Information Officer. 
 
