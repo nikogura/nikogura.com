@@ -13,11 +13,21 @@
 ## Terrace - Remote, USA
 2023 - Present *Chief Information Officer*
 
-* Managing the infrastructure, security, technology and people behind a best-in-class crypto trading experience for everyone.
-* Serving as Head of Engineering for a world-wide distributed workforce.
-* Built a cloud-agnostic, world-wide platform for wealth management across DeFi (Distributed Finance, a/k/a Crypto Exchanges) and traditional CeFi (centralized financial exchanges).  The perfect balance of Fintech, Blockchain, and Security.
-* Secure, immutable Kubernetes clusters that span multiple cloud providers and even on-prem systems.
-* Open Source, best-in-class technologies such as Kubernetes, Prometheus, Thanos, Grafana, Istio, and Kafka.  We only pay compute and network costs.  Everything else is truly free for all time.  No vendor lock-in.  Infinite agility.
+* Hired as Director of Cloud Infrastructure and Security.
+
+* Migrated DeFi/ CeFi Crypto Trading POC from GCP/GKE to AWS/EKS and finally to AWS/Talos Linux (immutable kubernetes distribution).
+
+* Architected a cloud-agnostic, planet-scale platform for wealth management across DeFi (Distributed Finance, i.e. Cryptocurrency Exchanges) and traditional CeFi (Centralized Financial Exchanges).  The perfect balance of Fintech, Blockchain, and Security.
+ 
+* Secured company IP during critical moment of turnover.
+ 
+* Took over as Head of Engineering.  
+
+* Recruited and hired an expanded engineering team.
+
+* Led a globally distributed engineering team to re-architect the company product from a partially functional, unscalable, insecure proof-of-concept to a secure, performant platform for DeFi, CeFi and Cryptocurrency trading with latencies measured in the milliseconds.
+
+* Promoted to Chief Information Officer. 
 
 ## Amazon Web Services - Remote, USA
 2022 - 2023  *Systems Development Engineer*, *Senior DevOps Consultant*
