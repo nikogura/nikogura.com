@@ -92,19 +92,15 @@
 
 * Security Architect for Corporate Payment Systems. Consultant for Threat Modeling, Penetration Testing, Security Remediation.
 
-* Built and Maintained Web Application Firewalls (WAF) for all of U.S. Bank.
+* Built and Maintained Web Application Firewalls (WAF) for all of U.S. Bank.  Did it single-handedly for 5 years while still serving as Security Architect.
 
-* Software Engineer for special / sensitive projects around Security and Payment Systems.
+* Consultant / Trainer for Automated Testing.  Wrote training curricula and taught these subjects through U.S. Bank's internal development portal.
 
-* Consultant / Trainer for Automated Testing.
-
-* SRE for Payment Systems (Credit card processing). Maintained PCI DSS compliance.  Created Observability / Monitoring / Alerting systems.
+* SRE for Payment Systems (Credit card processing). Maintained PCI DSS compliance.  Created Observability / Monitoring / Alerting systems. Created Encryption and Tokenization system for PAN (Primary Account Number) data in Merchant Acquiring systems.
 
 * Created Encryption Key management and delivery service used by multiple users in multiple countries.
 
-* Created Encryption and Tokenization system for PAN (Primary Account Number) data in Merchant Acquiring systems.
-
-* Designed and implemented processes for Code Signing, Continuous Integration, and Artifact Storage.
+* Designed and implemented systems for Code Signing, Continuous Integration, and Artifact Storage.
 
 ## Plain Black: 2006 - 2007 Software Engineer
 
@@ -178,6 +174,6 @@
 
 *Dynamic Binary Toolkit* https://github.com/nikogura/dbt  A delivery system for self-updating, signed tools.  Listed in *Awesome-Go* https://github.com/avelino/awesome-go.
 
-*GoMason* https://github.com/nikogura/gomason A tool for doing clean-room CI testing locally.  Listed in *Awesome-Go*.
+*Go Mason* https://github.com/nikogura/gomason A tool for doing clean-room CI testing locally.  Listed in *Awesome-Go*.
 
 *Managed Secrets* https://github.com/nikogura/managed-secrets A YAML interface on Hashicorp Vault that allows teams to manage their secrets, without being to access them in production.
