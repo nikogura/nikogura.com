@@ -1,10 +1,6 @@
 # Nik Ogura
 
-### Infrastructure - Security - Software - Platform - Tools - Leadership
-
-### San Diego County, USA
-
-#### *Viam inveniam, aut faciam.* 
+## *Viam inveniam, aut faciam.* 
 
 *(I will find a way, or I will make one)*
 
