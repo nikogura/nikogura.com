@@ -8,107 +8,118 @@
 
 ## Terrace: 2023 - Present Director of Cloud Infrastructure and Security, Chief Information Officer
 
-* Built a multi-cloud, hybrid Kubernetes platform across multiple cloud providers and on-prem systems.
+* Architected a multi-cloud, hybrid Kubernetes platform spanning various cloud providers and on-premises systems.
 
-* Secured company IP during critical moment of turnover.  Recovered company systems in a matter of hours.
+* Protected company intellectual property during a critical turnover period, swiftly restoring systems within hours.
 
-* Led Observability efforts as part of Engineering Management. Designed systems, and educated, engineers on how to create systems that can be monitored in a performant and scalable manner.  Reduced Monitoring spend by a factor of 100x.
+* Drove Observability initiatives in Engineering Management by designing scalable monitoring systems, resulting in a 100x reduction in monitoring costs.
 
-* Promoted to CIO and acting Head of Engineering.  Led a globally distributed team to re-architect Terrace's core product from the database up to meet all business requirements for a performant platform for DeFi, CeFi and Cryptocurrency trading.  This system combines Fintech, Blockchain, Observability and Security on Kubernetes.  Launched Terrace's flagship product in less than 3 months from takeover.
+* Elevated to CIO and interim Head of Engineering, overseeing the global team in re-architecting Terrace's core product for DeFi, CeFi, and Cryptocurrency trading, integrating Fintech, Blockchain, Observability, and Security on Kubernetes.
+
+* Launched Terrace's flagship product in less than 3 months from assumption of new duties.
 
 ## Amazon Web Services: 2022 - 2023  Systems Development Engineer, Senior DevOps Consultant
 
-* Implemented automation processes to ensure the security and maintenance of Amazon Global Accelerator systems for FedRamp.
+* Automated processes to secure and maintain Amazon Global Accelerator systems for FedRamp compliance.
 
-* Served as internal Security Consultant to Amazon Global Accelerator. Certified as AWS Solutions Architect and Hashicorp Vault Professional.
- 
-* Created Kubernetes Operators for Amazon Web Application Firewall.
+* Provided internal Security Consulting for Amazon Global Accelerator, holding certifications as AWS Solutions Architect and Hashicorp Vault Professional.
+
+* Developed Kubernetes Operators for Amazon Web Application Firewall implementation.
 
 ## Orion Labs: 2020 - 2022 Head of Infrastructure, Principal Engineer
 
-* Lead Infrastructure/DevOps/SRE Team across AWS, Azure, and On Prem systems.
+* Led a team managing Infrastructure/DevOps/SRE responsibilities on AWS, Azure, and On-Prem systems.
 
-* Designed and implemented a Kubernetes platform for SaaS, CloudPrem, OnPrem, and Air-gapped installations for realtime secure voice communications.
+* Designed and implemented a Kubernetes platform enabling secure voice communications across various installations.
 
-* Built contract tracing systems used by public transportation systems for epidemiological contract tracing during Covid.  
- 
-* Developed a cutting-edge Framework for Voice Bots using the Orion Platform on Kubernetes.
+* Developed contract tracing systems for public transportation during Covid outbreak.
 
-* Created engineering standards.  Led internal training initiatives on technology for all employees.
+* Built a Framework for Voice Bots using Orion Platform on Kubernetes.
+
+* Established engineering standards and conducted technology training for all employees.
 
 ## Scribd: 2018 - 2020 Principal DevSecOps Engineer, Sr. DevOps/SRE
 
-* Founded, hired, and led the Scribd Security Team.
+* Founded and led Scribd's Security Team
 
-* Developed a scalable SIEM system to monitor and secure Scribd's global CDN, ensuring the protection of customer data.
+* Developed a scalable SIEM system to monitor and secure Scribd's global CDN for customer data protection
 
-* Implemented a WAF (Web Application Firewall) to protect Scribd's services and network.
+*  Implemented a Web Application Firewall to safeguard Scribd's services and network
 
-* Created an easy-to-use YAML interface on Hashicorp Vault called "Managed Secrets" for streamlined management of sensitive information- now published as an Open Source project.
+* Created an easy-to-use YAML interface on Hashicorp Vault 'Managed Secrets' for efficient management of sensitive information, now an Open Source project
 
-* Designed Kubernetes clusters and Kubernetes native tooling that linked application workloads to Fastly CDN caches, enabling efficient tracking of cache expiration of precompiled javascript code at world-wide scale.
+* Designed Kubernetes clusters and native tooling that connected application workloads to Fastly CDN caches for tracking cache expiration of precompiled javascript code at a global scale
 
-* Created an Identity and Access System, complete with PKI to protect internal networks and Kubernetes clusters against unauthorized access.
+* Established an Identity and Access System with PKI to defend internal networks and Kubernetes clusters from unauthorized access
 
 ## Stitch Fix: 2017 - 2017  Sr. DevOps/SRE
 
-* Created the Identity and Access System whereby the Algorithms & Analytics department connects to every resource, instance and container in the stack.  System later was proven to be both secure and reliable when the 3rd party system used by the rest of the company went down in a breach.
+* Developed an Identity and Access System for the Algorithms & Analytics department to access all resources in the stack securely and reliably.
 
-* Enabled AWS IAM Role based development that works transparently on a laptop as if the computer were actually an EC2 node. Whether local or in the cloud, code works exactly the same.
-
-* Created a system for interactive containers in the cloud that enabled Data Scientists to run their code near their data transparently as if it was local.
+* Created an AWS IAM Role based development allowing seamless code execution between local machines and EC2 nodes.
+ 
+* Built a cloud-based system for interactive containers, enabling Data Scientists to run code near their data seamlessly as if it were local.
 
 ## Apple: 2015 - 2017 Lead DevOps Engineer
 
-* Led Apple Pay DevOps team. I Brought Security, Audit, and Engineering together on a modern, best-practice based pattern of administration and audit.  By understanding the technical and human needs of all concerned, and exhibiting relentless personal integrity, I allowed Apple Pay to take full ownership of their own hardware - a first in Apple history.
+* Led Apple Pay DevOps team in implementing a modern administration and audit pattern, fostering collaboration between Security, Audit, and Engineering which led to full hardware ownership by Apple Pay.  This was a first in Apple's history.
 
-* Designed and built a fully automated test-driven CI/CD system for Apple Pay - the first of its kind at Apple.
+* Designed and implemented the first automated test-driven CI/CD system for Apple Pay at Apple.
 
-* Architected the command and control architecture for Apple Pay for the China launch in 2016.  30k Servers under control across the globe. 
+* Architected the command and control architecture for global Apple Pay launch in China, managing 30k servers worldwide.
 
-* Created a private OpenStack cloud for testing and verification of applications from bare metal hardware.  This sped up Apple Pay's build and test cycle by 100x due to lack of testing infrastructure, and a prohibition on using public clouds.
+* Created a private OpenStack cloud to accelerate Apple Pay's build and test cycle by 100x, overcoming infrastructure limitations and cloud usage restrictions.
 
-* Created a container based system for full end-to-end integration testing of the Apple Pay platform on any laptop.  This was recognized as a first for Apple.
+* Developed a container-based system enabling end-to-end integration testing of Apple Pay platform on any laptop, a pioneering achievement within Apple.
 
 ## Data Recognition Corporation: 2014 - 2015 Principal DevOps Consultant
 
-* Designed an auto-scaling Continuous Delivery System for educational testing.
+* Created auto-scaling Continuous Delivery System for educational testing.
+ 
+* Successfully migrated applications from proprietary systems to fully Open Source platforms.
 
-* Shepherded multiple applications from proprietary systems to fully Open Source platforms.
-
-* Designed and taught internal training curriculum for the technology, disciplines, and cultural concepts that come under the heading of DevOps.
+* Developed and delivered internal training curriculum covering DevOps technology, disciplines, and cultural concepts.
 	
 ## Wells Fargo: 2014 DevOps Consultant, Sr. Software Engineer
 
-* Led Development, Testing, and Delivery of Applications and Middleware.
+* Led the development, testing, and delivery of applications and middleware.
 
-* Module Developer for Continuous Integration/ Continuous Delivery of multiple applications across multiple technologies and multiple operating systems.  
+* Developed modules for continuous integration/continuous delivery of multiple applications across various technologies and operating systems.
 
 ## U.S. Bank: 2007 - 2014 Security Architect, Application Architect, Sr. Systems Engineer / SRE 
 
-* Security Architect for Corporate Payment Systems. Consultant for Threat Modeling, Penetration Testing, Security Remediation.
+* Worked as a Security Architect for Corporate Payment Systems, providing consultation on Threat Modeling, Penetration Testing, and Security Remediation.
 
-* Built and Maintained Web Application Firewalls (WAF) for all of U.S. Bank.  Did it single-handedly for 5 years while still serving as Security Architect.
+* Solely developed and managed Web Application Firewalls (WAF) for the entire U.S. Bank over 5 years while concurrently serving as Security Architect.
 
-* Consultant / Trainer for Automated Testing.  Wrote training curricula and taught these subjects through U.S. Bank's internal development portal.
+* Provided consultancy and training on Automated Testing, including developing training materials and teaching classes through the organization's internal development platform.
+ 
+* Managed Payment Systems' reliability engineering (SRE), ensuring PCI DSS compliance, and implemented Observability, Monitoring, and Alerting systems. Established Encryption and Tokenization mechanisms for PAN data in Merchant Acquiring systems.
 
-* SRE for Payment Systems (Credit card processing). Maintained PCI DSS compliance.  Created Observability / Monitoring / Alerting systems. Created Encryption and Tokenization system for PAN (Primary Account Number) data in Merchant Acquiring systems.
+* Developed an Encryption Key management and distribution service utilized by numerous users across various countries.
+        
+* Engineered systems for Code Signing, Continuous Integration, and Artifact Storage.
 
-* Created Encryption Key management and delivery service used by multiple users in multiple countries.
-
-* Designed and implemented systems for Code Signing, Continuous Integration, and Artifact Storage.
 
 ## Plain Black: 2006 - 2007 Software Engineer
 
-* Software Engineer - WebGUI Content Management System. Managed Customer Service for paid and open source community customers.
+* Developed software for WebGUI Content Management System.
+
+* Handled customer service for both paid and open source community customers.
 
 ## Universal Talkware: 2000 Lead Systems Engineer
 
-* Built Network Operations Center, Internal tools.  Ran On Prem / Bare Metal Servers/ Datacenter
+* Established Network Operations Center and internal tools.
+
+* Managed On-Premise / Bare Metal Servers and Datacenter operations.
 
 ## Hessian & McKasy: 1999 - 2000 Director of IT
 
-* Ran IT for a 40 seat law firm. Desktops, Servers, Network, Backups, Compliance, Security - entire electronic / technological base of the company.  Navigated the "Y2K Crisis".
+* Oversaw all IT operations for a 40-seat law firm, including desktops, servers, network, backups, compliance, and security.
+
+*  Successfully managed the company's entire electronic and technological infrastructure.
+
+*  Skillfully navigated the challenges of the Y2K Crisis.
 
 # Skills
 
