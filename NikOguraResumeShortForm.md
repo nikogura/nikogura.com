@@ -12,17 +12,15 @@
 
 ## Terrace: 2023 - Present Director of Cloud Infrastructure and Security, Chief Information Officer
 
-* Replatformed DeFi/ CeFi Crypto Trading proof-of-concept from GCP/GKE to AWS/EKS and finally to AWS/Talos Linux (Immutable Kubernetes).
+* Built a multi-cloud, hybrid Kubernetes platform across multiple cloud providers and on-prem systems.
 
-* Built a cloud-agnostic, secure, planet-scalable Kubernetes platform across multiple cloud providers and on-prem installations.
- 
-* Secured company IP during critical moment of turnover.
- 
-* Took over as Head of Engineering.  Expanded a globally distributed engineering team to re-architect Terrace's core product from the ground up into a performant platform for DeFi, CeFi and Cryptocurrency trading.  This system combines Fintech, Blockchain, and Security, and has latencies measured in miliseconds.  Brought Terrace's product to success launch.
+* Secured company IP during critical moment of turnover.  Recovered company systems in a matter of hours.
 
-* Led Observability - designing systems, and educating, demonstrating, mentoring engineers on how to write software and make systems that can be monitored in a performant and scalable manner.
+* Led Observability efforts as part of Engineering Management. Designed systems, and educated, engineers on how to create systems that can be monitored in a performant and scalable manner.  Reduced Monitoring spend by a factor of 100x.
 
-## Amazon Web Services: 2022 - 2023  *Systems Development Engineer*, *Senior DevOps Consultant*
+* Promoted to CIO and acting Head of Engineering.  Led a globally distributed team to re-architect Terrace's core product from the database up to meet all business requirements for a performant platform for DeFi, CeFi and Cryptocurrency trading.  This system combines Fintech, Blockchain, Observability and Security on Kubernetes.  Launched Terrace's flagship product in less than 3 months from takeover.
+
+## Amazon Web Services: 2022 - 2023  Systems Development Engineer, Senior DevOps Consultant
 
 * Implemented automation processes to ensure the security and maintenance of Amazon Global Accelerator systems for FedRamp.
 
@@ -30,7 +28,7 @@
  
 * Created Kubernetes Operators for Amazon Web Application Firewall.
 
-## Orion Labs: 2020 - 2022 *Head of Infrastructure / SRE / DevOps, Principal Engineer*
+## Orion Labs: 2020 - 2022 Head of Infrastructure, Principal Engineer
 
 * Lead Infrastructure/DevOps/SRE Team across AWS, Azure, and On Prem systems.
 
@@ -40,7 +38,7 @@
  
 * Developed a cutting-edge Framework for Voice Bots using the Orion Platform on Kubernetes.
 
-* Created coding guidelines and migrating existing microservices to meet new standards and led internal training initiatives on technology for all employees at Orion.  
+* Created engineering standards.  Led internal training initiatives on technology for all employees.
 
 ## Scribd: 2018 - 2020 Principal DevSecOps Engineer, Sr. DevOps/SRE
 
@@ -52,36 +50,30 @@
 
 * Created an easy-to-use YAML interface on Hashicorp Vault called "Managed Secrets" for streamlined management of sensitive information- now published as an Open Source project.
 
-* Designed Kubernetes clusters and Kubernetes native tooling that linked application workloads to Fastly CDN caches, enabling efficient tracking of cache expiration of precompiled javascript code at scale.
+* Designed Kubernetes clusters and Kubernetes native tooling that linked application workloads to Fastly CDN caches, enabling efficient tracking of cache expiration of precompiled javascript code at world-wide scale.
 
-* Created an advanced IAM System and PKI to protect internal networks and Kubernetes clusters against unauthorized access.
+* Created an Identity and Access System, complete with PKI to protect internal networks and Kubernetes clusters against unauthorized access.
 
-## Stitch Fix: 2017 - 2017  Sr. DevOps/SRE, Data Platform Engineer 
+## Stitch Fix: 2017 - 2017  Sr. DevOps/SRE
 
-* Created the IAM System whereby the Algorithms & Analytics department connects to every resource, instance and container in the stack.
+* Created the Identity and Access System whereby the Algorithms & Analytics department connects to every resource, instance and container in the stack.  System later was proven to be both secure and reliable when the 3rd party system used by the rest of the company went down in a breach.
 
-* Enabled AWS IAM Role based development that works transparently on a laptop as if the computer were actually an EC2 node. Whether you're local or in the cloud your code works exactly the same.
+* Enabled AWS IAM Role based development that works transparently on a laptop as if the computer were actually an EC2 node. Whether local or in the cloud, code works exactly the same.
 
 * Created a system for interactive containers in the cloud that enabled Data Scientists to run their code near their data transparently as if it was local.
 
-* Created self-updating userspace tool framework that creates and distributes signed tools for doing work on laptops, servers, and containers.
+## Apple: 2015 - 2017 Lead DevOps Engineer
 
-## Apple: 2015 - 2017 Systems Architect, Lead DevOps Engineer, Senior DevOps Engineer
+* Led Apple Pay DevOps team. I Brought Security, Audit, and Engineering together on a modern, best-practice based pattern of administration and audit.  By understanding the technical and human needs of all concerned, and exhibiting relentless personal integrity, I allowed Apple Pay to take full ownership of their own hardware - a first in Apple history.
 
-* Led Apple Pay DevOps team.
- 
-* Transformed Systems Design and Administration by bringing Security, Audit, and Engineering to a modern, best-practice based pattern of administration and audit.
+* Designed and built a fully automated test-driven CI/CD system for Apple Pay - the first of its kind at Apple.
 
-* Designed and built a dynamic test driven CI/CD pipeline for Apple Pay, Apple Sim, and every Apple device in the world.
+* Architected the command and control architecture for Apple Pay for the China launch in 2016.  30k Servers under control across the globe. 
 
-* Architected the command and control architecture for Apple Pay for the China launch. 
+* Created a private OpenStack cloud for testing and verification of applications from bare metal hardware.  This sped up Apple Pay's build and test cycle by 100x due to lack of testing infrastructure, and a prohibition on using public clouds.
 
-* Implemented a private OpenStack cloud for testing and verification of applications from bare metal hardware.
+* Created a container based system for full end-to-end integration testing of the Apple Pay platform on any laptop.  This was recognized as a first for Apple.
 
-* Created a system by which full end-to-end integration testing of the Apple Pay stack can be performed on any laptop.
-
-* Implemented Git for Apple Pay.
- 
 ## Data Recognition Corporation: 2014 - 2015 Principal DevOps Consultant
 
 * Designed an auto-scaling Continuous Delivery System for educational testing.
@@ -118,31 +110,37 @@
 
 * Software Engineer - WebGUI Content Management System. Managed Customer Service for paid and open source community customers.
 
-## Universal Talkware: 2000 Lead Systems Engineer - Network Operations Center
+## Universal Talkware: 2000 Lead Systems Engineer
 
 * Built Network Operations Center, Internal tools.  Ran On Prem / Bare Metal Servers/ Datacenter
 
-## Hessian & McKasy: 1999 - 2000 Director of IT / Systems / Security
+## Hessian & McKasy: 1999 - 2000 Director of IT
 
-* Ran IT for a 40 seat law firm. Desktops, Servers, Network, Backups, Compliance, Security - entire electronic / technological base of the company.
+* Ran IT for a 40 seat law firm. Desktops, Servers, Network, Backups, Compliance, Security - entire electronic / technological base of the company.  Navigated the "Y2K Crisis".
 
 # Skills
 
-**Programming Languages**: Golang, Bash, Perl, Python, Ruby, Java, Groovy, JavaScript, Spring, Antlr
+**Programming Languages**: Golang, Bash, Perl, Python, Ruby, Java, Groovy, JavaScript
+
+**Frameworks**: Spring, Antlr, Gherkin, Cucumber, PyTest, Test::More, Go Test, Godogs, Selenium
+
+**Disciplines**: Test Driven Development, Behavior Driven Development, Agile, Rugged, SOLID
+
+**Compute / Virtualization**: Bare Metal, VmWare, Libvirt, OpenStack, EC2, GCP, Azure, VirtualBox, XHyve
+
+**Kubernetes**: EKS, AKS, Rancher, Kubeadm, Replicated, Talos, Operator Framework, Minikube, Jsonnet, Helm
 
 **Operating Systems**: Linux, Windows, MacOS, Unix
 
 **Web Servers/ Load Balancers**: Nginx, Apache, Envoy, HAProxy 
 
-**Service Meshes**: Istio, Consul
-
 **Containerization**: Kubernetes, ECS, Docker, Containerd
 
-**Security**: OpenSSL, Luna HSMs, IPTables, PF, OpenVPN, ModSecurity, SIEM
+**Security**: OpenSSL, OpenSSH, Luna HSMs, OpenVPN, SIEM, Kerberos, PKCS, IPSec, JWT
 
-**Virtualization**: Bare Metal, VmWare, Libvirt, OpenStack, EC2, GCP, Azure, VirtualBox, XHyve
+**Firewalls**: IPTables, PF, AWS WAF, Fastly WAF, ModSecurity
 
-**Databases**: Postgresql, Mysql, Oracle, Redis, Clickhouse, TimescaleDB, DynamoDB
+**Databases**: Postgresql, Mysql, Oracle, Redis, Clickhouse, TimescaleDB, DynamoDB, Hasura, GraphQL
 
 **Configuration Management**: Puppet, Chef, Ansible, Terraform, 
 
@@ -150,19 +148,23 @@
 
 **Version Control**: Git, Subversion, Mercurial, GitHub, GitLab
 
-**Hyperscalers/Public Clouds**: AWS, Azure, GCP
+**Hyperscalers/Compute Cloud**: AWS, Azure, GCP, OpenStack
 
-**Kubernetes**: EKS, AKS, Rancher, Kubeadm, Replicated, Talos, Operators
+**Access and Identity**: LDAP, OIDC, SAML, FusionAuth
 
-**Identity**: LDAP, OIDC, SAML
+**Secrets Management**: Hashicorp Vault, AWS Secrets Manager, AWS Systems Manager Parameter Store
 
-**Secrets**: Hashicorp Vault, AWS Secrets Manager, AWS Systems Manager Parameter Store
+**Observability**: Prometheus, AlertManager, Grafana, Loki, Promtail, Thanos, Fluentd, Fluent-bit, ElasticBeats, ElasticSearch, Artifactory, Logstash, Kibana, CloudWatch, Splunk, DataDog
 
-**Observability**: Prometheus, AlertManager, Grafana, Thanos, Fluentd, Fluent-bit, ElasticBeats, ElasticSearch, Artifactory, Logstash, Kibana, CloudWatch, Splunk, DataDog
-
-**Networking**: TCP/IP, Routers, Gateways, NAT, DNS
+**Networking / Service Meshes**: TCP/IP, Routers, Gateways, NAT, DNS, Forward Proxies, Reverse Proxies, Istio, Consul
 
 **CDNs**: Fastly, Cloudfront
+
+**Compliance**: FedRamp, SOC2, PCI, SOX, HIPAA, CIS, CVE, Inspec
+
+**Messaging**: Kafka, Elasticache, SNS, RabbitMQ
+
+**Blockchain / Crypto**: Ethereum 
 
 # Profiles
 
