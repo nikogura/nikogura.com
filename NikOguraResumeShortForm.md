@@ -30,7 +30,7 @@
 
 * Led a team managing Infrastructure/DevOps/SRE responsibilities on AWS, Azure, and On-Prem systems.
 
-* Designed and implemented a Kubernetes platform enabling secure voice communications across various installations.
+* Designed and implemented a Kubernetes platform enabling secure voice communications in cloud, on-prem, and air-gapped installations.
 
 * Developed contract tracing systems for public transportation during Covid outbreak.
 
