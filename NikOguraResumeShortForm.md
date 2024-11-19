@@ -6,7 +6,7 @@
 
 # Professional History
 
-## Terrace: 2023 - Present Director of Cloud Infrastructure and Security, Chief Information Officer
+## Terrace: 2023 - Present Director of Cloud Infrastructure and Security
 
 * Architected a multi-cloud, hybrid Kubernetes platform spanning various cloud providers and on-premises systems.
 
