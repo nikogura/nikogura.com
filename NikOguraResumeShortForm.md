@@ -129,7 +129,7 @@
 
 **Disciplines**: Test Driven Development, Behavior Driven Development, Agile, Rugged, SOLID
 
-**Compute / Virtualization**: Bare Metal, VmWare, Libvirt, OpenStack, EC2, GCP, Azure, VirtualBox, XHyve
+**Compute / Virtualization**: Bare Metal, VmWare/ESX/ESXi, Qemu, KVM, OpenStack, EC2, GCP, Azure, VirtualBox, XHyve, Vagrant, Libvirt, Proxmox
 
 **Kubernetes**: EKS, AKS, Rancher, Kubeadm, Replicated, Talos, Operator Framework, Minikube, Jsonnet, Helm
 
@@ -159,7 +159,7 @@
 
 **Observability**: Prometheus, AlertManager, Grafana, Loki, Promtail, Thanos, Fluentd, Fluent-bit, ElasticBeats, ElasticSearch, Artifactory, Logstash, Kibana, CloudWatch, Splunk, DataDog
 
-**Networking / Service Meshes**: TCP/IP, Routers, Gateways, NAT, DNS, Forward Proxies, Reverse Proxies, Istio, Consul
+**Networking / Service Meshes**: TCP/IP, Routers, Gateways, NAT, DNS, Forward Proxies, Reverse Proxies, Istio, Consul, PXE, TFTP
 
 **CDNs**: Fastly, Cloudfront
 
