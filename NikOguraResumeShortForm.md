@@ -14,7 +14,7 @@
 
 * Drove Observability initiatives in Engineering Management by designing scalable monitoring systems, resulting in a 100x reduction in monitoring costs.
 
-* Elevated to CIO and interim Head of Engineering, overseeing the global team in re-architecting Terrace's core product for DeFi, CeFi, and Cryptocurrency trading, integrating Fintech, Blockchain, Observability, and Security on Kubernetes.
+* Elevated to CIO and Head of Engineering, overseeing the global team in re-architecting Terrace's core product for DeFi, CeFi, and Cryptocurrency trading, integrating Fintech, Blockchain, Observability, and Security on Kubernetes.
 
 * Launched Terrace's flagship product in less than 3 months from assumption of new duties.
 
