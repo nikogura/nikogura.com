@@ -6,9 +6,11 @@
 
 # Professional History
 
-## Terrace: 2023 - Present Director of Cloud Infrastructure and Security
+## Terrace: 2023 - Present Chief Information Officer
 
-* Architected a multi-cloud, hybrid Kubernetes platform spanning various cloud providers and on-premises systems.
+* Hired as Director of Cloud Infrastructure and Security
+
+* Architected a multi-cloud, hybrid Kubernetes platform spanning various cloud providers and on-premises systems.  Migrated from GCP to AWS and On Premesis.
 
 * Protected company intellectual property during a critical turnover period, swiftly restoring systems within hours.
 
@@ -16,7 +18,7 @@
 
 * Elevated to CIO and Head of Engineering, overseeing the global team in re-architecting Terrace's core product for DeFi, CeFi, and Cryptocurrency trading, integrating Fintech, Blockchain, Observability, and Security on Kubernetes.
 
-* Launched Terrace's flagship product in less than 3 months from assumption of new duties.
+* Launched Terrace's flagship product in less than 3 months from assumption of new duties by re-architecting the entire platform from the database to the front-end to meet business requirements around scale and latency.  Brought latencies of > 600ms down to in some cases _microseconds_ and scaled the data handling capabilities of the product by over 100x.
 
 ## Amazon Web Services: 2022 - 2023  Systems Development Engineer, Senior DevOps Consultant
 
