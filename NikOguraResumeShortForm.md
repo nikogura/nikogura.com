@@ -20,6 +20,8 @@
 
 * Launched Terrace's flagship product in less than 3 months from assumption of new duties by re-architecting the entire platform from the database to the front-end to meet business requirements around scale and latency.  Brought latencies of > 600ms down to in some cases _microseconds_ and scaled the data handling capabilities of the product by over 100x.
 
+* Automated Security and Deployment incident response with AI bots that work through Slack to diagnose and resolve WAF blockages, Vulnerability Reports, and Deployment issues in Kubernetes, Nginx, and ModSecurity.
+
 ## Amazon Web Services: 2022 - 2023  Systems Development Engineer, Senior DevOps Consultant
 
 * Automated processes to secure and maintain Amazon Global Accelerator systems for FedRamp compliance.
