@@ -1,0 +1,37 @@
+\documentclass{compactresume}
+
+% Pandoc variables
+$if(title)$
+\title{$title$}
+$endif$
+
+$if(author)$
+\author{$author$}
+$endif$
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+\begin{document}
+
+$if(title)$
+\begin{center}
+{\huge\bfseries $title$}
+$if(author)$
+\\[4pt]
+$for(author)$
+$author$$sep$ \and
+$endfor$
+$endif$
+$if(contact)$
+\\[2pt]
+$contact$
+$endif$
+\end{center}
+\vspace{6pt}
+$endif$
+
+$body$
+
+\end{document}
