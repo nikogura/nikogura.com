@@ -1,4 +1,8 @@
-\documentclass{compactresume}
+\documentclass{resume}
+
+% Use normal font for URLs instead of typewriter/monospace
+\usepackage{hyperref}
+\urlstyle{same}
 
 % Pandoc variables
 $if(title)$

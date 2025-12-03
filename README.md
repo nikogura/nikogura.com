@@ -17,9 +17,7 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 # Contents
 
-* [Nik's Online Resume](NikOguraResume.md) *My resume.  Online.  For the world to see.  You're welcome.*
-
-* [Nik's Condensed Resume](https://github.com/nikogura/nikogura.github.io/blob/master/NikOgura.pdf?raw=true)  *In case you don't want to read the fun one.*
+* [My General Resume](https://github.com/nikogura/nikogura.github.io/blob/master/general-resume.pdf?raw=true) 
 
 * [Coding Standards](CodingStandards.md) My philosophy on coding standards - especially in Golang, and by inference on the rest of life.
 

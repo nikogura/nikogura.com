@@ -39,7 +39,7 @@
 % Tighter spacing for lists
 \setlist{nosep, leftmargin=1.5em}
 
-% Section formatting - compact and sans-serif
+% Section formatting - compact and sans-serif (no numbering)
 \titleformat{\section}
     {\large\bfseries\sffamily}
     {}
@@ -48,6 +48,9 @@
     [\titlerule]
 
 \titlespacing{\section}{0pt}{6pt}{3pt}
+
+% Remove section numbering
+\setcounter{secnumdepth}{0}
 
 % Subsection formatting
 \titleformat{\subsection}
