@@ -19,11 +19,21 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 * [My General Resume](https://github.com/nikogura/nikogura.github.io/blob/master/general-resume.pdf?raw=true) 
 
-* [Coding Standards](CodingStandards.md) My philosophy on coding standards - especially in Golang, and by inference on the rest of life.
+* [Engineering Standards](EngineeringStandards.md) My philosophy on code standards - especially in Golang, and by inference on the rest of life.
+
+* [Named Returns](https://github.com/nikogura/namedreturns) Linter enforcing the use of named returns in Go functions. Named returns improve code readability and make function signatures more self-documenting.
 
 * [DBT: Dynamic Binary Toolkit- Tools that keep themselves up to date!](DBT.md) *Never ask your users to update to the latest version again.*
 
 * [Gomason CI/CD in your pocket](https://github.com/nikogura/gomason) *Want to test locally?  Build, Sign, and publish binaries?  Here you go.*
+
+* [Hasura Operator](https://github.com/nikogura/hasura-operator) Kubernetes Operator for declarative Hasura GraphQL deployment and management. Makes Hasura GitOps-ready.
+
+* [K8s Cluster Manager](https://github.com/nikogura/k8s-cluster-manager) Kubernetes cluster lifecycle management tool for provisioning and managing multiple clusters.
+
+* [Diagnostic Slackbot](https://github.com/nikogura/diagnostic-slackbot) AI-powered Slack bot for automated infrastructure diagnostics. Analyzes WAF logs, Kubernetes events, and system metrics.  Allows users to interact with it via slack, and leverage a curated list of prompts that can be tuned for your specific infrastructure.
+
+* [Resume Tailor](https://github.com/nikogura/resume-tailor) AI-powered tool for generating tailored resumes and cover letters from structured achievements using Claude API.
 
 * [Managed Secrets](https://github.com/nikogura/managed-secrets) A YAML Interface on Hashicorp Vault
 
@@ -47,8 +57,6 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 * [Terraform Auto AMI Rolling Window](TerraformRollingWindow.md) Auto updating AMI's with a configurable rolling window so we can stay up to date, but not necessarily bleeding edge.
 
-* [Golang Design Tips](GolangDesignTips.md) Some design tips for golang.
- 
 * [Kubernetes Shell Functions](KubernetesShellFunctions.md) Kubernetes commands can get painful to type.  These make it a lot easier to interact with a cluster.
 
 * [Talos Linux OIDC for AWS with Terraform](TalosAWSOIDC.md) Connect your Talos Kubernetes clusters to AWS via OIDC.
