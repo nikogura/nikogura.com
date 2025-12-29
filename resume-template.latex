@@ -4,6 +4,12 @@
 \usepackage{hyperref}
 \urlstyle{same}
 
+% Table support for pandoc
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{calc}
+
 % Pandoc variables
 $if(title)$
 \title{$title$}

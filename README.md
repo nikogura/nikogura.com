@@ -62,3 +62,5 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 * [Talos Linux OIDC for AWS with Terraform](TalosAWSOIDC.md) Connect your Talos Kubernetes clusters to AWS via OIDC.
 
 * [The Three Virtues of a Programmer](https://thethreevirtues.com/)  I didn't invent them.  I didn't put them online, but Perl was my first programming language, and I feverently believe that these are virtues we should all embrace.
+
+* [Kubernetes Shell Functions](NiksShellFunctions.md) Shell functions to make Kubernetes use much more pleasant.
