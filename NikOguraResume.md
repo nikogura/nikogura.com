@@ -68,7 +68,7 @@
 
 [Built a Cryptocurrency Data Curation System That Handles Literal Chaos](#built-a-cryptocurrency-data-curation-system-that-handles-literal-chaos)
 
-[Hired an Entire Engineering Team Across 5 Continents](#hired-an-entire-engineering-team-across-5-continents-that-was-effective-within-30-days)
+[Hired an Entire Engineering Team Across 5 Continents that was Effective within 30 Days](#hired-an-entire-engineering-team-across-5-continents-that-was-effective-within-30-days)
 
 [Spent As Little As Possible While Building Enterprise-Grade Infrastructure](#spent-as-little-as-possible-while-building-enterprise-grade-infrastructure)
 
