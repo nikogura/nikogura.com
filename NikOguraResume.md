@@ -309,7 +309,7 @@ Nowadays everybody wants to talk about Kubernetes.  I have you covered.  I've bu
 Familiar with the Kubernetes source code?  Check.  Blue/Green deployments?  Ayup.  Not just blue/green either.  As many colors as you need- think cached precompiled javascript assets in a world-wide CDN stretching back in time.  How many?  How long does your cache live?  Not only do you have to deploy them, you have to clean 'em up when you're satisfied the pods are no longer in use.
 
 ## Containers 'n Stuff
-Been there, done that.  I wrote something funky to do local container orchestration for Apple.  This was before Docker Compose was really stable.  Now I recommend we all just Docker's version, cos it's open source and awesome.  
+Been there, done that.  I wrote something funky to do local container orchestration for Apple.  This was before Docker Compose was really stable.  Now I recommend we all just Docker's version, cos it's open source and awesome. 
 
 I've written tools to build container's locally, and deploy them to the cloud.  Piece of cake.  You can rapidly prototype locally, and deploy in a snap.  Isn't that what this is all about? 
 
@@ -320,6 +320,113 @@ Full end to end integration testing of the 'real code', configured the way it wo
 Lately I have worked for a couple of shops that are strongly biased towards 'built here' solutions.  On the one hand, this is cool, because it allowed me to get extremely deep into the wiring of this technology.  On the other hand it's annoying because there are so many perfectly good wheels out there, freely available.  Some of them I've personally reinvented multiple times.  All that work could have been applied to an open source solution that is enjoyed (and maintained) by many.  
 
 If we'd made these projects open source from the start or joined one in progress, not only would they probably be further along now, but the original author (me) would likely still be engaged in supporting them.  Headcount and available time/energy/focus for any team is always going to be limited.  When it comes to help, sometimes you gotta take 'yes' for an answer.
+
+## Built an AI Bot That Automated Its Boss Out of a Job
+
+Remember when companies hired people to stare at logs all day? I made a Slack bot using Claude that looks at our observability stack and figures out what's broken before the humans have finished their coffee. 
+
+The bot queries Loki, Elasticsearch, and Prometheus faster than you can say "distributed tracing." WAF blocked a legitimate user? Bot tells you which ModSecurity rule did it and suggests the fix.  Database migration failed? Bot reads the logs, identifies the schema conflict, and generates the exact SQL you need. Pod crashed? Bot correlates metrics across seven Kubernetes clusters and produces a PDF report prettier than anything I'd write by hand. 
+
+The best part? We went from 30-minute Mean Time To Resolution down to 5 minutes. That's an 85% improvement, but who's counting? Oh wait, I am—because those are real numbers. We automated 60-80% of routine diagnostics. The on-call engineers love it because they can sleep. The bean counters love it because we saved somewhere around $400-500k in annual on-call burden. I love it because I built a thing that makes other things work better, which is basically my whole jam. Too bad it made them able to live without me, and I'm expensive, but then again, I own a considerable piece of the company, so I wish them well.
+
+Components: Go, Claude API, MCP (Model Context Protocol), Slack, Loki, Elasticsearch, Prometheus, Kubernetes, ModSecurity
+
+## Survived an Insider Attack That Would Make Hollywood Blush
+
+You know those cybersecurity disaster movies where everything goes wrong at once? I lived through one—and we recovered in hours, not weeks. 
+
+A former executive decided to rage-quit by seizing our GitHub organization, stealing the production database (complete with unhashed passwords because someone hadn't listened to me), and potentially walking off with encryption keys. 
+
+Total organizational lockout. Operations completely halted. First major security incident, possible federal Computer Fraud and Abuse Act violations, and a really awkward call with lawyers. 
+
+Here's the thing: our zero-trust architecture worked exactly as designed. The attacker had privileged access to GitHub and the database, sure—but AWS and Kubernetes? Locked down tighter than Fort Knox. They couldn't touch the actual infrastructure because we'd separated concerns like adults. 
+
+We rebuilt from secured backups. Complete codebase reconstruction. Reorganized Go module paths across every repo. Redeployed production systems from ground zero. Full operational capability restored in hours. Zero customer data loss. Zero infrastructure compromise despite a privileged insider actively trying to burn the place down. 
+
+The security architecture I'd designed proved itself under real adversarial conditions. It's one thing to pass audits. It's another thing entirely to have your system survive an actual attack by someone who should have had the keys to the kingdom. 
+
+Components: Incident Response, Forensic Recovery, Zero-Trust Architecture, AWS IAM, Kubernetes RBAC, Disaster Recovery, Backup Strategy
+
+## Turned Boring Infrastructure Code Into an AI Collaboration
+
+I wrote Terraform code that both humans and AI agents can read. Yeah, that's a thing now. We're managing multiple AWS accounts, bare-metal clusters, and Azure resources—all the usual multi-cloud chaos. 
+
+But here's the twist: I wrote it with "clear is better than clever" as a guiding principle. No fancy abstractions. No showing off. Just flat, boring, unambiguous resource definitions. One file per concern. vpc.tf for VPCs. iam.tf for IAM. msk.tf for Kafka. If you're looking for the load balancer config, it's in lb.tf. Groundbreaking stuff, right? But here's why it matters: when an AI agent needs to understand your infrastructure, it doesn't want to reverse-engineer your 5-layer abstraction tower. It wants straightforward code it can parse.  Same goes for humans, turns out. 
+
+We've got cross-account IAM with OIDC for Kubernetes workload identity. VPC Flow Logs across all accounts for security monitoring. Production locked down to read-only access with changes only via CI/CD. GitOps workflow requiring code review before any infrastructure change. The result? Comprehensive infrastructure as code with full audit trails, zero drift, and regulatory compliance baked in. 
+
+Also, I can point Claude at it and ask "what would break if I changed this?" and actually get useful answers. Boring is beautiful. Clever is a liability. Your future self—and your AI assistant—will thank you. 
+
+Components: Terraform, AWS Multi-Account, Azure, Talos, GitOps, IAM, OIDC, Infrastructure as Code, Compliance
+
+## Built a Key Management System for Encrypted Bare-Metal That Doesn't Suck
+
+Data egress costs were bleeding us $10k-$20k monthly because we kept querying crypto nodes outside our VPC. So we built bare-metal Talos clusters in the same bare-metal datacenter as the crypto nodes and saved a fortune. Inbound data is free. Outbound? That's where AWS gets you. But then we needed full-disk encryption with proper key management. 
+
+The usual options: either fully automatic (security nightmare—machines decrypt themselves with no human oversight) or fully manual (operational nightmare—someone has to physically unlock every server on reboot). So I built a custom KMS that requires operator authorization to unlock disks. Not "type the password into the console" manual, but "click the button to authorize this node" reasonable. 
+
+Security controls without the operational burden. Integrated with the control plane so we can unlock selectively with proper authorization gates. LUKS full-disk encryption on bare metal. Operator-controlled unlock. Enterprise-grade security without making life miserable. Oh, and we eliminated those data egress charges entirely. 
+
+Components: Talos, LUKS, Kubernetes, KMS, Hashicorp Vault, Bare-Metal, Cost Optimization
+
+## Made AWS NAT Gateways Cry Uncle (Then Replaced Them)
+
+AWS was charging us $10k/month for NAT Gateways. Ten grand. For relatively low traffic volumes. Because NAT Gateway pricing is fixed hourly whether you're pushing terabytes or kilobytes. 
+
+Know what works just as well? EC2 instances running iptables. Know how much those cost? A fraction. Like, order-of-magnitude less. So we ripped out the managed NAT Gateways and built our own with EC2 instances doing network address translation. 
+
+High-availability design. Proper routing tables. Health monitoring. All the things AWS does for you—but at pay-per-use pricing instead of fixed hourly fees. Saved $120k annually. Zero functionality loss. Maintained equivalent availability and security posture. 
+
+The trade-off? We have to actually understand networking. But we do, so that's fine. Sometimes the managed service isn't worth it. Sometimes you look at the bill, look at what you're getting, and say "I can build that." Then you do. 
+
+Components: AWS, EC2, iptables, NAT, VPC Routing, Network Engineering, Cost Optimization
+
+## Built a Cryptocurrency Data Curation System That Handles Literal Chaos
+
+Picture this: 4.1 million trading pairs. Same asset on different blockchains or exchanges counts as a different entity. 70% of them are scams, rugpulls, or garbage. Data showing up that you literally couldn't imagine if you tried. System must filter aggressively and scale dynamically to catch trending assets before competitors notice. 
+
+Previous system stored 50 million objects. Most of them worthless. S3 API request costs alone: $10k-$20k monthly. I built a data curation platform with an extensible middleware pipeline designed for unknown future requirements. Because in crypto, the only constant is that something completely unexpected will show up tomorrow. 
+
+Cache-agnostic ETL with a producer-consumer pattern. Pluggable middleware chain. Fraud detection via GoPlus API. Liquidity calculation. Quality filters. Everything composable and independent. Cache-aside pattern with adaptive TTL for hot data. Sub-10ms change detection and propagation across 4.1 million trading pairs. 
+
+Rejected data persisted but never cached—so we can reprocess it later when quality criteria change. Because they will change. This is crypto. We migrated from S3 to self-hosted MinIO, then to database-only storage. Eliminated $120k-$240k in annual S3 API costs. Cut storage waste by 70%. The core library got adopted by 27+ services across our stack. 
+
+Built for chaos. Works in chaos. Would probably work during the apocalypse, honestly. 
+
+Components: Go, Redis, MinIO, PostgreSQL, DeFi, CeFi, Blockchain, ETL, Cost Optimization, Distributed Systems
+
+## Hired an Entire Engineering Team Across 5 Continents
+
+Contract-to-hire isn't new. But doing it right is rare. 
+
+Every new engineer starts with a real project. Not a coding challenge. Not whiteboard exercises. A real project requiring a full technical specification presented to the team. That spec becomes the living documentation. They build the deployment pipeline. They integrate with CI/CD. They deploy to dev. They test. They bring it to production. All in 30 days. 
+
+If they succeed? Permanent offer or long-term contract. If they don't? We find out before making an expensive mistake. I held technical veto power over all engineering hires. High bar. No exceptions. Because fast growth doesn't mean low standards. The result? Near-zero regrettable hires. 
+
+Documentation culture from day one because the Technical Requirements Document (TRD) requirement forces it. Engineers who can actually ship, not just interview well. 
+
+Built a globally distributed team spanning five continents: North America, South America, Europe, Africa, India. Majority of engineering capacity in Latin America and Africa because cost efficiency matters. Asynchronous-first communication because timezones. Documentation-heavy culture because you can't tap someone on the shoulder at 3 AM their time. It works. World-class engineering transcends geography when built on solid processes and clear communication. 
+
+Components: Hiring, Contract-to-Hire, Global Teams, Distributed Work, Async Communication, Documentation Culture, Leadership
+
+## Spent As Little As Possible While Building Enterprise-Grade Infrastructure
+
+Operating mandate: "Spend as little as possible while making it work." Not "build it cheap and hope." Build it right while spending almost nothing. We achieved enterprise-grade capabilities on a startup budget through radical open-source adoption and custom development. 
+
+Every capability evaluation: can we build this in-house? Because building saves orders of magnitude versus managed services. Built custom observability (Prometheus, Thanos, Loki, Elasticsearch) instead of Datadog or New Relic. 100x cost reduction. 
+
+Built AI-powered operational tooling in-house instead of enterprise support contracts. Built federated multi-cluster observability instead of commercial SaaS. Eliminated $360k+ in annual recurring costs through strategic infrastructure decisions:
+
+* $120k NAT Gateway savings
+* $120k-$240k S3 API savings
+* $10k-$20k monthly data egress elimination
+* 100x observability cost reduction
+
+Zero licensing costs beyond compute and network. Best-in-class open source: Kubernetes, Istio, Kafka, Prometheus, Grafana, Vault, Flux. No vendor lock-in. Infinite agility. 
+
+Engineering investment in custom tooling paid for itself in months. Proved that world-class infrastructure doesn't require proportional spending when built on solid engineering and open-source foundations. Sometimes the right answer to "build vs buy" is "build, obviously." Especially when you have the talent to do it right. 
+
+Components: Cost Optimization, Open Source, Custom Development, Capital Efficiency, FinOps, Build vs Buy
 
 ## Making Things Work
 I think of a hacker as someone who can pop the hood and fiddle around inside- make it go, stop, or do something unexpectedly wonderful.  Someone who is entirely unintimidated by not knowing something, and who's eminently comfortable digging in and figuring it out.
