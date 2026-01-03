@@ -68,7 +68,7 @@
 
 [Built a Cryptocurrency Data Curation System That Handles Literal Chaos](#built-a-cryptocurrency-data-curation-system-that-handles-literal-chaos)
 
-[Hired an Entire Engineering Team Across 5 Continents](#hired-an-entire-engineering-team-across-5-continents)
+[Hired an Entire Engineering Team Across 5 Continents](#hired-an-entire-engineering-team-across-5-continents-that-was-effective-within-30-days)
 
 [Spent As Little As Possible While Building Enterprise-Grade Infrastructure](#spent-as-little-as-possible-while-building-enterprise-grade-infrastructure)
 
@@ -411,7 +411,7 @@ Built for chaos. Works in chaos. Would probably work during the apocalypse, hone
 
 Components: Go, Redis, MinIO, PostgreSQL, DeFi, CeFi, Blockchain, ETL, Cost Optimization, Distributed Systems
 
-## Hired an Entire Engineering Team Across 5 Continents
+## Hired an Entire Engineering Team Across 5 Continents that was Effective within 30 Days
 
 Contract-to-hire isn't new. But doing it right is rare. 
 
