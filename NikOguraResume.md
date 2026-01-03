@@ -1,6 +1,6 @@
 # Nik Ogura
 
-### Principal Engineer, CIO, SecDevOps
+### Principal Engineer, CIO, SecDevOps Expert
 *Platform - Tools - Security - Infrastructure*
 
 *I make things - things that work- and by 'work' I mean work superlatively.*
