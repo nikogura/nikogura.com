@@ -17,7 +17,9 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 # Contents
 
-* [My General Resume](https://github.com/nikogura/nikogura.github.io/blob/master/nik-ogura-general-resume.pdf?raw=true) A general listing of what I've done in my career.
+* [Fun Online Resume](NikOguraResume.md) A fun version of my career.  Less likely to put you to sleep.
+
+* [My General Resume](https://github.com/nikogura/nikogura.github.io/blob/master/nik-ogura-general-resume.pdf?raw=true) A condensed listing of what I've done in my career.
 
 * [Engineering Standards](EngineeringStandards.md) My philosophy on code standards - especially in Golang, and by inference on the rest of life.
 
