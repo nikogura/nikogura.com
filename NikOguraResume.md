@@ -56,6 +56,22 @@
 
 [More UI's Than You Can Shake a Stick At](#more-uis-than-you-can-shake-a-stick-at)
 
+[Built an AI Bot That Automated Me Out of a Job](#built-an-ai-bot-that-automated-me-out-of-a-job)
+
+[Survived an Insider Attack That Would Make Hollywood Blush](#survived-an-insider-attack-that-would-make-hollywood-blush)
+
+[Turned Boring Infrastructure Code Into an AI Collaboration](#turned-boring-infrastructure-code-into-an-ai-collaboration)
+
+[Built a Key Management System for Encrypted Bare-Metal That Doesn't Suck](#built-a-key-management-system-for-encrypted-bare-metal-that-doesnt-suck)
+
+[Made AWS NAT Gateways Cry Uncle (Then Replaced Them)](#made-aws-nat-gateways-cry-uncle-then-replaced-them)
+
+[Built a Cryptocurrency Data Curation System That Handles Literal Chaos](#built-a-cryptocurrency-data-curation-system-that-handles-literal-chaos)
+
+[Hired an Entire Engineering Team Across 5 Continents](#hired-an-entire-engineering-team-across-5-continents)
+
+[Spent As Little As Possible While Building Enterprise-Grade Infrastructure](#spent-as-little-as-possible-while-building-enterprise-grade-infrastructure)
+
 ## Orion's SaaS and On-Premises Kubernetes Systems
 The platform on which all of Orion's technology stands.  What we run for our SaaS customers is what we sell as an on-prem solution.  We eat our own dogfood, and it's delicious.
 
@@ -321,7 +337,7 @@ Lately I have worked for a couple of shops that are strongly biased towards 'bui
 
 If we'd made these projects open source from the start or joined one in progress, not only would they probably be further along now, but the original author (me) would likely still be engaged in supporting them.  Headcount and available time/energy/focus for any team is always going to be limited.  When it comes to help, sometimes you gotta take 'yes' for an answer.
 
-## Built an AI Bot That Automated Its Boss Out of a Job
+## Built an AI Bot That Automated Me Out of a Job
 
 Remember when companies hired people to stare at logs all day? I made a Slack bot using Claude that looks at our observability stack and figures out what's broken before the humans have finished their coffee. 
 
