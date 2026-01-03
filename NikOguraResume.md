@@ -436,7 +436,7 @@ Built AI-powered operational tooling in-house instead of enterprise support cont
 * $120k NAT Gateway savings
 * $120k-$240k S3 API savings
 * $10k-$20k monthly data egress elimination
-* 100x observability cost reduction  (Started at $60k/month with DataDog)
+* 100% observability cost reduction (Apart from compute and storage costs.  Was $60k/month with DataDog)
 
 Zero licensing costs beyond compute and network. Best-in-class open source: Kubernetes, Istio, Kafka, Prometheus, Grafana, Vault, Flux. No vendor lock-in. Infinite agility. 
 
