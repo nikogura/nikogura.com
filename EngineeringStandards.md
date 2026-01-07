@@ -133,7 +133,7 @@ Generally, a single repository should build a single binary and be buildable wit
 
 ### Named Returns Are Mandatory
 
-The `namedreturns` linter [github.com/nikogura/namedreturns](github.com/nikogura/namedreturns) enforces named return values. Named returns provide critical information to both engineers and compilers.
+The `namedreturns` linter [https://github.com/nikogura/namedreturns](https://github.com/nikogura/namedreturns) enforces named return values. Named returns provide critical information to both engineers and compilers.
 
 **Why Named Returns Matter:**
 
