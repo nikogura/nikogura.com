@@ -44,7 +44,7 @@ Technical debt doesn't get paid down due to lack of desire; it persists due to l
 
 ### Named Returns Are Mandatory
 
-The `namedreturns` linter (github.com/nikogura/namedreturns) enforces named return values. Named returns provide critical information to both engineers and compilers.
+The `namedreturns` linter [github.com/nikogura/namedreturns](github.com/nikogura/namedreturns) enforces named return values. Named returns provide critical information to both engineers and compilers.
 
 **Why Named Returns Matter:**
 
