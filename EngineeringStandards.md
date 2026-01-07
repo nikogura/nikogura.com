@@ -32,110 +32,6 @@ Technical debt doesn't get paid down due to lack of desire; it persists due to l
 
 ---
 
-## Code Quality & Linting
-
-### Golang Linting is Law
-
-**golangci-lint** is the standard. All Go code must pass golangci-lint with the project's standardized configuration.
-
-- Zero tolerance for linting violations. If the linter complains, the code is wrong.
-- When suggesting code changes, verify they comply with the project's golangci-lint configuration.
-- Reference configuration: [.golangci.yml](.golangci.yml) (included in this repository)
-
-### Named Returns Are Mandatory
-
-The `namedreturns` linter [github.com/nikogura/namedreturns](github.com/nikogura/namedreturns) enforces named return values. Named returns provide critical information to both engineers and compilers.
-
-**Why Named Returns Matter:**
-
-```go
-// WRONG - Unnamed returns lack context
-func Foo() (string, error) {
-    return "", nil
-}
-
-// RIGHT - Named returns document intent
-func Foo() (output string, err error) {
-    output = "bar"
-    return output, err
-}
-```
-
-**Honor the Function Contract:**
-- Name your return values descriptively
-- Return what you promise, not something "just as good"
-- Every return statement must explicitly use the named return variables
-
-### Critical Linter Assumptions
-
-- **Never assume a linter has bugs** without explicit evidence
-- If lint fails, the problem is your code, not the linter
-- Don't waste time debugging linters—focus on making your code compliant
-- If you encounter an error you don't understand:
-  1. Read the linter's source code
-  2. Look at test cases in the linter's repository
-  3. Assume it's enforcing a discipline you're not familiar with
-  4. Adapt your code to meet the requirement
-
-### Common Lint Patterns
-
-#### 1. Cobra Globals/Init
-```go
-//nolint:gochecknoglobals // Cobra boilerplate
-var rootCmd = &cobra.Command{...}
-
-//nolint:gochecknoinits // Cobra boilerplate
-func init() {...}
-```
-
-#### 2. Avoid Nested Closures with Returns
-```go
-// ANTI-PATTERN - causes namedreturns issues
-func Outer() (result string, err error) {
-    token, err := jwt.Parse(str, func(t *jwt.Token) (interface{}, error) {
-        if check { return nil, errors.New("bad") }
-        return key, nil
-    })
-}
-
-// CORRECT - extract to top-level function
-func lookupKey(token *jwt.Token, config Config) (key interface{}, err error) {
-    return key, err
-}
-
-func Outer() (result string, err error) {
-    token, err := jwt.Parse(str, func(t *jwt.Token) (interface{}, error) {
-        return lookupKey(t, config)
-    })
-}
-```
-
-#### 3. Reduce Cognitive Complexity
-Extract helper functions instead of deeply nested logic:
-```go
-func validateAudience(claims jwt.MapClaims, expected string) bool {...}
-func extractGroups(claims jwt.MapClaims) []string {...}
-func validateGroupMembership(userGroups, allowedGroups []string) bool {...}
-```
-
-#### 4. Avoid Inline Error Handling
-```go
-// WRONG
-if err := doSomething(); err != nil {...}
-
-// RIGHT
-err := doSomething()
-if err != nil {...}
-```
-
-#### 5. Proto Field Access
-```go
-req.GetSourceBucket()  // CORRECT
-req.SourceBucket       // WRONG
-```
-
----
-
 ## Golang Best Practices
 
 ### Go Proverbs
@@ -222,6 +118,105 @@ go build -o main .  # Binary named "main" is meaningless
 Seeing `/app/main` in a container tells you nothing. Seeing `/app/curator-bybit` provides information.
 
 Generally, a single repository should build a single binary and be buildable with simply `go build`. If the repo is laid out differently or contains multiple binaries, perhaps you're being overly clever. Clear is better than clever. Simple is easier to debug in a crisis.
+
+---
+
+## Code Quality & Linting
+
+### Golang Linting is Law
+
+**golangci-lint** is the standard. All Go code must pass golangci-lint with the project's standardized configuration.
+
+- Zero tolerance for linting violations. If the linter complains, the code is wrong.
+- When suggesting code changes, verify they comply with the project's golangci-lint configuration.
+- Reference configuration: [.golangci.yml](.golangci.yml) (included in this repository)
+
+### Named Returns Are Mandatory
+
+The `namedreturns` linter [github.com/nikogura/namedreturns](github.com/nikogura/namedreturns) enforces named return values. Named returns provide critical information to both engineers and compilers.
+
+**Why Named Returns Matter:**
+
+```go
+// WRONG - Unnamed returns lack context.  You're missing an opportunity to make your code self-documenting here.
+func Foo() (string, error) {
+    return "", nil
+}
+
+// WRONG - Named returns, but returning something different from what's promised - this leads to confusion and surprises.  In a big, complex function you might be returning something unexpected. Better to be explicit than surprised.
+func Foo() (output string, err error) {
+    return "", nil
+}
+
+// RIGHT - Named returns document your intent, and makes the code clear, and easy to review.
+func Foo() (output string, err error) {
+    output = "bar"
+    return output, err
+}
+```
+
+**Honor the Function Contract:**
+- Name your return values descriptively
+- Return what you promise, not something "just as good"
+- Every return statement must explicitly use the named return variables
+
+### Common Lint Patterns
+
+#### 1. Globals and Init fuctions.  Cobra and Prometheus both make heavy use of global variables and init().  In the case of Prometheus, this is part of what makes Prometheus so easy to implement.  We need to allow this to use these common modules. However, if you haven't thought it through to the level that the Prometheus authors have, globals and init functions are probably something to avoid.
+
+```go
+//nolint:gochecknoglobals // Cobra boilerplate 
+var rootCmd = &cobra.Command{...}
+
+//nolint:gochecknoinits // Cobra boilerplate
+func init() {...}
+```
+
+#### 2. Avoid Nested Closures with Returns
+```go
+// ANTI-PATTERN - causes namedreturns issues
+func Outer() (result string, err error) {
+    token, err := jwt.Parse(str, func(t *jwt.Token) (interface{}, error) {
+        if check { return nil, errors.New("bad") }
+        return key, nil
+    })
+}
+
+// CORRECT - extract to top-level function.  It's just clearer, and clear is better than clever.
+func lookupKey(token *jwt.Token, config Config) (key interface{}, err error) {
+    return key, err
+}
+
+func Outer() (result string, err error) {
+    token, err := jwt.Parse(str, func(t *jwt.Token) (interface{}, error) {
+        return lookupKey(t, config)
+    })
+}
+```
+
+#### 3. Reduce Cognitive Complexity
+Extract helper functions instead of deeply nested logic:
+```go
+func validateAudience(claims jwt.MapClaims, expected string) bool {...}
+func extractGroups(claims jwt.MapClaims) []string {...}
+func validateGroupMembership(userGroups, allowedGroups []string) bool {...}
+```
+
+#### 4. Avoid Inline Error Handling - it's easier to read, and are you really worried about the extra newline?
+```go
+// WRONG
+if err := doSomething(); err != nil {...}
+
+// RIGHT
+err := doSomething()
+if err != nil {...}
+```
+
+#### 5. Proto Field Access
+```go
+req.GetSourceBucket()  // CORRECT
+req.SourceBucket       // WRONG
+```
 
 ---
 
