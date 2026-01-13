@@ -19,9 +19,11 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 * [Fun Online Resume](NikOguraResume.md) A fun version of my career.  Less likely to put you to sleep.
 
-* [My General Resume](https://github.com/nikogura/nikogura.github.io/blob/master/nik-ogura-general-resume.pdf?raw=true) A condensed listing of what I've done in my career.
+* [My Complete Resume](https://github.com/nikogura/nikogura.github.io/blob/master/nik-ogura-complete-resume.pdf?raw=true) A condensed listing of what I've done in my career.
 
 * [Engineering Standards](EngineeringStandards.md) My philosophy on code standards - especially in Golang, and by inference on the rest of life.
+
+* [GitHub Actions Reference](GitHubActionsReference.md) Reference implementation for GitHub Actions CI/CD pipelines with automated testing, linting, semantic versioning, and release management.
 
 * [Named Returns](https://github.com/nikogura/namedreturns) Linter enforcing the use of named returns in Go functions. Named returns improve code readability and make function signatures more self-documenting.
 

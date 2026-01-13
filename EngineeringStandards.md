@@ -5,12 +5,34 @@
 - [Code Quality & Linting](#code-quality--linting)
 - [Golang Best Practices](#golang-best-practices)
 - [Repository Structure](#repository-structure)
+- [Test-Driven Development (TDD)](#test-driven-development-tdd)
 - [Error Handling](#error-handling)
 - [External Connections](#external-connections)
 - [Kubernetes & GitOps](#kubernetes--gitops)
 - [Security & Compliance](#security--compliance)
 - [Documentation](#documentation)
 - [Investigation Methodology](#investigation-methodology)
+- [CI/CD & GitHub Actions](#cicd--github-actions)
+
+---
+
+## Quick Reference: Essential Tools
+
+Before writing any Go code, ensure these tools are installed:
+
+```bash
+# Install golangci-lint (standard linter)
+go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+
+# Install namedreturns (MANDATORY custom linter)
+go install github.com/nikogura/namedreturns@latest
+```
+
+**Every commit must pass:**
+```bash
+make lint        # Runs both namedreturns and golangci-lint
+go test ./...    # All tests must pass
+```
 
 ---
 
@@ -133,7 +155,15 @@ Generally, a single repository should build a single binary and be buildable wit
 
 ### Named Returns Are Mandatory
 
-The `namedreturns` linter [https://github.com/nikogura/namedreturns](https://github.com/nikogura/namedreturns) enforces named return values. Named returns provide critical information to both engineers and compilers.
+**The `namedreturns` linter is MANDATORY.** This is a custom linter, not included in golangci-lint.
+
+- Repository: `github.com/nikogura/namedreturns`
+- Install: `go install github.com/nikogura/namedreturns@latest`
+- **ALL code must use named returns** - no exceptions except generated code
+- Test code MUST comply (use `-test=true` flag, which is the default)
+- Generated code is exempt (exclude via grep or package filters)
+
+Named returns provide critical information to both engineers and compilers.
 
 **Why Named Returns Matter:**
 
@@ -218,6 +248,57 @@ req.GetSourceBucket()  // CORRECT
 req.SourceBucket       // WRONG
 ```
 
+### Integrating namedreturns into Build Process
+
+**The `namedreturns` linter must be integrated into your `make lint` target.**
+
+#### Pattern 1: Simple Projects (No Generated Code)
+
+For projects without generated code, use the simple pattern:
+
+```makefile
+# Run golangci-lint with namedreturns
+lint:
+	@echo "Running namedreturns linter..."
+	namedreturns ./...
+	@echo "Running golangci-lint..."
+	golangci-lint run
+```
+
+**Key points:**
+- Run `namedreturns` BEFORE `golangci-lint`
+- Check all packages with `./...`
+- Default `-test=true` means test files are checked (this is correct)
+- Fail fast: if `namedreturns` fails, don't run `golangci-lint`
+
+#### Pattern 2: Projects with Generated Code
+
+For projects with generated code (protobuf, GraphQL, OpenAPI, etc.), exclude generated packages:
+
+```makefile
+lint:
+	@echo "Running namedreturns linter..."
+	@for pkg in $(shell go list ./pkg/... ./cmd/... | grep -v 'generated/package/path$$' | grep -v 'another/generated/path$$'); do \
+		namedreturns -test=true $$pkg || exit 1; \
+	done
+	@echo "Running golangci-lint..."
+	golangci-lint run --timeout=5m
+```
+
+**Exclusion examples:**
+- GraphQL generated: `grep -v 'pkg/apiservice/gql$$'`
+- Protobuf generated: `grep -v 'internal/proto/.*$$'`
+- OpenAPI generated: `grep -v 'internal/market-data-api/.*$$'`
+- Multiple exclusions: Chain with `| grep -v 'pattern1$$' | grep -v 'pattern2$$'`
+
+**Key points:**
+- Use `go list` to get all packages
+- Use `grep -v 'pattern$$'` to exclude (the `$$` anchors to end of package path)
+- Loop over packages explicitly to get clear error messages
+- Use `-test=true` explicitly (though it's the default) to be clear about intent
+- `exit 1` on failure to stop the build immediately
+- Consider adding `--timeout=5m` for larger projects
+
 ---
 
 ## Repository Structure
@@ -277,6 +358,54 @@ Use the same container for all stages:
 - **Never** build or test with Alpine if running on Debian/Ubuntu
 
 Alpine uses Musl-C instead of GlibC. Binaries compiled on Alpine won't run on Debian. These errors require large amounts of debugging hours. Avoid them entirely.
+
+---
+
+## Test-Driven Development (TDD)
+
+**TDD is the law. All new features and changes MUST include test coverage.**
+
+- **NEVER ship code without tests.** Test coverage is not optional.
+- When adding new features, you MUST either:
+  1. Add new test files covering the new functionality, OR
+  2. Expand existing test files to cover the new behavior
+- **Tests must be written BEFORE claiming a feature is complete.**
+- If you implement code changes without adding tests, the work is INCOMPLETE.
+
+### Test Requirements
+
+- New functions/methods → New unit tests
+- New feature flags/config options → Tests verifying all code paths
+- Bug fixes → Regression tests preventing the bug from returning
+- Refactoring → Tests verifying behavior unchanged
+- API changes → Tests covering new signatures and edge cases
+
+### Test Quality Standards
+
+- Tests must be deterministic (no flaky tests)
+- Use table-driven tests for multiple scenarios
+- Test both happy paths AND error conditions
+- Tests must run in parallel when possible (`t.Parallel()`)
+- Test names must clearly describe what's being tested
+- Tests must be isolated (no shared state between tests)
+
+### Running Tests
+
+- All tests must pass: `go test ./...`
+- All linters must pass: `golangci-lint run`
+- Both must succeed before code is considered complete
+
+**If someone asks you to implement something and doesn't mention tests:**
+- You MUST proactively add tests anyway
+- Do NOT wait to be asked
+- Tests are not a "nice to have" - they are mandatory
+
+**Example workflow:**
+1. Implement feature
+2. Write comprehensive tests
+3. Run tests: `go test ./...`
+4. Run linters: `golangci-lint run`
+5. Only then is the feature complete
 
 ---
 
@@ -714,6 +843,61 @@ Documentation examples should follow this pattern, with PDFs generated from Mark
 - **Don't** auto-apply changes without review
 - **Don't** treat compliance requirements as negotiable
 - **Don't** propose changes requiring manual intervention in production
+
+---
+
+## CI/CD & GitHub Actions
+
+Continuous Integration and Continuous Deployment are fundamental to modern software delivery. Every repository should have automated testing, linting, and release management.
+
+### Reference Implementation
+
+For a complete, production-ready GitHub Actions workflow, see:
+
+**[GitHub Actions Reference Implementation](GitHubActionsReference.md)**
+
+This reference provides:
+- ✅ Automated testing on every push and PR
+- ✅ Linting with both golangci-lint and namedreturns
+- ✅ Semantic versioning with automatic tag creation
+- ✅ Automatic GitHub releases on main branch
+- ✅ Docker layer and Go module caching for speed
+- ✅ Proper permissions management
+
+### Key Requirements
+
+Every Go project should have a `.github/workflows/ci.yml` that:
+
+1. **Runs tests** - `make test` must pass
+2. **Runs linting** - Both `golangci-lint` AND `namedreturns`
+3. **Caches dependencies** - Go modules and Docker layers
+4. **Enforces branch protection** - Tests must pass before merge
+5. **Automates releases** - Tag and publish on main branch pushes
+
+### Essential Makefile Targets
+
+```makefile
+.PHONY: test lint
+
+test:
+	go test -v ./... -count=1 --cover
+
+lint:
+	@echo "Running namedreturns linter..."
+	namedreturns ./...
+	@echo "Running golangci-lint..."
+	golangci-lint run
+```
+
+### Why This Matters
+
+- **Consistency**: Every project follows the same patterns
+- **Quality**: No code reaches main without passing tests and lints
+- **Speed**: Caching reduces build times from minutes to seconds
+- **Automation**: Releases happen automatically, reducing human error
+- **Visibility**: GitHub Actions provides clear feedback on PRs
+
+See the [complete reference](GitHubActionsReference.md) for detailed configuration, customization options, and troubleshooting.
 
 ---
 

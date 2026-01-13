@@ -11,7 +11,7 @@
 
 *(I will find a way, or I will make one)*
 
-[*Condensed Version of this Resume*](https://github.com/nikogura/nikogura.github.io/blob/master/nik-ogura-general-resume.pdf?raw=true) A condensed listing of what I've done in my career.
+[*Condensed Version of this Resume*](https://github.com/nikogura/nikogura.github.io/blob/master/nik-ogura-complete-resume.pdf?raw=true) A condensed listing of what I've done in my career.
 
 # Table of Contents
 
