@@ -16,26 +16,6 @@
 
 ---
 
-## Quick Reference: Essential Tools
-
-Before writing any Go code, ensure these tools are installed:
-
-```bash
-# Install golangci-lint (standard linter)
-go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
-
-# Install namedreturns (MANDATORY custom linter)
-go install github.com/nikogura/namedreturns@latest
-```
-
-**Every commit must pass:**
-```bash
-make lint        # Runs both namedreturns and golangci-lint
-go test ./...    # All tests must pass
-```
-
----
-
 ## Core Philosophy
 
 Security, reliability, and compliance are non-negotiable. Every line of code is a potential attack vector or compliance violation. Move deliberately, not fast. Test all assumptions.
@@ -110,9 +90,9 @@ Follow https://github.com/golang-standards/project-layout
 - Never mix the two
 
 **Generate standardized repos:**
-```bash
-dbt boilerplate gen
-```
+Use something like the [boilerplate](https://github.com/nikogura/boilerplate) tool to generate recognizable code for yourself or your organization.
+
+The more familiar it looks, the easier it is for anyone to onboard or jump in and lend a hand.
 
 ### Public vs Private
 
@@ -137,7 +117,7 @@ go build  # Produces binary named after directory
 go build -o main .  # Binary named "main" is meaningless
 ```
 
-Seeing `/app/main` in a container tells you nothing. Seeing `/app/curator-bybit` provides information.
+Seeing `/app/main` in a container tells you nothing. Seeing `/app/my-cool-program` provides information.
 
 Generally, a single repository should build a single binary and be buildable with simply `go build`. If the repo is laid out differently or contains multiple binaries, perhaps you're being overly clever. Clear is better than clever. Simple is easier to debug in a crisis.
 
@@ -155,7 +135,7 @@ Generally, a single repository should build a single binary and be buildable wit
 
 ### Named Returns Are Mandatory
 
-**The `namedreturns` linter is MANDATORY.** This is a custom linter, not included in golangci-lint.
+**The `namedreturns` linter is MANDATORY. (In my world, anyway)** This is a custom linter, not included in golangci-lint.
 
 - Repository: `github.com/nikogura/namedreturns`
 - Install: `go install github.com/nikogura/namedreturns@latest`
@@ -204,7 +184,7 @@ func init() {...}
 
 #### 2. Avoid Nested Closures with Returns
 ```go
-// ANTI-PATTERN - causes namedreturns issues
+// ANTI-PATTERN  Yes, it works, but it's harder to read and to trace.  Think about who's maintaining this code!
 func Outer() (result string, err error) {
     token, err := jwt.Parse(str, func(t *jwt.Token) (interface{}, error) {
         if check { return nil, errors.New("bad") }
@@ -232,7 +212,7 @@ func extractGroups(claims jwt.MapClaims) []string {...}
 func validateGroupMembership(userGroups, allowedGroups []string) bool {...}
 ```
 
-#### 4. Avoid Inline Error Handling - it's easier to read, and are you really worried about the extra newline?
+#### 4. Avoid Inline Error Handling - it's easier to read, and are you really worried about the extra newline?  Sure, in the inline version the variable is scoped to the conditional, but is that really more important than readability?  Your functions shouldn't be that big in any case.  Optimize for your future self, who might not be as clever as you feel today.
 ```go
 // WRONG
 if err := doSomething(); err != nil {...}
@@ -357,13 +337,23 @@ Use the same container for all stages:
 - If you plan to run on Debian, build and test with Debian
 - **Never** build or test with Alpine if running on Debian/Ubuntu
 
-Alpine uses Musl-C instead of GlibC. Binaries compiled on Alpine won't run on Debian. These errors require large amounts of debugging hours. Avoid them entirely.
+Alpine uses Musl-C instead of GlibC. Binaries compiled on Alpine won't run on Debian. These errors require large amounts of debugging hours. Avoid them entirely by using the same containers for build, test, and deployment (or at least the same OS family).
 
 ---
 
 ## Test-Driven Development (TDD)
 
 **TDD is the law. All new features and changes MUST include test coverage.**
+
+If someone finds a bug in your software, and it is not exposed in your test suite, then that is your first problem.
+
+No code should ever be touched without expanding the test suite.
+
+First write a new test or fix an existing test. In TDD this is the "Red" stage.  Teach your test suite to recognize the flaw reported by your user.
+
+Next Fix the problem.  In TDD, this is the "Green" stage - now you've fixed the problem, and the test, which is now passing, lives on in the codebase, forever protecting you from this mistake.
+
+It might not be much, but these tests build up over time, like drops in a bucket.  You don't gain a lot from the first one, but over time, you can ship more, and more complex changes with confidence because what was today's functional test is now a regression test in the future.
 
 - **NEVER ship code without tests.** Test coverage is not optional.
 - When adding new features, you MUST either:
@@ -401,8 +391,8 @@ Alpine uses Musl-C instead of GlibC. Binaries compiled on Alpine won't run on De
 - Tests are not a "nice to have" - they are mandatory
 
 **Example workflow:**
-1. Implement feature
-2. Write comprehensive tests
+1. Write Tests for new Feature
+2. Implement feature
 3. Run tests: `go test ./...`
 4. Run linters: `golangci-lint run`
 5. Only then is the feature complete
@@ -438,7 +428,7 @@ thing, _ := SomethingThatReturnsThingAndErr()  // WRONG - errors are hidden
 **Don't use boilerplate error messages:**
 ```go
 const SOME_ERROR = "something went wrong"
-return errors.New(SOME_ERROR)  // WRONG - can't grep for it
+return errors.New(SOME_ERROR)  // WRONG - can't grep for it.  You might throw this error at multiple places in multiple files.
 ```
 
 **Don't compress error handling:**
@@ -458,11 +448,11 @@ if err != nil {
 
 ### Don't Panic
 
-`panic()` and `recover()` are built into Golang, but we should never use them. Simply put, there are better mechanisms to handle errors. Most of the time, panicking is a sign of laziness or lack of concern for maintainability.
+`panic()` and `recover()` are built into Golang, but we should almost never use them. Simply put, there are better mechanisms to handle errors. Most of the time, panicking is a sign of laziness or lack of concern for maintainability.
 
 **Especially avoid deferred panic recovery:**
 ```go
-// HORRIBLE - don't do this
+// HORRIBLE - don't do this!  You can't easily tell where this got thrown!
 defer func() {
     if err := recover(); err != nil {
         logrus.WithField("err", err).Error("panic-discovered")
@@ -472,7 +462,7 @@ defer func() {
 }()
 ```
 
-This gives you no information about where the error came from. In a 775-line function, good luck finding the error point quickly.
+This gives you no information about where the error came from. In a 800-line function, good luck finding the error point quickly.
 
 ### Exit with Logs and Return Codes
 
@@ -485,7 +475,7 @@ Services should not exit unless they cannot continue. When you must exit:
 
 Standardized error codes are an eventual goal. In the short term, even `exit(1)` is preferable to panic or no exit at all.
 
-Don't leave us hanging. Getting paged for a CrashLoopBackoff is not how we should learn about problems.
+Don't leave us hanging. Getting paged for a Kubernetes pod in CrashLoopBackoff state is not how we should learn about problems.
 
 ### Return Early
 
@@ -508,7 +498,7 @@ Every system making external connections must support:
    - All broken down by method
 5. **Never exit or panic** on failed connection - workload should continue to self-heal
 
-Pods entering crashloop due to connection errors is an anti-pattern to avoid at all costs.
+Kubernetes pods entering crashloop due to connection errors is an anti-pattern to avoid at all costs.
 
 ### Retries and Exponential Backoff
 
@@ -548,7 +538,13 @@ helm install my-release some-chart
 kubectl apply -k <url>
 ```
 
-Under no circumstances should anyone apply unevaluated resources to clusters. Read through every line and understand how they apply to your infrastructure and affect your security posture.
+Under no circumstances should anyone apply unevaluated resources to clusters. 
+
+Download the code, and build it locally if needed.  Use `helm template` rather than `helm install`.  `kubectl apply` is for play, not production.  
+
+Read through every line and understand how they apply to your infrastructure and affect your security posture.
+
+Check the results into Git, and have somethign like (FluxCD)[https://fluxcd.io] apply it to the cluster.
 
 ### Control Repositories
 
