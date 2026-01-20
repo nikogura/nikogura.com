@@ -30,7 +30,7 @@ San Diego County, USA
 
 • Designed federated multi-cluster observability platform processing 2M+ ModSecurity security events daily across distributed infrastructure, implementing specialized architecture using Loki for log streaming, Elasticsearch for security analytics, and Prometheus+Thanos for metrics federation, enabling 85% MTTR reduction through AI-powered diagnostic automation.
 
-• Built distributed data curation platform for cryptocurrency markets handling 4.1M+ unique trading pairs with sub-10ms change detection latency, implementing extensible middleware pipeline with fraud detection, cache-aside patterns, and adaptive TTL strategies while eliminating $120k-$240k annual S3 API costs through strategic storage optimization.
+• Built distributed data curation platform for cryptocurrency markets handling 4.1M+ unique trading pairs with 1 microsecond retrieval latency of popular tokens, implementing extensible middleware pipeline with fraud detection, caching patterns, and adaptive TTL strategies while eliminating $120k-$240k annual S3 API costs through strategic storage optimization.
 
 • Established globally distributed engineering organization spanning North America, South America, Europe, Africa, and India using contract-to-hire model with 30-day production validation periods, comprehensive documentation-first culture, and asynchronous communication patterns enabling 24/7 development cycle with maintained quality standards.
 
