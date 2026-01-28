@@ -516,35 +516,33 @@ Assume whatever you're connecting to may not be there or may not answer. Incorpo
 
 GitOps, coined by Weaveworks, is the practice of controlling infrastructure declaratively through Git.
 
-**In short:**
-1. Everything is applied via IaC through Git
-2. Nothing is applied outside of IaC through Git
-3. If something is added/removed in Git, it's added/removed from the environment
-4. If something is changed outside of Git, automation changes it back
+The commands `kubectl apply` and `helm install` are not GitOps. If you're using these commands directly against a cluster, you're manually managing infrastructure—and losing the audit trail, reproducibility, and drift correction that GitOps provides.
 
-**Never:**
-- Propose or attempt direct kubectl applies to managed systems
-- Modify resources in managed systems without explicit instruction
-- Commit or push to git without explicit instruction
+**Core tenets:**
+1. Git is the single source of truth for desired state
+2. Changes to Git trigger changes to infrastructure
+3. Drift from desired state is automatically corrected
+4. Every change is auditable through commit history
 
-### No Blind Application of Resources
+### Evaluate Before You Apply
 
-One of the biggest anti-patterns is blindly downloading and applying resources to clusters. Examples to avoid:
+Never apply unevaluated resources to clusters:
 
 ```bash
-# DON'T do this
+# Avoid these patterns
 kubectl apply -f https://raw.githubusercontent.com/.../deploy.yaml
 helm install my-release some-chart
 kubectl apply -k <url>
 ```
 
-Under no circumstances should anyone apply unevaluated resources to clusters. 
+Instead:
+1. Download and review the manifests locally
+2. Use `helm template` to render charts, not `helm install`
+3. Understand how each resource affects your security posture
+4. Commit the evaluated resources to Git
+5. Let a GitOps controller like [FluxCD](https://fluxcd.io) apply them
 
-Download the code, and build it locally if needed.  Use `helm template` rather than `helm install`.  `kubectl apply` is for play, not production.  
-
-Read through every line and understand how they apply to your infrastructure and affect your security posture.
-
-Check the results into Git, and have somethign like (FluxCD)[https://fluxcd.io] apply it to the cluster.
+This isn't bureaucracy—it's the difference between knowing what runs in your cluster and hoping for the best.
 
 ### Control Repositories
 
