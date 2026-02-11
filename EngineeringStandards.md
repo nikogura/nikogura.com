@@ -1,110 +1,97 @@
 # Engineering Standards
 
 ## Table of Contents
-- [Core Philosophy](#core-philosophy)
-- [Code Quality & Linting](#code-quality--linting)
-- [Golang Best Practices](#golang-best-practices)
-- [Repository Structure](#repository-structure)
-- [Test-Driven Development (TDD)](#test-driven-development-tdd)
-- [Error Handling](#error-handling)
-- [External Connections](#external-connections)
-- [Kubernetes & GitOps](#kubernetes--gitops)
+- [Philosophy](#philosophy)
+- [Golang](#golang)
+- [Testing](#testing)
+- [Repository & Build](#repository--build)
+- [API Design](#api-design)
+- [Infrastructure](#infrastructure)
+- [Observability](#observability)
 - [Security & Compliance](#security--compliance)
 - [Documentation](#documentation)
-- [Investigation Methodology](#investigation-methodology)
-- [CI/CD & GitHub Actions](#cicd--github-actions)
+- [CI/CD](#cicd)
+- [For AI Agents](#for-ai-agents)
 
 ---
 
-## Core Philosophy
+## Philosophy
 
 Security, reliability, and compliance are non-negotiable. Every line of code is a potential attack vector or compliance violation. Move deliberately, not fast. Test all assumptions.
 
-### The Master's Approach
+### Craftsmanship
 
-Excellence is a muscle. The more you exercise it, the stronger it becomes. "Doing it right" gets faster with practice, and faster work becomes better with repetition. That's mastery: producing master-level work with less effort than it takes an apprentice to pick up the tools.
+Excellence is a muscle. The more you exercise it, the stronger it becomes. "Doing it right" gets faster with practice, and faster work becomes better with repetition. That's mastery: producing high-quality work with less effort than it takes a beginner to pick up the tools.
 
-Write every line of code as if you'll publish it under your own name. Even if a repo will "never see the light of day," we owe it to ourselves and our successors to maintain excellence. Git is forever. If your name is on it, make it a lesson in coding excellence.
+Write every line of code as if you'll publish it under your own name. Even if a repo will "never see the light of day," you owe it to yourself and your successors to maintain excellence. Git is forever. If your name is on it, make it count.
 
-### Code Reusability
+### Reusability
 
-Design your code so it can be reused and refactored quickly. This isn't about perfection—it's about making it easy for your future self to swap out clunky implementations in 5-10 minutes of free time.
+Design code so it can be reused and refactored quickly. This isn't about perfection—it's about making it easy for your future self to swap out clunky implementations in 5-10 minutes of free time.
 
-Technical debt doesn't get paid down due to lack of desire; it persists due to lack of time. Front-load your pain by writing tests and modular code. If refactoring is easy and provable through tests, it will get done. Make refactoring easy.
+Technical debt doesn't get paid down due to lack of desire; it persists due to lack of time. Front-load your pain by writing tests and modular code. If refactoring is easy and provable through tests, it will get done.
 
 ---
 
-## Golang Best Practices
+## Golang
 
 ### Go Proverbs
 
 The language's author said it best: https://go-proverbs.github.io/
 
-Key proverbs we emphasize:
-- **interface{} says nothing** - Use real interfaces with actual types
-- **Clear is better than clever** - Your 3AM self will thank you
-- **Errors are values** - Use them, don't just check them
-- **Don't panic** - Handle errors gracefully
+Key proverbs:
+- **interface{} says nothing** — Use real interfaces with actual types
+- **Clear is better than clever** — Your 3AM self will thank you
+- **Errors are values** — Use them, don't just check them
+- **Don't panic** — Handle errors gracefully
 - **A little copying is better than a little dependency**
 
-### Write Golang as Golang
+### Idiom
 
-Golang is interface-oriented, not object-oriented. This is subtle but fundamental. Each language has syntax, but also idiom. Learn both, or you're missing out on what makes the language worth using.
+Go is interface-oriented, not object-oriented. This is subtle but fundamental. Each language has syntax, but also idiom. Learn both, or you're missing out on what makes the language worth using.
 
-**Keep packages flat.** Labyrinthine package trees get complicated quickly. If you really need a different package, make it a totally different module with its own lifecycle in a different repo.
+**Keep packages flat.** Labyrinthine package trees get complicated quickly. If you really need a different package, make it a separate module with its own lifecycle in a different repo.
 
-### SOLID/MVC Principles in Golang
+### Single Responsibility
 
-While SOLID was written for OOP (and Golang isn't OO), the principles remain the same:
+While SOLID was written for OOP (and Go isn't OO), the principles apply:
 
-- **Single Responsibility** - Do one thing well (The Unix Way)
-- **Don't half-ass two things. Whole-ass one thing.** - Ron Swanson
+- **Do one thing well** (The Unix Way)
+- **Don't half-ass two things. Whole-ass one thing.** — Ron Swanson
 
-#### Libraries (Models)
+**Libraries (Models):**
 - Write general-purpose, exhaustively tested libraries
-- Libraries should consume data and emit data
+- Libraries consume data and emit data
 - No assumptions about how or where data will be used
 - Libraries don't change much unless business fundamentals change
 - One library can serve CLI, web, API, and other programs
 
-#### Views
+**Views:**
 - Views change frequently
 - One Model to many Views relationship
 - A CLI is just a view—one way to interact with the Model
-- Web pages, APIs, CLIs are all just different views
-
-#### Tests
-- No such thing as a "stupid test"
-- Simple tests take 90 seconds to write and live forever
-- Little tests add up—no raindrop feels responsible for the flood
-- Teach the machine to verify your expectations
+- Web pages, APIs, CLIs are all different views
 
 ### Code Layout
 
 Follow https://github.com/golang-standards/project-layout
 
-**Key points:**
 - Put library code in `/pkg` (reusable by other programs)
 - Avoid `/internal` unless you have an astoundingly good reason
 - Put CLI/main code in `/cmd`
 - Never mix the two
 
-**Generate standardized repos:**
-Use something like the [boilerplate](https://github.com/nikogura/boilerplate) tool to generate recognizable code for yourself or your organization.
-
-The more familiar it looks, the easier it is for anyone to onboard or jump in and lend a hand.
+Use something like [boilerplate](https://github.com/nikogura/boilerplate) to generate standardized repos. The more familiar code looks, the easier it is to onboard or contribute.
 
 ### Public vs Private
 
-**Default to public** unless you can articulate why something needs to be private. Don't impose restrictions on your future self without good reason.
+Default to public unless you can articulate why something needs to be private. Don't impose restrictions on your future self without good reason.
 
-In Golang:
+In Go:
 - Public: starts with capital letter (accessible outside package)
 - Private: starts with lowercase letter (internal only)
 
-This is especially important for Golang beginners. Some error messages are esoteric, and words are used in slightly different ways that will bite you.
-
-### Building Code
+### Building
 
 Use standard conventions:
 
@@ -112,79 +99,77 @@ Use standard conventions:
 go build  # Produces binary named after directory
 ```
 
-**Don't do this:**
+Avoid:
 ```bash
 go build -o main .  # Binary named "main" is meaningless
 ```
 
 Seeing `/app/main` in a container tells you nothing. Seeing `/app/my-cool-program` provides information.
 
-Generally, a single repository should build a single binary and be buildable with simply `go build`. If the repo is laid out differently or contains multiple binaries, perhaps you're being overly clever. Clear is better than clever. Simple is easier to debug in a crisis.
+A single repository should build a single binary with simply `go build`. If the repo contains multiple binaries, consider whether you're being overly clever. Clear is better than clever.
 
----
+### Linting
 
-## Code Quality & Linting
+All Go code must pass `golangci-lint` with the project's configuration. Zero tolerance for linting violations—if the linter complains, the code is wrong.
 
-### Golang Linting is Law
+Reference configuration: [.golangci.yml](.golangci.yml)
 
-**golangci-lint** is the standard. All Go code must pass golangci-lint with the project's standardized configuration.
+### Named Returns
 
-- Zero tolerance for linting violations. If the linter complains, the code is wrong.
-- When suggesting code changes, verify they comply with the project's golangci-lint configuration.
-- Reference configuration: [.golangci.yml](.golangci.yml) (included in this repository)
+We recommend use of the `namedreturns` linter. This is a custom linter, not included in golangci-lint.  
 
-### Named Returns Are Mandatory
-
-**The `namedreturns` linter is MANDATORY. (In my world, anyway)** This is a custom linter, not included in golangci-lint.
+Code should be self-documenting and clear.  Named returns go a long way towards achieving this goal.
 
 - Repository: `github.com/nikogura/namedreturns`
 - Install: `go install github.com/nikogura/namedreturns@latest`
-- **ALL code must use named returns** - no exceptions except generated code
-- Test code MUST comply (use `-test=true` flag, which is the default)
-- Generated code is exempt (exclude via grep or package filters)
+- All code must use named returns (except generated code)
+- Test code must comply (`-test=true` flag, which is the default)
 
 Named returns provide critical information to both engineers and compilers.
 
-**Why Named Returns Matter:**
-
 ```go
-// WRONG - Unnamed returns lack context.  You're missing an opportunity to make your code self-documenting here.
+// Wrong — unnamed returns lack context
 func Foo() (string, error) {
     return "", nil
 }
 
-// WRONG - Named returns, but returning something different from what's promised - this leads to confusion and surprises.  In a big, complex function you might be returning something unexpected. Better to be explicit than surprised.
+// Wrong — named returns but returning something different
 func Foo() (output string, err error) {
-    return "", nil
+    return "", nil  // Promising "output" but returning empty string literal
 }
 
-// RIGHT - Named returns document your intent, and makes the code clear, and easy to review.
+// Right — named returns documenting intent
 func Foo() (output string, err error) {
     output = "bar"
     return output, err
 }
 ```
 
-**Honor the Function Contract:**
-- Name your return values descriptively
+**Honor the function contract:**
+- Name return values descriptively
 - Return what you promise, not something "just as good"
 - Every return statement must explicitly use the named return variables
 
-### Common Lint Patterns
+### Common Lint Problems
 
-#### 1. Globals and Init fuctions.  Cobra and Prometheus both make heavy use of global variables and init().  In the case of Prometheus, this is part of what makes Prometheus so easy to implement.  We need to allow this to use these common modules. However, if you haven't thought it through to the level that the Prometheus authors have, globals and init functions are probably something to avoid.
+**1. Globals and init functions**
+
+Cobra and Prometheus use global variables and `init()`. This is acceptable for well-designed libraries, but avoid in your own code unless you've thought it through carefully.
 
 ```go
-//nolint:gochecknoglobals // Cobra boilerplate 
+//nolint:gochecknoglobals // Cobra boilerplate
 var rootCmd = &cobra.Command{...}
 
 //nolint:gochecknoinits // Cobra boilerplate
 func init() {...}
 ```
 
-#### 2. Avoid Nested Closures with Returns
+**2. Nested closures with returns**
+
+Extract to top-level functions for clarity:
+
 ```go
-// ANTI-PATTERN  Yes, it works, but it's harder to read and to trace.  Think about who's maintaining this code!
+// Avoid — harder to read and trace
 func Outer() (result string, err error) {
     token, err := jwt.Parse(str, func(t *jwt.Token) (interface{}, error) {
         if check { return nil, errors.New("bad") }
@@ -192,7 +177,7 @@ func Outer() (result string, err error) {
     })
 }
 
-// CORRECT - extract to top-level function.  It's just clearer, and clear is better than clever.
+// Prefer — extract to top-level function
 func lookupKey(token *jwt.Token, config Config) (key interface{}, err error) {
     return key, err
 }
@@ -204,40 +189,47 @@ func Outer() (result string, err error) {
 }
 ```
 
-#### 3. Reduce Cognitive Complexity
+**3. Cognitive complexity**
+
 Extract helper functions instead of deeply nested logic:
+
 ```go
 func validateAudience(claims jwt.MapClaims, expected string) bool {...}
 func extractGroups(claims jwt.MapClaims) []string {...}
 func validateGroupMembership(userGroups, allowedGroups []string) bool {...}
 ```
 
-#### 4. Avoid Inline Error Handling - it's easier to read, and are you really worried about the extra newline?  Sure, in the inline version the variable is scoped to the conditional, but is that really more important than readability?  Your functions shouldn't be that big in any case.  Optimize for your future self, who might not be as clever as you feel today.
+**4. Inline error handling**
+
+Separate error checks for readability:
+
 ```go
-// WRONG
+// Avoid
 if err := doSomething(); err != nil {...}
 
-// RIGHT
+// Prefer
 err := doSomething()
 if err != nil {...}
-```
 
-#### 5. Proto Field Access
+```
+That being said, sometimes the inline handling _is_ the clearest way to express the idea behind the code.  There are exceptions to every rule, but unless you can articulate why the exception applies, follow the rule.
+
+**5. Proto field access**
+
+Always use getter methods:
+
 ```go
-req.GetSourceBucket()  // CORRECT
-req.SourceBucket       // WRONG
+req.GetSourceBucket()  // Correct
+req.SourceBucket       // Wrong
 ```
 
-### Integrating namedreturns into Build Process
+### Integrating namedreturns
 
-**The `namedreturns` linter must be integrated into your `make lint` target.**
+Add `namedreturns` to your `make lint` target.
 
-#### Pattern 1: Simple Projects (No Generated Code)
-
-For projects without generated code, use the simple pattern:
+**Simple projects:**
 
 ```makefile
-# Run golangci-lint with namedreturns
 lint:
 	@echo "Running namedreturns linter..."
 	namedreturns ./...
@@ -245,47 +237,118 @@ lint:
 	golangci-lint run
 ```
 
-**Key points:**
-- Run `namedreturns` BEFORE `golangci-lint`
-- Check all packages with `./...`
-- Default `-test=true` means test files are checked (this is correct)
-- Fail fast: if `namedreturns` fails, don't run `golangci-lint`
-
-#### Pattern 2: Projects with Generated Code
-
-For projects with generated code (protobuf, GraphQL, OpenAPI, etc.), exclude generated packages:
+**Projects with generated code:**
 
 ```makefile
 lint:
 	@echo "Running namedreturns linter..."
-	@for pkg in $(shell go list ./pkg/... ./cmd/... | grep -v 'generated/package/path$$' | grep -v 'another/generated/path$$'); do \
+	@for pkg in $(shell go list ./pkg/... ./cmd/... | grep -v 'generated/path$$'); do \
 		namedreturns -test=true $$pkg || exit 1; \
 	done
 	@echo "Running golangci-lint..."
 	golangci-lint run --timeout=5m
 ```
 
-**Exclusion examples:**
-- GraphQL generated: `grep -v 'pkg/apiservice/gql$$'`
-- Protobuf generated: `grep -v 'internal/proto/.*$$'`
-- OpenAPI generated: `grep -v 'internal/market-data-api/.*$$'`
-- Multiple exclusions: Chain with `| grep -v 'pattern1$$' | grep -v 'pattern2$$'`
+Run `namedreturns` before `golangci-lint`. Fail fast.
 
-**Key points:**
-- Use `go list` to get all packages
-- Use `grep -v 'pattern$$'` to exclude (the `$$` anchors to end of package path)
-- Loop over packages explicitly to get clear error messages
-- Use `-test=true` explicitly (though it's the default) to be clear about intent
-- `exit 1` on failure to stop the build immediately
-- Consider adding `--timeout=5m` for larger projects
+### Error Handling
+
+**Errors are values.** Don't just check errors to satisfy the compiler. Use the value.
+
+**Always add context:**
+
+```go
+thing := "foo"
+err := DoSomethingWith(thing)
+if err != nil {
+    err = errors.Wrapf(err, "failed to do something with %s", thing)
+    return err
+}
+```
+
+Make it easy to grep the code for error messages.
+
+**Don't ignore errors:**
+
+```go
+thing, _ := SomethingThatReturnsThingAndErr()  // Wrong — errors are hidden
+```
+
+**Don't use generic error messages:**
+
+```go
+const SOME_ERROR = "something went wrong"
+return errors.New(SOME_ERROR)  // Wrong — can't grep for it
+```
+
+**Don't panic.** `panic()` and `recover()` exist, but almost never use them. Panicking is usually a sign of laziness. Especially avoid deferred panic recovery—it gives you no information about where the error originated.
+
+**Exit gracefully:**
+
+- Use `exit()`, not `panic()`
+- Log useful information before exiting
+- Return an error code (0 = success, non-zero = failure)
+- Prefer `exit(100)` over `exit(1)` for deliberate exits
+
+Don't leave pods in CrashLoopBackoff as the way to learn about problems.
+
+**Return early.** Check errors and bail out as soon as you find one you can't handle. Go prefers early returns over nested else blocks.
 
 ---
 
-## Repository Structure
+## Testing
+
+All new features and changes must include test coverage.
+
+If someone finds a bug in your software and it's not exposed in your test suite, that's your first problem.
+
+### The TDD Cycle
+
+1. **Red:** Write a test that exposes the flaw. Teach your test suite to recognize the problem.
+2. **Green:** Fix the problem. The test now passes and lives in the codebase, protecting you from this mistake forever.
+
+Tests build up over time. What's a functional test today becomes a regression test tomorrow. Over time, you can ship more complex changes with confidence.
+
+### Requirements
+
+| Change Type | Test Requirement |
+|-------------|------------------|
+| New functions/methods | New unit tests |
+| New feature flags/config | Tests for all code paths |
+| Bug fixes | Regression tests |
+| Refactoring | Tests verifying behavior unchanged |
+| API changes | Tests covering new signatures and edge cases |
+
+### Quality Standards
+
+- Tests must be deterministic (no flaky tests)
+- Use table-driven tests for multiple scenarios
+- Test both happy paths and error conditions
+- Run tests in parallel when possible (`t.Parallel()`)
+- Test names must clearly describe what's being tested
+- Tests must be isolated (no shared state)
+
+### Workflow
+
+1. Write tests for the new feature
+2. Implement the feature
+3. Run tests: `go test ./...`
+4. Run linters: `golangci-lint run`
+5. Only then is the feature complete
+
+Code without tests is incomplete.
+
+---
+
+## Repository & Build
+
+### Code Layout
+
+Follow https://github.com/golang-standards/project-layout
 
 ### Standard Dockerfile
 
-Use multi-stage builds with distroless images for minimal attack surface and image size:
+Use multi-stage builds with distroless images:
 
 ```dockerfile
 FROM golang:1.23.4 AS builder
@@ -317,206 +380,105 @@ ENTRYPOINT ["/app/<binary-name>"]
 ```
 
 **Key points:**
-- Multi-stage builds keep images small (distroless base is ~20MB vs ~1GB for full golang image)
-- `CGO_ENABLED=0` produces static binaries that work in distroless
-- Distroless images contain only your app and runtime dependencies (no shell, package managers)
-- `nonroot` user runs as UID 65532 for security
-- Layer caching: copy `go.mod`/`go.sum` before source code
-- SSH mount (`--mount=type=ssh`) provides access to private repositories during build
-- Distroless images handle signals properly - the binary runs as PID 1 and receives signals directly
+- Multi-stage builds keep images small (~20MB vs ~1GB)
+- `CGO_ENABLED=0` produces static binaries
+- Distroless images contain only your app (no shell, no package managers)
+- `nonroot` user runs as UID 65532
+- Copy `go.mod`/`go.sum` before source for layer caching
 
-**Building with SSH:**
+**Build with SSH:**
 ```bash
 docker build --ssh default .
 ```
 
 ### Container Consistency
 
-Use the same container for all stages:
-- If you plan to run on Ubuntu, build with Ubuntu
-- If you plan to run on Debian, build and test with Debian
-- **Never** build or test with Alpine if running on Debian/Ubuntu
+Use the same OS for all stages:
+- Build on Ubuntu → Run on Ubuntu
+- Build on Debian → Run on Debian
+- **Never** build on Alpine if running on Debian/Ubuntu
 
-Alpine uses Musl-C instead of GlibC. Binaries compiled on Alpine won't run on Debian. These errors require large amounts of debugging hours. Avoid them entirely by using the same containers for build, test, and deployment (or at least the same OS family).
-
----
-
-## Test-Driven Development (TDD)
-
-**TDD is the law. All new features and changes MUST include test coverage.**
-
-If someone finds a bug in your software, and it is not exposed in your test suite, then that is your first problem.
-
-No code should ever be touched without expanding the test suite.
-
-First write a new test or fix an existing test. In TDD this is the "Red" stage.  Teach your test suite to recognize the flaw reported by your user.
-
-Next Fix the problem.  In TDD, this is the "Green" stage - now you've fixed the problem, and the test, which is now passing, lives on in the codebase, forever protecting you from this mistake.
-
-It might not be much, but these tests build up over time, like drops in a bucket.  You don't gain a lot from the first one, but over time, you can ship more, and more complex changes with confidence because what was today's functional test is now a regression test in the future.
-
-- **NEVER ship code without tests.** Test coverage is not optional.
-- When adding new features, you MUST either:
-  1. Add new test files covering the new functionality, OR
-  2. Expand existing test files to cover the new behavior
-- **Tests must be written BEFORE claiming a feature is complete.**
-- If you implement code changes without adding tests, the work is INCOMPLETE.
-
-### Test Requirements
-
-- New functions/methods → New unit tests
-- New feature flags/config options → Tests verifying all code paths
-- Bug fixes → Regression tests preventing the bug from returning
-- Refactoring → Tests verifying behavior unchanged
-- API changes → Tests covering new signatures and edge cases
-
-### Test Quality Standards
-
-- Tests must be deterministic (no flaky tests)
-- Use table-driven tests for multiple scenarios
-- Test both happy paths AND error conditions
-- Tests must run in parallel when possible (`t.Parallel()`)
-- Test names must clearly describe what's being tested
-- Tests must be isolated (no shared state between tests)
-
-### Running Tests
-
-- All tests must pass: `go test ./...`
-- All linters must pass: `golangci-lint run`
-- Both must succeed before code is considered complete
-
-**If someone asks you to implement something and doesn't mention tests:**
-- You MUST proactively add tests anyway
-- Do NOT wait to be asked
-- Tests are not a "nice to have" - they are mandatory
-
-**Example workflow:**
-1. Write Tests for new Feature
-2. Implement feature
-3. Run tests: `go test ./...`
-4. Run linters: `golangci-lint run`
-5. Only then is the feature complete
+Alpine uses musl libc instead of glibc. Binaries compiled on Alpine won't run on Debian. This causes debugging nightmares. Use the same containers for build, test, and deployment.
 
 ---
 
-## Error Handling
+## API Design
 
-### Errors Are Values
+### Proto Files Are Interface Definitions
 
-Don't just check errors to satisfy the compiler. Use the value. When constructing error handling routines, make them useful.
+Proto files define **interfaces between services**, not authoritative data types. They define message structures for communication and API contracts.
 
-### Always Do This
+Your application logic should dictate data types—not proto files. Proto messages are transport representations optimized for serialization.
+
+### Pitfalls of Proto-Centric Design
+
+- **Conflicting imports & type mismatches** across services
+- **Code coupling** — proto changes ripple everywhere
+- **Unnecessary complexity** — proto dependencies in utility libraries
+- **Blurred concerns** — serialization mixed with business logic
+
+### Better Approach
+
+1. Define your own domain structs
+2. Convert between internal structs and proto messages at boundaries
+3. Keep protos focused on API contracts
+4. Never reuse tag numbers
 
 ```go
-thing := "foo"
-err := DoSomethingWith(thing)
-if err != nil {
-    err = errors.Wrapf(err, "failed to do something with %s", thing)
-    return err
+// Wrong — proto-centric
+import "github.com/myorg/protos/common"
+
+func GetBlockchainID() common.Blockchain {
+    return common.Blockchain_ETH  // Hard-coupled to proto
+}
+
+// Right — decoupled
+type Blockchain int
+
+const (
+    Ethereum Blockchain = 1
+    Bitcoin  Blockchain = 2
+)
+
+func GetBlockchainID() Blockchain {
+    return Ethereum
+}
+
+// Convert only at boundaries
+func ToProtoBlockchain(b Blockchain) common.Blockchain {
+    return common.Blockchain(b)
 }
 ```
 
-Add context to errors. Make it easy to `grep` the code for the error message.
-
-### Never Do This
-
-**Don't ignore errors:**
-```go
-thing, _ := SomethingThatReturnsThingAndErr()  // WRONG - errors are hidden
-```
-
-**Don't use boilerplate error messages:**
-```go
-const SOME_ERROR = "something went wrong"
-return errors.New(SOME_ERROR)  // WRONG - can't grep for it.  You might throw this error at multiple places in multiple files.
-```
-
-**Don't compress error handling:**
-```go
-// WRONG - hard to read
-if err := priceConverter.Start(ctx); err != nil {
-    return fmt.Errorf("could not start price converter: %w", err)
-}
-
-// RIGHT - clear and readable
-err := priceConverter.Start(ctx)
-if err != nil {
-    err = errors.Wrapf(err, "could not start price converter for %s", thing.Name())
-    return err
-}
-```
-
-### Don't Panic
-
-`panic()` and `recover()` are built into Golang, but we should almost never use them. Simply put, there are better mechanisms to handle errors. Most of the time, panicking is a sign of laziness or lack of concern for maintainability.
-
-**Especially avoid deferred panic recovery:**
-```go
-// HORRIBLE - don't do this!  You can't easily tell where this got thrown!
-defer func() {
-    if err := recover(); err != nil {
-        logrus.WithField("err", err).Error("panic-discovered")
-        sentry.CaptureException(err.(error))
-        panic(err)  // Re-panicking is even worse
-    }
-}()
-```
-
-This gives you no information about where the error came from. In a 800-line function, good luck finding the error point quickly.
-
-### Exit with Logs and Return Codes
-
-Services should not exit unless they cannot continue. When you must exit:
-
-- Use `exit()`, not `panic()`
-- Log useful information before exiting
-- Return an error code (0 = success, non-zero = failure)
-- Prefer `exit(100)` over `exit(1)` for deliberate exits
-
-Standardized error codes are an eventual goal. In the short term, even `exit(1)` is preferable to panic or no exit at all.
-
-Don't leave us hanging. Getting paged for a Kubernetes pod in CrashLoopBackoff state is not how we should learn about problems.
-
-### Return Early
-
-Check errors and bail out of functions as soon as you find one you can't handle. Golang generally avoids `else` and prefers early returns.
+Proto files are blueprints for service contracts, not laws governing your codebase.
 
 ---
 
-## External Connections
+## Infrastructure
+
+### External Connections
 
 Every system making external connections must support:
 
-1. **Rate limits** that default to 0 (no limit)
+1. **Rate limits** defaulting to 0 (no limit)
 2. **Retries with exponential backoff**
-3. **Clear logging** - we should always know what's happening
-4. **Metrics** on:
-   - Number of calls by method
-   - Number of errors
-   - Durations
-   - Backoff period
-   - All broken down by method
-5. **Never exit or panic** on failed connection - workload should continue to self-heal
+3. **Clear logging**
+4. **Metrics:** calls by method, errors, durations, backoff periods
+5. **No exit or panic on failed connections** — workloads should self-heal
 
-Kubernetes pods entering crashloop due to connection errors is an anti-pattern to avoid at all costs.
+Kubernetes pods in CrashLoopBackoff due to connection errors is an anti-pattern.
 
 ### Retries and Exponential Backoff
 
-We live in an imperfect world. Code the assumption that things won't always work into your services.
+Assume whatever you're connecting to may not be there or may not answer. Incorporate retry logic, but endless retries cause further errors. Retries need exponential backoff.
 
-In Kubernetes, **pods are mortal**. This means the fundamental unit of work is expected to run, die, and be replaced at any time. A CrashLoopBackoff is not an error in itself. Something stuck in CrashLoopBackoff for too long is.
+In Kubernetes, pods are mortal. They're expected to run, die, and be replaced. A CrashLoopBackoff is not an error in itself—something stuck in CrashLoopBackoff for too long is.
 
-Assume whatever you're connecting to may not be there or may not answer. Incorporate retry logic, but endless retries become the cause of further errors. Retries need exponential backoff.
+### GitOps
 
----
+GitOps is the practice of controlling infrastructure declaratively through Git.
 
-## Kubernetes & GitOps
-
-### GitOps Principles
-
-GitOps, coined by Weaveworks, is the practice of controlling infrastructure declaratively through Git.
-
-The commands `kubectl apply` and `helm install` are not GitOps. If you're using these commands directly against a cluster, you're manually managing infrastructure—and losing the audit trail, reproducibility, and drift correction that GitOps provides.
+`kubectl apply` and `helm install` are not GitOps. If you're using these commands directly against a cluster, you're manually managing infrastructure and losing the audit trail, reproducibility, and drift correction that GitOps provides.
 
 **Core tenets:**
 1. Git is the single source of truth for desired state
@@ -529,181 +491,80 @@ The commands `kubectl apply` and `helm install` are not GitOps. If you're using 
 Never apply unevaluated resources to clusters:
 
 ```bash
-# Avoid these patterns
+# Avoid
 kubectl apply -f https://raw.githubusercontent.com/.../deploy.yaml
 helm install my-release some-chart
 kubectl apply -k <url>
 ```
 
 Instead:
-1. Download and review the manifests locally
+1. Download and review manifests locally
 2. Use `helm template` to render charts, not `helm install`
 3. Understand how each resource affects your security posture
-4. Commit the evaluated resources to Git
+4. Commit evaluated resources to Git
 5. Let a GitOps controller like [FluxCD](https://fluxcd.io) apply them
 
 This isn't bureaucracy—it's the difference between knowing what runs in your cluster and hoping for the best.
 
 ### Control Repositories
 
-Control Repositories contain Infrastructure as Code configuration. The main controls needed:
-- What change was made?
-- Who made the change?
-- When did the change happen?
-- How do we roll back?
+Control repositories contain Infrastructure as Code. VCS provides:
+- What change was made
+- Who made it
+- When it happened
+- How to roll back
 
-All of the above is given for free with VCS, so code reviews and pull requests can cause unnecessary burden and slow down delivery velocity.
+Code reviews on control repositories can be abbreviated compared to application code. The goal is communication and understanding, not rubber-stamp approvals.
 
-That's not to say there shouldn't be PR's and code reviews.  We use the same tools (Git, etc) for control repositories and code repositories, but we don't necessarily need to use the tools in the same way.  
+### Kubernetes Resource Management
 
-Much of the time, ceremonies on a control repository can be reduced or abbreviated.  It's not that we don't want reviews or communication, but we also don't want to needlessy distract or get into a pattern where people don't read or understand the changes and just 'rubber stamp' approvals.
-
-### Kubernetes Resource Approaches
-
-There are 4 main ways of managing resources in Kubernetes:
-- Bare YAML Files
+Four main approaches:
+- Bare YAML files
 - [Helm](https://helm.sh/)
 - [Kustomize](https://kustomize.io/)
 - [Jsonnet](https://jsonnet.org/)
 
-You'll encounter all four eventually. You can't really work in Kubernetes without uderstanding all 4.  Among them, Jsonnet is the author's preferred solution due to its flexibility and resistance to blind application.  Having everything explicitly laid out in code that is checked in also makes it really easy for an agent to read/understand/diagnose problems, and better yet, fix them.
-
----
-
-## Proto Files: Interface Definitions, Not Data Authorities
-
-Proto files define **interfaces between services**, not authoritative data types. Their primary function is to define message structures for communication, ensuring consistency in API contracts.
-
-### Why This Matters
-
-Your application logic should dictate data types—not proto files. Proto messages are **transport representations**, optimized for serialization. They're not designed to be the authoritative source of core data structures.
-
-### Pitfalls of Using Proto Messages as Core Types
-
-- **Conflicting imports & type mismatches** - Multiple services with different expectations
-- **Code coupling** - Changes to proto files ripple across unrelated parts
-- **Unnecessary complexity** - Proto dependencies in utility libraries
-- **Serialization vs. business logic** - Blurred concerns lead to performance bottlenecks
-
-### A Better Approach
-
-1. **Define your own structs** - Domain-driven structs that fit your application
-2. **Convert between internal structs & proto messages** - Map when communicating
-3. **Keep protos focused on API contracts** - Define how services interact, nothing more
-4. **Never reuse tags** - Changing a field? Use a new tag number
-
-**Example:**
-
-```go
-// WRONG - Proto-centric
-import "github.com/myorg/protos/common"
-
-func GetBlockchainID() common.Blockchain {
-    return common.Blockchain_ETH  // Hard-coupled to proto
-}
-
-// RIGHT - Decoupled
-type Blockchain int
-
-const (
-    Ethereum Blockchain = 1
-    Bitcoin  Blockchain = 2
-)
-
-func GetBlockchainID() Blockchain {
-    return Ethereum
-}
-
-// Convert only when needed
-func ToProtoBlockchain(b Blockchain) common.Blockchain {
-    return common.Blockchain(b)
-}
-```
-
-Think of proto files like blueprints for service contracts—not laws governing your entire codebase.
+You'll encounter all four. Jsonnet is preferred for its flexibility and resistance to blind application. Having everything explicitly laid out in checked-in code makes it easy for humans and AI agents to diagnose and fix problems.
 
 ---
 
 ## Observability
 
-### Understand the Difference between Metrics and Logs 
+### Metrics vs Logs
 
-Logs are expensive. Absent complicated log parsing mechanisms, they're a stream of noise nobody reads.
+Logs are expensive. Without parsing, they're noise nobody reads.
 
-Metrics, being essentially numbers, are easy for machines to parse, store, and understand. We prefer to expose critical information via metrics since it's easy to:
+Metrics are numbers—easy for machines to parse, store, and understand. Expose critical information via metrics:
 - Perform actions based on them
 - Track changes over time
-- Look back when incidents happen
+- Look back during incidents
 
-Logging "all the things, all the time" is not sustainable. Metrics are much cheaper and easier to handle.
+Logging "all the things, all the time" is unsustainable. Metrics are cheaper.
 
-That's not to say that logs are unimportant.  Metrics in systems like Prometheus scale with the cardinality of labels.  Cardinality is a huge concern with metrics systems.
+That said, metrics scale with label cardinality, which is a concern in systems like Prometheus. Logs allow near-infinite cardinality. Some data (like individual requests) is better captured by logs.
 
-Logs on the other hand, allow near infinite cardinality.  Some data, like say requests are better captured by logs.
+Real systems incorporate both.
 
-Any real system will incorporate both.
+### Example: WAF Security Logs
 
-### Real-World Example: WAF Security Logs
+WAF logs demonstrate the complementary nature of metrics and logs.
 
-Web Application Firewall (WAF) logs demonstrate the complementary nature of metrics and logs.
+**The problem:** ModSecurity generates structured JSON logs for every blocked request containing client IPs (millions of unique values), request URIs (infinite values), headers, cookies, and attack patterns. Storing this in Prometheus would explode the metrics database.
 
-**The Problem:** WAF systems like ModSecurity generate structured JSON logs for every blocked request. Each log contains:
-- Client IP address (potentially millions of unique values)
-- Full request URI (infinite possible values)
-- Request headers and cookies (high cardinality)
-- Matched rule details and attack patterns
-- Timestamp and geographic data
-
-Storing this in Prometheus would be impossible - the cardinality would explode the metrics database.
-
-**The Solution: Hybrid Approach**
-
-**Metrics for Aggregates:**
+**Metrics for aggregates:**
 ```prometheus
-# Track overall block rate
 rate(modsec_requests_blocked_total[5m])
-
-# Alert on anomalies
-modsec_requests_blocked_total > 100/min
-
-# Track by attack type (low cardinality)
 modsec_blocks_by_type{type="SQLi"}
 modsec_blocks_by_type{type="XSS"}
 ```
 
-**Logs for Details:**
-- Ship structured ModSecurity logs to Elasticsearch via Filebeat/Fluent Bit
-- Use ingest pipelines to enrich with GeoIP data
-- Extract attack types from rule IDs (930=LFI, 941=XSS, 942=SQLi)
-- Create searchable indices for investigation
+**Logs for details:**
+- Ship structured logs to Elasticsearch via Filebeat
+- Enrich with GeoIP data
+- Extract attack types from rule IDs
+- Create searchable indices
 
-**Example Elasticsearch Ingest Pipeline:**
-```json
-{
-  "processors": [
-    {
-      "geoip": {
-        "field": "client",
-        "target_field": "geoip"
-      }
-    },
-    {
-      "script": {
-        "source": "
-          if (ctx.transaction?.messages != null) {
-            def ruleId = ctx.transaction.messages[0]?.details?.ruleId;
-            if (ruleId?.startsWith('930')) ctx.attack_type = 'Path Traversal/LFI';
-            else if (ruleId?.startsWith('941')) ctx.attack_type = 'XSS';
-            else if (ruleId?.startsWith('942')) ctx.attack_type = 'SQLi';
-          }
-        "
-      }
-    }
-  ]
-}
-```
-
-**Query Pattern:**
+**Query patterns:**
 ```bash
 # Metrics: "Are we under attack right now?"
 curl prometheus:9090/api/v1/query?query=rate(modsec_blocks[1m])
@@ -718,61 +579,47 @@ curl elasticsearch:9200/modsec-*/_search -d '{
 }'
 ```
 
-**Investigation Automation:**
+Use metrics for real-time alerting and dashboards. Use logs for forensic analysis. Neither is sufficient alone.
 
-The [diagnostic-slackbot](https://github.com/nikogura/diagnostic-slackbot) project demonstrates automated WAF analysis:
-- Slack users trigger investigations via slash commands
-- Bot queries Loki for recent ModSecurity blocks
-- Claude AI analyzes logs and categorizes threats
-- Automated reports identify false positives vs. real attacks
-- Generates whitelisting recommendations for legitimate traffic
+### Prefer Continuous Services to Jobs
 
-**Key Insight:** Use metrics for real-time alerting and dashboards. Use logs for forensic analysis and investigation. Neither is sufficient alone.
+Prefer services that run continuously over Jobs and CronJobs.
 
-### Prefer Continuous Systems to Jobs
+If you need periodic tasks, code the period into the service with internal timers. This enables easier Prometheus monitoring without PushGateway.
 
-When possible, prefer services that run continuously over Jobs and CronJobs.
-
-If you need a periodic task, code the period into the service itself with internal timers. This provides easier monitoring via Prometheus rather than using a PushGateway.
-
-Prometheus supports the PushGateway, but the support is limited.  Prometheus was designed to periodically scrape a long running service.  Pushing metrics is opposite to the basic Prometheus design philosophy, and therefore it's not always as reliable as scraping.  The last thing we want is to lose information.
+Prometheus was designed to scrape long-running services. Pushing metrics is opposite to its design philosophy and less reliable.
 
 **Services with internal cron-like tasks must:**
 - Run once on server start (so "kick off now" means "delete the pod")
-- Expose metrics:
-  - Counter for number of runs (with timestamp label)
-  - Counter for failed runs
-  - Counter for successful runs
-  - Gauge showing run duration
+- Expose metrics: run counter, failed runs, successful runs, duration gauge
 
-### List All Metrics in the README
+### Document Metrics
 
-The README alone should be sufficient to set up dashboards and alerts. List all metrics and labels.
+The README should be sufficient to set up dashboards and alerts. List all metrics and labels.
 
 ---
 
 ## Security & Compliance
 
-### Non-Negotiables
+### Principles
 
 - Security, compliance, and reliability are non-negotiable
-- Never suggest sharing data with third-party vendors without explicit approval
+- Never share data with third-party vendors without explicit approval
 - Access controls and audit trails are critical
 - Assume every query is logged and auditable
-- Never suggest turning off security controls globally
-- All modifications to security controls must be minimal and closely targeted
-- Read-only operations only unless explicitly authorized
+- Never disable security controls globally
+- All security modifications must be minimal and targeted
+- Default to read-only operations
 
 ### Investigation Methodology
 
-**Critical: Don't Assume, Investigate**
+**Don't assume, investigate.**
 
 - Read the actual code—don't pattern-match to common scenarios
-- If told to examine specific code, READ IT FIRST
-- Organizations often have custom implementations that don't follow typical patterns
-- Stop and examine actual implementation before assuming standard patterns
+- Examine specific code before making suggestions
+- Organizations have custom implementations that don't follow typical patterns
 
-**Systematic Debugging Process:**
+**Systematic debugging:**
 1. Start with the obvious: recent deployments, known incidents
 2. Check metrics for anomalies
 3. Correlate with logs
@@ -781,92 +628,54 @@ The README alone should be sufficient to set up dashboards and alerts. List all 
 6. Document your investigation path
 
 **For security tool blocks (WAF, etc.):**
-- Query security logs to understand what triggered
-- Identify the rule ID
-- Correlate with the upstream request in application logs
-- Understand the legitimate use case before suggesting rule changes
+1. Query security logs to understand what triggered
+2. Identify the rule ID
+3. Correlate with the upstream request in application logs
+4. Understand the legitimate use case before suggesting rule changes
 
 ---
 
 ## Documentation
 
-### Documentation Must
+### Requirements
 
+Documentation must:
 1. Reside in the repo for the code it describes
 2. Be written in Markdown
-3. Be accessible via link from Notion
+3. Be accessible via link from knowledge management systems
 4. Be stored in top-level `/docs` directory
 5. Be renderable in any format from Markdown source
-6. Be rendered in PDF format
-7. Be named clearly in CamelCase (e.g., `ServiceArchitecture.pdf`)
+6. Use clear CamelCase naming (e.g., `ServiceArchitecture.md`)
 
-### Documentation Must Not
-
+Documentation must not:
 1. Be located in multiple places
-2. Be stored in dead-end formats where they can't be easily extracted or re-rendered
+2. Be stored in formats that can't be easily extracted or re-rendered
 
 ### Rendering
 
-Use [pandoc](https://pandoc.org/) to render Markdown to nearly any format:
+Use [pandoc](https://pandoc.org/) to render Markdown:
 
 ```bash
 pandoc -f markdown -t pdf -o NameOfDoc.pdf <source file>
 ```
 
-**Warning:** LaTeX project is huge. Be prepared for a large download.
-
-Documentation examples should follow this pattern, with PDFs generated from Markdown source.
+Note: LaTeX is a large dependency.
 
 ---
 
-## Communication Style
+## CI/CD
 
-- Be direct and technical
-- Don't sugar-coat problems
-- Assume the user understands the technology
-- Skip pleasantries, focus on substance
-- If you don't know something, say so clearly
+Every repository should have automated testing, linting, and release management.
 
----
+### Requirements
 
-## What NOT to Do
+Every Go project needs a `.github/workflows/ci.yml` that:
 
-- **Don't** propose "quick fixes" that bypass established processes
-- **Don't** suggest disabling linters or tests to make code pass
-- **Don't** make assumptions about what's acceptable in production
-- **Don't** auto-apply changes without review
-- **Don't** treat compliance requirements as negotiable
-- **Don't** propose changes requiring manual intervention in production
-
----
-
-## CI/CD & GitHub Actions
-
-Continuous Integration and Continuous Deployment are fundamental to modern software delivery. Every repository should have automated testing, linting, and release management.
-
-### Reference Implementation
-
-For a complete, production-ready GitHub Actions workflow, see:
-
-**[GitHub Actions Reference Implementation](GitHubActionsReference.md)**
-
-This reference provides:
-- ✅ Automated testing on every push and PR
-- ✅ Linting with both golangci-lint and namedreturns
-- ✅ Semantic versioning with automatic tag creation
-- ✅ Automatic GitHub releases on main branch
-- ✅ Docker layer and Go module caching for speed
-- ✅ Proper permissions management
-
-### Key Requirements
-
-Every Go project should have a `.github/workflows/ci.yml` that:
-
-1. **Runs tests** - `make test` must pass
-2. **Runs linting** - Both `golangci-lint` AND `namedreturns`
-3. **Caches dependencies** - Go modules and Docker layers
-4. **Enforces branch protection** - Tests must pass before merge
-5. **Automates releases** - Tag and publish on main branch pushes
+1. Runs tests (`make test`)
+2. Runs linting (both `golangci-lint` and `namedreturns`)
+3. Caches dependencies (Go modules and Docker layers)
+4. Enforces branch protection (tests must pass before merge)
+5. Automates releases (tag and publish on main branch)
 
 ### Essential Makefile Targets
 
@@ -883,24 +692,53 @@ lint:
 	golangci-lint run
 ```
 
-### Why This Matters
+### Reference Implementation
 
-- **Consistency**: Every project follows the same patterns
-- **Quality**: No code reaches main without passing tests and lints
-- **Speed**: Caching reduces build times from minutes to seconds
-- **Automation**: Releases happen automatically, reducing human error
-- **Visibility**: GitHub Actions provides clear feedback on PRs
-
-See the [complete reference](GitHubActionsReference.md) for detailed configuration, customization options, and troubleshooting.
-
----
-
-## Remember
-
-Every decision has security, compliance, and reliability implications. When uncertain about whether something meets standards, err on the side of caution and ask.
-
-Excellence is not optional. It's a practice, a discipline, and ultimately, a habit. Make it yours.
+See [GitHub Actions Reference Implementation](GitHubActionsReference.md) for:
+- Automated testing on every push and PR
+- Linting with both golangci-lint and namedreturns
+- Semantic versioning with automatic tag creation
+- Automatic GitHub releases on main branch
+- Docker layer and Go module caching
+- Proper permissions management
 
 ---
 
-*"I will find a way, or I will make one."* - Hannibal Barca
+## For AI Agents
+
+This section contains instructions for AI coding assistants working with this codebase.
+
+### Communication
+
+- Be direct and technical
+- Don't sugar-coat problems
+- Assume the user understands the technology
+- Skip pleasantries, focus on substance
+- If you don't know something, say so clearly
+
+### Constraints
+
+- Don't propose "quick fixes" that bypass established processes
+- Don't suggest disabling linters or tests to make code pass
+- Don't make assumptions about what's acceptable in production
+- Don't auto-apply changes without review
+- Don't treat compliance requirements as negotiable
+- Don't propose changes requiring manual intervention in production
+- Don't commit or push to git without explicit instruction
+
+### Code Changes
+
+- Read existing code before suggesting modifications
+- Verify changes comply with the project's golangci-lint configuration
+- Always include tests with new functionality
+- Add tests proactively, even if not explicitly requested
+
+### Investigation
+
+- Read the actual code—don't pattern-match to common scenarios
+- If told to examine specific code, read it first before making suggestions
+- Organizations often have custom implementations that don't follow typical patterns
+
+---
+
+Every decision has security, compliance, and reliability implications. When uncertain, err on the side of caution.
