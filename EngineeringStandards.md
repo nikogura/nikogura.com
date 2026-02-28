@@ -476,45 +476,9 @@ In Kubernetes, pods are mortal. They're expected to run, die, and be replaced. A
 
 ### GitOps
 
-GitOps is the practice of controlling infrastructure declaratively through Git.
+See [GitOps](GitOps.md) for the full treatment. The short version:
 
-`kubectl apply` and `helm install` are not GitOps. If you're using these commands directly against a cluster, you're manually managing infrastructure and losing the audit trail, reproducibility, and drift correction that GitOps provides.
-
-**Core tenets:**
-1. Git is the single source of truth for desired state
-2. Changes to Git trigger changes to infrastructure
-3. Drift from desired state is automatically corrected
-4. Every change is auditable through commit history
-
-### Evaluate Before You Apply
-
-Never apply unevaluated resources to clusters:
-
-```bash
-# Avoid
-kubectl apply -f https://raw.githubusercontent.com/.../deploy.yaml
-helm install my-release some-chart
-kubectl apply -k <url>
-```
-
-Instead:
-1. Download and review manifests locally
-2. Use `helm template` to render charts, not `helm install`
-3. Understand how each resource affects your security posture
-4. Commit evaluated resources to Git
-5. Let a GitOps controller like [FluxCD](https://fluxcd.io) apply them
-
-This isn't bureaucracy—it's the difference between knowing what runs in your cluster and hoping for the best.
-
-### Control Repositories
-
-Control repositories contain Infrastructure as Code. VCS provides:
-- What change was made
-- Who made it
-- When it happened
-- How to roll back
-
-Code reviews on control repositories can be abbreviated compared to application code. The goal is communication and understanding, not rubber-stamp approvals.
+`kubectl apply` and `helm install` are not GitOps. They're SSH-ing into your cluster with extra steps. GitOps means a controller running in the cluster continuously reconciles actual state against desired state declared in git. If you don't have that reconciliation loop, you don't have GitOps --- you have automation, which is a different thing with different properties.
 
 ### Kubernetes Resource Management
 

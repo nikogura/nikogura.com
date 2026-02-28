@@ -19,7 +19,9 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 * [Fun Online Resume](NikOguraResume.md) A fun version of my career.  Less likely to put you to sleep.
 
-* [My Complete Resume](https://github.com/nikogura/nikogura.github.io/blob/master/nik-ogura-complete-resume.pdf?raw=true) A complete listing of what I've done in my career, in a more condensed format.
+* [GitOps Manifesto](GitOps.md) Everyone's heard the term.  Most appear to be doing it wrong.
+
+* [FluxCD vs ArgoCD](FluxVsArgoArchitecture.md) The two big Open Source CD Systems compared.
 
 * [Engineering Standards](EngineeringStandards.md) My philosophy on code standards - especially in Golang, and by inference on the rest of life.
 
@@ -64,5 +66,9 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 * [Kubernetes Shell Functions](KubernetesShellFunctions.md) Kubernetes commands can get painful to type.  These make it a lot easier to interact with a cluster.
 
 * [Talos Linux OIDC for AWS with Terraform](TalosAWSOIDC.md) Connect your Talos Kubernetes clusters to AWS via OIDC.
+
+* [GitOps](GitOps.md) kubectl apply and helm install are not GitOps. Why the distinction matters, what GitOps actually is, and why imperative cluster management is just SSH-ing into production with extra steps.
+
+* [FluxCD vs ArgoCD: Architectural Comparison](FluxVsArgoArchitecture.md) Deep architectural comparison of FluxCD and ArgoCD for Kubernetes platform engineers. Covers CRD models, state propagation, Argo's eight points of state divergence, controller deadlocks, and why Flux's distributed architecture avoids these failure modes.
 
 * [The Three Virtues of a Programmer](https://thethreevirtues.com/)  I didn't invent them.  I didn't put them online, but Perl was my first programming language, and I feverently believe that these are virtues we should all embrace.
