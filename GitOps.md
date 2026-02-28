@@ -6,7 +6,7 @@ I hear it all the time. "Yeah, we do GitOps." Then I watch someone `kubectl appl
 
 That's not GitOps. That's a human applying a file to a cluster. The fact that the file came from a git repository doesn't make it GitOps any more than printing an email makes it a fax.
 
-We spent years as an industry learning that SSH-ing into production servers to make changes was a bad idea. No audit trail. No reproducibility. No way to know what changed, when, or by whom. No way to roll back except "SSH in again and hope you remember what it looked like before." We replaced that with configuration management, immutable infrastructure, and infrastructure as code.
+We spent years as an industry learning that SSH-ing into production servers to make changes was a bad idea. No audit trail. No reproducibility. No way to really know what changed, when, or by whom. You may have some idea from logs and file permissions, but it's a tenuous trail at best.  No way to roll back except "SSH in again and hope you remember what it looked like before." We replaced that with configuration management, immutable infrastructure, and infrastructure as code.
 
 `kubectl apply` from a laptop is the same thing wearing a Kubernetes t-shirt. You're SSH-ing into your cluster with extra steps. The manifest might be version-controlled, but the act of applying it isn't. The cluster doesn't know where the change came from, whether it was reviewed, or whether it matches what's in git. You've reproduced every problem we solved by getting off of production servers, just in a different context.
 
@@ -42,13 +42,13 @@ With `kubectl apply`, the audit trail is "someone ran a command at some point." 
 
 ### Reproducibility
 
-If your cluster catches fire, can you rebuild it? With GitOps, the answer is definitionally yes. Stand up a new cluster, point the controller at the same git repository, and walk away. The controller will converge the new cluster to the desired state.
+If your cluster catches fire, can you rebuild it? With GitOps, the answer is definitely yes. Stand up a new cluster, point the controller at the same git repository, and walk away. The controller will converge the new cluster to the desired state.
 
 With imperative `kubectl apply`, rebuilding means someone remembers (or discovers) which files to apply, in what order, with what flags. Maybe they documented it. Maybe they didn't. Maybe the docs are out of date. Do you want to bet your infrastructure on "maybe"?
 
 ### Drift Detection and Correction
 
-Production clusters drift. Someone scales a deployment manually during an incident and forgets to revert it. Someone edits a ConfigMap to test something. A CRD webhook mutates a resource in a way nobody expected. These things happen in every cluster, every week.
+Production clusters drift. Someone scales a deployment manually during an incident and forgets to revert it. Someone edits a ConfigMap to test something. A CRD webhook mutates a resource in a way nobody expected. These things happen in every cluster, every week.  Even the act of running causes drift - Those pristine volumes are filling up with logs.
 
 With GitOps, drift is detected and corrected automatically. The controller sees the difference between what git says and what the cluster has, and it fixes it. You don't need to discover the drift. You don't need to remember to fix it. It just converges.
 
@@ -120,7 +120,7 @@ Instead:
 
 4. **Let the controller apply them.** The GitOps controller picks up the commit and applies the resources. You never touch `kubectl apply`.
 
-This isn't bureaucracy. It's the difference between knowing what runs in your cluster and hoping for the best.
+This isn't bureaucracy. It's the difference between knowing what runs in your cluster and hoping for the best.  Hope is not a strategy.
 
 ## The Security Problem with Blind Application
 
