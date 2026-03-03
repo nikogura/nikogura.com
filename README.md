@@ -71,4 +71,8 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 * [FluxCD vs ArgoCD: Architectural Comparison](FluxVsArgoArchitecture.md) Deep architectural comparison of FluxCD and ArgoCD for Kubernetes platform engineers. Covers CRD models, state propagation, Argo's eight points of state divergence, controller deadlocks, and why Flux's distributed architecture avoids these failure modes.
 
+* [Puppets and Octopi](PuppetsAndOctopi.md) Why top-down orchestration hits a wall. The fundamental difference between imperative orchestration and declarative convergence, and why no amount of doing the former "right" fixes the scaling limit.
+
+* [The Best Dog Trainer in the World](TheBestDogTrainer.md) You can be the best dog trainer in the world. Your cat doesn't care. Why "try harder" and "get better" don't help when you're solving the wrong problem.
+
 * [The Three Virtues of a Programmer](https://thethreevirtues.com/)  I didn't invent them.  I didn't put them online, but Perl was my first programming language, and I feverently believe that these are virtues we should all embrace.
