@@ -69,6 +69,10 @@ Opinions on how to write software, run teams, and think about problems. Some of 
 
 Open source tools I've built and maintain.
 
+* [kubectl-ssh-oidc](https://github.com/nikogura/kubectl-ssh-oidc) Kubernetes CLI plugin for passwordless, SSH-key-based cluster authentication via OIDC. Users authenticate with their SSH keys instead of passwords or browser-based OAuth flows. Works with a companion Dex SSH connector.
+
+* [Dex (SSH Connector Fork)](https://github.com/nikogura/dex) Fork of the Dex OpenID Connect identity provider adding a custom SSH connector. Enables SSH-key-based authentication to Kubernetes clusters via JWT token exchange or challenge/response --- no certificates, no passwords, no browser redirects.
+
 * [RBAC Expiry Operator](https://github.com/nikogura/rbac-expiry-operator) Kubernetes operator for time-limited RBAC grants with automatic expiration, drift correction, and Prometheus metrics. Includes a kubectl plugin for grant management. Solves a compliance gap Kubernetes doesn't address natively.
 
 * [Hasura Operator](https://github.com/nikogura/hasura-operator) Kubernetes Operator for declarative Hasura GraphQL deployment and management. Makes Hasura GitOps-ready.
