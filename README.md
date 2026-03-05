@@ -11,69 +11,21 @@ I though, you know what?  I explain these various experiences so often to variou
 
 Joel Spolsky of [Joel On Software](https://www.joelonsoftware.com) fame wrote that documentation that nobody reads is useless, and therefore you had to make it easy on your readers.  This is advice I've taken to heart, and I always try to follow it.  To quote the late, great George Carlin, "My job is to entertain *and* inform."
 
-So here it is.  I'm not giving away any sort of private information.  Everyone within earshot of me when a particular point was brought up has probably heard the stories enough to repeat them by heart.  
+So here it is.  I'm not giving away any sort of private information.  Everyone within earshot of me when a particular point was brought up has probably heard the stories enough to repeat them by heart.
 
 Sorry about that.  I can't resist a good story, even if the cashier at Chevron really doesn't want to hear about asymmetric encryption right now...
 
+---
+
 # Contents
 
-* [Fun Online Resume](NikOguraResume.md) A fun version of my career.  Less likely to put you to sleep.
+## Resume
 
-* [GitOps Manifesto](GitOps.md) Everyone's heard the term.  Most appear to be doing it wrong.
+* [Fun Online Resume](NikOguraResume.md) A fun version of my career. Less likely to put you to sleep.
 
-* [FluxCD vs ArgoCD](FluxVsArgoArchitecture.md) The two big Open Source CD Systems compared.
+## Observability
 
-* [Engineering Standards](EngineeringStandards.md) My philosophy on code standards - especially in Golang, and by inference on the rest of life.
-
-* [GitHub Actions Reference](GitHubActionsReference.md) Reference implementation for GitHub Actions CI/CD pipelines with automated testing, linting, semantic versioning, and release management.
-
-* [Named Returns](https://github.com/nikogura/namedreturns) Linter enforcing the use of named returns in Go functions. Named returns improve code readability and make function signatures more self-documenting.
-
-* [DBT: Dynamic Binary Toolkit- Tools that keep themselves up to date!](DBT.md) *Never ask your users to update to the latest version again.*
-
-* [Gomason CI/CD in your pocket](https://github.com/nikogura/gomason) *Want to test locally?  Build, Sign, and publish binaries?  Here you go.*
-
-* [Hasura Operator](https://github.com/nikogura/hasura-operator) Kubernetes Operator for declarative Hasura GraphQL deployment and management. Makes Hasura GitOps-ready.
-
-* [K8s Cluster Manager](https://github.com/nikogura/k8s-cluster-manager) Kubernetes cluster lifecycle management tool for provisioning and managing multiple clusters.
-
-* [Diagnostic Slackbot](https://github.com/nikogura/diagnostic-slackbot) AI-powered Slack bot for automated infrastructure diagnostics. Analyzes WAF logs, Kubernetes events, and system metrics.  Allows users to interact with it via slack, and leverage a curated list of prompts that can be tuned for your specific infrastructure.
-
-* [Resume Tailor](https://github.com/nikogura/resume-tailor) AI-powered tool for generating tailored resumes and cover letters from structured achievements using Claude API.
-
-* [Managed Secrets](https://github.com/nikogura/managed-secrets) A YAML Interface on Hashicorp Vault
-
-* [TDD](TDD.md) *Test Driven Development Manifesto*
-
-* [Python](Python.md) *Python Development Tips*
-
-* [LocalEnv](LocalEnv.md) *Trick for syncing a CLI environment with your IDE*
-
-* [IAM Beyond AWS](IAM-Beyond_AWS.md) *Something I did recently that's both nasty and beautiful, but most of all useful!*
-
-* [Distributing Java Binaries via Homebrew](https://github.com/nikogura/homebrew-formula-plugin)  *A Maven plugin for writing homebrew formulae from templates.  Useful if you want to install executable jars via Homebrew and have them **just work** like any other Homebrew-installed tool.*
-
-* [One Script OpenStack Installer](OpenStackLibertyInstaller.md)  *The hardest parts of OpenStack are 1: setting it up and 2: upgrading it.  Here's a way I solved problem #1 and paved the way to handle #2.*
-
-* [Using CircleCI as if it was a Maven Repo](CircleCIMaven.md)  *Using CircleCI?  Don't have a private Maven repo?  Check this out.*
-
-* [LDAP for people with better things to do than master LDAP](AccessAndIdentityMadeEasy.md) *LDAP can be painful, but everything already knows how to connect to it.  Why not connect all the things?*
-
-* [Documentation](Documentation.md) My documentation manifesto.  How I do docs, and why you might want to consider doing something similar.
-
-* [Terraform Auto AMI Rolling Window](TerraformRollingWindow.md) Auto updating AMI's with a configurable rolling window so we can stay up to date, but not necessarily bleeding edge.
-
-* [Kubernetes Shell Functions](KubernetesShellFunctions.md) Kubernetes commands can get painful to type.  These make it a lot easier to interact with a cluster.
-
-* [Talos Linux OIDC for AWS with Terraform](TalosAWSOIDC.md) Connect your Talos Kubernetes clusters to AWS via OIDC.
-
-* [GitOps](GitOps.md) kubectl apply and helm install are not GitOps. Why the distinction matters, what GitOps actually is, and why imperative cluster management is just SSH-ing into production with extra steps.
-
-* [FluxCD vs ArgoCD: Architectural Comparison](FluxVsArgoArchitecture.md) Deep architectural comparison of FluxCD and ArgoCD for Kubernetes platform engineers. Covers CRD models, state propagation, Argo's eight points of state divergence, controller deadlocks, and why Flux's distributed architecture avoids these failure modes.
-
-* [Puppets and Octopi](PuppetsAndOctopi.md) Why top-down orchestration hits a wall. The fundamental difference between imperative orchestration and declarative convergence, and why no amount of doing the former "right" fixes the scaling limit.
-
-* [The Best Dog Trainer in the World](TheBestDogTrainer.md) You can be the best dog trainer in the world. Your cat doesn't care. Why "try harder" and "get better" don't help when you're solving the wrong problem.
+How monitoring, logging, and tracing actually work in production Kubernetes environments.
 
 * [Metrics, Logs, Traces, and Events](MetricsLogsTracesEvents.md) What makes each observability signal different, where they overlap, the cardinality problem, and how cross-signal correlation ties them together. Covers Prometheus, Loki, Tempo, and OpenTelemetry.
 
@@ -81,4 +33,74 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 * [Distributed Tracing](DistributedTracing.md) What distributed tracing is, how spans get produced and collected, the sampling problem, and how tracing fits alongside metrics, logs, and events. Covers OpenTelemetry, Jaeger, Grafana Tempo, and service mesh integration.
 
-* [The Three Virtues of a Programmer](https://thethreevirtues.com/)  I didn't invent them.  I didn't put them online, but Perl was my first programming language, and I feverently believe that these are virtues we should all embrace.
+## GitOps & Kubernetes
+
+Declarative infrastructure, continuous delivery, and the operational patterns that make Kubernetes manageable at scale.
+
+* [GitOps](GitOps.md) kubectl apply and helm install are not GitOps. Why the distinction matters, what GitOps actually is, and why imperative cluster management is just SSH-ing into production with extra steps.
+
+* [FluxCD vs ArgoCD: Architectural Comparison](FluxVsArgoArchitecture.md) Deep architectural comparison of FluxCD and ArgoCD for Kubernetes platform engineers. Covers CRD models, state propagation, Argo's eight points of state divergence, controller deadlocks, and why Flux's distributed architecture avoids these failure modes.
+
+* [Talos Linux OIDC for AWS with Terraform](TalosAWSOIDC.md) Connect your Talos Kubernetes clusters to AWS via OIDC.
+
+* [Kubernetes Shell Functions](KubernetesShellFunctions.md) Kubernetes commands can get painful to type. These make it a lot easier to interact with a cluster.
+
+* [GitHub Actions Reference](GitHubActionsReference.md) Reference implementation for GitHub Actions CI/CD pipelines with automated testing, linting, semantic versioning, and release management.
+
+* [Terraform Auto AMI Rolling Window](TerraformRollingWindow.md) Auto updating AMI's with a configurable rolling window so we can stay up to date, but not necessarily bleeding edge.
+
+## Engineering Philosophy
+
+Opinions on how to write software, run teams, and think about problems. Some of these are about code. Some are about cats.
+
+* [Puppets and Octopi](PuppetsAndOctopi.md) Why top-down orchestration hits a wall. The fundamental difference between imperative orchestration and declarative convergence, and why no amount of doing the former "right" fixes the scaling limit.
+
+* [The Best Dog Trainer in the World](TheBestDogTrainer.md) You can be the best dog trainer in the world. Your cat doesn't care. Why "try harder" and "get better" don't help when you're solving the wrong problem.
+
+* [Engineering Standards](EngineeringStandards.md) My philosophy on code standards - especially in Golang, and by inference on the rest of life.
+
+* [TDD](TDD.md) *Test Driven Development Manifesto*
+
+* [Documentation](Documentation.md) My documentation manifesto. How I do docs, and why you might want to consider doing something similar.
+
+* [The Three Virtues of a Programmer](https://thethreevirtues.com/) I didn't invent them. I didn't put them online, but Perl was my first programming language, and I feverently believe that these are virtues we should all embrace.
+
+## Tools & Projects
+
+Open source tools I've built and maintain.
+
+* [RBAC Expiry Operator](https://github.com/nikogura/rbac-expiry-operator) Kubernetes operator for time-limited RBAC grants with automatic expiration, drift correction, and Prometheus metrics. Includes a kubectl plugin for grant management. Solves a compliance gap Kubernetes doesn't address natively.
+
+* [Hasura Operator](https://github.com/nikogura/hasura-operator) Kubernetes Operator for declarative Hasura GraphQL deployment and management. Makes Hasura GitOps-ready.
+
+* [K8s Cluster Manager](https://github.com/nikogura/k8s-cluster-manager) Kubernetes cluster lifecycle management tool for provisioning and managing multiple clusters.
+
+* [Diagnostic Slackbot](https://github.com/nikogura/diagnostic-slackbot) AI-powered Slack bot for automated infrastructure diagnostics. Analyzes WAF logs, Kubernetes events, and system metrics. Allows users to interact with it via slack, and leverage a curated list of prompts that can be tuned for your specific infrastructure.
+
+* [Resume Tailor](https://github.com/nikogura/resume-tailor) AI-powered tool for generating tailored resumes and cover letters from structured achievements using Claude API.
+
+* [Named Returns](https://github.com/nikogura/namedreturns) Linter enforcing the use of named returns in Go functions. Named returns improve code readability and make function signatures more self-documenting.
+
+* [DBT: Dynamic Binary Toolkit](DBT.md) *Never ask your users to update to the latest version again.* Tools that keep themselves up to date.
+
+* [Gomason](https://github.com/nikogura/gomason) CI/CD in your pocket. Build, sign, and publish Go binaries locally.
+
+* [Managed Secrets](https://github.com/nikogura/managed-secrets) A YAML interface on Hashicorp Vault.
+
+## Reference & Legacy
+
+Older pieces that are still useful in the right context.
+
+* [IAM Beyond AWS](IAM-Beyond_AWS.md) *Something I did recently that's both nasty and beautiful, but most of all useful!*
+
+* [Python](Python.md) *Python Development Tips*
+
+* [LocalEnv](LocalEnv.md) *Trick for syncing a CLI environment with your IDE*
+
+* [LDAP for people with better things to do than master LDAP](AccessAndIdentityMadeEasy.md) *LDAP can be painful, but everything already knows how to connect to it. Why not connect all the things?*
+
+* [One Script OpenStack Installer](OpenStackLibertyInstaller.md) *The hardest parts of OpenStack are 1: setting it up and 2: upgrading it. Here's a way I solved problem #1 and paved the way to handle #2.*
+
+* [Using CircleCI as if it was a Maven Repo](CircleCIMaven.md) *Using CircleCI? Don't have a private Maven repo? Check this out.*
+
+* [Distributing Java Binaries via Homebrew](https://github.com/nikogura/homebrew-formula-plugin) *A Maven plugin for writing homebrew formulae from templates. Useful if you want to install executable jars via Homebrew and have them **just work** like any other Homebrew-installed tool.*
