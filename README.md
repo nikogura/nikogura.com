@@ -75,6 +75,8 @@ Sorry about that.  I can't resist a good story, even if the cashier at Chevron r
 
 * [The Best Dog Trainer in the World](TheBestDogTrainer.md) You can be the best dog trainer in the world. Your cat doesn't care. Why "try harder" and "get better" don't help when you're solving the wrong problem.
 
+* [Metrics, Logs, Traces, and Events](MetricsLogsTracesEvents.md) What makes each observability signal different, where they overlap, the cardinality problem, and how cross-signal correlation ties them together. Covers Prometheus, Loki, Tempo, and OpenTelemetry.
+
 * [Prometheus and OpenTelemetry](PrometheusAndOpenTelemetry.md) How Prometheus and OpenTelemetry fit together --- what each one does, where they overlap, where they don't, and the practical migration path from Prometheus-only to a unified OTel pipeline.
 
 * [Distributed Tracing](DistributedTracing.md) What distributed tracing is, how spans get produced and collected, the sampling problem, and how tracing fits alongside metrics, logs, and events. Covers OpenTelemetry, Jaeger, Grafana Tempo, and service mesh integration.
