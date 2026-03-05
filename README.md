@@ -85,7 +85,7 @@ Open source tools I've built and maintain.
 
 * [Named Returns](https://github.com/nikogura/namedreturns) Linter enforcing the use of named returns in Go functions. Named returns improve code readability and make function signatures more self-documenting.
 
-* [DBT: Dynamic Binary Toolkit](DBT.md) *Never ask your users to update to the latest version again.* Tools that keep themselves up to date.
+* [DBT: Dynamic Binary Toolkit](DBT.md) A framework for distributing self-updating signed binaries. Users always run the latest version without manual upgrades --- the tool checks for updates, verifies signatures, and replaces itself transparently.
 
 * [Gomason](https://github.com/nikogura/gomason) CI/CD in your pocket. Build, sign, and publish Go binaries locally.
 
