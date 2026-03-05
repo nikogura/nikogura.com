@@ -177,6 +177,28 @@ Within a GitOps model, you'll manage Kubernetes resources with one or more of th
 
 You'll encounter all four. They all have their place. The key discipline is the same regardless of which you choose: render locally, review the output, commit the result (or the inputs that produce it), and let the controller apply it.
 
+## What About Flux HelmRelease?
+
+This is the obvious question. If `helm install` and `helm upgrade` aren't GitOps because they're imperative actions performed by something outside the cluster, does Flux's HelmRelease CRD fix the problem?
+
+Partially. HelmRelease is a Kubernetes custom resource that declares a Helm release as a desired state object. You commit a HelmRelease manifest to git with a pinned chart version and values, and the Flux helm-controller reconciles it continuously --- installing, upgrading, and correcting drift the same way the kustomize-controller reconciles Kustomizations. The chart version is declared in git. The values are declared in git (inline or via ConfigMap/Secret references). The controller runs inside the cluster, watches for changes, and converges. If someone manually modifies a resource that Helm manages, the controller detects the drift and corrects it. That's real GitOps. It has the reconciliation loop. It has drift correction. It has an audit trail in git. It's a significant improvement over `helm upgrade` from a CI pipeline.
+
+But it has a fundamental transparency problem.
+
+When you commit Jsonnet, Kustomize overlays, or even bare YAML to a control repository, the PR diff shows you exactly what Kubernetes resources will change. You can read the diff, reason about it, and approve or reject it with full knowledge of what's about to happen. The resources are explicit. The review is meaningful.
+
+When you change a HelmRelease's chart version from `1.2.3` to `1.2.4`, the PR diff shows you that one line changed. What does that version bump actually do? What resources get added, modified, or removed? What RBAC grants changed? What new containers are being deployed? You don't know, because the Helm chart is a bundle of templates that get rendered at runtime inside the cluster. The rendering happens after the merge, not before.
+
+You can mitigate this. Run `helm template` locally before committing, diff the output, review it. Some teams commit the rendered output alongside the HelmRelease as documentation. But that's discipline, not a guarantee. The system doesn't enforce it. The controller will happily apply whatever the chart renders, reviewed or not.
+
+There's a deeper issue. Helm templates can use `.Capabilities` lookups to query the cluster's API server version and available APIs. They can use `lookup` functions to read existing resources. They can have conditional logic that produces different output depending on what's already running. The same chart version with the same values can render different resources on different clusters, or even on the same cluster at different times. That's non-deterministic by design. It's a feature of Helm's templating language, and HelmRelease inherits it.
+
+This doesn't make HelmRelease useless. For consuming third-party charts --- cert-manager, ingress-nginx, Prometheus operator --- it's often the pragmatic choice. Maintaining your own fork of every upstream chart's rendered YAML is expensive, and HelmRelease with pinned versions and explicit values is a reasonable tradeoff between control and maintenance burden. You're trusting the chart maintainer, but you're doing so declaratively, with version pinning, and with drift correction.
+
+For your own infrastructure, though --- the things you control, the things you build, the things you're responsible for at 3 AM --- render it yourself. Commit the actual resources. Review the actual diff. Know exactly what's running. HelmRelease gives you GitOps mechanics (reconciliation, drift correction, audit trail), but it trades away the full visibility that makes GitOps valuable in the first place. A reconciliation loop that converges toward a state you can't fully inspect before it's applied is better than no reconciliation loop at all, but it's not as good as one where every resource is explicit in git.
+
+The hierarchy is clear: raw `helm install` from a laptop is the worst. `helm upgrade` from a CI pipeline is better. HelmRelease with pinned versions is better still. Rendered manifests in git with a GitOps controller is the gold standard. Choose the level of rigor appropriate to the blast radius of what you're deploying.
+
 ## The Point
 
 GitOps is not a branding exercise. It's not "we keep files in git." It's a specific operational model with specific properties: audit trail, reproducibility, drift correction, and safe rollback. Those properties come from the reconciliation loop --- a controller in the cluster continuously converging actual state toward desired state.
