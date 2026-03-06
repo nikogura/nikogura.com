@@ -53,6 +53,8 @@ Declarative infrastructure, continuous delivery, and the operational patterns th
 
 Opinions on how to write software, run teams, and think about problems. Some of these are about code. Some are about cats.
 
+* [Security Is Infrastructure](SecurityIsInfrastructure.md) Security and infrastructure aren't two disciplines that overlap. They're one discipline that companies have artificially separated. Why you can't lock a door in a wall that isn't there.
+
 * [Puppets and Octopi](PuppetsAndOctopi.md) Why top-down orchestration hits a wall. The fundamental difference between imperative orchestration and declarative convergence, and why no amount of doing the former "right" fixes the scaling limit.
 
 * [The Best Dog Trainer in the World](TheBestDogTrainer.md) You can be the best dog trainer in the world. Your cat doesn't care. Why "try harder" and "get better" don't help when you're solving the wrong problem.
