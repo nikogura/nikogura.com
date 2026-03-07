@@ -53,6 +53,8 @@ Declarative infrastructure, continuous delivery, and the operational patterns th
 
 Opinions on how to write software, run teams, and think about problems. Some of these are about code. Some are about cats.
 
+* ["Design Me a Highly Resilient Database"](DatabaseDesign.md) There is no such thing as a "highly resilient database" in the abstract. Why the right database is intrinsically linked to the product, its data, its queries, and its failure modes --- and the business cost of treating database selection as trivia.
+
 * [Security Is Infrastructure](SecurityIsInfrastructure.md) Security and infrastructure aren't two disciplines that overlap. They're one discipline that companies have artificially separated. Why you can't lock a door in a wall that isn't there.
 
 * [Puppets and Octopi](PuppetsAndOctopi.md) Why top-down orchestration hits a wall. The fundamental difference between imperative orchestration and declarative convergence, and why no amount of doing the former "right" fixes the scaling limit.
