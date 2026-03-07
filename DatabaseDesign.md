@@ -12,7 +12,7 @@ His answer: "Whatever.  Your choice."
 
 So I chose.  I come from fintech.  U.S. Bank.  Apple Pay.  Environments where if a transaction says it committed, it *committed*, or somebody's money disappears and regulators start asking uncomfortable questions.  I laid out CloudNativePG on Kubernetes backed by S3-compatible object storage for WAL archiving — giving you 11 nines of durability on your backups, automated failover, point-in-time recovery, and the ability to restore a cluster from nothing but an S3 bucket and a manifest.  ACID-compliant.  Battle-tested.  Running in production right now under real money.
 
-The answer he was looking for was Cassandra.  "You'd have a hard time having it NOT be resilient."
+The answer he was looking for was 'Cassandra'.  "You'd have a hard time having it NOT be resilient."
 
 I failed the interview.
 
