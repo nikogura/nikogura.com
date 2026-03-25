@@ -95,6 +95,10 @@ Open source tools I've built and maintain.
 
 * [Managed Secrets](https://github.com/nikogura/managed-secrets) A YAML interface on Hashicorp Vault.
 
+## Web3 & Cryptocurrency
+
+* [Web3 Is Just Infrastructure With a Hoodie](Web3ForInfraEngineers.md) Everything in Web3 is something you already know, rebranded. A guide for infrastructure and cryptography engineers mapping blockchain concepts to their traditional equivalents --- and why wallet signing is just SSH auth v2.
+
 ## Reference & Legacy
 
 Older pieces that are still useful in the right context.
