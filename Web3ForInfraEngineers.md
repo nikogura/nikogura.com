@@ -4,7 +4,11 @@ Everything in Web3 is something you already know. It's wearing a hoodie, it grew
 
 I've spent my career building cryptographic infrastructure: PKI at U.S. Bank, Vault-backed certificate authorities at Orion Labs, managed secrets systems at Scribd, and most recently, the entire security and infrastructure stack for a cryptocurrency trading platform handling real customer funds across multiple hybrid cloud and bare-metal Kubernetes clusters. I also built [kubectl-ssh-oidc](https://github.com/nikogura/kubectl-ssh-oidc) and a [Dex SSH connector](https://github.com/nikogura/dex), which bridge SSH key identity into OIDC tokens via RFC 8693 token exchange. I built [DBT](DBT.md), which implements a full chain-of-trust for signed binary distribution. Every one of these systems solves the same fundamental problem that blockchains solve: prove who you are, prove you authorized this action, and make it verifiable by anyone without trusting a central authority more than you have to.
 
-The thesis of this piece is simple: **wallet signing is SSH authentication v2.** The same ECDSA private key that proves your identity in an SSH handshake proves your ownership of funds in a blockchain transaction. The only differences are the serialization format and the curve parameters. If you understand SSH, you understand wallets. If you understand Vault, you understand on-chain key management. If you understand GitOps, you understand why blockchains care so much about deterministic state.
+The thesis of this piece is simple: **wallet signing is SSH authentication v2.** The same ECDSA private key that proves your identity in an SSH handshake proves your ownership of funds in a blockchain transaction. The only differences are the serialization format and the curve parameters. 
+
+If you understand SSH, you understand wallets. Heck, a Solana Wallet *is* an ED25519 private key.  You can use the same key on chain that you use to access a remote server.  
+
+If you understand Vault, you understand on-chain key management. If you understand GitOps, you understand why blockchains care so much about deterministic state.
 
 Let me show you.
 
