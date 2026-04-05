@@ -1,0 +1,80 @@
+import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
+import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from 'astro/config';
+import siteConfig from './src/data/site-config';
+
+// https://astro.build/config
+export default defineConfig({
+    site: siteConfig.website,
+    vite: {
+        plugins: [tailwindcss()]
+    },
+    integrations: [mdx(), sitemap()],
+    redirects: {
+        // Old Jekyll .md URLs -> new Astro blog paths
+        '/GitOps.md': '/blog/gitops/',
+        '/GitOps': '/blog/gitops/',
+        '/FluxVsArgoArchitecture.md': '/blog/flux-vs-argo/',
+        '/FluxVsArgoArchitecture': '/blog/flux-vs-argo/',
+        '/MetricsLogsTracesEvents.md': '/blog/metrics-logs-traces-events/',
+        '/MetricsLogsTracesEvents': '/blog/metrics-logs-traces-events/',
+        '/PrometheusAndOpenTelemetry.md': '/blog/prometheus-and-opentelemetry/',
+        '/PrometheusAndOpenTelemetry': '/blog/prometheus-and-opentelemetry/',
+        '/DistributedTracing.md': '/blog/distributed-tracing/',
+        '/DistributedTracing': '/blog/distributed-tracing/',
+        '/DatabaseDesign.md': '/blog/database-design/',
+        '/DatabaseDesign': '/blog/database-design/',
+        '/SecurityIsInfrastructure.md': '/blog/security-is-infrastructure/',
+        '/SecurityIsInfrastructure': '/blog/security-is-infrastructure/',
+        '/PuppetsAndOctopi.md': '/blog/puppets-and-octopi/',
+        '/PuppetsAndOctopi': '/blog/puppets-and-octopi/',
+        '/TheBestDogTrainer.md': '/blog/the-best-dog-trainer/',
+        '/TheBestDogTrainer': '/blog/the-best-dog-trainer/',
+        '/Web3ForInfraEngineers.md': '/blog/web3-for-infra-engineers/',
+        '/Web3ForInfraEngineers': '/blog/web3-for-infra-engineers/',
+        '/TalosAWSOIDC.md': '/blog/talos-aws-oidc/',
+        '/TalosAWSOIDC': '/blog/talos-aws-oidc/',
+        '/KubernetesShellFunctions.md': '/blog/kubernetes-shell-functions/',
+        '/KubernetesShellFunctions': '/blog/kubernetes-shell-functions/',
+        '/GitHubActionsReference.md': '/blog/github-actions-reference/',
+        '/GitHubActionsReference': '/blog/github-actions-reference/',
+        '/TerraformRollingWindow.md': '/blog/terraform-rolling-window/',
+        '/TerraformRollingWindow': '/blog/terraform-rolling-window/',
+        '/EngineeringStandards.md': '/blog/engineering-standards/',
+        '/EngineeringStandards': '/blog/engineering-standards/',
+        '/TDD.md': '/blog/tdd/',
+        '/TDD': '/blog/tdd/',
+        '/Documentation.md': '/blog/documentation/',
+        '/Documentation': '/blog/documentation/',
+        '/GolangDesignTips.md': '/blog/golang-design-tips/',
+        '/GolangDesignTips': '/blog/golang-design-tips/',
+        '/CodingStandards.md': '/blog/coding-standards/',
+        '/CodingStandards': '/blog/coding-standards/',
+        '/ManagedSecrets.md': '/blog/managed-secrets/',
+        '/ManagedSecrets': '/blog/managed-secrets/',
+        '/VaultOperator.md': '/blog/vault-operator/',
+        '/VaultOperator': '/blog/vault-operator/',
+        '/IAM-Beyond_AWS.md': '/blog/iam-beyond-aws/',
+        '/IAM-Beyond_AWS': '/blog/iam-beyond-aws/',
+        '/AccessAndIdentityMadeEasy.md': '/blog/access-and-identity-made-easy/',
+        '/AccessAndIdentityMadeEasy': '/blog/access-and-identity-made-easy/',
+        '/Python.md': '/blog/python-tips/',
+        '/Python': '/blog/python-tips/',
+        '/LocalEnv.md': '/blog/local-env/',
+        '/LocalEnv': '/blog/local-env/',
+        '/OpenStackLibertyInstaller.md': '/blog/openstack-liberty-installer/',
+        '/OpenStackLibertyInstaller': '/blog/openstack-liberty-installer/',
+        '/CircleCIMaven.md': '/blog/circleci-maven/',
+        '/CircleCIMaven': '/blog/circleci-maven/',
+        '/DBT.md': '/blog/dbt-dynamic-binary-toolkit/',
+        '/DBT': '/blog/dbt-dynamic-binary-toolkit/',
+        '/FITFO.md': '/blog/fitfo/',
+        '/FITFO': '/blog/fitfo/',
+        // Old resume paths
+        '/NikOguraResume.md': '/resume/',
+        '/NikOguraResume': '/resume/',
+        '/NikOguraResumeShortForm.md': '/resume/',
+        '/NikOguraResumeShortForm': '/resume/',
+    }
+});
