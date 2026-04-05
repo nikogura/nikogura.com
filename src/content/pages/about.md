@@ -17,7 +17,7 @@ In 2025 I founded [KATN Solutions](https://katn-solutions.io), an infrastructure
 
 ## What I Do
 
-My core expertise lies in Kubernetes, observability, security, GitOps, and Go. I design platforms that run in cloud, on-prem, and air-gapped environments. I build the tooling, automation, and security controls that let engineering teams ship with confidence. When something does not exist yet, I build it.
+My core expertise is in distributed systems and open source. I've been building distributed infrastructure since long before Kubernetes existed — by hand, from scratch. One of the reasons I like Kubernetes so much is how well it handles the distributed systems problems I spent years solving manually. These days I work across the full stack: Kubernetes, observability, security, GitOps, and Go. I design platforms that run in cloud, on-prem, and air-gapped environments. I build the tooling, automation, and security controls that let engineering teams ship with confidence. When something doesn't exist yet, I build it.
 
 ## Career Highlights
 
