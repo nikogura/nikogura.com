@@ -1,5 +1,5 @@
 ---
-title: 'FITFO (Figure It The Fuck Out)'
+title: 'FITFO - Figure It The (Fun?) Out'
 excerpt: A reflection on how learning to program as a small business owner built the FITFO skill -- the ability to figure things out from scratch -- which became the foundation of a DevOps career.
 publishDate: 'Jul 19 2022'
 tags:
@@ -24,4 +24,4 @@ Eventually this 'Jack of All Trades' background I'd developed acquired it own na
 
 See, technology is always changing, adapting, reinventing itself- or pretending to.  It doesn't really matter what you know.  Whatever it is, blink and it will change.  What matters is how fast you can learn.
 
-Learning - acquiring new knowledge - is the real name of the game.  Acquiring and assimilating new knowledge is the first half of FITFO.  In any situation worth your enormous
+Learning - acquiring new knowledge - is the real name of the game.  Acquiring and assimilating new knowledge is the first half of FITFO.  In any situation worth your (hopefully enormous) salary, is your ability to FITFO. 
