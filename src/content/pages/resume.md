@@ -7,7 +7,7 @@ seo:
 
 ## Professional Summary
 
-- **Distinguished Engineer and Director of Infrastructure / Security with 25+ years of experience in distributed systems, platform engineering, and infrastructure automation** across fintech, cryptocurrency, enterprise technology, and financial services, with deep expertise in Kubernetes, multi-cloud architecture (AWS, GCP, Azure, bare-metal), and modern cloud-native systems
+- **Distinguished Engineer and Founder of [KATN Solutions](https://katn-solutions.io) with 25+ years of experience in distributed systems, platform engineering, and infrastructure automation** across fintech, cryptocurrency, enterprise technology, and financial services, with deep expertise in Kubernetes, multi-cloud architecture (AWS, GCP, Azure, bare-metal), and modern cloud-native systems
 
 - **Platform Engineering and Distributed Systems Expert** specializing in multi-cloud Kubernetes infrastructure, real-time data processing systems, and cost optimization at scale — achieving 76% infrastructure cost reductions, 100x observability cost savings, and architecting platforms processing millions of cryptocurrency market data events daily across federated clusters. Over $1.2M in annual savings.
 
