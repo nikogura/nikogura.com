@@ -141,7 +141,7 @@ spec:
         namespace: '{{path.basename}}'
 ```
 
-This generates one Application per directory. Flux doesn't have a direct equivalent --- you'd use Kustomize overlays or a script generating Kustomization CRDs.
+This generates one Application per directory. Flux doesn't have a direct equivalent at the CRD level --- you'd use Kustomize overlays or a code-generation layer (Jsonnet, CUE, or scripted generation of Kustomization CRDs). The distinction matters: ApplicationSet is runtime templating inside the cluster, while Flux's equivalent is static generation at build time. Static generation produces reviewable artifacts in a PR; runtime templating produces resources you discover after they're applied. For teams that value auditability, the build-time approach is arguably better --- but it requires tooling outside of Flux itself.
 
 ## The Architectural Tradeoff
 
@@ -223,6 +223,8 @@ The centralized architecture creates failure modes that don't exist in Flux's di
 ### The Weaveworks Factor
 
 Weaveworks, the company behind FluxCD, shut down in early 2024. Flux is a CNCF graduated project and won't disappear, but the core team that drove most development worked at Weaveworks. Commercial support is gone. Development continues via community contributors, but velocity has slowed relative to Argo. For existing Flux deployments this isn't urgent, but for long-term ecosystem health it's a real consideration.
+
+That said, there's a structural reason the velocity gap matters less than it appears. Flux's architecture is largely *finished* --- the independent-controller model with CRD-based state is a stable design that doesn't generate the same volume of bug-fix and refactoring work. Much of Argo's higher commit velocity is spent patching the consequences of its centralized design: cache invalidation bugs, controller deadlocks, state synchronization between Redis and the API server. A slower-moving project that doesn't need the fixes is in a fundamentally different position than a slower-moving project that's falling behind.
 
 ## Bottom Line
 
