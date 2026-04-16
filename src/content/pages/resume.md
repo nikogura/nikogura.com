@@ -143,6 +143,7 @@ seo:
 - [Gomason](https://github.com/nikogura/gomason) — Clean-room CI testing locally. Listed in [Awesome-Go](https://github.com/avelino/awesome-go).
 - [Diagnostic Slackbot](https://github.com/nikogura/diagnostic-slackbot) — AI-powered Slack bot for automated operational diagnostics using Claude, achieving 85% MTTR reduction.
 - [Kubectl-SSH-OIDC](https://github.com/nikogura/kubectl-ssh-oidc) — kubectl plugin for passwordless authentication using SSH keys and [Dex IDP](https://github.com/nikogura/dex).
+- [imgctl](https://github.com/nikogura/imgctl) — Secure gRPC-based artifact promotion (container images + static content) with OIDC authentication and group-based authorization.
 - [Dex SSH Connector](https://github.com/nikogura/dex) — SSH authentication connector for Dex implementing OAuth2 Token Exchange (RFC 8693).
 - [Managed Secrets](https://github.com/nikogura/managed-secrets) — YAML interface on Hashicorp Vault for teams to manage secrets without production access.
 - [Hasura Operator](https://github.com/nikogura/hasura-operator) — Kubernetes Operator for declaratively managing Hasura GraphQL instances.
