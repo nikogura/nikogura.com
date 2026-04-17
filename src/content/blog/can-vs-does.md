@@ -61,9 +61,9 @@ The ratchet only turns one way. Adding complexity is easy. Any individual engine
 
 This is Murphy's playground. Complex systems fail in complex ways. Simple systems fail in simple ways. Simple failures are easy to diagnose, easy to fix, and easy to prevent from recurring. Complex failures cascade, interact, and surprise. You can reason about a simple system. You cannot reason about a complex one — you can only react to it.
 
-## Your Day Moves
+## "Your Day" Moves
 
-There is a class of techniques in martial arts I like to call "your day" moves. The techniques that work when you are fresh, focused, and in control are not the techniques that work when you are exhausted, surprised, and under pressure. Under pressure, you do not rise to the occasion. You fall to the level of your training. You fall to whatever is simple enough and practiced enough to survive the adrenaline, the tunnel vision, and the chaos.
+There is a class of techniques in the martial arts I like to call "your day" moves. The techniques that work when you are fresh, focused, and in control are not the techniques that work when you are exhausted, surprised, and under pressure. Under pressure, you do not rise to the occasion. You fall to the level of your training. You fall to whatever is simple enough and practiced enough to survive the adrenaline, the tunnel vision, and the chaos.
 
 Systems work the same way. The architecture that looks elegant in a design review is not the architecture that survives a production incident at 3 AM. Under pressure, timescales collapse. You do not have time to consult the runbook, trace the dependency graph, or remember which of twelve services handles the thing that is currently on fire. You fall to the level of whatever is simple enough to reason about when nothing is going right.
 
@@ -77,7 +77,7 @@ Complexity is a luxury of peacetime. Simplicity is a requirement of crisis. And 
 
 ## K.I.S.S.
 
-Keep It Simple, Stupid. The acronym is crude. The principle is profound.  It is also a warning.
+Keep It Simple, Stupid. The acronym is crude. The principle is profound.  Its advice, but it is also a warning.
 
 Simplicity is not the absence of capability. It is the absence of unnecessary capability. A system that does one thing well is simpler than a system that does ten things adequately. A process with three steps is simpler than a process with twelve steps, even if the twelve-step process covers more edge cases. The edge cases it covers are not free — they are bets, and each bet has a cost that compounds over time.
 
