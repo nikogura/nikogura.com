@@ -139,7 +139,7 @@ seo:
 
 ## Open Source Projects
 
-- [Dynamic Binary Toolkit (DBT)](https://github.com/nikogura/dbt) — Self-updating signed binary distribution system. Listed in [Awesome-Go](https://github.com/avelino/awesome-go).
+- [Dynamic Binary Toolkit (DBT)](https://github.com/nikogura/dynamic-binary-toolkit) — Self-updating signed binary distribution system. Listed in [Awesome-Go](https://github.com/avelino/awesome-go).
 - [Gomason](https://github.com/nikogura/gomason) — Clean-room CI testing locally. Listed in [Awesome-Go](https://github.com/avelino/awesome-go).
 - [Diagnostic Slackbot](https://github.com/nikogura/diagnostic-slackbot) — AI-powered Slack bot for automated operational diagnostics using Claude, achieving 85% MTTR reduction.
 - [Kubectl-SSH-OIDC](https://github.com/nikogura/kubectl-ssh-oidc) — kubectl plugin for passwordless authentication using SSH keys and [Dex IDP](https://github.com/nikogura/dex).

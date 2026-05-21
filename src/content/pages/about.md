@@ -35,6 +35,6 @@ At **Apple**, I led Apple Pay DevOps, architected the command and control system
 
 ## Open Source
 
-I maintain several open source projects listed in [Awesome-Go](https://github.com/avelino/awesome-go), including [Dynamic Binary Toolkit](https://github.com/nikogura/dbt) and [Go Mason](https://github.com/nikogura/gomason). Other projects include [Managed Secrets](https://github.com/nikogura/managed-secrets), [K8S Cluster Manager](https://github.com/nikogura/k8s-cluster-manager), and [NamedReturns](https://github.com/nikogura/namedreturns), a Go linter enforcing named returns.
+I maintain several open source projects listed in [Awesome-Go](https://github.com/avelino/awesome-go), including [Dynamic Binary Toolkit](https://github.com/nikogura/dynamic-binary-toolkit) and [Go Mason](https://github.com/nikogura/gomason). Other projects include [Managed Secrets](https://github.com/nikogura/managed-secrets), [K8S Cluster Manager](https://github.com/nikogura/k8s-cluster-manager), and [NamedReturns](https://github.com/nikogura/namedreturns), a Go linter enforcing named returns.
 
 For my full professional history, see my [resume](/resume). Find me on [GitHub](https://github.com/nikogura).

@@ -16,4 +16,4 @@ DBT is designed for organizations that distribute internal tooling to engineers,
 
 The toolkit pairs well with [Gomason](https://github.com/nikogura/gomason) for building and signing the binaries that DBT distributes, providing a complete pipeline from source code to self-updating deployment.
 
-GitHub: [https://github.com/nikogura/dbt](https://github.com/nikogura/dbt)
+GitHub: [https://github.com/nikogura/dynamic-binary-toolkit](https://github.com/nikogura/dynamic-binary-toolkit)

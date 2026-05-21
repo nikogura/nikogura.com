@@ -47,7 +47,7 @@ In short, here's what we need to do:
 
 At first I wrote about it, then I broke down and just _wrote_ it:
 
-[DBT Dynamic Binary Toolkit](https://github.com/nikogura/dbt)
+[DBT Dynamic Binary Toolkit](https://github.com/nikogura/dynamic-binary-toolkit)
     
 ## How it's Done
 
