@@ -30,11 +30,11 @@ I have run a lot of incidents, I have made every mistake described below at leas
 
 ## Where this comes from
 
-The framework described here did not start in software. It started in the US fire service, as the **Incident Command System (ICS)** — developed in the 1970s after a series of catastrophic California wildfires in which the failure was not the fire itself but the *coordination between agencies* responding to it. Different departments arrived with different vocabularies, different chains of command, and no shared notion of who was in charge. People died because of organizational confusion, not because the fire was unfightable.
+The framework described here did not start in software. It started in the US fire service, as the **[Incident Command System (ICS)](https://en.wikipedia.org/wiki/Incident_Command_System)** — developed in the 1970s after a series of catastrophic California wildfires in which the failure was not the fire itself but the *coordination between agencies* responding to it. Different departments arrived with different vocabularies, different chains of command, and no shared notion of who was in charge. People died because of organizational confusion, not because the fire was unfightable.
 
 ICS was the response. It is a standardized, role-based command structure that scales from a single-engine response up to a multi-agency, multi-jurisdiction disaster. It is now codified federally as part of the **National Incident Management System (NIMS)**, taught through FEMA's ICS-100 / 200 / 300 / 400 course series, and used by every fire department, EMS service, and emergency management agency in the United States.
 
-**Jesse Robbins** brought ICS into web operations during his time at Amazon, where his title was "Master of Disaster" and he was responsible for the availability of every property bearing the Amazon brand. Robbins is a volunteer firefighter and emergency manager — he deployed on the federal task force to Hurricane Katrina — and he distilled the operational discipline of the fire service into a model that the technology industry has been adopting ever since. He went on to co-found the **Velocity Conference** with Tim O'Reilly, where this model was popularized, and to found **Chef** (the configuration-management company). His framework is the upstream source of the incident response processes you now see at PagerDuty, Google SRE, Atlassian, and most mature operations organizations.
+**[Jesse Robbins](https://jesserobbins.com/)** brought ICS into web operations during his time at Amazon, where his title was "Master of Disaster" and he was responsible for the availability of every property bearing the Amazon brand. Robbins is a volunteer firefighter and emergency manager — he deployed on the federal task force to Hurricane Katrina — and he distilled the operational discipline of the fire service into a model that the technology industry has been adopting ever since. He went on to co-found the **Velocity Conference** with Tim O'Reilly, where this model was popularized, and to found **Chef** (the configuration-management company). His framework is the upstream source of the incident response processes you now see at PagerDuty, Google SRE, Atlassian, and most mature operations organizations.
 
 What follows is that model. It is opinionated. It is deliberately rigid. The rigidity is the feature. What's more, **it works**.
 
@@ -440,6 +440,8 @@ Game Days are how the muscle gets built. Without them, the first time the team u
 - **[FEMA ICS-100 Course Material (PDF)](https://www.usda.gov/sites/default/files/documents/ICS100.pdf)** — The upstream source. Free, federal, comprehensive. Worth understanding if you want to know *why* the roles are shaped the way they are.
 
 - **[Incident Command System — Wikipedia](https://en.wikipedia.org/wiki/Incident_Command_System)** — Overview of the full ICS structure, including the sections (Planning, Logistics, Finance) that the web-ops adaptation typically omits.
+
+- **[Jesse Robbins's site](https://jesserobbins.com/)** and his **[Topics page](https://jesserobbins.com/topics/)** — Robbins's personal site (bio, portfolio, mentions) and his topical writing on Master-of-Disaster work, Game Days, DevOps history, and the ops culture lineage this framework comes from.
 
 - **[Jesse Robbins — Wikipedia](https://en.wikipedia.org/wiki/Jesse_Robbins)** — Background on Robbins himself: Amazon "Master of Disaster," Chef co-founder, Velocity co-founder, volunteer firefighter, Katrina task force.
 
