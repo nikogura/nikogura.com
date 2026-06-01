@@ -1,7 +1,7 @@
 ---
 title: "There's More Than One Way to Get Observability Right"
 excerpt: "The specialize-versus-unify argument feels like a religious war. It isn't. Both sides are right — they're answering different questions. There are several ways to get observability right. The way to get it wrong is to never ask which one you're building for."
-publishDate: 'May 31 2026'
+publishDate: 'June 1 2026'
 tags:
   - Observability
   - Architecture
