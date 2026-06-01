@@ -43,7 +43,7 @@ Observability does two fundamentally different things, and we call them by the s
 | Speed | Seconds, no human | Hours, human-driven |
 | Defining virtue | Autonomy under partition | Arbitrary query depth |
 | Wants | Simple, local, independent signals | One wide, rich, queryable record |
-| Built for it | Prometheus / specialized stores | Columnar wide events / "2.0" |
+| Built for it | Prometheus / specialized stores | Columnar wide events / "Observability 2.0" |
 
 Look at the two camps again with this in hand. The specialized-stores people are describing the fast loop. The wide-events people are describing the slow loop. The argument feels irreconcilable because each side is *right* — about a different loop. They're not fighting over territory. They're standing in different rooms.
 
