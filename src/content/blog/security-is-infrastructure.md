@@ -10,7 +10,7 @@ isFeatured: true
 
 ## You Can't Lock a Door in a Wall That Isn't There
 
-I've blown interviews over this. More than once. The conversation is going well, we're deep into architecture, I'm drawing on a decade of building platforms and securing them, and then the question comes:
+I've blown interviews over this. More than once. The conversation is going well, we're deep into architecture, I'm drawing on 27+ years of building platforms and securing them, and then the question comes:
 
 "So, do you want to be in security, or in infrastructure?"
 
