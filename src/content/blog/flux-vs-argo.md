@@ -14,16 +14,18 @@ A deep comparison of the architectural differences between FluxCD and ArgoCD for
 
 ## Flux Architecture
 
-Flux is a set of independent controllers, each owning a CRD:
+Flux is a set of independent controllers, each owning one or more CRDs:
 
-```
-Sources (what to watch)          Reconcilers (what to do with it)
-─────────────────────           ─────────────────────────────────
-GitRepository                   Kustomization
-OCIRepository                   HelmRelease
-HelmRepository
-Bucket
-```
+| Controller | CRDs It Owns | What It Controls |
+| --- | --- | --- |
+| **source-controller** | `GitRepository`, `OCIRepository`, `HelmRepository`, `HelmChart`, `Bucket` | Fetches, verifies, and exposes artifacts from external sources --- git, OCI registries, Helm repos, and S3-compatible buckets --- as in-cluster artifacts the reconcilers consume. |
+| **kustomize-controller** | `Kustomization` | Builds a Kustomize overlay (or plain YAML) from a source artifact and applies it, with health checks, pruning of removed resources, and drift correction. |
+| **helm-controller** | `HelmRelease` | Renders and reconciles a Helm release declaratively from a chart + values --- install, upgrade, rollback, uninstall --- driven entirely by the desired state in git. |
+| **notification-controller** | `Receiver`, `Alert`, `Provider` | Inbound webhooks that trigger reconciliation (`Receiver`); outbound events and alerts dispatched to Slack, Teams, and other targets (`Alert` + `Provider`). |
+| **image-reflector-controller** | `ImageRepository`, `ImagePolicy` | Scans container registries and reflects image tag metadata into the cluster, selecting the latest tag per a declared policy. |
+| **image-automation-controller** | `ImageUpdateAutomation` | Writes updated image tags back to git, closing the loop so a new image becomes a committed, reviewable deployment change. |
+
+The split that matters is **sources** (what to watch --- `GitRepository`, `OCIRepository`, `HelmRepository`, `Bucket`) versus **reconcilers** (what to do with it --- `Kustomization`, `HelmRelease`). Each is a separate controller with its own lifecycle.
 
 Each controller runs independently. A `Kustomization` references a `GitRepository` as its source. A `HelmRelease` references a `HelmRepository` + chart. Dependencies between `Kustomizations` are expressed via `dependsOn`. There's no central server --- each controller watches its own CRDs and reconciles independently. State lives in the CRDs themselves (status subresource). You query state with `kubectl get kustomization` or `flux get all`.
 
