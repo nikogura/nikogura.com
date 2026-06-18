@@ -16,7 +16,7 @@ You got changes back, didn't you? A tag that drifted. A security-group rule some
 
 We call this Infrastructure as Code and treat it as a solved problem. It isn't. Most IaC implementations — Terraform, CDK, CloudFormation — are broken, and they're broken for two separate reasons that get collapsed into one. The first is structural, and almost nobody fixes it. The second is human, and almost nobody admits it.
 
-## The structural half: there is no loop
+## The Structural Half: There is No Loop
 
 These tools are one-shot. You declare a desired state, you run apply, and the tool makes the world match — *once*. Then it walks away. Nothing is watching after that.
 
@@ -30,7 +30,7 @@ Now look at the other model. A Kubernetes controller does not apply once and lea
 
 So the structural flaw is real: the popular IaC tools give you a snapshot when what you need is a control system. Reconciliation closes that gap. If the post stopped here, it would be just another "adopt GitOps" take, and it would be half wrong.
 
-## But reconciliation is only half the reason
+## But Reconciliation is only Half the Problem
 
 Here is where the GitOps evangelists stop, and they shouldn't, because a reconciliation loop bolted onto a broken implementation does not give you correct infrastructure. It gives you *incorrect infrastructure, faster, forever, with confidence*.
 
@@ -46,7 +46,7 @@ None of that is fixed by reconciliation. Point a control loop at a non-determini
 
 The thing that makes Infrastructure as Code trustworthy was never the tool. It's discipline. Determinism: the same inputs produce the same plan, every time, so a clean diff means something. A single source of truth: git, not a laptop, not the console, not tribal memory. Trunk-based change: small, reviewed commits, no branch permitted to become its own universe. Most shops have bought the tool and skipped the discipline, and then they blame the tool.
 
-## Why the two halves get confused
+## Why the Two Halves Get Confused
 
 People who have been burned by drift discover reconciliation, feel the relief, and declare the problem solved. They're half right.
 
@@ -54,7 +54,7 @@ People who have been burned by a broken Terraform codebase conclude "Terraform i
 
 The drift crowd is correct that you need a loop. The tool-switchers are correct that the implementations are broken. Neither group, alone, ends up with infrastructure you can trust, because the two problems are independent and you have to solve both.
 
-## What actually works
+## What Actually Works
 
 The combination, and only the combination.
 
@@ -68,7 +68,7 @@ Trunk-based change, small and reviewed. No branch gets to spend three months bec
 
 And the honest caveat, because there's always one: the loop raises the stakes on the spec. When a control system continuously enforces your declared state, it enforces your *mistakes* just as continuously — and faster than you can undo them by hand. Reconciliation is a force multiplier, and a force multiplier multiplies errors as eagerly as it multiplies correctness. That is precisely why the discipline half is not optional. A reconciliation loop without determinism behind it is a loaded gun with the safety filed off.
 
-## Determinism is a tooling choice, not just a discipline
+## Determinism is a Tooling choice, Not Just a Discipline
 
 Discipline gets you most of the way, but your tools either preserve determinism or they leak it — and inside the Kubernetes world, the popular defaults leak.
 
@@ -84,7 +84,7 @@ Argo CD is excellent software, and on ergonomics it wins — the UI is genuinely
 
 None of this is a knock on Helm's ecosystem or Argo's UX; both earned their popularity honestly. The claim is narrower than that: on the single axis of *determinism*, Kustomize and Flux are deterministic by construction, while Helm and Argo make you opt into determinism and trust that nobody opts back out. If determinism is the half of the problem nobody respects, pick the tools that don't make you fight for it.
 
-## The actual job
+## The Actual Job
 
 Most Infrastructure as Code is broken. Half the reason is that the popular tools describe state instead of maintaining it — there's no loop, so it drifts, guaranteed, given time. The other half is that we aim those tools at undisciplined, non-deterministic, laptop-applied messes and act betrayed when the output is a mess.
 
