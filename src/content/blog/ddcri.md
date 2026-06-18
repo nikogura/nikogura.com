@@ -24,7 +24,7 @@ DDCRI is four claims at once. Drop any one and the sentence above stops being tr
 
 - **Declarative** — you write the desired end state, not the steps to reach it. The system figures out the diff. Imperative tooling (`kubectl apply` from a laptop, a `terraform apply` someone ran by hand) describes a *transition*, and a transition is only correct relative to a starting state you're assuming and can't prove.
 - **Deterministic** — the same inputs produce the same output, every time, on any machine, forever. This is the property nobody respects, and it's the one Helm's templating and Argo's UI quietly leak. If `render` can return different YAML depending on the wall clock, a freshly generated secret, or the current state of the cluster, then "what's in git" no longer has a single meaning, and the whole guarantee collapses into "what's in git, probably, today."
-- **Continuously Reconciling** — a controller runs inside the cluster, forever, comparing actual state to declared state and correcting the difference. Not once, on commit — *continuously*, on an interval. This is the difference between a photograph and a thermostat. One-shot tools (Terraform, CDK, CloudFormation) take a photograph at apply time; the moment someone touches the system out-of-band, the photo is a lie and nothing corrects it. A reconciler is a thermostat: it doesn't care how the room got cold, it just keeps making it warm.
+- **Continuously Reconciling** — a controller runs inside the cluster, forever, comparing actual state to declared state and correcting the difference. Not once, on commit — *continuously*, on an interval. This is the difference between a photograph and a thermostat. One-shot tools (Terraform, CDK, CloudFormation) take a photograph at apply time; the moment someone touches the system out-of-band, the photo is a lie and nothing corrects it. A reconciler is a thermostat: it doesn't care how the room got cold, it just keeps making it warm — and stops when it's warm enough.
 - **Infrastructure** — and this is the word that makes DDCRI more than "GitOps for Kubernetes." Not just your in-cluster manifests. Your *cloud* resources — the S3 buckets, the RDS instances, the IAM roles, the VPCs — managed by the same reconciler, under the same loop, with the same guarantee. Crossplane is what extends the thermostat out past the cluster boundary into your cloud account.
 
 Here is the same idea as a table — each property maps to a tool, and to a specific failure you're buying out of:
@@ -40,23 +40,23 @@ Here is the same idea as a table — each property maps to a tool, and to a spec
 
 The canonical DDCRI stack is deliberately small. Every piece is here either to satisfy one of the four properties or to be the practice that keeps them honest; nothing is here for fashion.
 
-- **[FluxCD](/blog/flux-vs-argo)** is the reconciler — the *Continuously Reconciling* half. Its source-controller watches the control repository; its kustomize-controller renders and applies, prunes what you've deleted, and corrects drift on an interval. It has no UI and no sync button, which is a feature: the only way to change the cluster is to change git. And it lives *inside each cluster* — the controllers run next to the workloads they manage, so every cluster reconciles itself independently against git rather than waiting on a central server to push to it. That decentralization is a resilience property, not a detail. There is no central control plane every cluster leans on the way an ArgoCD server is leaned on, so there is none to take down: your critical infrastructure keeps converging even when the rest of your tooling is on fire. And if git itself becomes unreachable, nothing drifts or disappears — source-controller keeps serving the last revision it successfully fetched, and the cluster goes right on reconciling to that last-known-good state until git returns. A control-plane or git outage degrades you to "can't ship new changes," never to "running infrastructure falls apart."
-- **[Kustomize](https://kustomize.io/)** is the renderer — the *Deterministic* half. It's a pure overlay system: bases plus declarative patches, no templating language, no functions, no logic. `kustomize build` is referentially transparent — same inputs, same YAML, forever. There is nowhere for non-determinism to get in.
+- **[FluxCD](/blog/flux-vs-argo)** is the reconciler — the *Continuously Reconciling* half. Its source-controller watches the control repository; its kustomize-controller renders and applies, prunes what you've deleted, and corrects drift on an interval. It has no UI and no sync button, which is a feature: the only way to change the cluster is to change git. And it lives *inside each cluster* — the controllers run next to the workloads they manage, so every cluster reconciles itself independently against git rather than waiting on a central server to push to it. That decentralization is a resilience property, not a detail. There is no central control plane every cluster leans on the way an ArgoCD server is leaned upon, so there is none to take down: your critical infrastructure keeps converging even when the rest of your tooling is on fire. And if git itself becomes unreachable, nothing drifts or disappears — source-controller keeps serving the last revision it successfully fetched, and the cluster goes right on reconciling to that last-known-good state until git returns. A control-plane or git outage degrades you to "can't ship new changes," never to "running infrastructure falls apart."
+- **[Kustomize](https://kustomize.io/)** is the renderer — the *Deterministic* half. It's a pure overlay system: bases plus declarative patches, no templating language, no functions, no logic. `kustomize build` is referentially transparent — same inputs, same YAML, forever. There is nowhere for non-determinism, or "Mr. Murphy" to get in.
 - **[Crossplane](https://www.crossplane.io/)** is the cloud control plane — the *Infrastructure* half. It turns cloud resources into Kubernetes custom resources, so an S3 bucket is just an object with a `status.conditions` block that a controller reconciles exactly like a Deployment. Your cloud account becomes a set of CRDs under continuous reconciliation.
 - **[Upjet](https://github.com/crossplane/upjet)** is part of Crossplane, not a separate tool — it's the Crossplane project's own code-generation framework (it lives in the Crossplane org as `crossplane/upjet`, the renamed successor to Terrajet). It's how Crossplane gets its *breadth*: Upjet generates Crossplane providers straight from existing Terraform providers — `provider-upjet-aws`, `provider-upjet-gcp`, `provider-upjet-azure` — so you inherit the full surface area of the Terraform provider ecosystem (thousands of resource types, maintained by the cloud vendors) without Terraform's one-shot, drift-blind apply model. It's the bridge that lets you leave Terraform behind without leaving its coverage behind.
 - **The [Control Repository](/blog/control-repositories)** is the release artifact. Its `main` branch is the declaration of what should be running, everywhere, right now. A merge to main *is* the deployment; a tag is just a pointer.
-- **[Trunk-Based Development](/blog/trunk-based-development)** is how you change it. Short-lived branches, render and validate in CI, review the rendered diff, merge to main, and the reconciler converges. No long-running branches, because the head of main is the state of the platform and you don't want two of those.
+- **[Trunk-Based Development](/blog/trunk-based-development)** is how you change it. Short-lived branches, render and validate in CI, review the rendered diff, merge to main, and the reconciler converges. No long-running branches, because the head of main is the state of the platform and the system of record — you don't want two of those.
 
 ## Why Not Helm
 
-You'll notice Helm and `HelmRelease` are absent. That's deliberate, and it's about the *Deterministic* D.
+You'll notice Helm and `HelmRelease` are absent. That's deliberate, and it's about the *Deterministic* 'D' in 'DDCRI'.
 
-Helm is a templating engine. Its templates can call `now`, `randAlphaNum`, `uuidv4`, and — worst of all — `lookup`, which reads the live cluster at render time. A chart can render differently depending on the clock, a freshly generated secret, or the current state of the cluster it happens to be pointed at. On top of that, `HelmRelease` stores release state *in the cluster*, so the reconciler's behavior now depends on history that doesn't live in git. And the diff is opaque: when you bump a chart from `1.2.3` to `1.2.4`, the PR shows one line changed, and you have no idea what resources, RBAC grants, or containers that actually adds or removes until it's running. Every one of those is a determinism leak.
+Helm is a templating engine. Its templates can call `now`, `randAlphaNum`, `uuidv4`, and — worst of all — `lookup`, which reads the live cluster at render time. A chart can render differently depending on the clock, a freshly generated secret, or the current state of the cluster it happens to be pointed at. On top of that, `HelmRelease` stores release state *in the cluster*, so the reconciler's behavior now depends on history that doesn't live in git. The diff is opaque: when you bump a chart from `1.2.3` to `1.2.4`, the PR shows one line changed, and you have no idea what resources, RBAC grants, or containers that actually adds or removes until it's running. Every one of those is a determinism leak and opportunity for "Murphy's Law" to bite you.
 
 So by default, DDCRI excludes it. But there are two honest positions short of "never":
 
-- **Helm as a build-time renderer, not a runtime.** Run `helm template` (or Kustomize's `helmCharts` inflation generator) at build time, render the chart to plain YAML, and feed *that* through Kustomize. You keep the chart ecosystem and you keep determinism, because the templating happens once, under review, with no in-cluster `lookup` and no release state. This is the compromise I reach for: Helm as a *renderer*, the same role Kustomize plays, not a *reconciler*.
-- **`HelmRelease` if you knowingly trade determinism away.** Flux's helm-controller will reconcile a `HelmRelease` continuously — you keep the loop, you keep drift correction, you keep the audit trail. You give up determinism and the reviewable diff. Some shops make that trade on purpose, usually for a sprawling third-party chart they don't want to vendor. That's a legitimate choice *as long as you name the cost out loud*: you've dropped one of the four letters, and "what's in git is what's in your infra" weakens to "what's in git plus whatever that chart decided to render this time."
+- **Helm as a build-time renderer, not a runtime.** You can still use the vast Helm ecosystem.  Run `helm template` (or Kustomize's `helmCharts` inflation generator) at build time, render the chart to plain YAML, feed *that* through Kustomize, and commit it to git. You keep the chart ecosystem and you keep determinism, because the templating happens once, under review, with no in-cluster `lookup` and no release state. This is the compromise I reach for: Helm as a *renderer*, the same role Kustomize plays, not a *reconciler*.  `git diff` is your answer to "what is the effect of this change?".
+- **`HelmRelease` if you knowingly trade determinism away.** Flux's helm-controller will reconcile a `HelmRelease` continuously — you keep the loop, you keep drift correction, you keep the audit trail. You give up full determinism and the reviewable diff. Some shops will want to make that trade on purpose, usually for a sprawling third-party chart they don't want to vendor, or teams that like that kind of flexibility in their product. That's a legitimate choice *as long as you name the cost out loud*: you've dropped one of the four letters, and "what's in git is what's in your infra" weakens to "what's in git plus whatever that chart decided to render this time."
 
 The right answer isn't "Helm or no Helm" across the whole platform — it's matching the *degree of determinism to the blast radius*. Determinism is most valuable exactly where a surprise is most expensive. The foundational layers — the cluster itself, networking, identity, cloud resources, the shared platform services everything else depends on — have enormous blast radius, and those should be fully deterministic: reviewable diffs, referential transparency, no render-time surprises, full stop. A wrong apply there takes down everyone.
 
@@ -66,39 +66,58 @@ So choosing Helm is a real, defensible decision — driven by the team, the prod
 
 ## A Canonical Example
 
-Here's a control repository that brings cloud resources — an S3 bucket, an RDS database — under the same reconciler that manages the cluster, with the same guarantee.
+Here's a control repository that brings cloud resources — an S3 bucket, an RDS database — under the same reconciler that manages the cluster, with the same guarantee.  This is a monorepo, for simplicity's sake. The same concept works however you slice the repositories — one repo for everything, or one per environment or cluster; on disk it's just a file tree either way.
 
 ### Repository Layout
 
 ```
 control-repo/
-├── clusters/
-│   └── production/
-│       └── flux-system/              # Flux bootstrap: GitRepository + Kustomizations
-├── infrastructure/
-│   ├── crossplane/                   # providers + provider configs
-│   │   ├── provider-aws-s3.yaml
-│   │   └── providerconfig.yaml
-│   ├── cloud/                        # Crossplane managed resources (the cloud itself)
-│   │   ├── base/
-│   │   │   └── artifacts-bucket.yaml
-│   │   └── production/
-│   │       └── kustomization.yaml
-│   └── addons/                       # in-cluster platform services
-│       ├── base/
-│       └── production/
-├── monitoring/
-│   ├── prometheusrules/
-│   │   └── ddcri-reconciliation.yaml
-│   └── alertmanager/
-│       └── ddcri-routing.yaml
-└── apps/
-    └── production/
+└── clusters/                              # one dir per cluster — everything it runs lives here
+    ├── production/
+    │   ├── flux-system/                   # Flux bootstrap + the per-area Kustomization CRs
+    │   │   ├── gotk-components.yaml        #   the Flux controllers
+    │   │   ├── gotk-sync.yaml              #   entry Kustomization → reconciles clusters/production
+    │   │   ├── infrastructure.yaml         #   Kustomization CRs: crossplane → cloud (dependsOn) → addons
+    │   │   ├── monitoring.yaml             #   Kustomization → ../monitoring
+    │   │   └── apps.yaml                   #   Kustomization → ../apps
+    │   ├── infrastructure/
+    │   │   ├── crossplane/                 # provider packages + provider configs
+    │   │   │   ├── providers.yaml
+    │   │   │   ├── provider-config.yaml
+    │   │   │   └── kustomization.yaml
+    │   │   ├── cloud/                      # Crossplane managed resources (S3, RDS, IAM, ...)
+    │   │   │   ├── buckets.yaml
+    │   │   │   ├── databases.yaml
+    │   │   │   └── kustomization.yaml
+    │   │   └── addons/                     # ingress, cert-manager, CNI extras, ...
+    │   │       └── kustomization.yaml
+    │   ├── monitoring/                     # kube-prometheus-stack + the DDCRI rules/routing
+    │   │   ├── kube-prometheus-stack.yaml
+    │   │   ├── prometheus-rules.yaml
+    │   │   ├── alertmanager-config.yaml
+    │   │   └── kustomization.yaml
+    │   └── apps/                           # the cluster's workloads
+    │       └── kustomization.yaml
+    └── staging/                            # the staging cluster — its own full tree
+        └── ...
 ```
+
+Everything a cluster runs lives under that cluster's directory — there is nothing to reconcile that sits outside one. `clusters/production/flux-system/` is the bootstrap: the Flux controllers, the entry Kustomization that reconciles the rest of `clusters/production/`, and the per-area Flux `Kustomization` CRs that give each slice its own interval, pruning, and ordering — `cloud` `dependsOn` `crossplane`, so managed resources never reconcile before their providers exist. The directories beside it — `infrastructure/`, `monitoring/`, `apps/` — are the actual manifests for *this* cluster, not references to a shared base. Add another cluster and it's a sibling under `clusters/` with its own complete tree.
+
+The duplication between `production` and `staging` is deliberate, not a smell — DRY is the wrong instinct here. The flat, repeated trees make the two questions you actually care about answerable with one plain command each:
+
+- **How does staging differ from production?** `diff -ruN clusters/production clusters/staging` — the complete, literal delta between two environments, with no overlay indirection to mentally render. (`-N` so a resource present in only one environment still shows as a full diff, not a terse "only in" line.)
+- **What just changed in staging?** `git diff -- clusters/staging` — the exact effect of a proposed or recent change, scoped to that one cluster.
+
+Each cluster's full desired state is right there to read; repetition you can diff beats cleverness you have to render in your head. A shared-base, overlay-heavy layout hides both of those answers — you can't diff two environments when half of each is assembled at build time from files they share.
+
+And none of this depends on how you slice repositories. One monorepo or a repo per environment — `diff` and `git diff` operate on directories on disk, not on repo boundaries. Check the trees out wherever they live and compare them; the repo split is a packaging decision, while the diffability is an intrinsic property of the trees. That's the same point as the monorepo note above: on disk, it's all just a file tree.
+
+The cloud resources are no exception: the Crossplane objects under `clusters/production/infrastructure/cloud/` are applied into this cluster, which runs Crossplane and projects them onto your cloud account. The cluster is always the point of application.
 
 ### The Reconciler
 
-Flux watches the repo, and each top-level path gets its own Kustomization — here's the one for the cloud layer. Note `prune: true`: this is what makes it *reconciliation* and not merely *additive apply*. Delete a file from git and the reconciler prunes the object it created — and what that does to the underlying cloud resource is the `deletionPolicy` question we reach below.
+Flux watches the repo, and `clusters/production/flux-system/` holds the per-area Flux `Kustomization` CRs that reconcile each slice of the production cluster. Here's the one for the cloud layer — it `dependsOn` the Crossplane providers, so the managed resources never try to reconcile before the providers that own them are installed. Note `prune: true`: this is what makes it *reconciliation* and not merely *additive apply*. Delete a file from git and the reconciler prunes the object it created — and what that does to the underlying cloud resource is the `deletionPolicy` question we reach below.
 
 ```yaml
 apiVersion: source.toolkit.fluxcd.io/v1
@@ -119,11 +138,13 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m
+  dependsOn:
+    - name: crossplane          # providers installed before their resources reconcile
   sourceRef:
     kind: GitRepository
     name: control-repo
-  path: ./infrastructure/cloud/production
-  prune: true        # remove from git → remove from cloud
+  path: ./clusters/production/infrastructure/cloud
+  prune: true        # remove from git → prune the object; deletionPolicy decides the cloud resource
   wait: true
   timeout: 5m
 ```
@@ -206,7 +227,7 @@ Trunk-based development is what makes this safe to change. A short-lived branch 
 
 ```bash
 # Deterministic render → schema validation. Same output on every machine.
-kustomize build infrastructure/cloud/production | kubeconform -strict -summary
+kustomize build clusters/production/infrastructure/cloud | kubeconform -strict -summary
 
 # If you use Crossplane composition functions, render them too — and keep them
 # deterministic (no clocks, no randomness), exactly like the no-Helm-templating rule.
