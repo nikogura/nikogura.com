@@ -152,7 +152,7 @@ spec:
 
 ### The Cloud, as Declarative Objects
 
-First the Upjet-based provider and its config:
+First the Crossplane-based provider and its config:
 
 ```yaml
 apiVersion: pkg.crossplane.io/v1
