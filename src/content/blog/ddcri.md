@@ -388,4 +388,6 @@ And the monitoring layer means the one failure mode left — the reconciler itse
 
 That's the whole thesis, and now it's enforceable rather than aspirational: **what's in git is what's in your infrastructure — or alarms are sounding.** 
 
-Build the loop, then instrument the loop. A reconciler you don't monitor is just a more confident way to be wrong.
+Build the loop, then instrument the loop. 
+
+A reconciler you don't monitor is just a more confident way to be wrong.
