@@ -237,6 +237,82 @@ crossplane render xr.yaml composition.yaml functions.yaml
 
 The diff in the PR is the rendered diff. There's no `lookup`, no `now()`, no chart version hiding a hundred changed lines behind one. Review, merge to main, and within the reconcile interval the platform converges. That's the whole change-management story.
 
+## Bootstrapping: The Seeds You Apply Once
+
+A reconciler can't reconcile itself into existence. Something has to install the first controller, and something has to grant it the permissions it needs before it can manage anything — including, eventually, itself. Every continuously-reconciling system has this chicken-and-egg at the very bottom, and pretending it doesn't is how people end up with an "automated" platform nobody can actually rebuild. DDCRI has exactly two seeds. You apply each once, by hand, and then the loop adopts them and never looks back.
+
+**Flux seeds itself with a single `kubectl apply`.** The `clusters/production/flux-system/` directory is committed to git like everything else — but git can't apply itself to an empty cluster. So once, against a fresh cluster, you run:
+
+```bash
+kubectl apply -k clusters/production/flux-system
+```
+
+That installs the controllers and the entry Kustomization. From that instant Flux is reconciling `clusters/production/` — which *includes* `flux-system/` itself — so Flux now manages Flux: its own upgrades, its own configuration, its own `GitRepository`. The imperative act happened exactly once; everything after it, the reconciler's own maintenance included, is back under git. (`flux bootstrap` does the same thing with more ceremony; `apply -k` is the determinism-friendly version, because the manifests are already in the repo and already reviewed.)
+
+**Crossplane seeds with one privileged cloud identity, created out of band.** Crossplane manages cloud resources by assuming an identity the cloud provider trusts — but that identity is itself a cloud resource, and Crossplane can't create the thing that grants it permission to create things. So the controller's identity is the one piece of cloud you provision the old-fashioned way: a `terraform apply`, a CLI call, a console click — whatever you like, once. **The example below is AWS** — an IAM role assumed through IRSA; with the AWS CLI it's a trust policy plus two calls:
+
+```bash
+# Discover the cluster's OIDC issuer and your account ID.
+OIDC=$(aws eks describe-cluster --name production \
+  --query 'cluster.identity.oidc.issuer' --output text | sed 's~https://~~')
+ACCOUNT=$(aws sts get-caller-identity --query Account --output text)
+
+# Trust policy: let the Crossplane AWS provider's ServiceAccount assume this role via IRSA.
+# (The SA name — provider-aws in crossplane-system — is fixed via a DeploymentRuntimeConfig.)
+cat > trust-policy.json <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Effect": "Allow",
+    "Principal": { "Federated": "arn:aws:iam::${ACCOUNT}:oidc-provider/${OIDC}" },
+    "Action": "sts:AssumeRoleWithWebIdentity",
+    "Condition": {
+      "StringEquals": {
+        "${OIDC}:aud": "sts.amazonaws.com",
+        "${OIDC}:sub": "system:serviceaccount:crossplane-system:provider-aws"
+      }
+    }
+  }]
+}
+EOF
+
+# Create the role Crossplane runs as, and grant it permissions.
+aws iam create-role \
+  --role-name crossplane-controller \
+  --assume-role-policy-document file://trust-policy.json
+
+# AdministratorAccess is the "keys to the kingdom" bootstrap; scope it down to the
+# services you actually let Crossplane manage in anything but a lab.
+aws iam attach-role-policy \
+  --role-name crossplane-controller \
+  --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
+```
+
+You hand the resulting role ARN to the `ProviderConfig`, and from there Crossplane can reach the rest of your cloud and station-keep it.
+
+Those commands are AWS-specific; other clouds need their own. The *shape* never changes — provision one privileged identity out of band, bind your cluster's workload identity to it, hand it to the `ProviderConfig` — only the mechanism does: on GCP a service account bound through Workload Identity, on Azure a managed identity through Azure AD Workload Identity. One identity, created once, whatever the provider.
+
+Then you bring that role back under GitOps — but carefully. Import it as a managed resource so Crossplane adopts the *existing* role rather than making a new one, and set it to `Orphan`:
+
+```yaml
+apiVersion: iam.aws.upbound.io/v1beta1
+kind: Role
+metadata:
+  name: crossplane-controller
+  annotations:
+    crossplane.io/external-name: crossplane-controller   # adopt the existing role, don't create one
+spec:
+  deletionPolicy: Orphan       # NEVER let the loop delete the role Crossplane runs on
+  forProvider:
+    assumeRolePolicy: "{ ... }"   # the same trust policy as trust-policy.json above
+  providerConfigRef:
+    name: default
+```
+
+On the database, `Orphan` was prudent — a guard on data you can't recreate. Here it's mandatory, because this is the role Crossplane *uses to function*. If a bad rebase, an errant `git rm`, or a fat-fingered CR pruned this object under `deletionPolicy: Delete`, Crossplane would cheerfully delete its own permissions and lock itself — and your entire cloud reconciliation — out of the account. There is no reconciling your way back from that; you're back to the out-of-band seed and a bad afternoon. `Orphan` makes the worst case "the CR disappears and Crossplane keeps running on the still-present role," which is survivable. Note what `Orphan` does *not* do: it doesn't stop reconciliation. While the CR exists, Crossplane still drives the role's trust policy and permissions to match git — head of main is still what's in the cloud — you've only told it that *deleting* the CR must not *delete* the role. The rule generalizes: any resource the control plane depends on for its *own* existence gets adopted, kept in sync, and latched against deletion — never let the loop unmake the thing running the loop.
+
+That's the entire bootstrap: one `kubectl apply -k`, one cloud identity. Two manual acts at the very beginning, and from then on Flux and Crossplane adopt and maintain themselves. The seeds are unavoidable — every honest system has them — but the discipline is that they happen *once*, then fold into the same loop as everything else, rather than living on as a runbook of manual steps you re-run and pray over.
+
 ## Making the Guarantee Observable — "Or Alarms Are Sounding"
 
 Everything above gives you the first half of the sentence: *what's in git is what's in your infrastructure.* This section is the second half — *or alarms are sounding* — and it's the part most GitOps writeups skip. A reconciliation loop that fails silently is worse than no loop, because it *looks* like it's working. The discipline is incomplete until **drift and reconciliation failure are pageable conditions**.
