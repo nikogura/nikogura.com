@@ -34,7 +34,7 @@ Here is the same idea as a table — each property maps to a tool, and to a spec
 | Declarative | Kustomize, Crossplane CRDs | transitions that assume a starting state you can't prove |
 | Deterministic | Kustomize (`kustomize build` is referentially transparent) | "what's in git, probably, today" |
 | Continuously Reconciling | FluxCD controllers | a photograph that silently becomes a lie |
-| Infrastructure (cloud included) | Crossplane (via Upjet providers) | a reconciled cluster sitting on un-reconciled cloud |
+| Infrastructure (cloud included) | Crossplane (alone, or via Upjet providers) | a reconciled cluster sitting on un-reconciled cloud |
 
 ## The Stack
 
