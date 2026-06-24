@@ -1,6 +1,6 @@
 ---
 title: 'Stop Holding Out for a Hero'
-excerpt: Incident response is either an engineering discipline — measured, quantified, repeatable, owned, evaluated — or it is a craft a few heroes practice and nobody else can see. Heroes are great. You shouldn't need them, and you shouldn't bet the company on still having them.
+excerpt: Incident response is either an engineering discipline — measured, quantified, repeatable, owned, evaluated — or it is a craft a few heroes practice and nobody else can duplicate. Heroes are great. You shouldn't need them, and you shouldn't bet the company on still having them.
 publishDate: 'Jun 17 2026'
 tags:
   - Incident Management
@@ -15,7 +15,7 @@ Heroes are real, and they are genuinely valuable. This is not an essay against t
 
 It is an essay against *depending* on them.
 
-> Incident response is either an engineering discipline — measured, quantified, repeatable, owned, evaluated — or it is a craft a few heroes practice and nobody else can see.
+> Incident response is either an engineering discipline — measured, quantified, repeatable, owned, evaluated — or it is a craft a few heroes practice and nobody else can duplicate.
 
 The first is an asset of the organization that survives any individual leaving. The second is a liability disguised as a strength, available only on the nights the right person happens to be awake.
 
