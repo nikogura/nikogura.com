@@ -23,7 +23,7 @@ That isn't pessimism. It's the only bet where the odds run in your favor. And I 
 
 Before I was an engineer, I was a professional kung fu instructor. The two careers look unrelated until you notice they're the same activity: **rule-based problem solving.** A fight and a distributed system are both bounded spaces where a finite set of pieces interact under fixed rules, and the discipline in both is figuring out which moves actually pay off under pressure — and which ones just look good in the brochure.
 
-"Kung fu" — 功夫 — literally means *energy and time*: skill bought with work. And that's exactly the trap, because most martial artists gamble on success on the strength of that very work. The assumption is seductive: *I'm the one who trains. I'm the athlete. I put in the energy and the time. When it comes to it, I will prevail.*
+"Kung fu" literally means *energy and time* or *hard work*: skill bought with work. And that's exactly the trap, because most martial artists gamble on success on the strength of their hard work. The assumption is seductive: *I'm the one who trains. I'm the athlete. I put in the energy and the time. When it comes to it, I will prevail.*
 
 Sometimes that's true. Often it isn't. The other person is just better — younger, faster, meaner, who knows. There's always a roll of the dice; some days you're lucky, some days you're not. And here's what the studio doesn't like to admit: not all skills are martial, and not all fighting is skillful. Sometimes you just run into a natural junkyard dog who never trained a day and will put you through a wall anyway.
 
