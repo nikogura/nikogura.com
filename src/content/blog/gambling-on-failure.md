@@ -11,9 +11,9 @@ isFeatured: true
 
 ## Two Kinds of Gamblers
 
-Everyone is gambling. Every plan, every deploy, every architecture, every hire, every fight, every Tuesday — you are betting on an outcome you do not fully control. The only real question is which way you bet.
+Everyone is gambling. Every plan, every deploy, every architecture, every hire, every fight, every Tuesday — you are betting on an outcome you do not fully control. Shit happens.  We all know that.  The only real question is which way you bet.
 
-Most people bet on success. They believe it will work. The deploy will go clean. The vendor will stay up. The one database with no replica will keep spinning. The hero will be awake. And because they believe it, they are *surprised* when it doesn't — surprised by the outage, the breach, the dead disk, the punch they never saw. The surprise is the tell. Surprise means you bet on success and the house collected.
+Most people bet on success. They believe it will work. The deploy will go clean. The vendor will stay up. The one database with no replica will keep spinning. The hero will be awake and respond to an emergency page. And because they believe it, they are *surprised* when it doesn't — surprised by the outage, the breach, the dead disk, the punch they never saw. The surprise is the tell. Surprise means you bet on success and the house collected.
 
 I bet the other way. I expect it to fail. And when I'm wrong — when the thing actually works — I am *pleasantly* surprised. I've arranged my life so that all of my surprises are good ones.
 
