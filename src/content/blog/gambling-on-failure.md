@@ -15,7 +15,7 @@ Everyone is gambling. Every plan, every deploy, every architecture, every hire, 
 
 Most people bet on success. They believe it will work. The deploy will go clean. The vendor will stay up. The one database with no replica will keep spinning. The hero will be awake and respond to an emergency page. And because they believe it, they are *surprised* when it doesn't — surprised by the outage, the breach, the dead disk, the punch they never saw. The surprise is the tell. Surprise means you bet on success and the house collected.
 
-I bet the other way. I expect it to fail. And when I'm wrong — when the thing actually works — I am *pleasantly* surprised. I've arranged my life so that all of my surprises are good ones.
+I prefer to bet the other way. I expect it to fail. And when I'm wrong — when the thing actually works — I am *pleasantly* surprised. I try to arranged my life so that all of my surprises are good ones.  I still get bad surprises of course.  Nothing and no one is perfect.  Sometimes I get a chance to feel smart and prepared.
 
 That isn't pessimism. It's the only bet where the odds run in your favor. And I learned it, of all places, by getting hit — repeatedly — by a man I outweighed by more than a hundred pounds.
 
