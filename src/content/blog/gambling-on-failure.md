@@ -11,7 +11,7 @@ isFeatured: true
 
 ## Two Kinds of Gamblers
 
-Everyone is gambling. Every plan, every deploy, every architecture, every hire, every fight, every Tuesday — you are betting on an outcome you do not fully control. Shit happens.  We all know that.  The only real question is which way you bet.
+Everyone is gambling. Every plan, every deploy, every architecture, every hire, every fight, every Tuesday — you are betting on an outcome you do not fully control. Shit happens.  We all know it.  The only real question is which way you bet.
 
 Most people bet on success. They believe it will work. The deploy will go clean. The vendor will stay up. The one database with no replica will keep spinning. The hero will be awake and respond to an emergency page. And because they believe it, they are *surprised* when it doesn't — surprised by the outage, the breach, the dead disk, the punch they never saw. The surprise is the tell. Surprise means you bet on success and the house collected.
 
@@ -21,11 +21,11 @@ That isn't pessimism. It's the only bet where the odds run in your favor. And I 
 
 ## Energy and Time
 
-Before I was an engineer, I was a professional kung fu instructor. The two careers look unrelated until you notice they're the same activity: **rule-based problem solving.** A fight and a distributed system are both bounded spaces where a finite set of pieces interact under fixed rules, and the discipline in both is figuring out which moves actually pay off under pressure — and which ones just look good in the brochure.
+Before I was an engineer, I was a professional kung fu instructor. The two careers look unrelated until you notice they're the same activity: **rule-based problem solving.** A fight and a distributed system are both bounded spaces where a finite set of pieces interact under fixed rules, and the discipline in both is figuring out which moves actually pay off under pressure — and which ones just look good in the brochure - or the sales pitch.
 
-"Kung fu" literally means *energy and time* or *hard work*: skill bought with work. And that's exactly the trap, because most martial artists gamble on success on the strength of their hard work. The assumption is seductive: *I'm the one who trains. I'm the athlete. I put in the energy and the time. When it comes to it, I will prevail.*
+"Kung fu" literally translates as *energy and time*: skill bought with work. And that's exactly the trap, because most martial artists gamble on success on the strength of their hard work. The assumption is seductive: *I'm the one who trains. I'm the athlete. I put in the energy and the time. When it comes to it, I will prevail.*
 
-Sometimes that's true. Often it isn't. The other person is just better — younger, faster, meaner, who knows. There's always a roll of the dice; some days you're lucky, some days you're not. And here's what the studio doesn't like to admit: not all skills are martial, and not all fighting is skillful. Sometimes you just run into a natural junkyard dog who never trained a day and will put you through a wall anyway.
+Sometimes that's true. Often it isn't. The other person is just better — younger, faster, meaner, who knows. There's always a roll of the dice; some days you're lucky, some days you're not. And here's what the studio doesn't like to admit: not all skills are martial, and not all fighting is skillful. Sometimes you just run into a natural 'junkyard dog' who never trained a day and will clean your clock anyway.
 
 The movies make it worse. They sell the low-probability tactics — the jumps, the spins, the flips, the spinning back kick to the jaw. Another teacher of mine had a name for the whole category: ["your day" moves](/blog/can-vs-does). Would a jump kick land? Sure — if it was *your day.* And if it wasn't, you'd just thrown both feet off the ground in front of a stranger and turned yourself into a committed, airborne, off-balance target with nothing left to do but find out. Beautiful, and almost never the right bet. The sucker punch beats the jump kick nearly every time.
 
