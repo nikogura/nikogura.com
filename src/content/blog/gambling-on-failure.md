@@ -27,7 +27,7 @@ Before I was an engineer, I was a professional kung fu instructor. The two caree
 
 Sometimes that's true. Often it isn't. The other person is just better — younger, faster, meaner, who knows. There's always a roll of the dice; some days you're lucky, some days you're not. And here's what the martial arts world doesn't like to admit: not all skills are martial, and not all fighting is skillful. Sometimes you just run into a natural 'junkyard dog' who never trained a day and will clean your clock anyway.
 
-The movies make it worse. They sell the low-probability tactics — the jumps, the spins, the flips, the spinning back kick to the jaw. Another teacher of mine had a name for the whole category: ["your day" moves](/blog/can-vs-does). Would a jump kick land? Sure — if it was *your day.* And if it wasn't, you'd just thrown both feet off the ground in front of a stranger and turned yourself into a committed, airborne, off-balance target with nothing left to do but find out. Beautiful, and almost never the right bet. The sucker punch beats the jump kick nearly every time.
+The movies make it worse. They sell the low-probability tactics — the jumps, the spins, the flips, the spinning back kick to the jaw. Another teacher of mine had a name for the whole category: ["your day" moves](/blog/can-vs-does). Would a jump kick work? Sure — if it was *your day.* And if it wasn't, you'd just thrown both feet off the ground in front of a stranger and turned yourself into a committed, airborne, off-balance target with nothing left to do but hope it turns out well. Beautiful, and almost never the right bet. The sucker punch beats the jump kick nearly every time, and hope is not a strategy.
 
 I put it to my own students more bluntly: *"Do you want to bet your nose on that?"* Because that's the real stake. If you're right, great. If you're wrong, you've got a broken nose. It's remarkable how many plans stop sounding clever the moment you say out loud what they cost when they fail. KISS isn't only an engineering principle; it's a survival one — the simple thing, done when it counts, beats the spectacular thing that needs everything to go right.
 
@@ -45,7 +45,11 @@ So Choi laid out the cheese. If you took the bait and blocked — which the rule
 
 He was either right, or he was pleasantly surprised. There was no branch where he lost. He had engineered the failure of his own move into a win either way.
 
-He never learned my name in all that time — to him I was just "the Big Guy from Minnesota," and I'd bet money he wouldn't remember me at all. I've remembered him for the rest of my life. Grandmaster [Wai Lun Choi](https://liuhopafa.com/) taught Liu Ho Pa Fa ("Water Boxing") in Chicago for decades; the lesson in this post is his, not mine. I just carried it into a different kind of fight.  Thank you Sifu.  You changed my life.
+Sifu Choi never seemed to learn my name in all the time I studied with him — to him I was just "the Big Guy from Minnesota,".  It didn't matter though.  He knew who I was.  His memory was perfect for every conversation we'd ever had, and he was able to articulate amazingly fine points of physics, mechanics, anatomy and human physiology in terms that were not necessarily scholarly, but incredibly precise and accessible. 
+
+I'll remembered him for the rest of my life. His picture hangs in my office, as it should.  (He even signed it and refers to *me* as 'Sifu Nik'.  Highest 'certification' I have ever acheived.  Grandmaster [Wai Lun Choi](https://liuhopafa.com/) taught Liu Ho Pa Fa ("Water Boxing"), Hsingyi, Pa Kua, Taiji, and Lama Pai in Chicago for decades; the lesson in this post is his, not mine. I just carried it into a different kind of fight.  
+
+Thank you Sifu.  You changed my life.
 
 ## The Same Game, With a Pager
 
