@@ -1,6 +1,6 @@
 ---
 title: 'Gambling on Failure'
-excerpt: Most people gamble on success — they assume the thing will work, and they're genuinely surprised when it doesn't. A 140-pound kung fu master taught me to gamble on failure instead: expect every move to be blocked, and win anyway. It turns out to be the same discipline that keeps systems alive at 2 AM.
+excerpt: Most people gamble on success — they assume the thing will work, and they're genuinely surprised when it doesn't. A tiny, birdlike kung fu master taught me to gamble on failure instead. Expect every move to be blocked, and win anyway. It turns out to be the same discipline that keeps systems alive at 2 AM.
 publishDate: 'Jun 26 2026'
 tags:
   - Philosophy
