@@ -109,4 +109,4 @@ So gamble on failure. Expect every move to be blocked. Expect the disk to die, t
 
 The house always wins. So does the master — you are not going to beat either one, so forget about trying. But if you take it as an absolute that the hit is coming — you just don't know when — you can prepare for it, and preparation is the whole difference between getting carried out and walking away with a spring in your step. 
 
-That isn't betting against yourself. It's the only way anyone ever survives the house — or a tiny little man who hits like a granite boulder.
+That isn't betting against yourself. It's the only way anyone ever survives the house — or a tiny little man who casually puts you on the ground with the touch of a finger.
