@@ -47,7 +47,7 @@ He was either right, or he was pleasantly surprised. There was no branch where h
 
 Sifu Choi never seemed to learn my name in all the time I studied with him — to him I was just "the Big Guy from Minnesota,".  It didn't matter though.  He knew who I was.  His memory was perfect for every conversation we'd ever had, and he was able to articulate amazingly fine points of physics, mechanics, anatomy and human physiology in terms that were not necessarily scholarly, but incredibly precise and accessible. 
 
-I'll remembered him for the rest of my life. His picture hangs in my office, as it should.  He even signed it and referred to *me* as 'Sifu Nik'.  Highest 'certification' I have ever acheived.  Grandmaster [Wai Lun Choi](https://liuhopafa.com/) taught Liu Ho Pa Fa ("Water Boxing"), Hsingyi, Pa Kua, Taiji, and Lama Pai in Chicago for decades; the lesson in this post is his, not mine. I just carried it into a different kind of fight.  
+I'll remembered him for the rest of my life. His picture hangs in my office, as it should.  He even signed it and referred to *me* as 'Sifu Nik'.  (So maybe he *did* remember after all.) Highest 'certification' I have ever acheived.  Grandmaster [Wai Lun Choi](https://liuhopafa.com/) taught Liu Ho Pa Fa ("Water Boxing"), Hsingyi, Pa Kua, Taiji, and Lama Pai in Chicago for decades; the lesson in this post is his, not mine. I just carried it into a different kind of fight.  
 
 Thank you Sifu.  You changed my life.
 
