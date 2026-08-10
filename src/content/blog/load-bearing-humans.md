@@ -1,7 +1,7 @@
 ---
 title: 'Load-Bearing Humans'
 excerpt: "A system that only keeps running because a person is continuously holding it up is not working. The person is working. The system is on life support. 'Working' is one more overloaded word, and most of the time it quietly means 'works as long as the right human is standing there.'"
-publishDate: 'Jul 04 2026'
+publishDate: 'Aug 10 2026'
 tags:
   - Philosophy
   - Engineering
