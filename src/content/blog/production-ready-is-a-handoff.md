@@ -12,7 +12,7 @@ isFeatured: false
 
 Ask an engineer if their service is production ready and they'll usually tell you yes. It builds, it passes tests, it does the thing in the demo. Ship it.
 
-Then it goes to the people who actually run production — the ones who carry the pager for it — and a different set of questions starts. Where do its logs go? What does healthy look like? What happens when its database is slow? How do I roll it back? Who do I call, and what do I do before I call them? The answers, more often than not, live in exactly one place: the head of the person who wrote it. And that person is asleep.
+Then it goes to the people who actually run production — the ones who carry the pager for it — and a different set of questions start being asked. Where do its logs go? What does healthy look like? What happens when its database is slow? How do I roll it back? Who do I call, and what do I do before I call them? The answers, more often than not, live in exactly one place: the head of the person who wrote it. And that person is asleep.
 
 That gap is the whole subject of this post. **Production ready is not a property of the code. It's a property of the hand-off.** It's the moment "it works" stops meaning "it works for me, right now, with everything I know in my head" and starts meaning "it keeps working for someone who has never seen it, at the worst possible hour, with nothing but what's written down." Almost everything on a real production-readiness checklist is downstream of that one shift in meaning.
 
