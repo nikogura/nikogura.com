@@ -70,11 +70,11 @@ A workload doesn't run alone. It shares a node with its neighbors, and readiness
 
 That mostly comes down to declaring what it needs — CPU and memory requests and limits, sized from something you actually measured, not guessed. Those numbers aren't bookkeeping; they're how the scheduler protects every other workload from this one, and they decide who gets starved or evicted when a node is contended. A service with no declared bounds is a service that can take its neighbors down with it under load, and "it was fine in the demo" is not a capacity statement. 
 
-If you didn't load test it — drive it past its expected peak, find the knee where it saturates and the point where it fails — then your requests and limits are a wish, and your saturation alert is a number someone invented.  You say you don't know what resources it needs?  You don't know how to simulate traffic?  Sounds like you have some more work to do.  
+If you didn't load test it — drive it past its expected peak, find the point where it saturates and the point where it fails — then your requests and limits are a wish, and your saturation alert is a number someone invented.  You say you don't know what resources it needs?  You don't know how to simulate traffic?  Sounds like you have some more work to do.  
 
-I have been told that Apple's Satellite Connectivity group models **virtual planets** and satellites in orbit around them.  Granted, that's Apple.  They do have more than a few resources at their command.  **I** wanna model virtual planets!  I wouldn't have a clue how to even get started, but how cool is that?
+I have been told that Apple's Satellite Connectivity group models **virtual planets** and satellites in orbit around them.  Granted, that's Apple.  They do have more than a few resources at their command than the average company.  (**I** wanna model virtual planets!  I wouldn't have a clue how to even get started, but how cool is that?)
 
-The same logic covers security, because [security and operability are one practice](/blog/security-is-infrastructure), not two. Least privilege — a narrowly scoped identity, no wildcard permissions — is just blast-radius control: when something is compromised, and eventually something is, least privilege decides whether it's an incident or a breach. Secrets come from a secret manager, never baked into an image or committed to git or printed in a log. An insecure service is an incident with a delay on it.
+The same logic covers security, because [security and operability are one practice](/blog/security-is-infrastructure), not two. Least privilege — a narrowly scoped identity, no wildcard permissions — is just blast-radius control: when something is compromised, and eventually something is, least privilege decides whether it's an incident or a breach. Secrets come from a secret manager, never baked into an image or committed to git or printed in a log. An insecure service is an incident with a delay fuse on it, and trust me, that fuse is lit.
 
 ## The Data Is the One Thing Git Can't Rebuild
 
@@ -84,7 +84,7 @@ Which is why the bar for anything stateful is higher. Backups on a schedule, to 
 
 Schema is data's twin, and it gets the same treatment: every change is a [reviewed, versioned migration](/blog/database-design) in the repo, never a hand-typed edit against a live database. Manual DDL against production is the exact opposite of every other principle here — invisible, unreviewed, unrepeatable, untested — and it actively defeats the testing you did everywhere else by turning production into a snowflake no other environment matches. Destructive changes go through expand-migrate-contract so an app rollback never has to claw a schema back through a lossy down-migration. "We had to fix some rows" is a migration. It was always a migration.
 
-## Why It's a Gate
+## Why Production Readiness is a Gate
 
 You could read all of this as a wish list — nice things to add once the real work is done. It isn't. It's a gate, and the reason it's a gate is that the pager is real and someone has to carry it.
 
