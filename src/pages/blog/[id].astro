@@ -11,14 +11,19 @@ import { slugify } from '../../utils/common-utils';
 export async function getStaticPaths() {
     const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
     const postCount = posts.length;
-    return posts.map((post, index) => ({
-        params: { id: post.id },
-        props: {
-            post,
-            prevPost: index + 1 !== postCount ? posts[index + 1] : null,
-            nextPost: index !== 0 ? posts[index - 1] : null
-        }
-    }));
+    return posts
+        .map((post, index) => ({
+            params: { id: post.id },
+            props: {
+                post,
+                prevPost: index + 1 !== postCount ? posts[index + 1] : null,
+                nextPost: index !== 0 ? posts[index - 1] : null
+            }
+        }))
+        // Posts with an externalUrl render as their own page elsewhere (e.g. a
+        // standalone static HTML essay), so we don't generate a /blog/<id> route
+        // for them — only list them. Neighbors still link out via PostPreview.
+        .filter((entry) => !entry.props.post.data.externalUrl);
 }
 
 type Props = { post: CollectionEntry<'blog'>; prevPost: CollectionEntry<'blog'>; nextPost: CollectionEntry<'blog'> };
