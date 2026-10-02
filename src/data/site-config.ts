@@ -25,6 +25,10 @@ const siteConfig: SiteConfig = {
             href: '/blog'
         },
         {
+            text: 'The Balanced Org',
+            href: '/the-balanced-org.html'
+        },
+        {
             text: 'Tags',
             href: '/tags'
         }
