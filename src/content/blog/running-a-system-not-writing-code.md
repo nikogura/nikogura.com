@@ -18,7 +18,7 @@ For most of the industry the sentence is **"I am writing code."** It should be *
 
 This sounds like a motivational-poster distinction. It isn't. The sentence you believe about your work silently decides what you consider *done*, what you consider *your problem*, and what you consider *optional*. Change the sentence and all three move at once.
 
-"I am writing code" makes the **artifact** the deliverable. The work is a diff. The finish line is the merge. Once it compiles, passes tests, and ships, the job is complete and attention moves to the next diff. What happens to that code afterward — in production, at 3 a.m., under a load nobody tested, calling a dependency that just fell over — is a different phase, owned by different people, living in a different part of the org chart. You wrote it. You're done.
+"I am writing code" makes **an artifact** the deliverable. The work is a diff. The finish line is the merge. Once it compiles, passes tests, and ships, the job is complete and attention moves to the next diff. What happens to that code afterward — in production, at 3 a.m., under a load nobody tested, calling a dependency that just fell over — is a different phase, owned by different people, living in a different part of the org chart. You wrote it. You're done.
 
 "I am running a system" makes the **live behavior over time** the deliverable. The diff is a means. The merge is the *starting* line — the moment the thing you built begins doing its actual job, which is to keep working, correctly, in a world that will not hold still. You are not finished when it ships. You are finished when it has run, healthily, long enough that you trust it to run without you.
 
@@ -47,6 +47,14 @@ To be clear, this is not "developers should become ops," and it is emphatically 
 And it's not about *caring less* about the product — that framing is wrong too. The best engineers running systems care enormously about the product. [It was never a lack of care](/blog/the-digital-plumber); it's that the product the business sells *is the running system*, and treating the merge as the finish line is how you end up [throwing it over the wall](/blog/production-ready-is-a-handoff) and discovering, during the incident, that nobody ever asked the system-runner's questions.
 
 The shift is cognitive, and it scales to any size. A solo developer can hold it. A team can hold it. A whole organization can hold it — and the ones that do are the ones that stop shipping [load-bearing humans](/blog/load-bearing-humans) and software that only its author can keep alive.
+
+## Meeting the Spec Is Also Not the Job
+
+The mindset also redraws where your responsibility ends. The old job was to write code to a spec, and the engineer was responsible for meeting the requirements — hit the spec, and you'd done your part. An agent can meet a spec, and it can do so faster than you can. What an agent cannot do is ensure the spec is right for the product or the customer, or be **responsible** for the result. It cannot stand behind whether the thing it produced actually works for the people who have to use it.
+
+And that responsibility was always the real one, because **a spec is never complete.** There are always gaps: the case nobody wrote down, the interaction nobody foresaw, the way a feature collides with the messy reality of an actual customer who doesn't behave the way the ticket assumed. Merely meeting the spec was never the job — it was a *proxy* for the job, and a leaky one. Good engineers always had to fill in the extra details when the spec wasn't enough. The job is creating something that is genuinely useful to the person on the other end, and closing the distance between "satisfies the written requirements" and "actually good for the customer" is work that only a responsible human does. It's the same gap [a passing 200 with a broken payload](/blog/continuous-acceptance-tests) hides: the letter of the spec met, the point of it missed.
+
+That responsibility doesn't live in the artifacts — not in the spec, not in the code. It lives out past them, in the running behavior and the human depending on it. Whether the thing is the right thing, whether it holds up in production, whether it serves the person it was built for — that's yours, and it always was. "I am running a system" is just what that responsibility sounds like once you say it out loud.
 
 ## What Only Matters If You're Running It
 
