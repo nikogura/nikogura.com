@@ -22,6 +22,8 @@ An application, by the time it's running, is a *stateless, transient artifact*. 
 
 Infrastructure is the opposite on every axis. It is *stateful, persistent, and singular*. There is exactly one production. It holds the data — the data *is* the point. You cannot stamp out an identical copy of it, you cannot kill it and let a scheduler replace it, and you cannot "roll it back" the way you roll back a binary, because rolling back the schema migration does not un-write the rows. It is less like a build artifact and more like a patient under care: continuous, irreplaceable, and unforgiving of the assumption that you can simply deploy another one.
 
+And yes — this is the old *pets versus cattle* distinction, and no, I'm not relitigating it. Cattle is the right ideal for stateless replicas: name none of them, mourn none of them, replace any of them at will. But the framing only holds for the part of the system whose state you can genuinely reproduce. Unless you can truly duplicate *all* of the state, your production environment is a pet — and calling it cattle does not change that. It just means you'll be surprised the day you reach for a replacement that was never actually interchangeable.
+
 [I've made a version of this point about the engineer's own self-concept](/blog/running-a-system-not-writing-code) — that "I am running a system" is a different job than "I am writing code." This is the same fault line one level down, in the *tools*. A tool built for many-identical-disposable will mislead you the instant you point it at one-persistent-irreplaceable. Here are the three places it bites hardest.
 
 ## DRY Is a Codebase Virtue and an Ops Vice
